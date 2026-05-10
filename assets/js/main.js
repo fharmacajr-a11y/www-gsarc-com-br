@@ -22,15 +22,29 @@ const setMenuState = (isOpen) => {
   }
 };
 
+const normalizePath = (path) => {
+  if (!path) return "/";
+
+  let normalizedPath = path.replace(/index\.html$/, "").replace(/\/+/g, "/");
+
+  if (!normalizedPath.startsWith("/")) {
+    normalizedPath = `/${normalizedPath}`;
+  }
+
+  if (normalizedPath.length > 1 && normalizedPath.endsWith("/")) {
+    return normalizedPath;
+  }
+
+  return normalizedPath || "/";
+};
+
 const markActiveLinks = () => {
-  const path = window.location.pathname.split("/").pop() || "index.html";
+  const currentPath = normalizePath(window.location.pathname);
 
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
-    const isActive =
-      (path === "" && href === "index.html") ||
-      (path === "index.html" && href === "index.html") ||
-      href === path;
+    const targetPath = href ? normalizePath(new URL(href, window.location.href).pathname) : "";
+    const isActive = currentPath === targetPath;
 
     link.classList.toggle("is-active", isActive);
 

@@ -1,9 +1,10 @@
 module.exports = {
   content: [
     "./index.html",
-    "./sobre.html",
-    "./servicos.html",
-    "./contato.html",
+    "./sobre/index.html",
+    "./servicos/index.html",
+    "./projetos/index.html",
+    "./contato/index.html",
     "./assets/js/**/*.js"
   ],
   theme: {
