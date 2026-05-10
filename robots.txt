@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fharmacajr-a11y.github.io/GSA---SITE/sitemap.xml
+Sitemap: https://gsarc.com.br/sitemap.xml
