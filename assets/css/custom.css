@@ -224,7 +224,87 @@ textarea:focus-visible {
 
 .home-hero__content {
   display: grid;
-  gap: 0;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .home-hero__content {
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+    gap: 3rem;
+  }
+}
+
+.home-hero__visual {
+  position: relative;
+  padding: 0 0 2.75rem 2.75rem;
+}
+
+.home-hero__phone {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28%;
+}
+
+/* Molduras com telas reais das demonstrações */
+.shot-frame {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 26px 54px rgba(5, 18, 43, 0.26);
+}
+
+.shot-frame__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid rgba(10, 31, 68, 0.08);
+  background: #eef3fb;
+}
+
+.shot-frame__bar i {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #c6d3e8;
+}
+
+.shot-frame__bar span {
+  overflow: hidden;
+  margin-left: 0.6rem;
+  padding: 0.12rem 0.75rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #5b6b85;
+  font-size: 0.68rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.shot-frame img,
+.shot-phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shot-frame img {
+  aspect-ratio: 16 / 10;
+}
+
+.shot-phone {
+  padding: 0.35rem;
+  border-radius: 1.5rem;
+  background: #0b1a33;
+  box-shadow: 0 24px 48px rgba(5, 18, 43, 0.32);
+}
+
+.shot-phone img {
+  aspect-ratio: 1 / 2;
+  border-radius: 1.2rem;
 }
 
 .home-hero {
@@ -291,6 +371,12 @@ textarea:focus-visible {
   .home-hero__title {
     font-size: clamp(2.35rem, 5.5vw, 3.75rem);
     line-height: 1.08;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-hero__title {
+    font-size: clamp(2.35rem, 3.6vw, 3.15rem);
   }
 }
 
@@ -392,18 +478,6 @@ textarea:focus-visible {
 
 .grid-accent {
   position: relative;
-}
-
-.grid-accent::after {
-  content: "";
-  position: absolute;
-  right: 1.4rem;
-  bottom: 1.4rem;
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 0.9rem;
-  border: 1px solid rgba(20, 100, 255, 0.18);
-  background: rgba(20, 100, 255, 0.06);
 }
 
 .process-step {
