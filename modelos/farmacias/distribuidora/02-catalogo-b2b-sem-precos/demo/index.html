@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedDistri Modelo | Demonstração Catálogo B2B sem Preços</title>
+    <meta name="description" content="Demonstração fictícia de catálogo B2B sem preços para distribuidora farmacêutica, com cotação pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da MedDistri Modelo">
+          <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">MedDistri Modelo</strong>
+            <span class="brand__subtitle">Catálogo para farmácias</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#como-cotar">Como cotar</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#catalogo">Abrir catálogo</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#como-cotar">Como cotar</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#catalogo">Abrir catálogo</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Catálogo para farmácias</p>
+            <h1>Consulte o portfólio e monte sua cotação.</h1>
+            <p class="lead">Busque pelo nome, princípio ativo, laboratório ou código. Monte a lista com as quantidades e envie para o vendedor da sua região.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#catalogo">Abrir catálogo</a>
+              <a class="button button-secondary" href="#como-cotar">Como cotar</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img src="assets/img/hero-distribuidora.svg" alt="Ilustração do centro de distribuição fictício" width="640" height="460" />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques">
+              <article class="meta-card">
+                <p class="meta-card__label">Portfólio</p>
+                <h2>6 mil itens</h2>
+                <p>Busca por nome ou código.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Preços</p>
+                <h2>Sob consulta</h2>
+                <p>Condições por cliente.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Cotação</p>
+                <h2>Pelo WhatsApp</h2>
+                <p>Lista pronta para o vendedor.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="catalogo" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Catálogo</p>
+            <h2>Encontre os itens e adicione à cotação.</h2>
+            <p>Experimente buscar &quot;genéricos&quot;, &quot;Vida Fictícia&quot; ou um código como 789000000005.</p>
+          </div>
+          <div class="shop-layout">
+            <div data-filter-scope data-count-label="item|itens">
+          <div class="toolbar">
+            <label class="search-field">
+              <span class="skip-link">Buscar por nome, laboratório ou código</span>
+              <input type="search" data-search placeholder="Buscar por nome, laboratório ou código" aria-label="Buscar por nome, laboratório ou código" />
+            </label>
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todos</button>
+              <button type="button" data-filter="analgesicos" aria-pressed="false">Analgésicos</button>
+              <button type="button" data-filter="genericos" aria-pressed="false">Genéricos</button>
+              <button type="button" data-filter="dermo" aria-pressed="false">Dermocosméticos</button>
+              <button type="button" data-filter="vitaminas" aria-pressed="false">Vitaminas</button>
+              <button type="button" data-filter="hospitalar" aria-pressed="false">Hospitalar</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="product-grid product-grid--three">
+            <article class="product-card" data-item data-tags="analgesicos">
+              <div class="product-thumb" aria-hidden="true">Analgésicos</div>
+              <p class="product-meta">Analgésicos · Laboratório Exemplo</p>
+              <h3>Dipirona sódica 500 mg</h3>
+              <p>Caixa com 10 comprimidos. Cód. 7890000000011</p>
+              <button class="button button-primary" type="button" data-add data-name="Dipirona sódica 500 mg" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="analgesicos">
+              <div class="product-thumb" aria-hidden="true">Analgésicos</div>
+              <p class="product-meta">Analgésicos · Genéricos Amostra</p>
+              <h3>Paracetamol 750 mg</h3>
+              <p>Caixa com 20 comprimidos. Cód. 7890000000028</p>
+              <button class="button button-primary" type="button" data-add data-name="Paracetamol 750 mg" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="analgesicos">
+              <div class="product-thumb" aria-hidden="true">Analgésicos</div>
+              <p class="product-meta">Analgésicos · Farma Modelo</p>
+              <h3>Ibuprofeno 400 mg</h3>
+              <p>Caixa com 10 cápsulas. Cód. 7890000000035</p>
+              <button class="button button-primary" type="button" data-add data-name="Ibuprofeno 400 mg" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="genericos">
+              <div class="product-thumb" aria-hidden="true">Genéricos</div>
+              <p class="product-meta">Genéricos · Genéricos Amostra</p>
+              <h3>Losartana potássica 50 mg</h3>
+              <p>Caixa com 30 comprimidos. Cód. 7890000000042</p>
+              <button class="button button-primary" type="button" data-add data-name="Losartana potássica 50 mg" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="genericos">
+              <div class="product-thumb" aria-hidden="true">Genéricos</div>
+              <p class="product-meta">Genéricos · Genéricos Amostra</p>
+              <h3>Omeprazol 20 mg</h3>
+              <p>Caixa com 28 cápsulas. Cód. 7890000000059</p>
+              <button class="button button-primary" type="button" data-add data-name="Omeprazol 20 mg" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="genericos">
+              <div class="product-thumb" aria-hidden="true">Genéricos</div>
+              <p class="product-meta">Genéricos · Farma Modelo</p>
+              <h3>Metformina 850 mg</h3>
+              <p>Caixa com 30 comprimidos. Cód. 7890000000066</p>
+              <button class="button button-primary" type="button" data-add data-name="Metformina 850 mg" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Dermocosméticos</div>
+              <p class="product-meta">Dermocosméticos · Dermo Demonstração</p>
+              <h3>Protetor solar FPS 60</h3>
+              <p>Frasco de 200 ml. Cód. 7890000000073</p>
+              <button class="button button-primary" type="button" data-add data-name="Protetor solar FPS 60" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Dermocosméticos</div>
+              <p class="product-meta">Dermocosméticos · Dermo Demonstração</p>
+              <h3>Hidratante facial</h3>
+              <p>Frasco de 50 g. Cód. 7890000000080</p>
+              <button class="button button-primary" type="button" data-add data-name="Hidratante facial" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Vitaminas</div>
+              <p class="product-meta">Vitaminas · Vida Fictícia</p>
+              <h3>Vitamina C 1 g efervescente</h3>
+              <p>Tubo com 10 comprimidos. Cód. 7890000000097</p>
+              <button class="button button-primary" type="button" data-add data-name="Vitamina C 1 g efervescente" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Vitaminas</div>
+              <p class="product-meta">Vitaminas · Vida Fictícia</p>
+              <h3>Complexo B</h3>
+              <p>Frasco com 60 drágeas. Cód. 7890000000103</p>
+              <button class="button button-primary" type="button" data-add data-name="Complexo B" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="hospitalar">
+              <div class="product-thumb" aria-hidden="true">Hospitalar</div>
+              <p class="product-meta">Hospitalar · Saúde Exemplo</p>
+              <h3>Seringa 5 ml</h3>
+              <p>Caixa com 100 unidades. Cód. 7890000000110</p>
+              <button class="button button-primary" type="button" data-add data-name="Seringa 5 ml" data-unit="cx">Adicionar à cotação</button>
+            </article>
+            <article class="product-card" data-item data-tags="hospitalar">
+              <div class="product-thumb" aria-hidden="true">Hospitalar</div>
+              <p class="product-meta">Hospitalar · Saúde Exemplo</p>
+              <h3>Curativo adesivo</h3>
+              <p>Caixa com 40 unidades. Cód. 7890000000127</p>
+              <button class="button button-primary" type="button" data-add data-name="Curativo adesivo" data-unit="cx">Adicionar à cotação</button>
+            </article>
+          </div>
+            </div>
+            <aside class="cart-panel" aria-label="Sua cotação">
+              <h2>Sua cotação <span class="cart-count" data-cart-count>0</span></h2>
+              <ul class="cart-list" data-cart-list></ul>
+              <p class="cart-empty" data-cart-empty>Nenhum item ainda. Toque em "Adicionar" nos produtos.</p>
+              <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero uma cotação destes itens:" data-needs-cart data-cart-title="Itens da cotação:" data-cart-name="adicione pelo menos um item" novalidate>
+                <label>
+                  Razão social
+                  <input type="text" name="razao" required />
+                </label>
+                <label>
+                  CNPJ
+                  <input type="text" name="cnpj" inputmode="numeric" required />
+                </label>
+                <label>
+                  Cidade
+                  <input type="text" name="cidade" required />
+                </label>
+                <p class="quote-form__error" data-form-error role="alert" hidden></p>
+                <button class="button button-primary" type="submit">Enviar cotação pelo WhatsApp</button>
+              </form>
+            </aside>
+          </div>
+          <p class="section-note">Venda exclusiva para empresas com CNPJ e licença sanitária. Produtos, códigos e laboratórios fictícios.</p>
+        </div>
+      </section>
+      <section id="como-cotar" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Como cotar</p>
+            <h2>Da lista ao pedido em três passos.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Monte a lista</h3>
+              <p>Adicione os itens e ajuste as quantidades em caixas.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Envie ao vendedor</h3>
+              <p>A cotação chega pronta no WhatsApp do comercial.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Receba as condições</h3>
+              <p>O vendedor retorna com preços, prazo e forma de pagamento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Fale com o comercial.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Rua Exemplo, 800, Centro de Distribuição, Distrito Industrial</dd>
+              </div>
+              <div>
+                <dt>Horário comercial</dt>
+                <dd>Segunda a sexta, das 8h às 18h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp comercial</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:comercial@meddistrimodelo.com.br">comercial@meddistrimodelo.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Distribuidora fictícia para mostrar o modelo</h2>
+            <p>A MedDistri Modelo não existe. Produtos, códigos e contatos desta página são fictícios.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#catalogo">Abrir catálogo</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">MedDistri Modelo</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Catálogo B2B sem Preços</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>
