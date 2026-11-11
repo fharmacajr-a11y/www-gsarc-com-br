@@ -220,11 +220,11 @@
 
           <article class="section-card p-7 md:p-8" id="formulario">
             <p class="eyebrow">Formulário</p>
-            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Briefing inicial em configuração</h2>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Envie um briefing inicial</h2>
             <p class="mt-4 text-sm leading-7 text-slate-600">
-              O envio pelo site ainda não está ativo nesta rodada. Use o WhatsApp ou o e-mail comercial para iniciar o atendimento.
+              Preencha os campos e clique em enviar. A mensagem abre pronta no WhatsApp comercial da GSA, é só confirmar o envio.
             </p>
-            <form class="mt-8 grid gap-5" onsubmit="return false;" aria-disabled="true">
+            <form class="mt-8 grid gap-5" data-contact-form data-whatsapp="5511999129999" novalidate>
               <div class="grid gap-5 md:grid-cols-2">
                 <label class="grid gap-2 text-sm font-semibold text-brand-dark">
                   Nome
@@ -260,13 +260,12 @@
                 Descreva a necessidade da sua empresa
                 <textarea name="mensagem" rows="6" class="field" required></textarea>
               </label>
+              <p class="hidden text-sm font-semibold text-red-700" data-contact-error role="alert"></p>
               <button
-                type="button"
-                class="inline-flex items-center justify-center rounded-full bg-slate-300 px-6 py-3.5 text-sm font-semibold text-slate-600"
-                disabled
-                aria-disabled="true"
+                type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
               >
-                Formulário temporariamente indisponível
+                Enviar pelo WhatsApp
               </button>
             </form>
           </article>
