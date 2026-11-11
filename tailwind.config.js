@@ -6,6 +6,7 @@ module.exports = {
     "./modelos/**/*.html",
     "./projetos/**/*.html",
     "./contato/**/*.html",
+    "./monte-seu-site/**/*.html",
     "./assets/js/**/*.js"
   ],
   theme: {
