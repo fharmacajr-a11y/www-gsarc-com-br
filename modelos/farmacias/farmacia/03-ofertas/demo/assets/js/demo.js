@@ -221,7 +221,14 @@
         problems.unshift(form.getAttribute("data-cart-name") || "adicione pelo menos um item");
       }
       if (problems.length) {
-        errorBox.textContent = "Falta preencher: " + problems.join(", ").toLowerCase() + ".";
+        errorBox.textContent =
+          "Falta preencher: " +
+          problems
+            .map(function (text) {
+              return /^[A-ZÀ-Ú]{2}/.test(text) ? text : text.charAt(0).toLowerCase() + text.slice(1);
+            })
+            .join(", ") +
+          ".";
         errorBox.hidden = false;
         if (missing.length) {
           missing[0].focus();
