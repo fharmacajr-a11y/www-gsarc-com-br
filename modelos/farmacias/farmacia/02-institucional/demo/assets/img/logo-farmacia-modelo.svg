@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Logo da Farmácia Bem Estar</title>
+  <desc id="desc">Ícone com cruz farmacêutica e folha em tons de verde e azul.</desc>
+  <defs>
+    <linearGradient id="logoGradient" x1="18" y1="16" x2="78" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D8F62" />
+      <stop offset="1" stop-color="#2C89C9" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="84" height="84" rx="24" fill="url(#logoGradient)" />
+  <circle cx="48" cy="48" r="26" fill="#FFFFFF" fill-opacity="0.14" />
+  <path d="M44 28h8v16h16v8H52v16h-8V52H28v-8h16z" fill="#FFFFFF" />
+  <path d="M61 58c-6 0-10 5-12 13 8 1 16-2 20-7 4-6 4-12 2-17-4 5-5 11-10 11z" fill="#BEEEDC" />
+</svg>

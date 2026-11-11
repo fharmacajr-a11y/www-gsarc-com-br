@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Farmácia Bem Estar | Demonstração Farmácia Institucional</title>
+    <meta name="description" content="Demonstração fictícia de site institucional de farmácia com várias páginas." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ir para o início da Farmácia Bem Estar">
+          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Farmácia Bem Estar</strong>
+            <span class="brand__subtitle">Cuidado de verdade desde 1998</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">A farmácia</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="convenios.html">Convênios</a>
+            <a href="contato.html" aria-current="page">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">A farmácia</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="convenios.html">Convênios</a>
+            <a href="contato.html" aria-current="page">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Contato</p>
+          <h1>Como chegar e falar com a farmácia.</h1>
+          <p>Endereço, horário e todos os canais de atendimento.</p>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Estamos na Rua Exemplo, 250.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Rua Exemplo, 250, Centro</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>Segunda a sábado, das 7h às 22h. Domingo, das 8h às 14h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:contato@farmaciabemestar.com.br">contato@farmaciabemestar.com.br</a></dd>
+              </div>
+              <div>
+                <dt>Estacionamento</dt>
+                <dd>Duas vagas em frente à loja</dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Farmácia fictícia para mostrar o modelo</h2>
+            <p>A Farmácia Bem Estar não existe. Endereço e contatos são fictícios. No site real, entra também o mapa.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+              <a class="button button-secondary" href="servicos.html">Ver serviços</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section id="mensagem" class="section anchor-target">
+        <div class="container about-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Mensagem</p>
+              <h2>Envie sua dúvida.</h2>
+              <p>A mensagem abre pronta no WhatsApp da farmácia.</p>
+            </div>
+            <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Vim pelo site da farmácia." novalidate>
+              <div class="quote-form__row">
+                <label>
+                  Seu nome
+                  <input type="text" name="nome" required />
+                </label>
+                <label>
+                  Telefone
+                  <input type="tel" name="telefone" />
+                </label>
+              </div>
+              <label>
+                Assunto
+                <select name="assunto" required>
+                  <option value="">Selecione</option>
+                  <option>Dúvida sobre produto</option>
+                  <option>Serviços farmacêuticos</option>
+                  <option>Convênios</option>
+                  <option>Outro assunto</option>
+                </select>
+              </label>
+              <label>
+                Mensagem
+                <textarea name="mensagem" rows="4" required></textarea>
+              </label>
+              <p class="quote-form__error" data-form-error role="alert" hidden></p>
+              <div class="hero-actions">
+                <button class="button button-primary" type="submit">Enviar pelo WhatsApp</button>
+              </div>
+            </form>
+          </article>
+          <aside class="info-card">
+            <p class="info-card__label">Privacidade</p>
+            <p>No site real, entra o link para a política de privacidade, como pede a LGPD.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Farmácia Bem Estar</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Farmácia Institucional</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>
