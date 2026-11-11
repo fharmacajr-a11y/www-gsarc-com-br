@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cotação | TransModelo Logística | Demonstração Transportadora Institucional</title>
+    <meta name="description" content="Demonstração fictícia de site institucional para transportadora, com várias páginas e cotação pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ir para o início da TransModelo Logística">
+          <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">TransModelo Logística</strong>
+            <span class="brand__subtitle">Transporte de cargas desde 2002</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="a-empresa.html">A empresa</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="frota.html">Frota e regiões</a>
+            <a href="cotacao.html" aria-current="page">Cotação</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="cotacao.html">Pedir cotação</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="index.html">Início</a>
+            <a href="a-empresa.html">A empresa</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="frota.html">Frota e regiões</a>
+            <a href="cotacao.html" aria-current="page">Cotação</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="cotacao.html">Pedir cotação</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Cotação</p>
+          <h1>Peça a cotação do seu frete.</h1>
+          <p>Preencha os dados e a mensagem abre pronta no WhatsApp da equipe comercial.</p>
+        </div>
+      </section>
+      <section id="cotacao-form" class="section anchor-target">
+        <div class="container about-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Cotação</p>
+              <h2>Dados da carga.</h2>
+              <p>Quanto mais detalhes, mais rápida e precisa a resposta.</p>
+            </div>
+            <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Gostaria de uma cotação de frete." novalidate>
+              <div class="quote-form__row">
+                <label>
+                  Empresa
+                  <input type="text" name="empresa" required />
+                </label>
+                <label>
+                  Seu nome
+                  <input type="text" name="contato" required />
+                </label>
+              </div>
+              <div class="quote-form__row">
+                <label>
+                  Cidade de origem
+                  <input type="text" name="origem" required />
+                </label>
+                <label>
+                  Cidade de destino
+                  <input type="text" name="destino" required />
+                </label>
+              </div>
+              <div class="quote-form__row">
+                <label>
+                  Tipo de carga
+                  <select name="carga" required>
+                    <option value="">Selecione</option>
+                    <option>Caixas e volumes pequenos</option>
+                    <option>Carga paletizada</option>
+                    <option>Carga completa (lotação)</option>
+                    <option>Medicamentos e produtos de farmácia</option>
+                    <option>Outro tipo de carga</option>
+                  </select>
+                </label>
+                <label>
+                  Peso aproximado
+                  <input type="text" name="peso" placeholder="Ex.: 300 kg" />
+                </label>
+              </div>
+              <label>
+                Observações
+                <textarea name="obs" rows="4"></textarea>
+              </label>
+              <p class="quote-form__error" data-form-error role="alert" hidden></p>
+              <div class="hero-actions">
+                <button class="button button-primary" type="submit">Enviar pelo WhatsApp</button>
+              </div>
+            </form>
+          </article>
+          <aside class="info-card">
+            <p class="info-card__label">Demonstração</p>
+            <p>A TransModelo Logística é fictícia. O número de WhatsApp desta página não é real.</p>
+          </aside>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Fale com a equipe comercial.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Av. Exemplo, 1000, Galpão 3, Distrito Industrial</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>Segunda a sexta, das 7h às 18h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:comercial@transportadoramodelo.com.br">comercial@transportadoramodelo.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Transportadora fictícia para mostrar o modelo</h2>
+            <p>Os dados desta página são fictícios e mostram como o site final organiza os canais da transportadora.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="servicos.html">Ver serviços</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">TransModelo Logística</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Transportadora Institucional</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>

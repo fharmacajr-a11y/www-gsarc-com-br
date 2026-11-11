@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmácia Bem Estar | Demonstração Farmácia com Catálogo</title>
+    <meta name="description" content="Demonstração fictícia de catálogo de farmácia com busca, categorias e lista de pedido pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da Farmácia Bem Estar">
+          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Farmácia Bem Estar</strong>
+            <span class="brand__subtitle">Catálogo de produtos</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#catalogo">Ver catálogo</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#catalogo">Ver catálogo</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Catálogo online</p>
+            <h1>Encontre o produto e mande a lista pelo WhatsApp.</h1>
+            <p class="lead">Busque pelo nome, filtre por categoria e monte sua lista. A farmácia confirma o preço e a disponibilidade pelo WhatsApp.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#catalogo">Ver catálogo</a>
+              <a class="button button-secondary" href="#como-funciona">Como funciona</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img src="assets/img/hero-farmacia.svg" alt="Ilustração da fachada da Farmácia Bem Estar, empresa fictícia" width="640" height="460" />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques">
+              <article class="meta-card">
+                <p class="meta-card__label">Busca</p>
+                <h2>Pelo nome</h2>
+                <p>Encontre o produto em segundos.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Lista</p>
+                <h2>Vários itens</h2>
+                <p>Junte tudo e envie de uma vez.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Resposta</p>
+                <h2>Pelo WhatsApp</h2>
+                <p>Preço e estoque confirmados na hora.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="catalogo" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Catálogo</p>
+            <h2>Produtos para a saúde e o bem-estar da família.</h2>
+            <p>Experimente buscar &quot;vitamina&quot; ou filtrar por Infantil. No site real, entram as fotos e os produtos da farmácia.</p>
+          </div>
+          <div class="shop-layout">
+            <div data-filter-scope data-count-label="produto|produtos">
+          <div class="toolbar">
+            <label class="search-field">
+              <span class="skip-link">Buscar produto</span>
+              <input type="search" data-search placeholder="Buscar produto" aria-label="Buscar produto" />
+            </label>
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todos</button>
+              <button type="button" data-filter="dermo" aria-pressed="false">Dermocosméticos</button>
+              <button type="button" data-filter="vitaminas" aria-pressed="false">Vitaminas</button>
+              <button type="button" data-filter="infantil" aria-pressed="false">Infantil</button>
+              <button type="button" data-filter="saude" aria-pressed="false">Saúde</button>
+              <button type="button" data-filter="higiene" aria-pressed="false">Higiene</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="product-grid product-grid--three">
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Protetor facial</div>
+              <p class="product-meta">Dermocosméticos</p>
+              <h3>Protetor solar facial FPS 60</h3>
+              <p>50 g, toque seco.</p>
+              <button class="button button-primary" type="button" data-add data-name="Protetor solar facial FPS 60">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Sérum</div>
+              <p class="product-meta">Dermocosméticos</p>
+              <h3>Sérum de vitamina C</h3>
+              <p>30 ml, uso diário.</p>
+              <button class="button button-primary" type="button" data-add data-name="Sérum de vitamina C">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Água micelar</div>
+              <p class="product-meta">Dermocosméticos</p>
+              <h3>Água micelar 200 ml</h3>
+              <p>Para todos os tipos de pele.</p>
+              <button class="button button-primary" type="button" data-add data-name="Água micelar 200 ml">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Vitamina D</div>
+              <p class="product-meta">Vitaminas</p>
+              <h3>Vitamina D 2.000 UI</h3>
+              <p>60 cápsulas.</p>
+              <button class="button button-primary" type="button" data-add data-name="Vitamina D 2.000 UI">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Ômega 3</div>
+              <p class="product-meta">Vitaminas</p>
+              <h3>Ômega 3</h3>
+              <p>120 cápsulas.</p>
+              <button class="button button-primary" type="button" data-add data-name="Ômega 3">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Colágeno</div>
+              <p class="product-meta">Vitaminas</p>
+              <h3>Colágeno em pó</h3>
+              <p>300 g, sabor limão.</p>
+              <button class="button button-primary" type="button" data-add data-name="Colágeno em pó">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="infantil">
+              <div class="product-thumb" aria-hidden="true">Fralda M</div>
+              <p class="product-meta">Infantil</p>
+              <h3>Fralda infantil tamanho M</h3>
+              <p>Pacote com 48 unidades.</p>
+              <button class="button button-primary" type="button" data-add data-name="Fralda infantil tamanho M">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="infantil">
+              <div class="product-thumb" aria-hidden="true">Pomada infantil</div>
+              <p class="product-meta">Infantil</p>
+              <h3>Pomada para assaduras</h3>
+              <p>45 g.</p>
+              <button class="button button-primary" type="button" data-add data-name="Pomada para assaduras">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="saude">
+              <div class="product-thumb" aria-hidden="true">Termômetro</div>
+              <p class="product-meta">Saúde</p>
+              <h3>Termômetro digital</h3>
+              <p>Resultado em 60 segundos.</p>
+              <button class="button button-primary" type="button" data-add data-name="Termômetro digital">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="saude">
+              <div class="product-thumb" aria-hidden="true">Medidor de pressão</div>
+              <p class="product-meta">Saúde</p>
+              <h3>Medidor de pressão de pulso</h3>
+              <p>Com memória de 60 medições.</p>
+              <button class="button button-primary" type="button" data-add data-name="Medidor de pressão de pulso">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Álcool em gel</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Álcool em gel 500 ml</h3>
+              <p>70% INPM.</p>
+              <button class="button button-primary" type="button" data-add data-name="Álcool em gel 500 ml">Adicionar à lista</button>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Fio dental</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Fio dental 100 m</h3>
+              <p>Com flúor.</p>
+              <button class="button button-primary" type="button" data-add data-name="Fio dental 100 m">Adicionar à lista</button>
+            </article>
+          </div>
+            </div>
+            <aside class="cart-panel" aria-label="Sua lista">
+              <h2>Sua lista <span class="cart-count" data-cart-count>0</span></h2>
+              <ul class="cart-list" data-cart-list></ul>
+              <p class="cart-empty" data-cart-empty>Nenhum item ainda. Toque em "Adicionar" nos produtos.</p>
+              <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero consultar estes produtos:" data-needs-cart data-cart-title="Lista de produtos:" data-cart-name="adicione pelo menos um produto" novalidate>
+                <label>
+                  Seu nome
+                  <input type="text" name="nome" required />
+                </label>
+                <label>
+                  Como prefere receber
+                  <select name="recebimento" required>
+                    <option value="">Selecione</option>
+                    <option>Retirar na loja</option>
+                    <option>Entrega no bairro</option>
+                  </select>
+                </label>
+                <p class="quote-form__error" data-form-error role="alert" hidden></p>
+                <button class="button button-primary" type="submit">Enviar lista pelo WhatsApp</button>
+              </form>
+            </aside>
+          </div>
+          <p class="section-note">Medicamentos com receita seguem a orientação do farmacêutico no balcão. Produtos e descrições fictícios.</p>
+        </div>
+      </section>
+      <section id="como-funciona" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Como funciona</p>
+            <h2>Sem cadastro e sem pagamento online.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Monte a lista</h3>
+              <p>Adicione os produtos que você precisa, com as quantidades.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Envie pelo WhatsApp</h3>
+              <p>A lista chega pronta para o atendente da farmácia.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Confirme e receba</h3>
+              <p>O atendente informa preço e prazo, e você retira ou recebe em casa.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Fale com a Farmácia Bem Estar.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Rua Exemplo, 250, Centro</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>Segunda a sábado, das 7h às 22h. Domingo, das 8h às 14h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:contato@farmaciabemestar.com.br">contato@farmaciabemestar.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Farmácia fictícia para mostrar o modelo</h2>
+            <p>A Farmácia Bem Estar não existe. Produtos e contatos desta página são fictícios.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#catalogo">Ver catálogo</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Farmácia Bem Estar</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Farmácia com Catálogo</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>

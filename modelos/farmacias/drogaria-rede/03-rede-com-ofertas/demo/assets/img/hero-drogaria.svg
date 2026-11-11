@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustração de mapa com unidades da rede</title>
+  <desc id="desc">Mapa estilizado com ruas e marcadores vermelhos indicando as lojas da rede fictícia.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3FB" />
+      <stop offset="1" stop-color="#FDEEF0" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="460" rx="36" fill="url(#bg)" />
+  <g stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" fill="none">
+    <path d="M40 140h560" />
+    <path d="M40 320h560" />
+    <path d="M180 40v380" />
+    <path d="M440 40v380" />
+    <path d="M40 420 600 60" stroke-width="16" />
+  </g>
+  <g fill="#1D2A44" fill-opacity="0.08">
+    <rect x="210" y="170" width="200" height="120" rx="16" />
+    <rect x="60" y="170" width="90" height="120" rx="16" />
+    <rect x="470" y="170" width="110" height="120" rx="16" />
+    <rect x="210" y="40" width="200" height="70" rx="16" />
+  </g>
+  <g>
+    <path d="M300 236c0-26 20-46 46-46s46 20 46 46c0 36-46 76-46 76s-46-40-46-76z" fill="#C8102E" />
+    <path d="M338 214h16v14h14v16h-14v14h-16v-14h-14v-16h14z" fill="#FFFFFF" />
+  </g>
+  <g fill="#C8102E">
+    <path d="M110 108c0-17 13-30 30-30s30 13 30 30c0 24-30 50-30 50s-30-26-30-50z" />
+    <path d="M486 300c0-17 13-30 30-30s30 13 30 30c0 24-30 50-30 50s-30-26-30-50z" />
+    <path d="M500 100c0-14 11-25 25-25s25 11 25 25c0 20-25 42-25 42s-25-22-25-42z" fill="#1F5FA8" />
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="140" cy="108" r="9" />
+    <circle cx="516" cy="300" r="9" />
+    <circle cx="525" cy="100" r="8" />
+  </g>
+</svg>

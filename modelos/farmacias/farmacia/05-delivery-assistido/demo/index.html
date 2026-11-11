@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmácia Bem Estar | Demonstração Delivery Assistido</title>
+    <meta name="description" content="Demonstração fictícia de delivery de farmácia com carrinho, taxa por bairro e pedido pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da Farmácia Bem Estar">
+          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Farmácia Bem Estar</strong>
+            <span class="brand__subtitle">Delivery no seu bairro</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#pedido">Fazer pedido</a>
+            <a href="#bairros">Bairros</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#pedido">Fazer pedido</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="#inicio">Início</a>
+            <a href="#pedido">Fazer pedido</a>
+            <a href="#bairros">Bairros</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#pedido">Fazer pedido</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Delivery de farmácia</p>
+            <h1>Peça pelo site e receba em casa, sem aplicativo.</h1>
+            <p class="lead">Monte o carrinho, escolha o bairro e envie o pedido pelo WhatsApp. A farmácia confirma e o entregador sai em seguida.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#pedido">Fazer pedido</a>
+              <a class="button button-secondary" href="#bairros">Ver bairros atendidos</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img src="assets/img/hero-farmacia.svg" alt="Ilustração da fachada da Farmácia Bem Estar, empresa fictícia" width="640" height="460" />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques">
+              <article class="meta-card">
+                <p class="meta-card__label">Entrega</p>
+                <h2>Até 60 min</h2>
+                <p>Prazo médio nos bairros atendidos.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Taxa</p>
+                <h2>Por bairro</h2>
+                <p>Valor aparece antes de enviar.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Pagamento</p>
+                <h2>Na entrega</h2>
+                <p>Cartão, Pix ou dinheiro.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="pedido" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Fazer pedido</p>
+            <h2>Escolha os produtos e envie o pedido.</h2>
+            <p>Adicione itens ao carrinho, escolha o bairro e veja o total com a entrega.</p>
+          </div>
+          <div class="shop-layout">
+            <div data-filter-scope data-count-label="produto|produtos">
+          <div class="toolbar">
+            <label class="search-field">
+              <span class="skip-link">Buscar produto</span>
+              <input type="search" data-search placeholder="Buscar produto" aria-label="Buscar produto" />
+            </label>
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todos</button>
+              <button type="button" data-filter="mip" aria-pressed="false">Sem receita</button>
+              <button type="button" data-filter="vitaminas" aria-pressed="false">Vitaminas</button>
+              <button type="button" data-filter="infantil" aria-pressed="false">Infantil</button>
+              <button type="button" data-filter="dermo" aria-pressed="false">Dermocosméticos</button>
+              <button type="button" data-filter="higiene" aria-pressed="false">Higiene</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="product-grid product-grid--three">
+            <article class="product-card" data-item data-tags="mip">
+              <div class="product-thumb" aria-hidden="true">Analgésico</div>
+              <p class="product-meta">Medicamentos sem receita</p>
+              <h3>Dipirona 500 mg, 10 comprimidos</h3>
+              <div class="price-row"><span class="price">R$ 6,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Dipirona 500 mg, 10 comprimidos" data-price="6.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="mip">
+              <div class="product-thumb" aria-hidden="true">Soro</div>
+              <p class="product-meta">Medicamentos sem receita</p>
+              <h3>Soro fisiológico 500 ml</h3>
+              <div class="price-row"><span class="price">R$ 8,50</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Soro fisiológico 500 ml" data-price="8.50">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="mip">
+              <div class="product-thumb" aria-hidden="true">Antiácido</div>
+              <p class="product-meta">Medicamentos sem receita</p>
+              <h3>Antiácido efervescente, 10 env.</h3>
+              <div class="price-row"><span class="price">R$ 12,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Antiácido efervescente, 10 env." data-price="12.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Vitamina C</div>
+              <p class="product-meta">Vitaminas</p>
+              <h3>Vitamina C 1 g, 30 comprimidos</h3>
+              <div class="price-row"><span class="price">R$ 24,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Vitamina C 1 g, 30 comprimidos" data-price="24.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="infantil">
+              <div class="product-thumb" aria-hidden="true">Fralda G</div>
+              <p class="product-meta">Infantil</p>
+              <h3>Fralda infantil tamanho G, 40 un.</h3>
+              <div class="price-row"><span class="price">R$ 59,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Fralda infantil tamanho G, 40 un." data-price="59.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="infantil">
+              <div class="product-thumb" aria-hidden="true">Lenço</div>
+              <p class="product-meta">Infantil</p>
+              <h3>Lenço umedecido, 50 un.</h3>
+              <div class="price-row"><span class="price">R$ 9,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Lenço umedecido, 50 un." data-price="9.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Protetor solar</div>
+              <p class="product-meta">Dermocosméticos</p>
+              <h3>Protetor solar FPS 50</h3>
+              <div class="price-row"><span class="price">R$ 49,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Protetor solar FPS 50" data-price="49.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Álcool em gel</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Álcool em gel 500 ml</h3>
+              <div class="price-row"><span class="price">R$ 11,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Álcool em gel 500 ml" data-price="11.90">Adicionar</button>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Escova</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Escova dental macia</h3>
+              <div class="price-row"><span class="price">R$ 5,90</span></div>
+              <button class="button button-primary" type="button" data-add data-name="Escova dental macia" data-price="5.90">Adicionar</button>
+            </article>
+          </div>
+            </div>
+            <aside class="cart-panel" aria-label="Seu carrinho">
+              <h2>Seu carrinho <span class="cart-count" data-cart-count>0</span></h2>
+              <ul class="cart-list" data-cart-list></ul>
+              <p class="cart-empty" data-cart-empty>Nenhum item ainda. Toque em "Adicionar" nos produtos.</p>
+              <dl class="cart-totals">
+                <div><dt>Subtotal</dt><dd data-cart-subtotal>R$ 0,00</dd></div>
+                <div><dt>Entrega</dt><dd data-cart-fee>Escolha o bairro</dd></div>
+                <div class="is-total"><dt>Total</dt><dd data-cart-total>R$ 0,00</dd></div>
+              </dl>
+              <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero fazer um pedido de entrega:" data-needs-cart data-cart-title="Pedido:" data-cart-name="adicione pelo menos um produto" novalidate>
+                <label>
+                  Bairro
+                  <select name="bairro" required data-fee-select>
+                    <option value="">Selecione</option>
+                    <option data-fee="0">Centro (entrega grátis)</option>
+                    <option data-fee="5">Vila Modelo</option>
+                    <option data-fee="7">Jardim Exemplo</option>
+                    <option data-fee="9">Parque Amostra</option>
+                  </select>
+                </label>
+                <label>
+                  Seu nome
+                  <input type="text" name="nome" required />
+                </label>
+                <label>
+                  Endereço com número
+                  <input type="text" name="endereco" required />
+                </label>
+                <label>
+                  Forma de pagamento na entrega
+                  <select name="pagamento" required>
+                    <option value="">Selecione</option>
+                    <option>Cartão na maquininha</option>
+                    <option>Pix na entrega</option>
+                    <option>Dinheiro</option>
+                  </select>
+                </label>
+                <p class="quote-form__error" data-form-error role="alert" hidden></p>
+                <button class="button button-primary" type="submit">Enviar pedido pelo WhatsApp</button>
+              </form>
+            </aside>
+          </div>
+          <p class="section-note">Medicamentos com receita: envie a foto da receita no WhatsApp depois do pedido. Preços fictícios.</p>
+        </div>
+      </section>
+      <section id="bairros" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Bairros atendidos</p>
+            <h2>Entregamos nestes bairros.</h2>
+            <p>Lista fictícia. No site real, entram os bairros e as taxas da farmácia.</p>
+          </div>
+          <ul class="segments-list">
+            <li>Centro: entrega grátis</li>
+            <li>Vila Modelo: R$ 5,00</li>
+            <li>Jardim Exemplo: R$ 7,00</li>
+            <li>Parque Amostra: R$ 9,00</li>
+          </ul>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Monte o carrinho</h3>
+              <p>Escolha os produtos e as quantidades.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Envie pelo WhatsApp</h3>
+              <p>O pedido chega com itens, endereço e total.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Receba em casa</h3>
+              <p>A farmácia confirma e o entregador sai em seguida.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Fale com a Farmácia Bem Estar.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Rua Exemplo, 250, Centro</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>Segunda a sábado, das 7h às 22h. Domingo, das 8h às 14h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:contato@farmaciabemestar.com.br">contato@farmaciabemestar.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Farmácia fictícia para mostrar o modelo</h2>
+            <p>A Farmácia Bem Estar não existe. Produtos, preços, bairros e contatos desta página são fictícios.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#pedido">Fazer pedido</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Farmácia Bem Estar</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Delivery Assistido</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustração da Farmácia Bem Estar</title>
+  <desc id="desc">Fachada fictícia de uma farmácia com balcão, símbolo farmacêutico e elementos de atendimento local.</desc>
+  <defs>
+    <linearGradient id="heroBg" x1="74" y1="52" x2="570" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2FBF7" />
+      <stop offset="1" stop-color="#E6F4FF" />
+    </linearGradient>
+    <linearGradient id="shopAccent" x1="202" y1="138" x2="438" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C89C9" />
+      <stop offset="1" stop-color="#1D8F62" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="460" rx="36" fill="url(#heroBg)" />
+  <circle cx="132" cy="98" r="54" fill="#DDF4EA" />
+  <circle cx="534" cy="98" r="48" fill="#DCEEFF" />
+  <path d="M78 362c96-48 194-72 290-72 76 0 144 15 206 46v54H78z" fill="#D7EEE4" />
+  <rect x="182" y="126" width="276" height="208" rx="24" fill="#FFFFFF" stroke="#C9E2D8" stroke-width="8" />
+  <rect x="166" y="162" width="308" height="38" rx="12" fill="url(#shopAccent)" />
+  <path d="M192 162h28v38h-28zm56 0h28v38h-28zm56 0h28v38h-28zm56 0h28v38h-28zm56 0h28v38h-28z" fill="#FFFFFF" fill-opacity="0.28" />
+  <rect x="214" y="214" width="72" height="88" rx="16" fill="#E9F8F1" />
+  <rect x="316" y="214" width="112" height="88" rx="16" fill="#EAF4FF" />
+  <rect x="232" y="228" width="36" height="60" rx="10" fill="#FFFFFF" />
+  <rect x="340" y="234" width="64" height="14" rx="7" fill="#C6E2FF" />
+  <rect x="340" y="258" width="48" height="12" rx="6" fill="#D6F0E4" />
+  <rect x="340" y="278" width="72" height="12" rx="6" fill="#D6F0E4" />
+  <circle cx="320" cy="122" r="42" fill="#FFFFFF" stroke="#CFE6DC" stroke-width="8" />
+  <path d="M314 98h12v18h18v12h-18v18h-12v-18h-18v-12h18z" fill="#1D8F62" />
+  <rect x="134" y="308" width="132" height="82" rx="18" fill="#FFFFFF" stroke="#CDE5DB" stroke-width="6" />
+  <circle cx="168" cy="342" r="16" fill="#E0F3EB" />
+  <path d="M164 332h8v8h8v8h-8v8h-8v-8h-8v-8h8z" fill="#1D8F62" />
+  <rect x="196" y="328" width="52" height="10" rx="5" fill="#C7E3D7" />
+  <rect x="196" y="348" width="38" height="10" rx="5" fill="#DCEEFF" />
+  <rect x="376" y="304" width="140" height="90" rx="18" fill="#FFFFFF" stroke="#CDE0EE" stroke-width="6" />
+  <path d="M410 334c14-18 42-18 56 0" fill="none" stroke="#2C89C9" stroke-width="8" stroke-linecap="round" />
+  <circle cx="438" cy="348" r="18" fill="#EAF4FF" />
+  <path d="M438 338a10 10 0 0 1 10 10c0 7-10 18-10 18s-10-11-10-18a10 10 0 0 1 10-10z" fill="#2C89C9" />
+  <circle cx="438" cy="348" r="4" fill="#FFFFFF" />
+</svg>

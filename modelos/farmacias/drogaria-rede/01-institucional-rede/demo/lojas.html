@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lojas | Rede DrogaModelo | Demonstração Rede Institucional</title>
+    <meta name="description" content="Demonstração fictícia de site institucional para rede de drogarias, com várias páginas." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ir para o início da Rede DrogaModelo">
+          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Rede DrogaModelo</strong>
+            <span class="brand__subtitle">Drogarias perto de você</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="a-rede.html">A rede</a>
+            <a href="lojas.html" aria-current="page">Lojas</a>
+            <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="lojas.html">Encontrar loja</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="index.html">Início</a>
+            <a href="a-rede.html">A rede</a>
+            <a href="lojas.html" aria-current="page">Lojas</a>
+            <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+            <a href="contato.html">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="lojas.html">Encontrar loja</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Lojas</p>
+          <h1>Encontre a loja mais perto de você.</h1>
+          <p>Escolha a cidade e fale direto com a unidade pelo WhatsApp.</p>
+        </div>
+      </section>
+      <section class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Unidades</p>
+            <h2>Nossas lojas.</h2>
+          </div>
+          <div data-filter-scope data-count-label="unidade|unidades|encontrada|encontradas">
+          <div class="toolbar">
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
+              <button type="button" data-filter="sao-paulo" aria-pressed="false">São Paulo</button>
+              <button type="button" data-filter="guarulhos" aria-pressed="false">Guarulhos</button>
+              <button type="button" data-filter="osasco" aria-pressed="false">Osasco</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="units-grid">
+            <article class="unit-card" data-item data-tags="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Centro</h3>
+              <p>Rua Exemplo, 120, Centro</p>
+              <p>Aberta 24 horas</p>
+              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Vila Modelo</h3>
+              <p>Av. Fictícia, 900, Vila Modelo</p>
+              <p>7h às 22h</p>
+              <ul class="unit-badges"><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Modelo.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Parque Modelo</h3>
+              <p>Av. do Parque, 2.300</p>
+              <p>Aberta 24 horas</p>
+              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Parque%20Modelo.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="guarulhos">
+              <p class="unit-card__city">Guarulhos</p>
+              <h3>Unidade Centro de Guarulhos</h3>
+              <p>Rua Exemplo, 77, Centro</p>
+              <p>7h às 22h</p>
+              <ul class="unit-badges"><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Guarulhos.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="guarulhos">
+              <p class="unit-card__city">Guarulhos</p>
+              <h3>Unidade Vila Amostra</h3>
+              <p>Av. Fictícia, 1.500</p>
+              <p>Aberta 24 horas</p>
+              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Amostra.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="osasco">
+              <p class="unit-card__city">Osasco</p>
+              <h3>Unidade Centro de Osasco</h3>
+              <p>Rua Exemplo, 300, Centro</p>
+              <p>7h às 22h</p>
+              <ul class="unit-badges"><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Osasco.">WhatsApp da loja</a>
+            </article>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Rede DrogaModelo</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Rede Institucional</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmácia Bem Estar | Demonstração Farmácia com Ofertas</title>
+    <meta name="description" content="Demonstração fictícia de site de farmácia com ofertas da semana e pedido pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da Farmácia Bem Estar">
+          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Farmácia Bem Estar</strong>
+            <span class="brand__subtitle">Ofertas da semana perto de você</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#campanha">Campanha</a>
+            <a href="#como-pedir">Como pedir</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#ofertas">Ver ofertas</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="#inicio">Início</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#campanha">Campanha</a>
+            <a href="#como-pedir">Como pedir</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#ofertas">Ver ofertas</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Ofertas da semana</p>
+            <h1>Ofertas da semana com pedido direto no WhatsApp.</h1>
+            <p class="lead">Escolha a oferta, toque em &quot;Pedir no WhatsApp&quot; e a mensagem já abre com o produto e o preço. Você retira na loja ou recebe em casa.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
+              <a class="button button-secondary" href="#como-pedir">Como pedir</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img src="assets/img/hero-farmacia.svg" alt="Ilustração da fachada da Farmácia Bem Estar, empresa fictícia" width="640" height="460" />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques">
+              <article class="meta-card">
+                <p class="meta-card__label">Validade</p>
+                <h2>Até domingo</h2>
+                <p>Ofertas renovadas toda segunda-feira.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Pedido</p>
+                <h2>Pelo WhatsApp</h2>
+                <p>A mensagem abre pronta com o produto.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Entrega</p>
+                <h2>No bairro</h2>
+                <p>Ou retire no balcão em minutos.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ofertas" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Ofertas da semana</p>
+            <h2>Economize nos itens que você mais usa.</h2>
+            <p>Filtre por categoria. No site real, a farmácia troca as ofertas toda semana em uma lista simples.</p>
+          </div>
+          <div data-filter-scope data-count-label="oferta|ofertas|encontrada|encontradas">
+          <div class="toolbar">
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
+              <button type="button" data-filter="dermo" aria-pressed="false">Dermocosméticos</button>
+              <button type="button" data-filter="vitaminas" aria-pressed="false">Vitaminas</button>
+              <button type="button" data-filter="infantil" aria-pressed="false">Infantil</button>
+              <button type="button" data-filter="higiene" aria-pressed="false">Higiene</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="product-grid">
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Protetor solar</div>
+              <span class="offer-badge">-28%</span>
+              <p class="product-meta">Dermocosméticos</p>
+              <h3>Protetor solar FPS 50, 200 ml</h3>
+              <p>Válido até domingo ou enquanto durar o estoque.</p>
+              <div class="price-row"><span class="price-old">R$ 69,90</span><span class="price">R$ 49,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Protetor%20solar%20FPS%2050%2C%20200%20ml%20por%20R%24%2049%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Vitamina C</div>
+              <span class="offer-badge">-29%</span>
+              <p class="product-meta">Vitaminas</p>
+              <h3>Vitamina C 1 g, 30 comprimidos</h3>
+              <p>Leve 2 e ganhe 10% no segundo.</p>
+              <div class="price-row"><span class="price-old">R$ 34,90</span><span class="price">R$ 24,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Vitamina%20C%201%20g%2C%2030%20comprimidos%20por%20R%24%2024%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="infantil">
+              <div class="product-thumb" aria-hidden="true">Fralda G</div>
+              <span class="offer-badge">-20%</span>
+              <p class="product-meta">Infantil</p>
+              <h3>Fralda infantil tamanho G, 40 un.</h3>
+              <p>Marcas selecionadas.</p>
+              <div class="price-row"><span class="price-old">R$ 74,90</span><span class="price">R$ 59,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Fralda%20infantil%20tamanho%20G%2C%2040%20un.%20por%20R%24%2059%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Shampoo</div>
+              <span class="offer-badge">-23%</span>
+              <p class="product-meta">Higiene</p>
+              <h3>Shampoo anticaspa 400 ml</h3>
+              <p>Válido para todas as fragrâncias.</p>
+              <div class="price-row"><span class="price-old">R$ 29,90</span><span class="price">R$ 22,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Shampoo%20anticaspa%20400%20ml%20por%20R%24%2022%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="dermo">
+              <div class="product-thumb" aria-hidden="true">Hidratante</div>
+              <span class="offer-badge">-25%</span>
+              <p class="product-meta">Dermocosméticos</p>
+              <h3>Hidratante corporal 400 ml</h3>
+              <p>Pele seca e extrasseca.</p>
+              <div class="price-row"><span class="price-old">R$ 39,90</span><span class="price">R$ 29,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Hidratante%20corporal%20400%20ml%20por%20R%24%2029%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="vitaminas">
+              <div class="product-thumb" aria-hidden="true">Polivitamínico</div>
+              <span class="offer-badge">-25%</span>
+              <p class="product-meta">Vitaminas</p>
+              <h3>Polivitamínico A a Z, 60 cápsulas</h3>
+              <p>Para toda a família.</p>
+              <div class="price-row"><span class="price-old">R$ 52,90</span><span class="price">R$ 39,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Polivitam%C3%ADnico%20A%20a%20Z%2C%2060%20c%C3%A1psulas%20por%20R%24%2039%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="infantil">
+              <div class="product-thumb" aria-hidden="true">Lenço umedecido</div>
+              <span class="offer-badge">Leve 3</span>
+              <p class="product-meta">Infantil</p>
+              <h3>Lenço umedecido, 3 pacotes</h3>
+              <p>Pague menos levando o kit.</p>
+              <div class="price-row"><span class="price-old">R$ 27,90</span><span class="price">R$ 19,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Len%C3%A7o%20umedecido%2C%203%20pacotes%20por%20R%24%2019%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Escova dental</div>
+              <span class="offer-badge">-32%</span>
+              <p class="product-meta">Higiene</p>
+              <h3>Escova dental macia, 4 un.</h3>
+              <p>Kit para a família.</p>
+              <div class="price-row"><span class="price-old">R$ 21,90</span><span class="price">R$ 14,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Escova%20dental%20macia%2C%204%20un.%20por%20R%24%2014%2C90.">Pedir no WhatsApp</a>
+            </article>
+          </div>
+          </div>
+          <p class="section-note">Preços fictícios, válidos apenas para esta demonstração. Imagens ilustrativas.</p>
+        </div>
+      </section>
+      <section id="campanha" class="section anchor-target">
+        <div class="container">
+          <div class="campaign-banner">
+            <div>
+              <p class="eyebrow">Campanha do mês</p>
+              <h2>Mês da proteção solar</h2>
+              <p>Na compra de 2 protetores solares, ganhe um pós-sol. Página de campanha que a farmácia troca a cada data comemorativa.</p>
+            </div>
+            <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20participar%20da%20campanha%20do%20m%C3%AAs%20da%20prote%C3%A7%C3%A3o%20solar.">Pedir pelo WhatsApp</a>
+          </div>
+        </div>
+      </section>
+      <section id="como-pedir" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Como pedir</p>
+            <h2>Do site para o balcão em três passos.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Escolha a oferta</h3>
+              <p>Veja as ofertas da semana e toque em &quot;Pedir no WhatsApp&quot;.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Confirme com o atendente</h3>
+              <p>A farmácia confirma o estoque e o valor final pelo WhatsApp.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Retire ou receba</h3>
+              <p>Busque no balcão ou receba em casa com a entrega do bairro.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Fale com a Farmácia Bem Estar.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Rua Exemplo, 250, Centro</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>Segunda a sábado, das 7h às 22h. Domingo, das 8h às 14h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:contato@farmaciabemestar.com.br">contato@farmaciabemestar.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Farmácia fictícia para mostrar o modelo</h2>
+            <p>A Farmácia Bem Estar não existe. Ofertas, preços e contatos desta página são fictícios.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
+              <a class="button button-secondary" href="#como-pedir">Como pedir</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Farmácia Bem Estar</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Farmácia com Ofertas</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>
