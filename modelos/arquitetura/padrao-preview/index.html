@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Padrao de Preview dos Modelos da GSA | Documentacao Reutilizavel</title>
+    <meta
+      name="description"
+      content="Estrutura reutilizavel para transformar cada template da GSA em uma pagina comercial clara, bonita e pronta para venda, sem prometer operacao real quando houver dependencia de backend."
+    />
+    <link rel="canonical" href="https://gsarc.com.br/modelos/arquitetura/padrao-preview/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GSA - Gestor de Sites e Apps" />
+    <meta property="og:title" content="Padrao de Preview dos Modelos da GSA | Documentacao Reutilizavel" />
+    <meta
+      property="og:description"
+      content="Padrao visual e comercial da GSA para transformar templates em previews consistentes, vendaveis e seguros por segmento."
+    />
+    <meta property="og:url" content="https://gsarc.com.br/modelos/arquitetura/padrao-preview/" />
+    <meta property="og:image" content="https://gsarc.com.br/assets/img/brand/gsa-og-image.png" />
+    <meta property="og:image:alt" content="Gestor de Sites e Apps - imagem social da GSA" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Padrao de Preview dos Modelos da GSA | Documentacao Reutilizavel" />
+    <meta
+      name="twitter:description"
+      content="Guia local da GSA para manter consistencia entre previews de modelos por segmento, escopo e maturidade comercial."
+    />
+    <meta name="twitter:image" content="https://gsarc.com.br/assets/img/brand/gsa-og-image.png" />
+    <meta name="theme-color" content="#0A1F44" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../assets/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../assets/css/tailwind.css" />
+    <link rel="stylesheet" href="../../../assets/css/custom.css" />
+  </head>
+  <body class="antialiased">
+    <a
+      href="#conteudo"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >Pular para o conteudo</a
+    >
+
+    <div class="border-b border-white/10 bg-brand-dark text-white">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 text-sm">
+        <p class="font-medium">Padrao reutilizavel para previews comerciais dos modelos da GSA</p>
+        <p class="hidden text-white/70 md:block">Guia local para manter clareza comercial, limites tecnicos e consistencia visual entre os proximos previews.</p>
+      </div>
+    </div>
+
+    <header class="site-header sticky top-0 z-50" data-site-header>
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="header-main flex items-center justify-between">
+          <a href="../../../" class="brand-lockup brand-lockup--header" aria-label="Pagina inicial - Gestor de Sites &amp; Apps">
+            <img
+              src="../../../assets/GESTOR DE APPS-logo-sem-escrita.png"
+              alt=""
+              class="brand-lockup__image"
+              width="812"
+              height="817"
+            />
+            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 md:flex" aria-label="Navegacao principal">
+            <a href="../../../" class="nav-link text-sm font-semibold" data-nav-link>Inicio</a>
+            <a href="../../../sobre/" class="nav-link text-sm font-semibold" data-nav-link>Sobre</a>
+            <a href="../../../servicos/" class="nav-link text-sm font-semibold" data-nav-link>Servicos</a>
+            <a href="../../" class="nav-link text-sm font-semibold" data-nav-link>Modelos</a>
+            <a href="../../../projetos/" class="nav-link text-sm font-semibold" data-nav-link>Projetos</a>
+            <a href="../../../contato/" class="nav-link text-sm font-semibold" data-nav-link>Contato</a>
+          </nav>
+
+          <div class="hidden md:block">
+            <a
+              href="../../../contato/"
+              class="inline-flex items-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark"
+              >Solicitar orcamento</a
+            >
+          </div>
+
+          <button
+            type="button"
+            class="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-4 py-2 text-sm font-semibold text-brand-dark md:hidden"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="menu-mobile"
+          >
+            <span data-menu-label>Abrir menu</span>
+          </button>
+        </div>
+
+        <div id="menu-mobile" class="hidden border-t border-brand/10 pb-4 pt-3 md:hidden" data-mobile-menu>
+          <nav class="grid gap-2" aria-label="Navegacao movel">
+            <a href="../../../" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Inicio</a
+            >
+            <a href="../../../sobre/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Sobre</a
+            >
+            <a href="../../../servicos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Servicos</a
+            >
+            <a href="../../" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Modelos</a
+            >
+            <a href="../../../projetos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Projetos</a
+            >
+            <a href="../../../contato/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Contato</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="px-6 pb-14 pt-8 md:pb-20 md:pt-12">
+        <div class="hero-shell mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-12">
+          <div class="hero-mesh" aria-hidden="true"></div>
+          <div class="relative z-10 grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+            <div>
+              <p class="eyebrow">Padrao de preview</p>
+              <h1 class="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight text-brand-dark md:text-6xl">
+                Padrao de preview dos modelos
+              </h1>
+              <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+                Estrutura reutilizavel para transformar cada template em uma pagina comercial clara, bonita e pronta para venda.
+              </p>
+              <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+                O preview precisa vender o formato com honestidade, mostrar escopo real e deixar explicito quando uma operacao depende de backend ou de validacao mais sensivel do cliente.
+              </p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="../"
+                  class="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
+                  >Voltar para arquitetura</a
+                >
+                <a
+                  href="../../farmacias/farmacia/01-onepage/"
+                  class="inline-flex items-center justify-center rounded-full border border-brand/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark transition hover:border-brand/30 hover:bg-brand-ice"
+                  >Ver referencia aprovada</a
+                >
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="detail-card p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Funcao do preview</p>
+                <p class="mt-3 text-xl font-semibold text-brand-dark">Apresentar valor, escopo, limites e proximos passos comerciais sem simular operacao real.</p>
+              </div>
+              <div class="detail-card p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Consistencia</p>
+                <p class="mt-3 text-xl font-semibold text-brand-dark">Cada modelo muda de segmento e promessa, mas preserva a mesma espinha dorsal visual e comercial.</p>
+              </div>
+              <div class="detail-card p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Limite tecnico</p>
+                <p class="mt-3 text-xl font-semibold text-brand-dark">Sem checkout fake, sem backend fake e sem promessas que dependam de sistema antes da fase certa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <article class="detail-card p-7">
+            <p class="eyebrow">Objetivo do preview</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">O preview existe para vender o modelo com clareza comercial.</h2>
+            <ul class="mt-6 grid gap-3 text-base leading-7 text-slate-600">
+              <li>Apresentar o modelo de forma vendavel e facil de entender.</li>
+              <li>Mostrar para quem ele serve e em qual contexto comercial faz sentido.</li>
+              <li>Deixar claro o que esta incluido e o que nao esta incluido.</li>
+              <li>Explicar evolucoes futuras sem prometer funcionalidades inexistentes na fase atual.</li>
+              <li>Levar o visitante para o orcamento com CTA direto.</li>
+              <li>Nao simular venda real quando a operacao exigir backend, validacao ou integracao futura.</li>
+            </ul>
+          </article>
+          <article class="service-card p-7">
+            <p class="eyebrow">Leitura comercial</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">O preview deve ser bonito, mas tambem honesto.</h2>
+            <p class="mt-6 text-base leading-7 text-slate-600">
+              A pagina precisa mostrar escopo, posicionamento, publico ideal e potenciais evolucoes. O visitante deve entender rapidamente se aquele formato resolve seu momento atual ou se precisa de um projeto mais robusto.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl">
+            <p class="eyebrow">Estrutura obrigatoria</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
+              Toda pagina de preview deve repetir a mesma sequencia base de leitura e venda.
+            </h2>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">A. Hero do modelo</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Nome do modelo</li>
+                <li>Descricao curta</li>
+                <li>Badges de nivel, tipo, custo e tecnologia</li>
+                <li>CTA para orcamento</li>
+                <li>CTA para voltar ou ver outros modelos</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">B. Mini preview visual</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Simulacao HTML e CSS do site</li>
+                <li>Sem iframe</li>
+                <li>Sem imagem externa</li>
+                <li>Sem produto real sensivel</li>
+                <li>Visual responsivo</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">C. Para quem e indicado</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Publico ideal</li>
+                <li>Tamanho de empresa</li>
+                <li>Cenario de uso</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">D. O que esta incluido</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Secoes, paginas e componentes</li>
+                <li>Canais de contato</li>
+                <li>Visual responsivo</li>
+                <li>Estrutura pronta para evolucao</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">E. Limitacoes do modelo</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Sem backend, quando aplicavel</li>
+                <li>Sem checkout, quando aplicavel</li>
+                <li>Sem painel, quando aplicavel</li>
+                <li>Sem pagamento online, quando aplicavel</li>
+                <li>Avisos regulatorios quando necessario</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">F. Evolucao possivel</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Paginas extras</li>
+                <li>Catalogo</li>
+                <li>Ofertas</li>
+                <li>Formulario ou cotacao</li>
+                <li>Backend futuro</li>
+                <li>Painel administrativo futuro</li>
+              </ul>
+            </article>
+            <article class="service-card p-6 md:col-span-2 xl:col-span-3">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">G. CTA final</p>
+              <div class="mt-5 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-center">
+                <div>
+                  <h3 class="font-display text-2xl font-bold text-brand-dark">Fechar a leitura com adaptacao, orcamento e retorno para a lista.</h3>
+                  <p class="mt-3 text-sm leading-7 text-slate-600">
+                    O visitante precisa sair da pagina sabendo que o modelo pode ser adaptado ao seu negocio, com um caminho simples para solicitar orcamento ou comparar outras opcoes.
+                  </p>
+                </div>
+                <ul class="grid gap-2 text-sm leading-7 text-slate-600">
+                  <li>Convite para adaptar o modelo</li>
+                  <li>CTA de orcamento</li>
+                  <li>CTA para voltar para modelos</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl">
+            <p class="eyebrow">Regras por segmento</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
+              Cada segmento muda o cuidado editorial, a promessa comercial e o limite tecnico do preview.
+            </h2>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Farmacias e Drogarias</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Evitar propaganda de medicamento com prescricao.</li>
+                <li>Nao simular venda de controlados.</li>
+                <li>Checkout e pedido real exigem cuidado regulatorio.</li>
+                <li>Catalogo simples pode existir sem checkout.</li>
+                <li>Textos devem ser revisados pelo responsavel do cliente.</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Distribuidoras</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Foco B2B.</li>
+                <li>Catalogo pode ser sem precos.</li>
+                <li>Orcamento assistido e mais seguro no inicio.</li>
+                <li>Area de cliente e login ficam para backend futuro.</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Transportadoras</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Foco em cotacao.</li>
+                <li>Rotas e servicos precisam ficar claros.</li>
+                <li>Formulario visual pode ser estatico.</li>
+                <li>Rastreamento exige backend ou integracao futura.</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Empresas locais</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Foco em servicos, WhatsApp e localizacao.</li>
+                <li>OnePage e plano de entrada.</li>
+                <li>Orcamento assistido por WhatsApp.</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Consultorias</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Foco em autoridade, servicos e captacao de leads.</li>
+                <li>Conteudo educativo pode virar diferencial.</li>
+                <li>Area restrita fica para backend futuro.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <article class="detail-card p-7">
+            <p class="eyebrow">Checklist final</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Checklist antes de concluir um preview</h2>
+            <ul class="mt-6 grid gap-3 text-base leading-7 text-slate-600">
+              <li>Title e meta description preenchidos.</li>
+              <li>Favicon funcionando.</li>
+              <li>CSS e JS sem 404.</li>
+              <li>Desktop ok.</li>
+              <li>Mobile ok.</li>
+              <li>CTAs corretos.</li>
+              <li>Voltar para lista correto.</li>
+              <li>Sem conteudo interno exposto.</li>
+              <li>Sem promessas indevidas.</li>
+              <li>Sem checkout fake.</li>
+              <li>Sem backend fake.</li>
+              <li>Commit separado.</li>
+            </ul>
+          </article>
+          <article class="service-card p-7">
+            <p class="eyebrow">Uso pratico</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Aplicar o checklist antes de abrir a proxima fase reduz retrabalho.</h2>
+            <p class="mt-6 text-base leading-7 text-slate-600">
+              O padrao nao serve apenas para design. Ele organiza promessas, define limites do modelo e garante que cada commit represente um preview comercial pronto para comparacao e venda assistida.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="px-6 pb-20 pt-12 md:pb-24 md:pt-16">
+        <div class="mx-auto max-w-7xl">
+          <article class="detail-card p-7">
+            <p class="eyebrow">Primeiro modelo aprovado como referencia</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Farmacia OnePage ja serve como base local para os proximos previews.</h2>
+            <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_1fr]">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">URL local</p>
+                <p class="mt-3 break-all font-mono text-sm text-brand-dark">http://127.0.0.1:8877/modelos/farmacias/farmacia/01-onepage/</p>
+              </div>
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">Link relativo</p>
+                <p class="mt-3 break-all font-mono text-sm text-brand-dark">../../farmacias/farmacia/01-onepage/</p>
+              </div>
+            </div>
+            <p class="mt-6 max-w-4xl text-base leading-7 text-slate-600">
+              Esse preview ja combina hero, mini simulacao visual, publico ideal, escopo incluido, limitacoes, evolucoes futuras e CTA final. A partir daqui, os proximos modelos devem variar o conteudo sem perder essa logica de apresentacao.
+            </p>
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="../../farmacias/farmacia/01-onepage/"
+                class="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
+                >Abrir preview aprovado</a
+              >
+              <a
+                href="../"
+                class="inline-flex items-center justify-center rounded-full border border-brand/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark transition hover:border-brand/30 hover:bg-brand-ice"
+                >Voltar para arquitetura</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-shell py-12">
+      <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
+        <div>
+          <a href="../../../" class="brand-lockup brand-lockup--footer" aria-label="Pagina inicial - Gestor de Sites &amp; Apps">
+            <img
+              src="../../../assets/GESTOR DE APPS-logo-sem-escrita.png"
+              alt=""
+              class="brand-lockup__image"
+              width="812"
+              height="817"
+            />
+            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
+          </a>
+          <p class="mt-5 max-w-xl text-sm leading-7 text-slate-600">
+            Divisao de tecnologia - Regularize Consultoria, dedicada a sites institucionais, aplicativos, sistemas e estruturas digitais sob medida.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-lg font-bold text-brand-dark">Navegacao</h2>
+          <nav class="mt-4 grid gap-3 text-sm text-slate-600">
+            <a href="../../../" class="transition hover:text-brand-dark">Inicio</a>
+            <a href="../../../sobre/" class="transition hover:text-brand-dark">Sobre</a>
+            <a href="../../../servicos/" class="transition hover:text-brand-dark">Servicos</a>
+            <a href="../../" class="transition hover:text-brand-dark">Modelos</a>
+            <a href="../../../projetos/" class="transition hover:text-brand-dark">Projetos</a>
+            <a href="../../../contato/" class="transition hover:text-brand-dark">Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <h2 class="font-display text-lg font-bold text-brand-dark">Contato inicial</h2>
+          <div class="mt-4 grid gap-3 text-sm text-slate-600">
+            <a href="https://wa.me/5511999129999" class="transition hover:text-brand-dark">WhatsApp: (11) 9 9912-9999</a>
+            <a href="mailto:contato@gsa.com" class="transition hover:text-brand-dark">E-mail: contato@gsa.com</a>
+            <p>Atendimento comercial sob agendamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-10 max-w-7xl border-t border-brand/10 px-6 pt-6 text-sm text-slate-500">
+        <p>&copy; <span data-current-year></span> GSA - Gestor de Sites &amp; Apps. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../../../assets/js/main.js"></script>
+  </body>
+</html>

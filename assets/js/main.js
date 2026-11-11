@@ -44,7 +44,7 @@ const markActiveLinks = () => {
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     const targetPath = href ? normalizePath(new URL(href, window.location.href).pathname) : "";
-    const isActive = currentPath === targetPath;
+    const isActive = currentPath === targetPath || (targetPath !== "/" && currentPath.startsWith(targetPath));
 
     link.classList.toggle("is-active", isActive);
 
@@ -92,3 +92,61 @@ if (currentYear) {
 syncHeaderState();
 setMenuState(false);
 markActiveLinks();
+
+const contactForm = document.querySelector("[data-contact-form]");
+
+if (contactForm) {
+  const errorBox = contactForm.querySelector("[data-contact-error]");
+
+  const showError = (message) => {
+    if (!errorBox) return;
+    errorBox.textContent = message;
+    errorBox.classList.toggle("hidden", !message);
+  };
+
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(contactForm);
+    const value = (name) => String(data.get(name) || "").trim();
+
+    const missing = [];
+    if (!value("nome")) missing.push("nome");
+    if (!value("email")) missing.push("e-mail");
+    if (!value("mensagem")) missing.push("descrição da necessidade");
+
+    if (missing.length) {
+      showError(`Preencha: ${missing.join(", ")}.`);
+      const firstInvalid = contactForm.querySelector(
+        `[name="${!value("nome") ? "nome" : !value("email") ? "email" : "mensagem"}"]`
+      );
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+
+    const emailField = contactForm.querySelector('[name="email"]');
+    if (emailField && !emailField.checkValidity()) {
+      showError("Informe um e-mail válido.");
+      emailField.focus();
+      return;
+    }
+
+    showError("");
+
+    const lines = [
+      "Olá! Vim pelo site da GSA e gostaria de um orçamento.",
+      "",
+      `Nome: ${value("nome")}`,
+      value("empresa") ? `Empresa: ${value("empresa")}` : null,
+      `E-mail: ${value("email")}`,
+      value("telefone") ? `WhatsApp: ${value("telefone")}` : null,
+      `Tipo de projeto: ${value("tipo-de-projeto")}`,
+      "",
+      value("mensagem"),
+    ].filter((line) => line !== null);
+
+    const phone = contactForm.dataset.whatsapp;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(lines.join("\n"))}`;
+    window.location.href = url;
+  });
+}
