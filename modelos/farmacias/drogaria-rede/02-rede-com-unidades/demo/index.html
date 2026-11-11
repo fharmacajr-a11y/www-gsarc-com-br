@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rede DrogaModelo | Demonstração Rede com Unidades</title>
+    <meta
+      name="description"
+      content="Demonstração fictícia de um site para rede de drogarias, com busca de unidades por cidade, horários, serviços e WhatsApp de cada loja."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da Rede DrogaModelo">
+          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Rede DrogaModelo</strong>
+            <span class="brand__subtitle">Drogarias perto de você</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal da rede">
+          <a href="#inicio">Início</a>
+          <a href="#unidades">Unidades</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#vantagens">Vantagens</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#unidades">Encontrar loja</a>
+
+        <button
+          class="menu-button"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+        >
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel da rede">
+            <a href="#inicio">Início</a>
+            <a href="#unidades">Unidades</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#vantagens">Vantagens</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#unidades">Encontrar loja</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Rede de drogarias</p>
+            <h1>Tem uma DrogaModelo perto de você.</h1>
+            <p class="lead">
+              São 8 lojas na capital e na região, com unidades 24 horas, entrega no bairro e atendimento farmacêutico. Encontre a
+              loja mais próxima e fale direto com ela pelo WhatsApp.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#unidades">Encontrar loja</a>
+              <a class="button button-secondary" href="#servicos">Ver serviços</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img
+                src="assets/img/hero-drogaria.svg"
+                alt="Ilustração de um mapa com as lojas da rede fictícia marcadas"
+                width="640"
+                height="460"
+              />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques rápidos da rede fictícia">
+              <article class="meta-card">
+                <p class="meta-card__label">Lojas</p>
+                <h2>8 unidades</h2>
+                <p>Em 3 cidades, com endereço e horário de cada uma.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Plantão</p>
+                <h2>Lojas 24h</h2>
+                <p>Unidades abertas todos os dias, a qualquer hora.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Entrega</p>
+                <h2>No bairro</h2>
+                <p>Pedido pelo WhatsApp da loja mais próxima.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unidades" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Nossas unidades</p>
+            <h2>Escolha a cidade e veja as lojas.</h2>
+            <p>Cada unidade tem o próprio horário, serviços e WhatsApp. No site real, entram os endereços de verdade da rede.</p>
+          </div>
+
+          <div class="unit-filter" role="group" aria-label="Filtrar unidades por cidade">
+            <button type="button" data-unit-filter="todas" aria-pressed="true">Todas</button>
+            <button type="button" data-unit-filter="sao-paulo" aria-pressed="false">São Paulo</button>
+            <button type="button" data-unit-filter="guarulhos" aria-pressed="false">Guarulhos</button>
+            <button type="button" data-unit-filter="osasco" aria-pressed="false">Osasco</button>
+          </div>
+          <p class="units-count" data-units-count aria-live="polite">8 unidades encontradas.</p>
+
+          <div class="units-grid">
+            <article class="unit-card" data-unit-city="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Centro</h3>
+              <p>Rua Exemplo, 120, Centro</p>
+              <p>Aberta 24 horas, todos os dias</p>
+              <ul class="unit-badges">
+                <li class="is-24h">24 horas</li>
+                <li>Entrega</li>
+                <li>Aferição de pressão</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Vila Modelo</h3>
+              <p>Av. Fictícia, 900, Vila Modelo</p>
+              <p>Segunda a sábado, 7h às 22h. Domingo, 8h às 20h</p>
+              <ul class="unit-badges">
+                <li>Entrega</li>
+                <li>Estacionamento</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Jardim Exemplo</h3>
+              <p>Rua das Amostras, 45, Jardim Exemplo</p>
+              <p>Segunda a sábado, 7h às 22h</p>
+              <ul class="unit-badges">
+                <li>Aplicação de injetáveis</li>
+                <li>Testes rápidos</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Parque Modelo</h3>
+              <p>Av. do Parque, 2.300, Parque Modelo</p>
+              <p>Aberta 24 horas, todos os dias</p>
+              <ul class="unit-badges">
+                <li class="is-24h">24 horas</li>
+                <li>Drive-thru</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="guarulhos">
+              <p class="unit-card__city">Guarulhos</p>
+              <h3>Unidade Centro de Guarulhos</h3>
+              <p>Rua Exemplo, 77, Centro</p>
+              <p>Segunda a sábado, 7h às 22h. Domingo, 8h às 18h</p>
+              <ul class="unit-badges">
+                <li>Entrega</li>
+                <li>Aferição de pressão</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="guarulhos">
+              <p class="unit-card__city">Guarulhos</p>
+              <h3>Unidade Vila Amostra</h3>
+              <p>Av. Fictícia, 1.500, Vila Amostra</p>
+              <p>Aberta 24 horas, todos os dias</p>
+              <ul class="unit-badges">
+                <li class="is-24h">24 horas</li>
+                <li>Entrega</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="osasco">
+              <p class="unit-card__city">Osasco</p>
+              <h3>Unidade Centro de Osasco</h3>
+              <p>Rua Exemplo, 300, Centro</p>
+              <p>Segunda a sábado, 7h às 22h</p>
+              <ul class="unit-badges">
+                <li>Testes rápidos</li>
+                <li>Estacionamento</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-unit-city="osasco">
+              <p class="unit-card__city">Osasco</p>
+              <h3>Unidade Jardim Modelo</h3>
+              <p>Av. das Demonstrações, 610, Jardim Modelo</p>
+              <p>Segunda a domingo, 8h às 22h</p>
+              <ul class="unit-badges">
+                <li>Entrega</li>
+                <li>Aplicação de injetáveis</li>
+              </ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Serviços farmacêuticos</p>
+            <h2>Cuidado além do balcão.</h2>
+            <p>Os serviços variam por unidade. Confira as etiquetas de cada loja na lista acima.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <p class="service-card__tag">Serviço 01</p>
+              <h3>Aferição de pressão</h3>
+              <p>Medição rápida com orientação do farmacêutico, sem precisar agendar.</p>
+            </article>
+            <article class="service-card">
+              <p class="service-card__tag">Serviço 02</p>
+              <h3>Aplicação de injetáveis</h3>
+              <p>Sala reservada e profissional habilitado, mediante apresentação da receita.</p>
+            </article>
+            <article class="service-card">
+              <p class="service-card__tag">Serviço 03</p>
+              <h3>Testes rápidos</h3>
+              <p>Glicemia e outros testes rápidos com resultado na hora.</p>
+            </article>
+            <article class="service-card">
+              <p class="service-card__tag">Serviço 04</p>
+              <h3>Entrega no bairro</h3>
+              <p>Peça pelo WhatsApp da loja mais próxima e receba em casa.</p>
+            </article>
+            <article class="service-card">
+              <p class="service-card__tag">Serviço 05</p>
+              <h3>Lojas 24 horas</h3>
+              <p>Unidades de plantão abertas todos os dias, inclusive feriados.</p>
+            </article>
+            <article class="service-card">
+              <p class="service-card__tag">Serviço 06</p>
+              <h3>Drive-thru, se houver</h3>
+              <p>Bloco opcional para unidades com retirada sem sair do carro.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="vantagens" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Vantagens</p>
+            <h2>Descontos e convênios em todas as lojas.</h2>
+            <p>Lista fictícia. No site real, entram os convênios e programas que a rede oferece de verdade.</p>
+          </div>
+          <ul class="segments-list">
+            <li>Farmácia Popular</li>
+            <li>Convênios de empresas</li>
+            <li>Programa de fidelidade</li>
+            <li>Desconto para idosos</li>
+            <li>Laboratórios parceiros</li>
+          </ul>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Escolha a loja</h3>
+              <p>Filtre pela sua cidade e veja a unidade mais perto de você.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Chame no WhatsApp</h3>
+              <p>Envie a foto da receita ou a lista de produtos para a loja.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Retire ou receba</h3>
+              <p>Busque no balcão ou receba em casa com a entrega do bairro.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Fale com a rede</p>
+              <h2>Atendimento central da DrogaModelo.</h2>
+            </div>
+
+            <dl class="contact-list">
+              <div>
+                <dt>SAC</dt>
+                <dd>Segunda a sexta, das 8h às 18h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp central</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:sac@drogariamodelo.com.br">sac@drogariamodelo.com.br</a></dd>
+              </div>
+              <div>
+                <dt>Trabalhe conosco</dt>
+                <dd><a href="mailto:rh@drogariamodelo.com.br">rh@drogariamodelo.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Rede fictícia para mostrar o modelo</h2>
+            <p>
+              A Rede DrogaModelo não existe. Endereços, horários e números de WhatsApp desta página são fictícios e mostram
+              como o site final organiza as lojas da rede.
+            </p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#unidades">Encontrar loja</a>
+              <a class="button button-secondary" href="#servicos">Ver serviços</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Rede DrogaModelo</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Rede com Unidades</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>

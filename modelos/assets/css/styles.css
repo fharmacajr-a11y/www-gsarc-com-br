@@ -267,6 +267,10 @@ main li {
   margin-top: 28px;
 }
 
+.feature-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .info-panel {
   padding: 24px;
 }
@@ -510,4 +514,9 @@ main li {
 .check-list,
 .placeholder-meta {
   list-style: disc;
+}
+
+.preview-badge--soon {
+  border-style: dashed;
+  background: transparent;
 }
