@@ -65,14 +65,14 @@ if (menuButton) {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
       setMenuState(false);
     }
   });
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1024) {
     setMenuState(false);
   }
 });
