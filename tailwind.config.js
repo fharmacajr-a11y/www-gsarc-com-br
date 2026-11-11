@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./index.html",
+    "./index.html", "./404.html",
     "./sobre/**/*.html",
     "./servicos/**/*.html",
     "./modelos/**/*.html",
