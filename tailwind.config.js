@@ -1,10 +1,11 @@
 module.exports = {
   content: [
     "./index.html",
-    "./sobre/index.html",
-    "./servicos/index.html",
-    "./projetos/index.html",
-    "./contato/index.html",
+    "./sobre/**/*.html",
+    "./servicos/**/*.html",
+    "./modelos/**/*.html",
+    "./projetos/**/*.html",
+    "./contato/**/*.html",
     "./assets/js/**/*.js"
   ],
   theme: {
