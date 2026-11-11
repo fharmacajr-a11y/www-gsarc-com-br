@@ -12,6 +12,17 @@
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <div class="topbar__group">
+          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span>
+          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 800, Distrito Industrial</span>
+        </div>
+        <div class="topbar__group">
+          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ir para o início da TransModelo Logística">
@@ -54,6 +65,7 @@
     <main id="conteudo">
       <section class="page-hero">
         <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Cotação</span></nav>
           <p class="eyebrow">Cotação</p>
           <h1>Peça a cotação do seu frete.</h1>
           <p>Preencha os dados e a mensagem abre pronta no WhatsApp da equipe comercial.</p>
@@ -160,17 +172,47 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p class="footer-brand">TransModelo Logística</p>
-          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+      <div class="container">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-col__brand">
+              <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="48" height="48" />
+              <strong>TransModelo Logística</strong>
+            </div>
+            <p>Transportadora regional com frota própria, rastreamento e cotação rápida pelo WhatsApp.</p>
+          </div>
+          <div class="footer-col">
+            <h2>Navegação</h2>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="a-empresa.html">A empresa</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="frota.html">Frota e regiões</a></li>
+              <li><a href="cotacao.html">Cotação</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Contato</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 800, Distrito Industrial</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Horário</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-links">
+        <div class="footer-bottom">
+          <span>© <span data-current-year></span> TransModelo Logística. Empresa fictícia: demonstração do modelo Transportadora Institucional.</span>
           <a href="../">Voltar para a GSA</a>
-          <span>© <span data-current-year></span> Demonstração Transportadora Institucional</span>
         </div>
       </div>
     </footer>
+
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
 
     <script src="assets/js/demo.js"></script>
   </body>

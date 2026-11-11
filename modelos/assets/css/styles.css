@@ -520,3 +520,203 @@ main li {
   border-style: dashed;
   background: transparent;
 }
+
+/* ===== Páginas de modelo: padrão azul com telas reais ===== */
+.models-page .hero {
+  border: 1px solid rgba(121, 203, 255, 0.16);
+  background:
+    radial-gradient(circle at 86% 14%, rgba(121, 203, 255, 0.22), transparent 30%),
+    linear-gradient(135deg, #061733 0%, #0d3273 58%, #2a7cff 100%);
+  box-shadow: 0 24px 60px rgba(6, 23, 51, 0.22);
+}
+
+.models-page .hero::after {
+  display: none;
+}
+
+.models-page .hero-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.models-page .hero h1 {
+  max-width: 12ch;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 4.4vw, 3.9rem);
+}
+
+.models-page .hero .eyebrow {
+  color: #9fd0ff;
+}
+
+.models-page .hero .hero-copy {
+  color: rgba(236, 245, 255, 0.88);
+}
+
+.models-page .hero .preview-badge {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.models-page .hero .button-primary {
+  background: #ffffff;
+  color: var(--accent-strong);
+  box-shadow: 0 16px 30px rgba(5, 18, 43, 0.25);
+}
+
+.models-page .hero .button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.back-link {
+  display: table;
+  margin-bottom: 18px;
+  color: rgba(236, 245, 255, 0.78);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
+.model-shots {
+  position: relative;
+  padding: 0 0 2.5rem 2.5rem;
+}
+
+.model-shots__phone {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 27%;
+}
+
+/* Lista do que vem pronto */
+.summary-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 34px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.summary-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231464ff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 14px no-repeat, var(--accent-soft);
+}
+
+/* Cartões com ícone azul */
+.models-page .showcase-card {
+  position: relative;
+  gap: 10px;
+  padding: 24px;
+  border-color: rgba(20, 100, 255, 0.1);
+  background: #ffffff;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.models-page .showcase-card::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 20px no-repeat, linear-gradient(135deg, #1464ff, #0a1f44);
+  box-shadow: 0 10px 22px rgba(20, 100, 255, 0.25);
+}
+
+.models-page .card-grid .showcase-card::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='3.6'/%3E%3Cpath d='M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6'/%3E%3C/svg%3E") center / 22px no-repeat, linear-gradient(135deg, #2a7cff, #0d3273);
+}
+
+.models-page .showcase-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(20, 100, 255, 0.28);
+  box-shadow: 0 24px 50px rgba(10, 31, 68, 0.14);
+}
+
+.models-page .showcase-card h3 {
+  font-size: 1.25rem;
+}
+
+.models-page .showcase-card p {
+  margin: 0;
+}
+
+/* Bom saber + teste */
+.models-page .section-split .info-panel:last-child {
+  border-color: rgba(20, 100, 255, 0.18);
+  background: linear-gradient(135deg, #eef6ff, #ffffff);
+}
+
+/* Chamada final azul */
+.models-page .cta-panel {
+  border: 0;
+  background:
+    radial-gradient(circle at 88% 20%, rgba(121, 203, 255, 0.25), transparent 32%),
+    linear-gradient(135deg, #0a1f44 0%, #123a86 60%, #1464ff 100%);
+}
+
+.models-page .cta-panel h2 {
+  color: #ffffff;
+}
+
+.models-page .cta-panel p {
+  color: rgba(236, 245, 255, 0.85);
+}
+
+.models-page .cta-panel .eyebrow {
+  color: #9fd0ff;
+}
+
+.models-page .cta-panel .button-primary {
+  background: #ffffff;
+  color: var(--accent-strong);
+}
+
+.models-page .cta-panel .button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+@media (max-width: 960px) {
+  .models-page .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .model-shots {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 720px) {
+  .summary-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .model-shots {
+    padding: 0 0 1.75rem 1.75rem;
+  }
+}

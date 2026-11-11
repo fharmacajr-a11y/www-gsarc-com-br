@@ -15,6 +15,18 @@
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+        <div class="topbar">
+      <div class="container topbar__inner">
+        <div class="topbar__group">
+          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span>
+          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 500, Distrito Industrial</span>
+        </div>
+        <div class="topbar__group">
+          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        </div>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#inicio" aria-label="Ir para o início da DistriModelo Atacado">
@@ -102,6 +114,27 @@
                 <p>Atendimento exclusivo para empresas e revendas.</p>
               </article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Diferenciais">
+        <div class="container trust-strip__inner">
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+            <div><strong>Entrega em até 24 h</strong><span>Rotas fixas para cada cidade.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
+            <div><strong>Vendedor dedicado</strong><span>Atendimento direto pelo WhatsApp.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+            <div><strong>Nota fiscal e conferência</strong><span>Tudo conferido na entrega.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></span>
+            <div><strong>Pedido mínimo acessível</strong><span>Pensado para o pequeno varejo.</span></div>
           </div>
         </div>
       </section>
@@ -249,6 +282,33 @@
         </div>
       </section>
 
+      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Depoimentos</p>
+            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
+            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+          </div>
+          <div class="reviews-grid">
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Mando a lista pelo WhatsApp e no dia seguinte está tudo na loja. Facilitou a reposição.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">P</span><span><strong>Paulo H.</strong><span>Mercado São José</span></span></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“O vendedor responde rápido e o prazo de pagamento ajuda muito o caixa.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">S</span><span><strong>Sandra M.</strong><span>Drogaria Central</span></span></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Entrega sempre no dia combinado, com tudo conferido. Parceiro de confiança.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>Jorge L.</strong><span>Padaria Pão Nosso</span></span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section id="contato" class="section anchor-target">
         <div class="container contact-grid">
           <article class="section-panel">
@@ -291,17 +351,47 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p class="footer-brand">DistriModelo Atacado</p>
-          <p class="footer-note">Este é um modelo demonstrativo. Dados, imagens e textos são fictícios.</p>
+      <div class="container">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-col__brand">
+              <img src="assets/img/logo-distribuidora-modelo.svg" alt="" width="48" height="48" />
+              <strong>DistriModelo Atacado</strong>
+            </div>
+            <p>Distribuidora que abastece o comércio da região com entrega rápida e atendimento por vendedor.</p>
+          </div>
+          <div class="footer-col">
+            <h2>Navegação</h2>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#produtos">Produtos</a></li>
+              <li><a href="#clientes">Para quem vendemos</a></li>
+              <li><a href="#orcamento">Orçamento</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Contato</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 500, Distrito Industrial</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Horário</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-links">
+        <div class="footer-bottom">
+          <span>© <span data-current-year></span> DistriModelo Atacado. Empresa fictícia: demonstração do modelo Distribuidora OnePage.</span>
           <a href="../">Voltar para a GSA</a>
-          <span>© <span data-current-year></span> Demonstração OnePage</span>
         </div>
       </div>
     </footer>
+
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
 
     <script src="assets/js/demo.js"></script>
   </body>

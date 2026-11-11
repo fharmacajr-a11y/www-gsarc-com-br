@@ -12,6 +12,17 @@
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <div class="topbar__group">
+          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lojas abertas todos os dias · 3 lojas 24 horas</span>
+          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Matriz: Rua Exemplo, 1000, Centro</span>
+        </div>
+        <div class="topbar__group">
+          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ir para o início da Rede DrogaModelo">
@@ -87,6 +98,26 @@
           </div>
         </div>
       </section>
+      <section class="trust-strip" aria-label="Diferenciais">
+        <div class="container trust-strip__inner">
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
+            <div><strong>Lojas em 6 cidades</strong><span>Encontre a unidade mais perto de você.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
+            <div><strong>Farmacêutico em todas</strong><span>Atendimento de confiança em cada loja.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span>
+            <div><strong>Ofertas toda semana</strong><span>Promoções da rede e da sua cidade.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
+            <div><strong>Clube de vantagens</strong><span>Descontos para clientes cadastrados.</span></div>
+          </div>
+        </div>
+      </section>
       <section class="section anchor-target">
         <div class="container section-panel">
           <div class="section-head">
@@ -138,20 +169,76 @@
           </div>
         </div>
       </section>
+      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Depoimentos</p>
+            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
+            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+          </div>
+          <div class="reviews-grid">
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Achei a loja 24 horas mais perto pelo site, de madrugada. Salvou a noite.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">A</span><span><strong>Ana P.</strong><span>Osasco</span></span></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Uso o WhatsApp da minha loja para reservar os remédios. Chego e já está separado.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Marcos T.</strong><span>Barueri</span></span></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“As ofertas da semana compensam muito. Sempre confiro antes de comprar.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">L</span><span><strong>Luciana F.</strong><span>Carapicuíba</span></span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p class="footer-brand">Rede DrogaModelo</p>
-          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+      <div class="container">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-col__brand">
+              <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="48" height="48" />
+              <strong>Rede DrogaModelo</strong>
+            </div>
+            <p>Rede de drogarias com lojas em várias cidades da região e farmacêutico em todas as unidades.</p>
+          </div>
+          <div class="footer-col">
+            <h2>Navegação</h2>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="a-rede.html">A rede</a></li>
+              <li><a href="lojas.html">Lojas</a></li>
+              <li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Contato</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Matriz: Rua Exemplo, 1000, Centro</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Horário</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lojas abertas todos os dias · 3 lojas 24 horas</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-links">
+        <div class="footer-bottom">
+          <span>© <span data-current-year></span> Rede DrogaModelo. Empresa fictícia: demonstração do modelo Rede Institucional.</span>
           <a href="../">Voltar para a GSA</a>
-          <span>© <span data-current-year></span> Demonstração Rede Institucional</span>
         </div>
       </div>
     </footer>
+
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
 
     <script src="assets/js/demo.js"></script>
   </body>

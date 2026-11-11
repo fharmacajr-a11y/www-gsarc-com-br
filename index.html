@@ -206,18 +206,21 @@
       <section class="home-services-section px-6 pb-10 md:pb-14">
         <div class="home-services-strip mx-auto max-w-7xl">
           <div class="home-services-grid grid gap-4 md:grid-cols-3">
-            <div class="section-card p-5">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Para ser encontrado</p>
+            <div class="section-card strip-card p-5">
+              <span class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+              <p class="mt-4 text-xs font-bold uppercase tracking-[0.22em] text-brand">Para ser encontrado</p>
               <p class="mt-3 text-lg font-semibold text-brand-dark">Sites para farmácias e outras empresas</p>
               <p class="mt-2 text-sm leading-6 text-slate-600">Serviços, endereço, horário, convênios e WhatsApp organizados para quem chega pelo Google ou pelo Instagram.</p>
             </div>
-            <div class="section-card p-5">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Para começar rápido</p>
+            <div class="section-card strip-card p-5">
+              <span class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+              <p class="mt-4 text-xs font-bold uppercase tracking-[0.22em] text-brand">Para começar rápido</p>
               <p class="mt-3 text-lg font-semibold text-brand-dark">Modelos prontos</p>
               <p class="mt-2 text-sm leading-6 text-slate-600">Escolha uma base para farmácia, rede ou distribuidora e nós adaptamos com a sua marca e as suas informações.</p>
             </div>
-            <div class="section-card p-5">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Para crescer depois</p>
+            <div class="section-card strip-card p-5">
+              <span class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+              <p class="mt-4 text-xs font-bold uppercase tracking-[0.22em] text-brand">Para crescer depois</p>
               <p class="mt-3 text-lg font-semibold text-brand-dark">Catálogos, sistemas e aplicativos</p>
               <p class="mt-2 text-sm leading-6 text-slate-600">Quando o site já não basta: catálogo com pedido pelo WhatsApp, controles internos e automações.</p>
             </div>
@@ -226,7 +229,7 @@
       </section>
 
       <section class="px-6 py-12 md:py-20">
-        <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p class="eyebrow">Quem somos</p>
             <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
@@ -235,30 +238,37 @@
             <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
               A GSA é a divisão de tecnologia da Regularize Consultoria. Nasceu para resolver um problema da própria operação e hoje leva essa abordagem prática para outras empresas: soluções feitas para funcionar no dia a dia, não só para ficar bonitas na apresentação.
             </p>
+            <div class="stat-row mt-8">
+              <div class="stat-tile"><strong>16</strong><span>modelos com demonstração</span></div>
+              <div class="stat-tile"><strong>4</strong><span>segmentos atendidos</span></div>
+              <div class="stat-tile"><strong>100%</strong><span>pensado para o celular</span></div>
+            </div>
           </div>
-
-          <div class="grid gap-5">
-            <article class="detail-card grid-accent p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Foco</p>
-              <h3 class="mt-3 font-display text-2xl font-bold text-brand-dark">Farmácias, distribuidoras e transportadoras.</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Conhecemos a rotina de quem atende cliente todos os dias: o site precisa responder rápido o que a empresa faz, onde atende e como falar com ela.
-              </p>
-            </article>
-            <article class="detail-card grid-accent p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Linguagem simples</p>
-              <h3 class="mt-3 font-display text-2xl font-bold text-brand-dark">Sem termos técnicos.</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Textos e páginas pensados para o seu cliente entender de primeira, e um atendimento em que você entende o que está contratando.
-              </p>
-            </article>
-            <article class="detail-card grid-accent p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Depois da entrega</p>
-              <h3 class="mt-3 font-display text-2xl font-bold text-brand-dark">Suporte e evolução.</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Ajustes, atualizações e novas etapas continuam com a mesma equipe que fez o seu site.
-              </p>
-            </article>
+          <div class="about-panel">
+            <div class="about-item">
+              <span class="icon-badge icon-badge--light"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.8"/></svg></span>
+              <div>
+                <p class="about-item__label">Foco</p>
+                <h3 class="about-item__title">Farmácias, distribuidoras e transportadoras.</h3>
+                <p class="about-item__text">Conhecemos a rotina de quem atende cliente todos os dias: o site precisa responder rápido o que a empresa faz, onde atende e como falar com ela.</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="icon-badge icon-badge--light"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
+              <div>
+                <p class="about-item__label">Linguagem simples</p>
+                <h3 class="about-item__title">Sem termos técnicos.</h3>
+                <p class="about-item__text">Textos e páginas para o seu cliente entender de primeira, e um atendimento em que você entende o que está contratando.</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="icon-badge icon-badge--light"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+              <div>
+                <p class="about-item__label">Depois da entrega</p>
+                <h3 class="about-item__title">Suporte e evolução.</h3>
+                <p class="about-item__text">Ajustes, atualizações e novas etapas continuam com a mesma equipe que fez o seu site.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -272,33 +282,41 @@
             </h2>
           </div>
           <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <article class="service-card p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">01</p>
-              <h3 class="mt-4 font-display text-2xl font-bold text-brand-dark">Sites para farmácias e drogarias</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Serviços, convênios, horários, entrega e WhatsApp, com visual sério e fácil de usar no celular. Também para farmácias de manipulação.
-              </p>
+            <article class="feature-card">
+              <div class="flex items-center justify-between">
+                <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 7.5v9M7.5 12h9"/></svg></span>
+                <span class="feature-card__number">01</span>
+              </div>
+              <h3 class="mt-6 font-display text-2xl font-bold text-brand-dark">Sites para farmácias e drogarias</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Serviços, convênios, horários, entrega e WhatsApp, com visual sério e fácil de usar no celular. Também para farmácias de manipulação.</p>
+              <a href="modelos/farmacias/" class="feature-card__link">Ver modelos <span aria-hidden="true">&rarr;</span></a>
             </article>
-            <article class="service-card p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">02</p>
-              <h3 class="mt-4 font-display text-2xl font-bold text-brand-dark">Sites para distribuidoras, transportadoras e outras empresas</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Apresentação, serviços, regiões atendidas e contato para distribuidoras B2B, transportadoras, clínicas, comércios e prestadores de serviço.
-              </p>
+            <article class="feature-card">
+              <div class="flex items-center justify-between">
+                <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+                <span class="feature-card__number">02</span>
+              </div>
+              <h3 class="mt-6 font-display text-2xl font-bold text-brand-dark">Distribuidoras, transportadoras e outras empresas</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Apresentação, serviços, regiões atendidas e pedidos de orçamento pelo WhatsApp, para distribuidoras, transportadoras, clínicas e comércios.</p>
+              <a href="modelos/" class="feature-card__link">Ver modelos <span aria-hidden="true">&rarr;</span></a>
             </article>
-            <article class="service-card p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">03</p>
-              <h3 class="mt-4 font-display text-2xl font-bold text-brand-dark">Catálogos e ofertas</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Vitrine de produtos e campanhas com pedido pelo WhatsApp, sem precisar de loja virtual.
-              </p>
+            <article class="feature-card">
+              <div class="flex items-center justify-between">
+                <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg></span>
+                <span class="feature-card__number">03</span>
+              </div>
+              <h3 class="mt-6 font-display text-2xl font-bold text-brand-dark">Catálogos e ofertas</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Vitrine de produtos e campanhas com pedido pelo WhatsApp, sem precisar de loja virtual.</p>
+              <a href="modelos/farmacias/farmacia/04-catalogo/demo/" class="feature-card__link">Ver demonstração <span aria-hidden="true">&rarr;</span></a>
             </article>
-            <article class="service-card p-6">
-              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">04</p>
-              <h3 class="mt-4 font-display text-2xl font-bold text-brand-dark">Sistemas e aplicativos</h3>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
-                Ferramentas sob medida para cadastros, controles e rotinas internas da equipe.
-              </p>
+            <article class="feature-card">
+              <div class="flex items-center justify-between">
+                <span class="icon-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+                <span class="feature-card__number">04</span>
+              </div>
+              <h3 class="mt-6 font-display text-2xl font-bold text-brand-dark">Sistemas e aplicativos</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Ferramentas sob medida para cadastros, controles e rotinas internas da equipe.</p>
+              <a href="servicos/" class="feature-card__link">Ver serviços <span aria-hidden="true">&rarr;</span></a>
             </article>
           </div>
         </div>
@@ -306,14 +324,15 @@
 
       <section class="px-6 py-12 md:py-20">
         <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
-          <div class="detail-card p-7">
-            <p class="eyebrow">Diferenciais</p>
-            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark">Por que escolher a GSA</h2>
+          <div class="diff-head p-7">
+            <p class="diff-head__label">Diferenciais</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-white">Por que escolher a GSA</h2>
+            <p class="mt-4 text-sm leading-7 text-sky-100/90">Quatro motivos para tirar o site do papel com a gente.</p>
           </div>
           <div class="detail-card process-step p-7" data-step="01">
             <h3 class="font-display text-2xl font-bold text-brand-dark">Modelos prontos para o seu segmento</h3>
             <p class="mt-3 text-sm leading-7 text-slate-600">
-              Bases já pensadas para farmácia, rede e distribuidora, o que reduz o prazo e o custo de um site profissional.
+              Bases já pensadas para farmácia, distribuidora, transportadora e outras empresas, o que reduz o prazo e o custo de um site profissional.
             </p>
           </div>
           <div class="detail-card process-step p-7" data-step="02">
