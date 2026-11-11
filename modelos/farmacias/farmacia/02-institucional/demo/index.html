@@ -12,6 +12,17 @@
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <div class="topbar__group">
+          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span>
+          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 250, Centro</span>
+        </div>
+        <div class="topbar__group">
+          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ir para o início da Farmácia Bem Estar">
@@ -87,6 +98,26 @@
           </div>
         </div>
       </section>
+      <section class="trust-strip" aria-label="Diferenciais">
+        <div class="container trust-strip__inner">
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
+            <div><strong>Farmacêutico presente</strong><span>Em todo o horário de funcionamento.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+            <div><strong>Entrega no bairro</strong><span>Seu pedido em casa em poucos minutos.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+            <div><strong>Convênios aceitos</strong><span>Farmácia Popular e convênios de empresas.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
+            <div><strong>Pague como quiser</strong><span>Pix, cartão ou dinheiro na entrega.</span></div>
+          </div>
+        </div>
+      </section>
       <section class="section anchor-target">
         <div class="container section-panel">
           <div class="section-head">
@@ -140,20 +171,76 @@
           </div>
         </div>
       </section>
+      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Depoimentos</p>
+            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
+            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+          </div>
+          <div class="reviews-grid">
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Pedi pelo WhatsApp e em meia hora o remédio estava em casa. Atendimento muito educado.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Mariana S.</strong><span>Centro</span></span></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“O farmacêutico sempre tira as minhas dúvidas com paciência. Confio muito.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>José R.</strong><span>Vila Nova</span></span></figcaption>
+            </figure>
+            <figure class="review-card">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Gosto de ver as ofertas pelo site antes de passar na loja. Facilita a vida.”</blockquote>
+              <figcaption class="review-card__who"><span class="review-card__avatar">C</span><span><strong>Carla M.</strong><span>Jardim América</span></span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <p class="footer-brand">Farmácia Bem Estar</p>
-          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+      <div class="container">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-col__brand">
+              <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="48" height="48" />
+              <strong>Farmácia Bem Estar</strong>
+            </div>
+            <p>Farmácia de bairro com atendimento próximo, farmacêutico presente e entrega rápida.</p>
+          </div>
+          <div class="footer-col">
+            <h2>Navegação</h2>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="sobre.html">A farmácia</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="convenios.html">Convênios</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Contato</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 250, Centro</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Horário</h2>
+            <ul class="footer-contact">
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-links">
+        <div class="footer-bottom">
+          <span>© <span data-current-year></span> Farmácia Bem Estar. Empresa fictícia: demonstração do modelo Farmácia Institucional.</span>
           <a href="../">Voltar para a GSA</a>
-          <span>© <span data-current-year></span> Demonstração Farmácia Institucional</span>
         </div>
       </div>
     </footer>
+
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
 
     <script src="assets/js/demo.js"></script>
   </body>
