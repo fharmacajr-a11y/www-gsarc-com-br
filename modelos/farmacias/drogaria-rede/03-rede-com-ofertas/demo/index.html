@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rede DrogaModelo | Demonstração Rede com Ofertas</title>
+    <meta name="description" content="Demonstração fictícia de site de rede de drogarias com ofertas da rede, ofertas por cidade e pedido pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da Rede DrogaModelo">
+          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">Rede DrogaModelo</strong>
+            <span class="brand__subtitle">Ofertas em todas as lojas</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#unidades">Lojas</a>
+            <a href="#como-pedir">Como pedir</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#ofertas">Ver ofertas</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="#inicio">Início</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#unidades">Lojas</a>
+            <a href="#como-pedir">Como pedir</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#ofertas">Ver ofertas</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Ofertas da rede</p>
+            <h1>Ofertas que valem na loja perto de você.</h1>
+            <p class="lead">Ofertas da rede inteira e promoções exclusivas de cada cidade. Escolha a oferta e peça pelo WhatsApp da loja mais próxima.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
+              <a class="button button-secondary" href="#unidades">Encontrar loja</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img src="assets/img/hero-drogaria.svg" alt="Ilustração de um mapa com as lojas da rede fictícia" width="640" height="460" />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques">
+              <article class="meta-card">
+                <p class="meta-card__label">Validade</p>
+                <h2>Até domingo</h2>
+                <p>Novas ofertas toda segunda.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Regionais</p>
+                <h2>Por cidade</h2>
+                <p>Promoções só de algumas lojas.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Pedido</p>
+                <h2>Na loja certa</h2>
+                <p>Pelo WhatsApp da unidade.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ofertas" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Ofertas da semana</p>
+            <h2>Escolha sua cidade e veja as ofertas válidas.</h2>
+            <p>As ofertas de toda a rede aparecem em todas as cidades. As regionais, só onde valem.</p>
+          </div>
+          <div data-filter-scope data-count-label="oferta|ofertas|encontrada|encontradas">
+          <div class="toolbar">
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
+              <button type="button" data-filter="sao-paulo" aria-pressed="false">São Paulo</button>
+              <button type="button" data-filter="guarulhos" aria-pressed="false">Guarulhos</button>
+              <button type="button" data-filter="osasco" aria-pressed="false">Osasco</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="product-grid">
+            <article class="product-card" data-item data-tags="rede sao-paulo guarulhos osasco">
+              <div class="product-thumb" aria-hidden="true">Protetor solar</div>
+              <span class="offer-badge">-31%</span>
+              <p class="product-meta">Toda a rede</p>
+              <h3>Protetor solar FPS 50, 200 ml</h3>
+              <div class="price-row"><span class="price-old">R$ 69,90</span><span class="price">R$ 47,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Protetor%20solar%20FPS%2050%2C%20200%20ml%20por%20R%24%2047%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="rede sao-paulo guarulhos osasco">
+              <div class="product-thumb" aria-hidden="true">Fralda G</div>
+              <span class="offer-badge">-23%</span>
+              <p class="product-meta">Toda a rede</p>
+              <h3>Fralda infantil tamanho G, 40 un.</h3>
+              <div class="price-row"><span class="price-old">R$ 74,90</span><span class="price">R$ 57,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Fralda%20infantil%20tamanho%20G%2C%2040%20un.%20por%20R%24%2057%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="rede sao-paulo guarulhos osasco">
+              <div class="product-thumb" aria-hidden="true">Vitamina C</div>
+              <span class="offer-badge">-34%</span>
+              <p class="product-meta">Toda a rede</p>
+              <h3>Vitamina C 1 g, 30 comprimidos</h3>
+              <div class="price-row"><span class="price-old">R$ 34,90</span><span class="price">R$ 22,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Vitamina%20C%201%20g%2C%2030%20comprimidos%20por%20R%24%2022%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="sao-paulo">
+              <div class="product-thumb" aria-hidden="true">Shampoo</div>
+              <span class="offer-badge">Regional</span>
+              <p class="product-meta">Só em São Paulo</p>
+              <h3>Shampoo 400 ml</h3>
+              <div class="price-row"><span class="price-old">R$ 26,90</span><span class="price">R$ 17,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Shampoo%20400%20ml%20por%20R%24%2017%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="sao-paulo">
+              <div class="product-thumb" aria-hidden="true">Desodorante</div>
+              <span class="offer-badge">Leve 3</span>
+              <p class="product-meta">Só em São Paulo</p>
+              <h3>Desodorante aerossol, leve 3</h3>
+              <div class="price-row"><span class="price-old">R$ 41,70</span><span class="price">R$ 29,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Desodorante%20aerossol%2C%20leve%203%20por%20R%24%2029%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="guarulhos">
+              <div class="product-thumb" aria-hidden="true">Hidratante</div>
+              <span class="offer-badge">Regional</span>
+              <p class="product-meta">Só em Guarulhos</p>
+              <h3>Hidratante corporal 400 ml</h3>
+              <div class="price-row"><span class="price-old">R$ 39,90</span><span class="price">R$ 24,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Hidratante%20corporal%20400%20ml%20por%20R%24%2024%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="osasco">
+              <div class="product-thumb" aria-hidden="true">Escova dental</div>
+              <span class="offer-badge">Regional</span>
+              <p class="product-meta">Só em Osasco</p>
+              <h3>Escova dental, 4 un.</h3>
+              <div class="price-row"><span class="price-old">R$ 21,90</span><span class="price">R$ 12,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Escova%20dental%2C%204%20un.%20por%20R%24%2012%2C90.">Pedir no WhatsApp</a>
+            </article>
+            <article class="product-card" data-item data-tags="osasco">
+              <div class="product-thumb" aria-hidden="true">Álcool em gel</div>
+              <span class="offer-badge">Regional</span>
+              <p class="product-meta">Só em Osasco</p>
+              <h3>Álcool em gel 500 ml</h3>
+              <div class="price-row"><span class="price-old">R$ 13,90</span><span class="price">R$ 8,90</span></div>
+              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20%C3%81lcool%20em%20gel%20500%20ml%20por%20R%24%208%2C90.">Pedir no WhatsApp</a>
+            </article>
+          </div>
+          </div>
+          <p class="section-note">Preços fictícios, válidos apenas para esta demonstração.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="campaign-banner">
+            <div>
+              <p class="eyebrow">Campanha da rede</p>
+              <h2>Semana do bebê DrogaModelo</h2>
+              <p>Fraldas, lenços e cuidados infantis com desconto em todas as lojas. Página de campanha que a rede troca a cada ação.</p>
+            </div>
+            <a class="button button-secondary" href="#ofertas">Ver ofertas infantis</a>
+          </div>
+        </div>
+      </section>
+      <section id="unidades" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Lojas</p>
+            <h2>Peça na loja mais perto de você.</h2>
+          </div>
+          <div data-filter-scope data-count-label="unidade|unidades|encontrada|encontradas">
+          <div class="toolbar">
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
+              <button type="button" data-filter="sao-paulo" aria-pressed="false">São Paulo</button>
+              <button type="button" data-filter="guarulhos" aria-pressed="false">Guarulhos</button>
+              <button type="button" data-filter="osasco" aria-pressed="false">Osasco</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="units-grid">
+            <article class="unit-card" data-item data-tags="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Centro</h3>
+              <p>Rua Exemplo, 120, Centro</p>
+              <p>Aberta 24 horas</p>
+              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Vila Modelo</h3>
+              <p>Av. Fictícia, 900, Vila Modelo</p>
+              <p>7h às 22h</p>
+              <ul class="unit-badges"><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Modelo.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="sao-paulo">
+              <p class="unit-card__city">São Paulo</p>
+              <h3>Unidade Parque Modelo</h3>
+              <p>Av. do Parque, 2.300</p>
+              <p>Aberta 24 horas</p>
+              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Parque%20Modelo.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="guarulhos">
+              <p class="unit-card__city">Guarulhos</p>
+              <h3>Unidade Centro de Guarulhos</h3>
+              <p>Rua Exemplo, 77, Centro</p>
+              <p>7h às 22h</p>
+              <ul class="unit-badges"><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Guarulhos.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="guarulhos">
+              <p class="unit-card__city">Guarulhos</p>
+              <h3>Unidade Vila Amostra</h3>
+              <p>Av. Fictícia, 1.500</p>
+              <p>Aberta 24 horas</p>
+              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Amostra.">WhatsApp da loja</a>
+            </article>
+            <article class="unit-card" data-item data-tags="osasco">
+              <p class="unit-card__city">Osasco</p>
+              <h3>Unidade Centro de Osasco</h3>
+              <p>Rua Exemplo, 300, Centro</p>
+              <p>7h às 22h</p>
+              <ul class="unit-badges"><li>Entrega</li></ul>
+              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Osasco.">WhatsApp da loja</a>
+            </article>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section id="como-pedir" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Como pedir</p>
+            <h2>Simples como mandar uma mensagem.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Escolha a oferta</h3>
+              <p>Filtre pela sua cidade e toque em &quot;Pedir no WhatsApp&quot;.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Escolha a loja</h3>
+              <p>A central encaminha o pedido para a loja mais próxima.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Retire ou receba</h3>
+              <p>Busque no balcão ou receba em casa com a entrega da loja.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Atendimento central da DrogaModelo.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>SAC</dt>
+                <dd>Segunda a sexta, das 8h às 18h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp central</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:sac@drogariamodelo.com.br">sac@drogariamodelo.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Rede fictícia para mostrar o modelo</h2>
+            <p>A Rede DrogaModelo não existe. Ofertas, preços e contatos desta página são fictícios.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Rede DrogaModelo</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Rede com Ofertas</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>
