@@ -44,7 +44,7 @@ const markActiveLinks = () => {
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     const targetPath = href ? normalizePath(new URL(href, window.location.href).pathname) : "";
-    const isActive = currentPath === targetPath;
+    const isActive = currentPath === targetPath || (targetPath !== "/" && currentPath.startsWith(targetPath));
 
     link.classList.toggle("is-active", isActive);
 

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arquitetura dos Modelos da GSA | Planejamento Comercial e Evolucao</title>
+    <meta
+      name="description"
+      content="Organizacao interna das linhas de templates da GSA, niveis de complexidade, URLs planejadas e proximos modelos comerciais a desenvolver."
+    />
+    <link rel="canonical" href="https://gsarc.com.br/modelos/arquitetura/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GSA - Gestor de Sites e Apps" />
+    <meta property="og:title" content="Arquitetura dos Modelos da GSA | Planejamento Comercial e Evolucao" />
+    <meta
+      property="og:description"
+      content="Linhas de modelos, niveis de complexidade, matriz inicial e ordem de execucao da arquitetura comercial dos templates da GSA."
+    />
+    <meta property="og:url" content="https://gsarc.com.br/modelos/arquitetura/" />
+    <meta property="og:image" content="https://gsarc.com.br/assets/img/brand/gsa-og-image.png" />
+    <meta property="og:image:alt" content="Gestor de Sites e Apps - imagem social da GSA" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arquitetura dos Modelos da GSA | Planejamento Comercial e Evolucao" />
+    <meta
+      name="twitter:description"
+      content="Planejamento local da arquitetura de modelos comerciais da GSA por segmento, complexidade e prioridade de execucao."
+    />
+    <meta name="twitter:image" content="https://gsarc.com.br/assets/img/brand/gsa-og-image.png" />
+    <meta name="theme-color" content="#0A1F44" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../assets/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/css/tailwind.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
+  </head>
+  <body class="antialiased">
+    <a
+      href="#conteudo"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >Pular para o conteudo</a
+    >
+
+    <div class="border-b border-white/10 bg-brand-dark text-white">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 text-sm">
+        <p class="font-medium">Documentacao interna da arquitetura comercial dos modelos da GSA</p>
+        <p class="hidden text-white/70 md:block">Planejamento local de segmentos, niveis de entrega, URLs e proximas fases dos previews.</p>
+      </div>
+    </div>
+
+    <header class="site-header sticky top-0 z-50" data-site-header>
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="header-main flex items-center justify-between">
+          <a href="../../" class="brand-lockup brand-lockup--header" aria-label="Pagina inicial - Gestor de Sites &amp; Apps">
+            <img
+              src="../../assets/GESTOR DE APPS-logo-sem-escrita.png"
+              alt=""
+              class="brand-lockup__image"
+              width="812"
+              height="817"
+            />
+            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 md:flex" aria-label="Navegacao principal">
+            <a href="../../" class="nav-link text-sm font-semibold" data-nav-link>Inicio</a>
+            <a href="../../sobre/" class="nav-link text-sm font-semibold" data-nav-link>Sobre</a>
+            <a href="../../servicos/" class="nav-link text-sm font-semibold" data-nav-link>Servicos</a>
+            <a href="../" class="nav-link text-sm font-semibold" data-nav-link>Modelos</a>
+            <a href="../../projetos/" class="nav-link text-sm font-semibold" data-nav-link>Projetos</a>
+            <a href="../../contato/" class="nav-link text-sm font-semibold" data-nav-link>Contato</a>
+          </nav>
+
+          <div class="hidden md:block">
+            <a
+              href="../../contato/"
+              class="inline-flex items-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark"
+              >Solicitar orcamento</a
+            >
+          </div>
+
+          <button
+            type="button"
+            class="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-4 py-2 text-sm font-semibold text-brand-dark md:hidden"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="menu-mobile"
+          >
+            <span data-menu-label>Abrir menu</span>
+          </button>
+        </div>
+
+        <div id="menu-mobile" class="hidden border-t border-brand/10 pb-4 pt-3 md:hidden" data-mobile-menu>
+          <nav class="grid gap-2" aria-label="Navegacao movel">
+            <a href="../../" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Inicio</a
+            >
+            <a href="../../sobre/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Sobre</a
+            >
+            <a href="../../servicos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Servicos</a
+            >
+            <a href="../" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Modelos</a
+            >
+            <a href="../../projetos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Projetos</a
+            >
+            <a href="../../contato/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
+              >Contato</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="px-6 pb-14 pt-8 md:pb-20 md:pt-12">
+        <div class="hero-shell mx-auto max-w-7xl px-6 py-10 md:px-10 md:py-12">
+          <div class="hero-mesh" aria-hidden="true"></div>
+          <div class="relative z-10 grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+            <div>
+              <p class="eyebrow">Arquitetura dos modelos</p>
+              <h1 class="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight text-brand-dark md:text-6xl">
+                Arquitetura dos modelos comerciais da GSA
+              </h1>
+              <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+                Organizacao interna das linhas de templates, niveis de complexidade e proximos modelos a desenvolver.
+              </p>
+              <p class="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+                Esta pagina organiza os segmentos priorizados, o nivel comercial de cada estrutura, as URLs planejadas e os limites tecnicos entre vitrine estatica, operacao assistida e sistema completo.
+              </p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="../"
+                  class="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
+                  >Voltar para modelos</a
+                >
+                <a
+                  href="../farmacias/"
+                  class="inline-flex items-center justify-center rounded-full border border-brand/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark transition hover:border-brand/30 hover:bg-brand-ice"
+                  >Ver linha farmaceutica atual</a
+                >
+              </div>
+            </div>
+            <div class="grid gap-4">
+              <div class="detail-card p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Objetivo desta fase</p>
+                <p class="mt-3 text-xl font-semibold text-brand-dark">Definir linhas, niveis, URLs e prioridades antes de transformar placeholders em previews reais.</p>
+              </div>
+              <div class="detail-card p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Escopo comercial</p>
+                <p class="mt-3 text-xl font-semibold text-brand-dark">OnePage, institucional, ofertas, catalogo e operacao assistida sem checkout real nesta etapa.</p>
+              </div>
+              <div class="detail-card p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Limite tecnico</p>
+                <p class="mt-3 text-xl font-semibold text-brand-dark">Pix, login, painel, pedidos e banco de dados ficam reservados para sistema completo com backend futuro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl">
+            <p class="eyebrow">Linhas de modelos</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
+              Segmentos organizados por contexto comercial e maturidade de entrega.
+            </h2>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">A. Farmacias e Drogarias</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>OnePage</li>
+                <li>Institucional</li>
+                <li>Ofertas</li>
+                <li>Catalogo</li>
+                <li>Delivery assistido</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">B. Redes de Drogarias</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Institucional Rede</li>
+                <li>Rede com Unidades</li>
+                <li>Rede com Ofertas</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">C. Distribuidoras</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Institucional B2B</li>
+                <li>Catalogo B2B sem precos</li>
+                <li>Cotacao assistida, futuro</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">D. Transportadoras</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>OnePage</li>
+                <li>Institucional</li>
+                <li>Solicitacao de cotacao</li>
+                <li>Rastreamento ou area de cliente, futuro com backend</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">E. Empresas locais e prestadores de servico</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>OnePage</li>
+                <li>Institucional</li>
+                <li>Servicos com orcamento</li>
+                <li>Captacao de leads</li>
+              </ul>
+            </article>
+            <article class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">F. Consultorias e empresas reguladas</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Institucional</li>
+                <li>Servicos</li>
+                <li>Conteudo educativo</li>
+                <li>Captacao de leads</li>
+                <li>Area restrita, futuro com backend</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl">
+            <p class="eyebrow">Niveis de complexidade</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
+              Escala comercial do modelo mais simples ate a entrega que exige sistema completo.
+            </h2>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Nivel 1 - OnePage</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Uma unica pagina</li>
+                <li>Ideal para cliente pequeno</li>
+                <li>Baixo custo</li>
+                <li>WhatsApp, endereco, servicos e CTA</li>
+                <li>Sem catalogo</li>
+                <li>Sem backend</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Nivel 2 - Institucional</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Home, sobre, servicos e contato</li>
+                <li>Ideal para empresas que querem presenca profissional</li>
+                <li>Sem catalogo</li>
+                <li>Sem backend</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Nivel 3 - Ofertas ou Servicos</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Pagina de ofertas, servicos ou campanhas</li>
+                <li>Pedido ou orcamento por WhatsApp</li>
+                <li>Sem checkout real</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Nivel 4 - Catalogo</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Lista de produtos ou servicos</li>
+                <li>Filtros simples</li>
+                <li>Pedido ou orcamento assistido</li>
+                <li>Sem pagamento online</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Nivel 5 - Operacao assistida</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Carrinho local ou resumo de pedido</li>
+                <li>Envio por WhatsApp ou formulario</li>
+                <li>Preparado para backend futuro</li>
+              </ul>
+            </article>
+            <article class="detail-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Nivel 6 - Sistema completo</p>
+              <ul class="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                <li>Checkout, Pix, login, painel, pedidos e estoque</li>
+                <li>Exige backend, banco de dados e hospedagem adequada</li>
+                <li>Nao e GitHub Pages</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl">
+            <p class="eyebrow">Matriz inicial de modelos</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
+              Base inicial para decidir a ordem comercial e a transformacao dos placeholders em previews reais.
+            </h2>
+          </div>
+          <div class="mt-10 overflow-hidden rounded-[32px] border border-brand/10 bg-white shadow-[0_32px_80px_-48px_rgba(10,31,68,0.45)]">
+            <div class="overflow-x-auto">
+              <table class="min-w-full border-collapse text-left">
+                <thead class="bg-brand-dark text-white">
+                  <tr>
+                    <th class="px-5 py-4 text-xs font-bold uppercase tracking-[0.22em]">Segmento</th>
+                    <th class="px-5 py-4 text-xs font-bold uppercase tracking-[0.22em]">Modelo</th>
+                    <th class="px-5 py-4 text-xs font-bold uppercase tracking-[0.22em]">URL planejada</th>
+                    <th class="px-5 py-4 text-xs font-bold uppercase tracking-[0.22em]">Status</th>
+                    <th class="px-5 py-4 text-xs font-bold uppercase tracking-[0.22em]">Prioridade</th>
+                    <th class="px-5 py-4 text-xs font-bold uppercase tracking-[0.22em]">Observacoes</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-brand/10 text-sm leading-7 text-slate-600">
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Farmacias e Drogarias</td>
+                    <td class="px-5 py-4">Farmacia OnePage</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/farmacia/01-onepage/</span></td>
+                    <td class="px-5 py-4">Importado / precisa virar preview real</td>
+                    <td class="px-5 py-4">Alta</td>
+                    <td class="px-5 py-4">primeiro modelo barato</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Farmacias e Drogarias</td>
+                    <td class="px-5 py-4">Farmacia Institucional</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/farmacia/02-institucional/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Alta</td>
+                    <td class="px-5 py-4">segundo modelo</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Farmacias e Drogarias</td>
+                    <td class="px-5 py-4">Farmacia com Ofertas</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/farmacia/03-ofertas/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">ofertas semanais</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Farmacias e Drogarias</td>
+                    <td class="px-5 py-4">Farmacia com Catalogo</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/farmacia/04-catalogo/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">catalogo sem checkout</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Farmacias e Drogarias</td>
+                    <td class="px-5 py-4">Delivery Assistido</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/farmacia/05-delivery-assistido/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">sem pagamento real</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Redes de Drogarias</td>
+                    <td class="px-5 py-4">Rede Institucional</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/drogaria-rede/01-institucional-rede/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">rede pequena</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Redes de Drogarias</td>
+                    <td class="px-5 py-4">Rede com Unidades</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/drogaria-rede/02-rede-com-unidades/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">varias lojas</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Redes de Drogarias</td>
+                    <td class="px-5 py-4">Rede com Ofertas</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/drogaria-rede/03-rede-com-ofertas/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Baixa</td>
+                    <td class="px-5 py-4">fase posterior</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Distribuidoras</td>
+                    <td class="px-5 py-4">Distribuidora B2B Institucional</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/distribuidora/01-institucional-b2b/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Alta</td>
+                    <td class="px-5 py-4">pode servir para distribuidoras gerais tambem</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Distribuidoras</td>
+                    <td class="px-5 py-4">Catalogo B2B sem Precos</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/farmacias/distribuidora/02-catalogo-b2b-sem-precos/</span></td>
+                    <td class="px-5 py-4">Importado / placeholder</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">catalogo com orcamento</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Transportadoras</td>
+                    <td class="px-5 py-4">Transportadora OnePage</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/transportadoras/onepage/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Alta</td>
+                    <td class="px-5 py-4">site barato para cliente pequeno</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Transportadoras</td>
+                    <td class="px-5 py-4">Transportadora Institucional</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/transportadoras/institucional/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">paginas separadas</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Transportadoras</td>
+                    <td class="px-5 py-4">Cotacao de Frete</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/transportadoras/cotacao/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">formulario visual, backend futuro</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Empresas Locais</td>
+                    <td class="px-5 py-4">OnePage Local</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/empresas/onepage/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Alta</td>
+                    <td class="px-5 py-4">generico e vendavel</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Empresas Locais</td>
+                    <td class="px-5 py-4">Institucional Local</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/empresas/institucional/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">prestadores de servico</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Empresas Locais</td>
+                    <td class="px-5 py-4">Servicos com Orcamento</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/empresas/servicos-orcamento/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">captacao de leads</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Consultorias</td>
+                    <td class="px-5 py-4">Consultoria Institucional</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/consultorias/institucional/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Media</td>
+                    <td class="px-5 py-4">servicos e autoridade</td>
+                  </tr>
+                  <tr class="align-top">
+                    <td class="px-5 py-4 font-semibold text-brand-dark">Consultorias</td>
+                    <td class="px-5 py-4">Consultoria com Conteudo</td>
+                    <td class="px-5 py-4"><span class="font-mono text-xs text-brand-dark">/modelos/consultorias/conteudo/</span></td>
+                    <td class="px-5 py-4">Planejado</td>
+                    <td class="px-5 py-4">Baixa</td>
+                    <td class="px-5 py-4">artigos e materiais</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 py-12 md:py-20">
+        <div class="mx-auto max-w-7xl grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <article class="detail-card p-7">
+            <p class="eyebrow">Regras comerciais dos modelos</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Como vender corretamente cada nivel sem prometer o que depende de sistema.</h2>
+            <ul class="mt-6 grid gap-3 text-base leading-7 text-slate-600">
+              <li>OnePage e o plano mais barato e mais rapido de estruturar.</li>
+              <li>Institucional tem mais paginas, mais conteudo e mais trabalho de organizacao.</li>
+              <li>Catalogo exige mais organizacao de conteudo, categorias e consistencia editorial.</li>
+              <li>Carrinho, checkout e pagamento exigem backend e nao devem ser vendidos como site estatico simples.</li>
+              <li>GitHub Pages e ambiente local estatico atendem vitrine, institucional e catalogo simples.</li>
+              <li>Projetos com Pix, checkout, login, painel administrativo ou banco de dados devem ser orcados como sistema.</li>
+            </ul>
+          </article>
+          <article class="service-card p-7">
+            <p class="eyebrow">Padrao visual dos previews</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Mesmo esqueleto visual, com adaptacao por segmento e nivel de entrega.</h2>
+            <ul class="mt-6 grid gap-3 text-base leading-7 text-slate-600">
+              <li>Hero curto com nome do modelo, segmento, status e promessa comercial.</li>
+              <li>Bloco com publico ideal, escopo, paginas previstas e itens fora do pacote.</li>
+              <li>CTA duplo fixo: voltar para modelos e solicitar orcamento.</li>
+              <li>Aviso explicito quando houver funcionalidade preparada para backend futuro.</li>
+              <li>Visual leve, coerente com a GSA e reutilizavel entre farmacia, distribuidora, transportadora e modelos genericos.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="px-6 pb-20 pt-12 md:pb-24 md:pt-16">
+        <div class="mx-auto max-w-7xl">
+          <div class="max-w-3xl">
+            <p class="eyebrow">Ordem recomendada de execucao</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-5xl">
+              Sequencia sugerida para transformar a arquitetura em previews consistentes sem ampliar o escopo antes da hora.
+            </h2>
+          </div>
+          <ol class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3B</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Transformar Farmacia OnePage em preview real</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3C</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Criar padrao visual de preview reutilizavel</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3D</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Aplicar padrao nos 5 modelos de farmacia</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3E</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Aplicar padrao nos modelos de distribuidora</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3F</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Planejar linha de transportadoras</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3G</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Planejar linha de empresas locais</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 3H</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Revisar SEO antes de publicacao</p>
+            </li>
+            <li class="service-card p-6">
+              <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand">Fase 4</p>
+              <p class="mt-4 text-lg font-semibold text-brand-dark">Publicar somente quando aprovado</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="px-6 pb-20 md:pb-24">
+        <div class="mx-auto max-w-7xl">
+          <article class="detail-card max-w-4xl p-7">
+            <p class="eyebrow">Padrao de preview</p>
+            <h2 class="mt-5 font-display text-3xl font-bold text-brand-dark md:text-4xl">Consistencia visual e comercial antes de replicar os proximos modelos.</h2>
+            <p class="mt-5 max-w-3xl text-base leading-7 text-slate-600">
+              Antes de replicar os modelos, a GSA mantem um padrao visual e comercial para garantir consistencia entre previews.
+            </p>
+            <div class="mt-6">
+              <a
+                href="padrao-preview/"
+                class="inline-flex items-center justify-center rounded-full border border-brand/15 bg-white px-6 py-3 text-sm font-semibold text-brand-dark transition hover:border-brand/30 hover:bg-brand-ice"
+                >Ver padrao de preview</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-shell py-12">
+      <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
+        <div>
+          <a href="../../" class="brand-lockup brand-lockup--footer" aria-label="Pagina inicial - Gestor de Sites &amp; Apps">
+            <img
+              src="../../assets/GESTOR DE APPS-logo-sem-escrita.png"
+              alt=""
+              class="brand-lockup__image"
+              width="812"
+              height="817"
+            />
+            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
+          </a>
+          <p class="mt-5 max-w-xl text-sm leading-7 text-slate-600">
+            Divisao de tecnologia - Regularize Consultoria, dedicada a sites institucionais, aplicativos, sistemas e estruturas digitais sob medida.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-lg font-bold text-brand-dark">Navegacao</h2>
+          <nav class="mt-4 grid gap-3 text-sm text-slate-600">
+            <a href="../../" class="transition hover:text-brand-dark">Inicio</a>
+            <a href="../../sobre/" class="transition hover:text-brand-dark">Sobre</a>
+            <a href="../../servicos/" class="transition hover:text-brand-dark">Servicos</a>
+            <a href="../" class="transition hover:text-brand-dark">Modelos</a>
+            <a href="../../projetos/" class="transition hover:text-brand-dark">Projetos</a>
+            <a href="../../contato/" class="transition hover:text-brand-dark">Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <h2 class="font-display text-lg font-bold text-brand-dark">Contato inicial</h2>
+          <div class="mt-4 grid gap-3 text-sm text-slate-600">
+            <a href="https://wa.me/5511999129999" class="transition hover:text-brand-dark">WhatsApp: (11) 9 9912-9999</a>
+            <a href="mailto:contato@gsa.com" class="transition hover:text-brand-dark">E-mail: contato@gsa.com</a>
+            <p>Atendimento comercial sob agendamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-10 max-w-7xl border-t border-brand/10 px-6 pt-6 text-sm text-slate-500">
+        <p>&copy; <span data-current-year></span> GSA - Gestor de Sites &amp; Apps. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
