@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DistriModelo Atacado | Demonstração Catálogo B2B</title>
+    <meta name="description" content="Demonstração fictícia de catálogo B2B para distribuidora, com busca, categorias e pedido pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir para o início da DistriModelo Atacado">
+          <img src="assets/img/logo-distribuidora-modelo.svg" alt="" width="72" height="72" />
+          <span class="brand__text">
+            <strong class="brand__title">DistriModelo Atacado</strong>
+            <span class="brand__subtitle">Catálogo para o varejo</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#como-comprar">Como comprar</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#catalogo">Abrir catálogo</a>
+
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
+          Abrir menu
+        </button>
+      </div>
+
+      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
+        <div class="container mobile-panel__inner">
+          <nav class="mobile-nav" aria-label="Menu móvel">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#como-comprar">Como comprar</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <a class="button button-primary mobile-cta" href="#catalogo">Abrir catálogo</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section id="inicio" class="hero-section anchor-target">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Catálogo para o varejo</p>
+            <h1>Monte o pedido da sua loja e envie para o vendedor.</h1>
+            <p class="lead">Busque os produtos, escolha as quantidades em caixas ou fardos e envie a lista pelo WhatsApp. O vendedor retorna com preços e prazo de entrega.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#catalogo">Abrir catálogo</a>
+              <a class="button button-secondary" href="#como-comprar">Como comprar</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="illustration-card">
+              <img src="assets/img/hero-distribuidora.svg" alt="Ilustração do galpão fictício com uma van saindo para entrega" width="640" height="460" />
+            </div>
+            <div class="hero-meta-grid" aria-label="Destaques">
+              <article class="meta-card">
+                <p class="meta-card__label">Mix</p>
+                <h2>2 mil itens</h2>
+                <p>Higiene, limpeza, mercearia e bebidas.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Preços</p>
+                <h2>Sob consulta</h2>
+                <p>Condições por volume e cliente.</p>
+              </article>
+              <article class="meta-card">
+                <p class="meta-card__label">Pedido</p>
+                <h2>Pelo WhatsApp</h2>
+                <p>Lista pronta para o vendedor.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="catalogo" class="section anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Catálogo</p>
+            <h2>Encontre os produtos e monte o pedido.</h2>
+            <p>Experimente buscar &quot;fardo&quot; ou filtrar por Bebidas. No site real, entram as fotos e o mix da distribuidora.</p>
+          </div>
+          <div class="shop-layout">
+            <div data-filter-scope data-count-label="produto|produtos">
+          <div class="toolbar">
+            <label class="search-field">
+              <span class="skip-link">Buscar produto</span>
+              <input type="search" data-search placeholder="Buscar produto" aria-label="Buscar produto" />
+            </label>
+            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
+              <button type="button" data-filter="todas" aria-pressed="true">Todos</button>
+              <button type="button" data-filter="higiene" aria-pressed="false">Higiene</button>
+              <button type="button" data-filter="limpeza" aria-pressed="false">Limpeza</button>
+              <button type="button" data-filter="mercearia" aria-pressed="false">Mercearia</button>
+              <button type="button" data-filter="bebidas" aria-pressed="false">Bebidas</button>
+            </div>
+          </div>
+          <p class="result-count" data-filter-count aria-live="polite"></p>
+          <div class="product-grid product-grid--three">
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Higiene</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Sabonete em barra 85 g</h3>
+              <p>Caixa com 12 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Sabonete em barra 85 g" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Higiene</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Shampoo 350 ml</h3>
+              <p>Caixa com 12 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Shampoo 350 ml" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="higiene">
+              <div class="product-thumb" aria-hidden="true">Higiene</div>
+              <p class="product-meta">Higiene</p>
+              <h3>Papel higiênico folha dupla</h3>
+              <p>Fardo com 16 pacotes de 4</p>
+              <button class="button button-primary" type="button" data-add data-name="Papel higiênico folha dupla" data-unit="fardo">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="limpeza">
+              <div class="product-thumb" aria-hidden="true">Limpeza</div>
+              <p class="product-meta">Limpeza</p>
+              <h3>Detergente 500 ml</h3>
+              <p>Caixa com 24 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Detergente 500 ml" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="limpeza">
+              <div class="product-thumb" aria-hidden="true">Limpeza</div>
+              <p class="product-meta">Limpeza</p>
+              <h3>Água sanitária 2 L</h3>
+              <p>Caixa com 6 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Água sanitária 2 L" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="limpeza">
+              <div class="product-thumb" aria-hidden="true">Limpeza</div>
+              <p class="product-meta">Limpeza</p>
+              <h3>Sabão em pó 1 kg</h3>
+              <p>Fardo com 10 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Sabão em pó 1 kg" data-unit="fardo">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="mercearia">
+              <div class="product-thumb" aria-hidden="true">Mercearia</div>
+              <p class="product-meta">Mercearia</p>
+              <h3>Arroz tipo 1, 5 kg</h3>
+              <p>Fardo com 6 pacotes</p>
+              <button class="button button-primary" type="button" data-add data-name="Arroz tipo 1, 5 kg" data-unit="fardo">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="mercearia">
+              <div class="product-thumb" aria-hidden="true">Mercearia</div>
+              <p class="product-meta">Mercearia</p>
+              <h3>Café torrado 500 g</h3>
+              <p>Caixa com 10 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Café torrado 500 g" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="mercearia">
+              <div class="product-thumb" aria-hidden="true">Mercearia</div>
+              <p class="product-meta">Mercearia</p>
+              <h3>Óleo de soja 900 ml</h3>
+              <p>Caixa com 20 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Óleo de soja 900 ml" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="bebidas">
+              <div class="product-thumb" aria-hidden="true">Bebidas</div>
+              <p class="product-meta">Bebidas</p>
+              <h3>Água mineral 500 ml</h3>
+              <p>Fardo com 12 garrafas</p>
+              <button class="button button-primary" type="button" data-add data-name="Água mineral 500 ml" data-unit="fardo">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="bebidas">
+              <div class="product-thumb" aria-hidden="true">Bebidas</div>
+              <p class="product-meta">Bebidas</p>
+              <h3>Refrigerante 2 L</h3>
+              <p>Fardo com 6 garrafas</p>
+              <button class="button button-primary" type="button" data-add data-name="Refrigerante 2 L" data-unit="fardo">Adicionar ao pedido</button>
+            </article>
+            <article class="product-card" data-item data-tags="bebidas">
+              <div class="product-thumb" aria-hidden="true">Bebidas</div>
+              <p class="product-meta">Bebidas</p>
+              <h3>Suco 1 L</h3>
+              <p>Caixa com 12 unidades</p>
+              <button class="button button-primary" type="button" data-add data-name="Suco 1 L" data-unit="cx">Adicionar ao pedido</button>
+            </article>
+          </div>
+            </div>
+            <aside class="cart-panel" aria-label="Seu pedido">
+              <h2>Seu pedido <span class="cart-count" data-cart-count>0</span></h2>
+              <ul class="cart-list" data-cart-list></ul>
+              <p class="cart-empty" data-cart-empty>Nenhum item ainda. Toque em "Adicionar" nos produtos.</p>
+              <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero um orçamento destes itens:" data-needs-cart data-cart-title="Itens do pedido:" data-cart-name="adicione pelo menos um item" novalidate>
+                <label>
+                  Nome da empresa
+                  <input type="text" name="empresa" required />
+                </label>
+                <label>
+                  CNPJ
+                  <input type="text" name="cnpj" inputmode="numeric" />
+                </label>
+                <label>
+                  Cidade
+                  <input type="text" name="cidade" required />
+                </label>
+                <p class="quote-form__error" data-form-error role="alert" hidden></p>
+                <button class="button button-primary" type="submit">Enviar pedido pelo WhatsApp</button>
+              </form>
+            </aside>
+          </div>
+          <p class="section-note">Venda exclusiva para empresas. Produtos e embalagens fictícios.</p>
+        </div>
+      </section>
+      <section id="como-comprar" class="section section-alt anchor-target">
+        <div class="container section-panel">
+          <div class="section-head">
+            <p class="eyebrow">Como comprar</p>
+            <h2>Do catálogo à entrega na loja.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__number">1</span>
+              <h3>Monte o pedido</h3>
+              <p>Escolha os produtos e as quantidades em caixas ou fardos.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">2</span>
+              <h3>Envie ao vendedor</h3>
+              <p>A lista chega pronta no WhatsApp do vendedor da sua região.</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__number">3</span>
+              <h3>Receba na loja</h3>
+              <p>O vendedor confirma preço e prazo, e o pedido sai na rota da sua cidade.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="contato" class="section anchor-target">
+        <div class="container contact-grid">
+          <article class="section-panel">
+            <div class="section-head section-head--compact">
+              <p class="eyebrow">Contato</p>
+              <h2>Fale com o time de vendas.</h2>
+            </div>
+            <dl class="contact-list">
+              <div>
+                <dt>Endereço</dt>
+                <dd>Rua Exemplo, 500, Centro de Distribuição</dd>
+              </div>
+              <div>
+                <dt>Horário</dt>
+                <dd>Segunda a sexta, das 8h às 18h</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
+              </div>
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:vendas@distribuidoramodelo.com.br">vendas@distribuidoramodelo.com.br</a></dd>
+              </div>
+            </dl>
+          </article>
+          <aside class="contact-card">
+            <p class="contact-card__label">Demonstração</p>
+            <h2>Distribuidora fictícia para mostrar o modelo</h2>
+            <p>A DistriModelo Atacado não existe. Produtos e contatos desta página são fictícios.</p>
+            <div class="hero-actions contact-actions">
+              <a class="button button-primary" href="#catalogo">Abrir catálogo</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">DistriModelo Atacado</p>
+          <p class="footer-note">Este é um modelo demonstrativo. Dados, preços, imagens e textos são fictícios.</p>
+        </div>
+        <div class="footer-links">
+          <a href="../">Voltar para a GSA</a>
+          <span>© <span data-current-year></span> Demonstração Catálogo B2B</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>
