@@ -68,9 +68,22 @@
       .replace(/"/g, "&quot;");
   }
 
+  function groupSize(group) {
+    var count = 0;
+    for (var i = 0; i < MODELS.length; i += 1) {
+      if (MODELS[i][2] === group) {
+        count += 1;
+      }
+    }
+    return count;
+  }
+
   var model = findModel(window.location.pathname);
   var name = model ? model.name : "";
-  var backHref = "/modelos/" + (model ? "#" + model.group : "");
+  // "Ver outros modelos": a galeria filtrada pelo grupo do modelo. Num grupo de um
+  // modelo só (outras-empresas), a galeria inteira, para o link mostrar outros modelos
+  // (mesma regra do shell.group_href() nas páginas dos modelos).
+  var backHref = "/modelos/" + (model && groupSize(model.group) > 1 ? "#" + model.group : "");
   var message = model
     ? "Olá! Vi o modelo " + name + " no site da GSA e quero um site assim."
     : "Olá! Vim pelo site da GSA e quero um orçamento.";
@@ -148,6 +161,9 @@
       P + "__pill{transition:background-color .15s ease}" +
       P + "__t{transition:text-decoration-color .15s ease}" +
     "}",
+    /* as demonstrações rolam suave pelos links internos (CSS delas); quem pediu
+       menos movimento no sistema rola direto, como no resto do site */
+    "@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}",
     "@media (forced-colors:active){" + P + "__pill{border:1px solid ButtonText}" + P + "::after{background:CanvasText}}",
     "@media print{" + P + "{display:none!important}}"
   ].join("\n");

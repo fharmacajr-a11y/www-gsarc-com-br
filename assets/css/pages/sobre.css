@@ -2,28 +2,13 @@
    Sobre (/sobre/) - regras só desta página. Carregada depois de site.css.
    Usa os tokens e as variáveis de contexto (--c-*) de site.css.
 
-   0. Herói compacto: título à esquerda, texto à direita (a partir de 900)
+   (O herói .page-hero--split vem de site.css, bloco 10.)
    1. Nossa história: linha do tempo (vertical; horizontal a partir de 900)
    2. Regularize Consultoria e GSA: quadro "empresa principal > divisão"
    3. Como trabalhamos: quatro princípios sob linhas finas
    4. Para quem fazemos: lista de atalhos para a galeria
    5. Missão: frase em destaque
    ========================================================================== */
-
-
-/* ==========================================================================
-   0. Herói compacto (.page-hero--split, igual em /contato/)
-   Usa .page-hero__grid--aside de site.css; o texto de abertura ocupa a
-   coluna da direita e alinha pela última linha com o título.
-   ========================================================================== */
-.page-hero--split .page-hero__grid { row-gap: var(--s-5); }
-.page-hero--split .page-hero__intro { margin-top: 0; }
-@media (min-width: 900px) {
-  .page-hero--split .page-hero__grid--aside {
-    align-items: end;
-    align-items: last baseline;
-  }
-}
 
 
 /* ==========================================================================
@@ -96,6 +81,12 @@
    Quadro claro (empresa principal) com o quadro azul-marinho da GSA dentro:
    mostra em um olhar que a GSA é uma divisão da Regularize.
    ========================================================================== */
+/* o título quebra como "Regularize Consultoria / e GSA", sem partir o nome
+   da empresa; entre 900 e 939 px a coluna é estreita demais para o nome
+   inteiro e o título quebra normalmente */
+@media (max-width: 899px), (min-width: 940px) {
+  .nome-empresa { white-space: nowrap; }
+}
 .org {
   width: 100%;
   max-width: 34rem;
@@ -144,6 +135,13 @@
   line-height: 1.5;
   color: var(--c-text);
 }
+/* 320 px: menos respiro interno para "Marca e atendimento próprios"
+   caber em uma linha */
+@media (max-width: 359px) {
+  .org { padding: var(--s-4); }
+  .org__inner { padding: 18px var(--s-4); }
+  .org__note { font-size: var(--fs-xs); }
+}
 @media (min-width: 900px) {
   .org { justify-self: end; }
 }
@@ -152,7 +150,10 @@
 /* ==========================================================================
    3. Como trabalhamos
    < 600: linhas com o ícone à esquerda. >= 600: 2 x 2 sob linhas fortes;
-   >= 1100: quatro colunas.
+   >= 1100: quatro colunas. A partir de 600, ícone, título e texto de cada
+   princípio ficam em linhas comuns da grade (subgrid): um título que quebra
+   em duas linhas ("Começa simples, cresce depois") não desce o texto só
+   daquela coluna.
    ========================================================================== */
 .principios { display: grid; }
 .principio {
@@ -173,12 +174,16 @@
   color: var(--c-num);
 }
 .principio__title { grid-column: 2; }
-.principio__text { grid-column: 2; margin-top: var(--s-2); max-width: 26rem; color: var(--c-text); }
+/* frases curtas (2 a 4 linhas): linhas parecidas, quebrando entre as frases
+   ("...no celular. / O site é pensado...") e sem palavra sozinha no fim */
+.principio__text { grid-column: 2; margin-top: var(--s-2); max-width: 26rem; color: var(--c-text); text-wrap: balance; }
 
 @media (min-width: 600px) {
+  /* o espaço entre as fileiras vem da margem dos itens (linhas da grade
+     sem vão, para o subgrid abaixo) */
   .principios {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--s-12) var(--s-8);
+    gap: 0 var(--s-8);
   }
   .principio,
   .principio:first-child,
@@ -187,11 +192,29 @@
     padding: var(--s-6) 0 0;
     border-top-color: var(--c-heading);
   }
+  .principio:nth-child(n + 3) { margin-top: var(--s-12); }
   .principio .icon { margin: 0 0 var(--s-5); }
   .principio__text { margin-top: var(--s-3); }
 }
 @media (min-width: 1100px) {
-  .principios { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-10); }
+  .principios { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--s-10); }
+  .principio:nth-child(n + 3) { margin-top: 0; }
+}
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 600px) {
+    .principio,
+    .principio:first-child,
+    .principio:last-child {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: subgrid;
+      grid-row: span 3;
+      row-gap: 0;
+    }
+    .principio .icon,
+    .principio__title,
+    .principio__text { grid-column: 1; grid-row: auto; }
+  }
 }
 
 
@@ -242,7 +265,8 @@
 }
 .publico__link:hover { color: var(--c-link); }
 .publico__link:hover .icon { color: var(--c-link); transform: translateX(3px); }
-.publico__link:focus-visible { outline-offset: -2px; }
+/* anel de foco por fora da linha, sem encostar no texto */
+.publico__link:focus-visible { outline-offset: 2px; }
 
 @media (max-width: 599px) {
   .para-quem__action .btn { width: 100%; }

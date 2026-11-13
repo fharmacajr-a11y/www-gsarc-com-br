@@ -212,7 +212,8 @@ a { color: inherit; }
 p, figure, blockquote { margin: 0; }
 ul, ol, dl, dd { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
-p { text-wrap: pretty; }
+/* parágrafos e itens de lista: sem palavra sozinha na última linha */
+p, li { text-wrap: pretty; }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
 fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
@@ -328,6 +329,8 @@ small { font-size: var(--fs-xs); line-height: 1.55; }
   height: 1px;
   background: currentColor;
 }
+/* sem o traço: bloco comum, o texto (e spans dentro dele) corre como uma linha só */
+.eyebrow--plain { display: block; }
 .eyebrow--plain::before { display: none; }
 
 /* Rótulo pequeno em caixa alta (metadados, títulos de coluna) */
@@ -365,7 +368,12 @@ small { font-size: var(--fs-xs); line-height: 1.55; }
 .container--narrow { --maxw: 46rem; }
 
 .section { padding-block: var(--section-y); }
-.section--alt { background: var(--paper-alt); }
+/* cinza: as linhas finas sobem um tom para continuarem visíveis (como no branco) */
+.section--alt {
+  --c-rule: var(--hairline-strong);
+  --c-rule-strong: var(--hairline-hover);
+  background: var(--paper-alt);
+}
 .section--dark { position: relative; isolation: isolate; }
 .section--tight { padding-block: clamp(3rem, 2rem + 3vw, 4.5rem); }
 .section--flush-top { padding-top: 0; }
@@ -377,8 +385,9 @@ small { font-size: var(--fs-xs); line-height: 1.55; }
   max-width: 46rem;
   margin-bottom: var(--head-gap);
 }
+/* texto de apoio curto (1 a 3 linhas): linhas equilibradas */
 .section-head > .lead,
-.section-head__main > .lead { margin-top: var(--s-5); }
+.section-head__main > .lead { margin-top: var(--s-5); text-wrap: balance; }
 
 /* h2 à esquerda, texto à direita (a partir de 900) */
 .section-head--split { max-width: none; }
@@ -840,11 +849,13 @@ html.menu-open .site-header__cta { visibility: hidden; }
    Faixa azul-marinho compacta: trilha ou link de voltar, sobretítulo, h1,
    texto, ações opcionais e lista lateral opcional.
    ========================================================================== */
+/* compacto (todas as páginas internas têm a mesma altura de faixa): 32 -> 52 em
+   cima, 44 -> 64 embaixo; a página de modelo reduz só o topo (link de voltar) */
 .page-hero {
   position: relative;
   isolation: isolate;
   overflow: clip;
-  padding-block: clamp(36px, 1.5rem + 3vw, 72px) clamp(48px, 2rem + 4vw, 88px);
+  padding-block: clamp(32px, 1rem + 2vw, 52px) clamp(44px, 1.5rem + 2.2vw, 64px);
 }
 .page-hero__grid { display: grid; gap: var(--s-10); }
 .page-hero__title { max-width: 20ch; }
@@ -863,7 +874,20 @@ html.menu-open .site-header__cta { visibility: hidden; }
   .page-hero__grid--aside { column-gap: clamp(64px, 8vw, 112px); }
 }
 
-/* Lista lateral (no herói ou em qualquer coluna): linhas finas, número ou marca */
+/* Herói dividido (.page-hero--split + .page-hero__grid--aside): sobretítulo e h1 à
+   esquerda, texto de abertura (.page-hero__intro) à direita a partir de 900,
+   alinhado pela última linha do título (Sobre, Contato, Pedir orçamento) */
+.page-hero--split .page-hero__grid { row-gap: var(--s-5); }
+.page-hero--split .page-hero__intro { margin-top: 0; }
+@media (min-width: 900px) {
+  .page-hero--split .page-hero__grid--aside {
+    align-items: end;
+    align-items: last baseline;
+  }
+}
+
+/* Lista lateral (no herói ou em qualquer coluna): linhas finas, número ou marca.
+   Item em duas linhas: linhas equilibradas e a marca na altura da primeira. */
 .side-list { border-top: 1px solid var(--c-rule); }
 .side-list li {
   display: flex;
@@ -874,6 +898,7 @@ html.menu-open .site-header__cta { visibility: hidden; }
   color: var(--c-heading);
   font-weight: 500;
   line-height: 1.45;
+  text-wrap: balance;
 }
 .side-list__num {
   flex: none;
@@ -884,7 +909,7 @@ html.menu-open .site-header__cta { visibility: hidden; }
   color: var(--c-num);
   font-variant-numeric: tabular-nums;
 }
-.side-list .icon { align-self: center; width: 18px; height: 18px; color: var(--c-num); }
+.side-list .icon { align-self: flex-start; width: 18px; height: 18px; margin-top: 3px; color: var(--c-num); }
 
 /* Trilha (breadcrumb) */
 .breadcrumb { margin-bottom: var(--s-4); font-size: var(--fs-xs); color: var(--c-muted); }
@@ -1054,18 +1079,25 @@ html.menu-open .site-header__cta { visibility: hidden; }
 }
 .stage .browser,
 .stage .phone { transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+/* Legenda: "Modelo X · Ver demonstração ->". O ponto é desenhado antes do link
+   (.stage__cta::before), no vão entre os dois; quando o link quebra para a linha
+   de baixo, o ponto fica fora da caixa (overflow) e some, em vez de sobrar no
+   fim da primeira linha. */
 .stage__caption {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2px 10px;
+  gap: 2px 1.25em;
+  overflow: hidden;
   margin-top: var(--s-4);
+  padding-bottom: 2px; /* sublinhado do link no hover */
   font-size: var(--fs-xs);
   line-height: 1.5;
   color: var(--c-muted);
 }
-.stage__sep { opacity: 0.6; }
+.stage__sep { display: none; } /* marcação antiga: o ponto agora vem do ::before do link */
 .stage__cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1074,16 +1106,29 @@ html.menu-open .site-header__cta { visibility: hidden; }
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
+.stage__cta::before {
+  content: "\00B7";
+  position: absolute;
+  left: -0.78em;
+  color: var(--c-muted);
+  font-weight: 400;
+}
 .stage__cta .icon { width: 16px; height: 16px; transition: transform 0.2s var(--ease); }
 .stage:hover .browser { transform: translateY(-4px); }
 .stage:hover .phone { transform: translateY(-8px); }
 .stage:hover .stage__cta { text-decoration-line: underline; }
 .stage:hover .stage__cta .icon { transform: translateX(3px); }
 .stage:focus-visible { outline-offset: 8px; }
-/* palco estreito: o link da legenda vai para a linha de baixo, sem o ponto */
+/* palco estreito: o link da legenda vai para a linha de baixo (sem o ponto) */
 @container (max-width: 379px) {
   .stage__caption { flex-direction: column; align-items: flex-start; }
-  .stage__sep { display: none; }
+}
+
+/* Palco simples (.stage.stage--single): uma moldura de navegador só, com a
+   mesma legenda; a moldura e a legenda formam UM link (ex.: o catálogo em /servicos/) */
+.stage--single .browser { position: relative; width: 100%; }
+.stage--single:hover .browser:not(.browser--dark) {
+  box-shadow: 0 0 0 1px rgba(10, 31, 68, 0.1), 0 2px 4px rgba(10, 31, 68, 0.04), 0 28px 48px -26px rgba(10, 31, 68, 0.45);
 }
 
 
@@ -1201,6 +1246,7 @@ html.menu-open .site-header__cta { visibility: hidden; }
   font-size: var(--fs-xs);
   line-height: 1.55;
   color: var(--c-text);
+  text-wrap: balance;   /* uma frase curta: "WhatsApp." não fica sozinho na última linha */
 }
 .model-item__actions {
   display: flex;
@@ -1308,12 +1354,21 @@ html.menu-open .site-header__cta { visibility: hidden; }
   .model-item__demo::after { border-radius: var(--r-md); }
   .model-item:hover .model-item__demo { background: none; text-decoration-line: underline; }
   .model-item__details { align-self: auto; }
+  /* a largura do item decide a linha "tipo · páginas" (ver @container abaixo) */
+  .model-grid > .model-item { container: model-item / inline-size; }
 }
 @media (min-width: 900px) {
   .model-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--s-16) var(--s-8);
   }
+}
+/* coluna estreita (< 350 px, ex.: 640-720 e 900-1180): tipo e páginas em duas
+   linhas em TODOS os itens, como no celular, em vez de quebrar só nos tipos
+   longos e desalinhar os títulos da fileira. A linha mais longa
+   ("Distribuidora de medicamentos · 5 páginas") pede 338 px. */
+@container model-item (max-width: 349px) {
+  .model-item__meta { flex-direction: column; flex-wrap: nowrap; }
 }
 
 
@@ -1354,13 +1409,22 @@ html.menu-open .site-header__cta { visibility: hidden; }
 .seg-index__link .icon { width: 18px; height: 18px; color: var(--c-muted); transition: transform 0.2s var(--ease), color 0.15s ease; }
 .seg-index__link:hover { color: var(--c-link); }
 .seg-index__link:hover .icon { color: var(--c-link); transform: translateX(3px); }
-.seg-index__link:focus-visible { outline-offset: -2px; }
+/* anel do foco fora da linha (dentro, ele encostava no nome e na seta) */
+.seg-index__link:focus-visible { outline-offset: 2px; }
 
 @media (min-width: 600px) {
   .seg-index__list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-8); }
 }
 @media (min-width: 900px) {
   .seg-index__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+/* sem fileira pela metade: o último item ocupa o que sobra da fileira */
+@media (min-width: 600px) and (max-width: 899px) {
+  .seg-index__list li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .seg-index__list li:last-child:nth-child(3n + 1) { grid-column: 1 / -1; }
+  .seg-index__list li:last-child:nth-child(3n + 2) { grid-column: span 2; }
 }
 /* uma fileira de cinco: colunas do tamanho do texto, sobra dividida por igual */
 @media (min-width: 1200px) {
@@ -1379,7 +1443,8 @@ html.menu-open .site-header__cta { visibility: hidden; }
 /* ==========================================================================
    15. Chips de filtro (galeria /modelos/; o JavaScript é da página)
    <div class="chips" role="group"> <button class="chip" aria-pressed="true">
-   Os chips quebram linha (nada de rolagem lateral), 44 px de altura.
+   Os chips quebram linha, 44 px de altura. (Exceção registrada: em /modelos/,
+   abaixo de 600 px, a fileira rola de lado; ver DESIGN 7.6.)
    ========================================================================== */
 .filter-label { margin-bottom: var(--s-3); }
 .chips {
@@ -1426,14 +1491,26 @@ html.menu-open .site-header__cta { visibility: hidden; }
 /* Linha de resultado sob os chips (aria-live="polite") */
 .result-line { margin-top: var(--s-4); font-size: var(--fs-xs); color: var(--c-muted); }
 
-/* Barra de filtro fixa sob o cabeçalho (opcional) */
+/* Barra de filtro fixa sob o cabeçalho (opcional). Ela gruda só dentro do
+   elemento pai: deve ser filha direta do bloco que contém a lista filtrada
+   inteira. Fundo opaco (grudada, o texto de baixo não aparece). */
 .filter-bar {
   position: sticky;
   top: calc(var(--header-h) + 1px);
   z-index: 40;
   padding-block: var(--s-3);
-  background: rgba(255, 255, 255, 0.97);
+  background: var(--paper);
   border-bottom: 1px solid var(--hairline);
+  transition: box-shadow 0.2s ease;
+}
+/* grudada (o script da página põe .is-stuck na barra e .has-stuck-bar no
+   <html>): a sombra passa do cabeçalho para a barra, sem linha entre os dois */
+.filter-bar.is-stuck { box-shadow: 0 6px 24px -18px rgba(10, 31, 68, 0.45); }
+html.has-stuck-bar .site-header { box-shadow: none; }
+/* tela baixa (celular deitado, zoom de 200%): só o cabeçalho gruda */
+@media (max-height: 500px) {
+  .filter-bar { position: static; }
+  .filter-bar.is-stuck { box-shadow: none; }
 }
 
 
@@ -1458,7 +1535,7 @@ html.menu-open .site-header__cta { visibility: hidden; }
   font-variant-numeric: tabular-nums;
 }
 .step__title { margin-top: var(--s-5); }
-.step__text { margin-top: var(--s-3); max-width: 26rem; color: var(--c-text); }
+.step__text { margin-top: var(--s-3); max-width: 26rem; color: var(--c-text); text-wrap: balance; }
 @media (min-width: 768px) {
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-10); }
   .step,
@@ -1467,6 +1544,18 @@ html.menu-open .site-header__cta { visibility: hidden; }
 @media (min-width: 1100px) {
   .steps { gap: var(--s-16); }
   .step__num { font-size: 3.5rem; }
+}
+
+/* Quatro passos (.steps.steps--4): duas colunas de 600 a 1099, quatro a partir
+   de 1100 (a 768 três colunas deixariam um passo sozinho) */
+@media (min-width: 600px) {
+  .steps--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-10); }
+  .steps--4 .step,
+  .steps--4 .step:first-child { padding: var(--s-8) 0 0; border-top-color: var(--c-heading); }
+}
+@media (min-width: 1100px) {
+  .steps--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-10); }
+  .steps--4 .step__num { font-size: 3rem; }
 }
 
 /* Rodapé dos passos: frase + botão, com linha fina */
@@ -1680,6 +1769,8 @@ html.menu-open .site-header__cta { visibility: hidden; }
 .accordion__item[open] .accordion__icon::after { transform: rotate(0deg); opacity: 0; }
 .accordion__panel { padding: 0 var(--s-12) var(--s-6) 0; color: var(--c-text); }
 .accordion__panel > * + * { margin-top: var(--s-3); }
+/* respostas de 2 a 5 linhas: linhas equilibradas, sem 1-2 palavras sozinhas no fim */
+.accordion__panel p { text-wrap: balance; }
 .accordion__panel a { color: var(--c-link); font-weight: 600; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 @media (max-width: 599px) {
   .accordion__panel { padding-right: 0; }
@@ -1715,9 +1806,15 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
 }
 .cta-band__inner { display: grid; gap: var(--s-8); }
 .cta-band__title { max-width: 18ch; }
-.cta-band__text { margin-top: var(--s-4); max-width: 34rem; }
+.cta-band__text { margin-top: var(--s-4); max-width: 34rem; text-wrap: balance; }
 @media (min-width: 900px) {
   .cta-band__inner { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--s-16); }
+}
+/* Três ações (.cta-band--3, que o shell põe quando a faixa tem 3 botões ou mais,
+   ex.: páginas de modelo): de 900 a 1199 a coluna das ações (~600 px) espremeria
+   o título em 3-4 linhas; título e texto ficam em cima e as ações embaixo. */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .cta-band--3 .cta-band__inner { grid-template-columns: minmax(0, 1fr); align-items: start; gap: var(--s-8); }
 }
 
 .site-footer__main { padding-top: clamp(48px, 2rem + 3vw, 72px); }
@@ -1788,11 +1885,19 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
 .site-footer__top:hover { color: #ffffff; text-decoration: underline; text-underline-offset: 4px; }
 .site-footer__top .icon { width: 16px; height: 16px; }
 
+/* < 360: colunas de 132 px e links de 14 px ("Redes de drogarias" cabe numa linha
+   e as duas listas seguem alinhadas) */
+@media (max-width: 359px) {
+  .site-footer__grid { column-gap: var(--s-4); }
+  .site-footer__list a { font-size: var(--fs-xs); }
+}
 @media (min-width: 600px) and (max-width: 899px) {
   .site-footer__contact .site-footer__list { display: flex; flex-wrap: wrap; column-gap: var(--s-8); }
 }
+/* a partir de 900 a coluna "Fale com a gente" tem a largura das duas linhas de
+   contato (max-content): "WhatsApp: (11) ..." e "E-mail: ..." nunca quebram */
 @media (min-width: 900px) {
-  .site-footer__grid { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)); gap: var(--s-10) var(--s-8); }
+  .site-footer__grid { grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr)) max-content; gap: var(--s-10) var(--s-8); }
   .site-footer__brand,
   .site-footer__contact { grid-column: auto; }
   .site-footer__list a { min-height: 36px; }
@@ -1819,6 +1924,7 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
   line-height: 1.4;
   color: var(--ink);
 }
+.label { text-wrap: balance; }   /* rótulos longos: duas linhas parecidas */
 .label__optional { font-weight: 400; color: var(--ink-muted); }
 .legend { margin-bottom: var(--s-3); }
 .legend--lg { font-family: var(--font-display); font-size: var(--fs-h3); letter-spacing: -0.015em; }
@@ -1839,7 +1945,7 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 .input::placeholder,
-.textarea::placeholder { color: #7a879b; }
+.textarea::placeholder { color: var(--ink-muted); }   /* 5.8:1 no branco */
 .input:hover,
 .select:hover,
 .textarea:hover { border-color: var(--hairline-hover); }
@@ -1859,6 +1965,13 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
   background-repeat: no-repeat;
   background-position: right 14px center;
   background-size: 18px 18px;
+  /* opção mais longa que o campo: reticências, não letra cortada sob a seta */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 359px) {
+  .select { padding-left: 12px; padding-right: 36px; background-position: right 12px center; }
 }
 .textarea { min-height: 140px; resize: vertical; }
 .field__hint { font-size: var(--fs-xs); color: var(--ink-muted); }
@@ -1885,14 +1998,15 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
   .form__submit { justify-self: stretch; }
 }
 
-/* Cartões de escolha (rádio ou caixa) */
+/* Cartões de escolha (rádio ou caixa). As colunas dependem da largura da
+   própria grade, não da tela (funcionam numa coluna ao lado de um painel):
+   --2: até 2 colunas de no mínimo 16rem; --3: até 3 colunas de no mínimo 13rem. */
 .choice-grid { display: grid; gap: var(--s-3); }
-@media (min-width: 600px) {
-  .choice-grid--2,
-  .choice-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.choice-grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(16rem, (100% - var(--s-3)) / 2)), 1fr));
 }
-@media (min-width: 900px) {
-  .choice-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.choice-grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(13rem, (100% - 2 * var(--s-3)) / 3)), 1fr));
 }
 .choice {
   position: relative;
@@ -1917,8 +2031,8 @@ footer.site-footer { display: block; margin: 0; padding: 0; }
   cursor: pointer;
 }
 .choice__body { display: grid; gap: 2px; min-width: 0; }
-.choice__title { font-weight: 600; line-height: 1.4; color: var(--ink); }
-.choice__text { font-size: var(--fs-xs); line-height: 1.5; color: var(--ink-muted); }
+.choice__title { font-weight: 600; line-height: 1.4; color: var(--ink); text-wrap: balance; }   /* "Distribuidora / de medicamentos" */
+.choice__text { font-size: var(--fs-xs); line-height: 1.5; color: var(--ink-muted); text-wrap: balance; }
 .choice:has(input:checked) {
   border-color: var(--blue);
   background: var(--ice);

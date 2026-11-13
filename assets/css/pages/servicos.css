@@ -1,23 +1,22 @@
 /* ==========================================================================
    GSA · /servicos/ (só esta página, depois de site.css)
 
-   1. Herói compacto + índice "O que fazemos" (a partir de 900)
+   1. Herói (altura compacta de site.css) + índice "O que fazemos" (a partir de 900)
    2. Serviço em duas colunas: texto + moldura (Sites, Catálogos)
    3. Ofertas: itens abertos com ícone e linha fina
-   4. Vitrine do catálogo: moldura de navegador com legenda (um só link)
    5. Sistemas e aplicativos (faixa azul-marinho) + "Projeto real"
    6. Ilustração abstrata do aplicativo (SVG; não é a tela real)
    7. Domínio, e-mail e suporte
-   8. Como trabalhamos: 4 passos
+   9. Quebra de linha equilibrada dos textos curtos
+   Vêm de site.css (antigos blocos 4 e 8): a moldura do catálogo (.stage.stage--single), os 4 passos
+   (.steps--4), o .eyebrow--plain em bloco e o "balance" dos textos de apoio
+   das seções e das respostas das perguntas.
    ========================================================================== */
 
 
 /* ==========================================================================
-   1. Herói compacto
+   1. Herói
    ========================================================================== */
-.page-hero--servicos {
-  padding-block: clamp(32px, 1rem + 2vw, 52px) clamp(44px, 1.5rem + 2.2vw, 64px);
-}
 /* o título usa a coluna toda: 2 linhas a partir de 1100 */
 .page-hero--servicos .page-hero__title { max-width: none; }
 .page-hero--servicos .lead { max-width: 37rem; }
@@ -60,7 +59,8 @@
   }
   .indice__link:hover { color: var(--c-link); }
   .indice__link:hover .icon { color: var(--c-link); transform: translateY(2px); }
-  .indice__link:focus-visible { outline-offset: -2px; border-radius: 4px; }
+  /* anel por fora da linha: dentro dela encostava nos números */
+  .indice__link:focus-visible { outline-offset: 2px; border-radius: 4px; }
 }
 
 
@@ -108,7 +108,8 @@
 .servico__visual { min-width: 0; }
 
 @media (min-width: 600px) and (max-width: 899px) {
-  .servico__visual { width: min(100%, 680px); }
+  /* centralizada, como o palco de Sites na mesma faixa */
+  .servico__visual { width: min(100%, 680px); margin-inline: auto; }
 }
 @media (min-width: 900px) {
   .servico__grid {
@@ -162,9 +163,9 @@
   .ofertas--sites .oferta { padding-bottom: 0; border-bottom: 0; }
 }
 
-/* Sistemas: duas colunas a partir de 768 */
+/* Sistemas: duas colunas a partir de 600 (mesma quebra das ofertas de Sites e dos passos) */
 .ofertas--2 { margin-top: 0; }
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .ofertas--2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--s-8);
@@ -173,30 +174,6 @@
 }
 @media (min-width: 1100px) {
   .ofertas--2 { column-gap: clamp(64px, 8vw, 112px); }
-}
-
-
-/* ==========================================================================
-   4. Vitrine do catálogo: a moldura e a legenda formam UM link
-   ========================================================================== */
-.vitrine {
-  container-type: inline-size;
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  border-radius: var(--r-md);
-}
-.vitrine .browser { transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
-.vitrine:hover .browser {
-  transform: translateY(-4px);
-  box-shadow: 0 0 0 1px rgba(10, 31, 68, 0.1), 0 2px 4px rgba(10, 31, 68, 0.04), 0 28px 48px -26px rgba(10, 31, 68, 0.45);
-}
-.vitrine:hover .stage__cta { text-decoration-line: underline; }
-.vitrine:hover .stage__cta .icon { transform: translateX(3px); }
-.vitrine:focus-visible { outline-offset: 8px; }
-@container (max-width: 379px) {
-  .vitrine .stage__caption { flex-direction: column; align-items: flex-start; }
-  .vitrine .stage__sep { display: none; }
 }
 
 
@@ -226,8 +203,15 @@
   background: var(--navy-2);
 }
 .projeto__arte { min-width: 0; width: min(100%, 460px); margin-inline: auto; }
-/* .eyebrow é flex: aqui o texto precisa quebrar como uma linha só */
-.projeto__rotulo { display: block; margin: 0; }
+.projeto__rotulo { margin: 0; }   /* .eyebrow--plain já é bloco (site.css) */
+/* "Projeto real · Regularize Consultoria": numa linha quando cabe; na coluna
+   estreita, duas linhas e sem o ponto (antes o "·" sobrava no fim da 1ª linha) */
+.projeto__copy { container-type: inline-size; }
+.projeto__parte { white-space: nowrap; }
+@container (max-width: 349px) {
+  .projeto__parte { display: block; }
+  .projeto__sep { display: none; }
+}
 .projeto__titulo {
   margin-top: var(--s-3);
   font-size: clamp(1.375rem, 1.15rem + 0.8vw, 1.875rem);
@@ -288,7 +272,7 @@
 
 
 /* ==========================================================================
-   7. Domínio, e-mail e suporte (duas colunas a partir de 768)
+   7. Domínio, e-mail e suporte (duas colunas a partir de 600)
    ========================================================================== */
 .extras__grid { display: grid; }
 .extra + .extra {
@@ -314,7 +298,7 @@
 }
 .extra__texto { margin-top: var(--s-4); max-width: 32rem; color: var(--c-text); }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .extras__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .extra + .extra {
     margin-top: 0;
@@ -328,15 +312,29 @@
 
 
 /* ==========================================================================
-   8. Como trabalhamos: 4 passos (2 colunas de 600, 4 de 1100)
+   9. Quebra de linha dos textos curtos (2 a 6 linhas)
+   Equilibrados em vez de "pretty": nesta página "pretty" deixava uma ou
+   duas palavras sozinhas na última linha em várias larguras ("dão conta.",
+   "no WhatsApp.", "ir ao ar.", "com login.", "seu site.", "faz sentido.",
+   "já existe."). Os textos de apoio dos cabeçalhos de seção e as respostas
+   das perguntas já são equilibrados em site.css.
    ========================================================================== */
-@media (min-width: 600px) {
-  .steps--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-10); }
-  /* mesmo tratamento que site.css aplica aos passos a partir de 768 */
-  .steps--4 .step,
-  .steps--4 .step:first-child { padding: var(--s-8) 0 0; border-top-color: var(--c-heading); }
+.servico__lead,
+.oferta__texto,
+.projeto__texto,
+.sistemas__foot p,
+.extra__texto,
+.steps--4 .step__text { text-wrap: balance; }
+/* Exceção, a partir de 900 (título e texto lado a lado no azul): ali o
+   "balance" (site.css) escolhia "Para quando planilhas e / mensagens soltas
+   já não dão conta."; com 18em e "pretty" fica "Para quando planilhas e
+   mensagens / soltas já não dão conta.". */
+@media (min-width: 900px) {
+  .sistemas__head > .lead { max-width: 18em; text-wrap: pretty; }
 }
-@media (min-width: 1100px) {
-  .steps--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-10); }
-  .steps--4 .step__num { font-size: 3rem; }
+/* Exceção: texto do "Projeto real" com a coluna abaixo de 290 px (celulares
+   de 320 a 360). Ali ele passa de 6 linhas, o "balance" do Chrome não age e
+   sobrava "negócios." sozinho; "pretty" resolve sem colar palavras. */
+@container (max-width: 289px) {
+  .projeto__texto { text-wrap: pretty; }
 }

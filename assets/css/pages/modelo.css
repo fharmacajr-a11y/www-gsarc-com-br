@@ -8,7 +8,8 @@
    3. O que vem no modelo (.model-includes, .model-summary, .model-features)
    4. Para quem é (.model-audience)
    5. O que não tem (.model-limits)
-   6. Faixa final no rodapé (ajuste da .cta-band com três ações)
+   (A faixa final com três ações usa .cta-band--3 de site.css; a legenda do
+   palco e o text-wrap das listas também vêm de site.css.)
    Gerado por scratchpad/pages/modelo/build_models.py (HTML) - edite os dois
    juntos.
    ========================================================================== */
@@ -42,18 +43,6 @@
   left: -0.74em;
 }
 
-/* Legenda do palco: mesmo truque, para o ponto não sobrar no fim da linha */
-.model-hero .stage__caption { column-gap: 1.25em; overflow: hidden; padding-bottom: 2px; }
-.model-hero .stage__sep { display: none; }
-.model-hero .stage__cta { position: relative; }
-.model-hero .stage__cta::before {
-  content: "\00B7";
-  position: absolute;
-  left: -0.78em;
-  color: var(--c-muted);
-  font-weight: 400;
-}
-
 .model-hero__grid {
   display: grid;
   gap: var(--s-12);
@@ -68,8 +57,11 @@
 
 @media (min-width: 900px) {
   .model-hero .back-link { margin-bottom: var(--s-6); }
+  /* a coluna do texto nunca fica mais estreita que os dois botões lado a
+     lado (195 + 12 + 237 px): entre 900 e ~940 o palco cede a largura,
+     em vez de "Quero um site assim" cair sozinho para a linha de baixo */
   .model-hero__grid {
-    grid-template-columns: minmax(0, 13fr) minmax(0, 11fr);
+    grid-template-columns: minmax(min(100%, 28.5rem), 13fr) minmax(0, 11fr);
     align-items: center;
     gap: clamp(40px, 4.5vw, 72px);
   }
@@ -112,7 +104,7 @@
   gap: var(--s-8);
   margin-bottom: var(--head-gap);
 }
-.model-includes__intro .lead { margin-top: var(--s-5); }
+.model-includes__intro .lead { margin-top: var(--s-5); text-wrap: balance; }
 
 /* resumo: linhas finas, traço azul (neutro: alguns itens dizem "Sem ...") */
 .model-summary { border-top: 1px solid var(--c-heading); }
@@ -153,7 +145,7 @@
   font-variant-numeric: tabular-nums;
 }
 .model-feature__title { margin-top: var(--s-3); }
-.model-feature__text { margin-top: var(--s-2); max-width: 30rem; color: var(--c-text); }
+.model-feature__text { margin-top: var(--s-2); max-width: 30rem; color: var(--c-text); text-wrap: balance; }
 
 /* empilhado: a última linha do resumo some (a linha da função 01 já separa) */
 @media (max-width: 899px) {
@@ -195,7 +187,7 @@
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
-.model-audience__text { margin-top: var(--s-2); max-width: 34rem; color: var(--c-text); }
+.model-audience__text { margin-top: var(--s-2); max-width: 34rem; color: var(--c-text); text-wrap: balance; }
 
 @media (min-width: 600px) and (max-width: 899px) {
   .model-audience__item {
@@ -266,16 +258,10 @@
   max-width: 36rem;
   color: var(--c-text);
 }
+/* duas linhas equilibradas (sem "sob medida." sobrando); no celular o
+   "pretty" dos parágrafos já resolve e o "balance" estreitaria demais */
+@media (min-width: 600px) {
+  .model-limits__foot { text-wrap: balance; }
+}
 .model-limits__foot strong { color: var(--c-heading); font-weight: 600; }
 
-
-/* ==========================================================================
-   6. Faixa final (componente compartilhado .cta-band, no rodapé)
-   Com três ações (shell.model_cta) a coluna automática das ações ocupa
-   ~600 px e, entre 900 e 1199, espreme o título em 3-4 linhas. Nestas
-   larguras a faixa fica empilhada (título e texto em cima, ações embaixo),
-   como no tablet. Pedido de ajuste compartilhado registrado.
-   ========================================================================== */
-@media (min-width: 900px) and (max-width: 1199px) {
-  .cta-band__inner { grid-template-columns: minmax(0, 1fr); align-items: start; gap: var(--s-8); }
-}

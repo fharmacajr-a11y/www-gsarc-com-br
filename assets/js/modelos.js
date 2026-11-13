@@ -10,9 +10,11 @@
    - Linha de resultado (aria-live="polite") com o texto do chip ativo.
    - Celular: fileira de chips com rolagem lateral; as bordas esmaecem quando
      há mais chips daquele lado e o chip ativo é trazido para a vista.
-   - Barra fixa: .is-fixa quando gruda sob o cabeçalho; ao trocar o filtro
-     com a barra grudada, a página volta ao começo da galeria. A altura dela
-     vai para --filtro-h (a âncora #grupo para logo abaixo da barra).
+   - Barra fixa (.filter-bar de site.css): .is-stuck na barra e
+     .has-stuck-bar no <html> enquanto ela gruda sob o cabeçalho (a sombra
+     passa do cabeçalho para a barra); ao trocar o filtro com a barra
+     grudada, a página volta ao começo da galeria. A altura dela vai para
+     --filtro-h (a âncora #grupo para logo abaixo da barra).
    Sem JavaScript: todos os grupos aparecem e os chips ficam escondidos.
    ========================================================================== */
 (function () {
@@ -110,8 +112,8 @@
   function syncStuck() {
     ticking = false;
     var stuck = isStuck();
-    bar.classList.toggle("is-fixa", stuck);
-    root.classList.toggle("filtro-fixo", stuck);
+    bar.classList.toggle("is-stuck", stuck);
+    root.classList.toggle("has-stuck-bar", stuck);
   }
   function onScroll() {
     if (ticking) return;
@@ -168,10 +170,18 @@
     });
   });
 
-  /* links para /modelos/#grupo dentro da própria página (rodapé, voltar/avançar) */
+  /* links para /modelos/#grupo dentro da própria página (rodapé) e voltar/avançar.
+     Endereço sem # = todos (voltar até /modelos/ não deixa o filtro antigo na
+     tela). Outros # (#topo, #perguntas...) não mexem no filtro. Se o filtro
+     não muda, a rolagem fica por conta do navegador (pulo da âncora ou
+     posição guardada ao voltar). */
   window.addEventListener("hashchange", function () {
     var value = valueFromHash();
-    if (!value) return;
+    if (!value) {
+      if (window.location.hash.replace(/^#/, "")) return;
+      value = ALL;
+    }
+    if (value === (root.getAttribute("data-filtro") || ALL)) return;
     apply(value, false);
     var section = value === ALL ? null : document.getElementById(value);
     if (section && section.scrollIntoView) section.scrollIntoView({ block: "start" });

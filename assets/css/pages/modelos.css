@@ -8,8 +8,11 @@
    5. Filtro ativo: <html data-filtro="grupo"> esconde os outros grupos
    6. Grade sem fileira pela metade (pares de grupos e item largo)
    7. "Não achou o modelo certo?"
-   8. Perguntas frequentes
    9. Sem JavaScript
+   Vêm de site.css: a altura do herói (.page-hero), o estado grudado da
+   barra (.filter-bar.is-stuck + html.has-stuck-bar, posto pelo modelos.js),
+   a barra parada em tela baixa, a linha "tipo · páginas" em duas linhas nas
+   colunas estreitas e as linhas mais fortes do FAQ cinza (.section--alt).
    ========================================================================== */
 
 :root {
@@ -22,11 +25,8 @@
 
 
 /* ==========================================================================
-   1. Herói compacto (sem botões: a galeria começa na primeira tela)
+   1. Herói (sem botões: a galeria começa na primeira tela)
    ========================================================================== */
-.page-hero--modelos {
-  padding-block: clamp(32px, 1rem + 2vw, 48px) clamp(40px, 1.25rem + 2vw, 52px);
-}
 .page-hero--modelos .page-hero__title { max-width: none; }
 .page-hero--modelos .lead { max-width: 47rem; }
 @media (min-width: 1100px) {
@@ -54,6 +54,8 @@
     line-height: 1.45;
     color: var(--c-heading);
   }
+  /* 600-899 (três colunas estreitas): linhas equilibradas, sem palavra sozinha */
+  .hero-steps__text { min-width: 0; text-wrap: balance; }
   .hero-steps__num {
     flex: none;
     display: inline-grid;
@@ -99,13 +101,7 @@
 .filtro__topo { padding-bottom: var(--s-2); }
 .filtro__label { margin-bottom: 0; }
 
-.filtro__barra {
-  padding-block: 10px;
-  transition: box-shadow 0.2s ease;
-}
-/* grudada: a barra leva a sombra do cabeçalho */
-.filtro__barra.is-fixa { box-shadow: 0 6px 24px -18px rgba(10, 31, 68, 0.45); }
-html.filtro-fixo .site-header.is-scrolled { box-shadow: none; }
+.filtro__barra { padding-block: 10px; }
 
 @property --fade-esq {
   syntax: "<length>";
@@ -143,9 +139,17 @@ html.filtro-fixo .site-header.is-scrolled { box-shadow: none; }
   .filtro__chips.tem-mais-dir { --fade-dir: 56px; }
 }
 
+/* 600-899: duas fileiras de três (farmácias e redes em cima; distribuidoras,
+   transportadoras e outras embaixo), em vez de 4 + 2 ou de um chip sozinho */
+@media (min-width: 600px) and (max-width: 899px) {
+  .filtro__chips { max-width: 33rem; }
+}
+
+/* 900-1099: os seis chips em uma fileira já em 900px (com folga para a
+   fonte do sistema), sem "Outras empresas" sozinho embaixo */
 @media (min-width: 900px) and (max-width: 1099px) {
   .filtro__chips { gap: 6px; }
-  .filtro__chips .chip { gap: 6px; padding: 0 12px; font-size: var(--fs-xs); }
+  .filtro__chips .chip { gap: 6px; padding: 0 10px; font-size: var(--fs-xs); }
 }
 
 
@@ -200,18 +204,15 @@ html.filtro-fixo .site-header.is-scrolled { box-shadow: none; }
   color: var(--c-text);
 }
 
-/* âncora #grupo: o grupo aparece abaixo da barra de chips e da linha de resultado */
-html.js .grupo { scroll-margin-top: calc(var(--filtro-h) + 40px); }
-
-/* Títulos alinhados na fileira: em coluna estreita, tipo e páginas ficam em
-   duas linhas em todos os itens (como no celular), em vez de quebrar só nos
-   tipos mais longos e desalinhar os títulos vizinhos. A linha mais longa
-   ("Distribuidora de medicamentos · 5 páginas") pede 338 px. */
-@media (min-width: 600px) {
-  .grupo__grid > .model-item { container: modelo / inline-size; }
-}
-@container modelo (max-width: 349px) {
-  .model-item__meta { flex-direction: column; flex-wrap: nowrap; }
+/* Rolagem com a barra grudada: o espaço reservado no topo inclui a barra de
+   chips, então o item focado pelo teclado (Tab e Shift+Tab) nunca fica
+   escondido atrás dela, e a âncora #grupo para logo abaixo da barra, com a
+   linha de resultado à vista entre as duas. */
+html.js { scroll-padding-top: calc(var(--header-h) + var(--filtro-h) + 16px); }
+html.js .grupo { scroll-margin-top: 48px; }
+/* tela baixa: a barra não gruda (site.css), então só o cabeçalho conta */
+@media (max-height: 500px) {
+  html.js { scroll-padding-top: calc(var(--header-h) + 24px); }
 }
 
 
@@ -376,24 +377,23 @@ html[data-filtro="outras-empresas"] .catalogo__par--dt { display: none; }
   html[data-filtro="outras-empresas"] .nao-achou__actions .btn { flex: 1 1 100%; }
 }
 
-/* faixa larga (filtros sem "Outras empresas"): texto à esquerda, botões à direita */
-@media (min-width: 768px) {
+/* faixa larga (filtros sem "Outras empresas"): texto à esquerda, botões à
+   direita a partir de 900; antes disso os dois botões ficam lado a lado
+   embaixo do texto (na coluna estreita eles quebravam com larguras diferentes) */
+@media (min-width: 900px) {
   html[data-filtro]:not([data-filtro="outras-empresas"]) .nao-achou__body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: var(--s-8);
   }
+  /* os botões ficam sempre lado a lado; quem se ajusta é o texto */
+  html[data-filtro]:not([data-filtro="outras-empresas"]) .nao-achou__actions {
+    flex: none;
+    flex-wrap: nowrap;
+  }
 }
 
-
-/* ==========================================================================
-   8. Perguntas frequentes (fundo cinza: linhas um pouco mais fortes)
-   ========================================================================== */
-.perguntas {
-  --c-rule: var(--hairline-strong);
-  --c-rule-strong: var(--hairline-hover);
-}
 
 
 /* ==========================================================================

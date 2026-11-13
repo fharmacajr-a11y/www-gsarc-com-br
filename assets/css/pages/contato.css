@@ -2,7 +2,8 @@
    Contato (/contato/) - regras só desta página. Carregada depois de site.css.
    Usa os tokens e as variáveis de contexto (--c-*) de site.css.
 
-   0. Herói compacto: título à esquerda, texto à direita (a partir de 900)
+   (O herói .page-hero--split vem de site.css, bloco 10; aqui só a
+   proporção das colunas, abaixo.)
    1. Canais (WhatsApp e e-mail), logo abaixo do herói
    2. Atalho para o pedido de orçamento (/monte-seu-site/)
    3. Formulário: texto, lista de ajuda e campos
@@ -10,17 +11,12 @@
    ========================================================================== */
 
 
-/* ==========================================================================
-   0. Herói compacto (.page-hero--split, igual em /sobre/)
-   Usa .page-hero__grid--aside de site.css; o texto de abertura ocupa a
-   coluna da direita e alinha pela última linha com o título.
-   ========================================================================== */
-.page-hero--split .page-hero__grid { row-gap: var(--s-5); }
-.page-hero--split .page-hero__intro { margin-top: 0; }
-@media (min-width: 900px) {
-  .page-hero--split .page-hero__grid--aside {
-    align-items: end;
-    align-items: last baseline;
+/* Herói: título curto e texto de abertura longo. De 900 a 1279 a coluna
+   do texto fica mais larga (3 linhas em vez de 4), para o texto não
+   começar acima do sobretítulo do título. */
+@media (min-width: 900px) and (max-width: 1279px) {
+  .page-hero--contato .page-hero__grid--aside {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   }
 }
 
@@ -61,7 +57,9 @@
   letter-spacing: -0.03em;
   color: var(--c-heading);
 }
-.canal__text { margin-top: var(--s-3); margin-bottom: var(--s-6); color: var(--c-text); }
+/* frase curta: duas linhas parecidas, sem "a gente." ou "mais detalhes."
+   sobrando na segunda */
+.canal__text { margin-top: var(--s-3); margin-bottom: var(--s-6); color: var(--c-text); text-wrap: balance; }
 .canal__btn { margin-top: auto; }
 
 @media (max-width: 599px) {
@@ -81,7 +79,7 @@
 .atalho-secao { padding-block: clamp(48px, 2rem + 2.4vw, 72px); }
 .atalho { display: grid; gap: var(--s-6); justify-items: start; }
 .atalho__title { font-size: clamp(1.5rem, 1.2rem + 1vw, 2.125rem); letter-spacing: -0.025em; }
-.atalho__text { margin-top: var(--s-3); max-width: 36rem; }
+.atalho__text { margin-top: var(--s-3); max-width: 36rem; text-wrap: balance; }
 
 @media (max-width: 599px) {
   .atalho__btn { justify-self: stretch; }
@@ -99,12 +97,16 @@
    3. Formulário
    < 900: título, texto e lista de ajuda acima dos campos.
    >= 900: texto e lista à esquerda (fixos ao rolar), campos à direita.
+   Sem JavaScript o formulário não envia nada (main.js monta a mensagem do
+   WhatsApp): a seção some e ficam os botões de WhatsApp e e-mail do topo.
    ========================================================================== */
+html:not(.js) #formulario { display: none; }
+html:not(.js) #duvidas { background: var(--paper); }   /* sem duas faixas cinza seguidas */
 .form-intro__text { margin-top: var(--s-5); max-width: 32rem; }
 .ajuda { margin-top: clamp(32px, 1.5rem + 2vw, 48px); max-width: 30rem; }
 .ajuda__title { margin-bottom: var(--s-3); }
-/* itens que quebram linha: a marca fica alinhada à primeira linha */
-.ajuda .side-list .icon { align-self: flex-start; margin-top: 3px; }
+/* (lista de ajuda, rótulos e o campo Assunto seguem as regras de site.css:
+   .side-list equilibrada, .label equilibrado, .select com reticências) */
 
 
 /* ==========================================================================

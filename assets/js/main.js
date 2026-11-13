@@ -101,7 +101,9 @@
       var first = $all(FOCUSABLE, panel).filter(visible)[0];
       if (first) first.focus({ preventScroll: true });
     } else if (!open && options.returnFocus) {
-      toggle.focus();
+      /* sem preventScroll o Chrome rola até a posição do cabeçalho fixo no fluxo
+         (a página subia 400-600 px ao fechar o menu com Esc) */
+      toggle.focus({ preventScroll: true });
     }
   }
 
@@ -131,13 +133,13 @@
         var active = document.activeElement;
         if (items.indexOf(active) === -1) {
           event.preventDefault();
-          (event.shiftKey ? lastItem : firstItem).focus();
+          (event.shiftKey ? lastItem : firstItem).focus({ preventScroll: true });
         } else if (event.shiftKey && active === firstItem) {
           event.preventDefault();
-          lastItem.focus();
+          lastItem.focus({ preventScroll: true });
         } else if (!event.shiftKey && active === lastItem) {
           event.preventDefault();
-          firstItem.focus();
+          firstItem.focus({ preventScroll: true });
         }
       }
     });
@@ -205,6 +207,26 @@
       errorBox.classList.toggle("hidden", !message);
     };
 
+    /* O aviso fica no topo do formulário e o campo, mais abaixo. Se os dois cabem
+       juntos na tela, rola até o aviso (abaixo do cabeçalho fixo: scrollIntoView
+       respeita o scroll-padding-top) e foca o campo sem rolar de novo; senão,
+       foca o campo normalmente (o aviso é lido pelo role="alert"). */
+    var focusField = function (field) {
+      if (!field) return;
+      if (errorBox && !errorBox.hidden && errorBox.scrollIntoView) {
+        var pad = parseFloat(window.getComputedStyle(root).scrollPaddingTop) || 0;
+        var boxTop = errorBox.getBoundingClientRect().top;
+        var fieldBottom = field.getBoundingClientRect().bottom;
+        var viewport = window.innerHeight || root.clientHeight;
+        if (fieldBottom - boxTop + pad <= viewport) {
+          if (boxTop < pad || fieldBottom > viewport) errorBox.scrollIntoView({ block: "start" });
+          field.focus({ preventScroll: true });
+          return;
+        }
+      }
+      field.focus();
+    };
+
     var markInvalid = function (names) {
       ["nome", "email", "mensagem"].forEach(function (name) {
         var field = contactForm.querySelector('[name="' + name + '"]');
@@ -231,8 +253,7 @@
       if (missing.length) {
         showError("Preencha: " + missing.join(", ") + ".");
         markInvalid(missingNames);
-        var firstInvalid = contactForm.querySelector('[name="' + missingNames[0] + '"]');
-        if (firstInvalid) firstInvalid.focus();
+        focusField(contactForm.querySelector('[name="' + missingNames[0] + '"]'));
         return;
       }
 
@@ -240,7 +261,7 @@
       if (emailField && !emailField.checkValidity()) {
         showError("Informe um e-mail válido.");
         markInvalid(["email"]);
-        emailField.focus();
+        focusField(emailField);
         return;
       }
 
