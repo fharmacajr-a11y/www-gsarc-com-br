@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A empresa | TransModelo Logística | Demonstração Transportadora Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para transportadora, com várias páginas e cotação pelo WhatsApp." />
+    <title>A empresa | Expresso Modelo Transportes</title>
+    <meta name="description" content="História, estrutura, missão e compromissos da Expresso Modelo Transportes, empresa fictícia da demonstração Transportadora Institucional." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0b3b5c" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-expresso-modelo.svg" />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
   <body>
@@ -15,146 +18,199 @@
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 800, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 18h · Plantão 24 h para clientes</p>
+        <div class="topbar__links">
+          <a class="topbar__item topbar__hide-sm" href="mailto:comercial@expressomodelo.com.br"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>comercial@expressomodelo.com.br</a>
+          <a class="topbar__item" href="tel:+550040000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 4000-0000</a>
+          <a class="topbar__item" href="https://wa.me/5500000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a>
         </div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da TransModelo Logística">
-          <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">TransModelo Logística</strong>
-            <span class="brand__subtitle">Transporte de cargas desde 2002</span>
-          </span>
-        </a>
 
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Expresso Modelo Transportes, página inicial">
+          <img src="assets/img/logo-expresso-modelo.svg" alt="" width="46" height="46" />
+          <span class="brand__name">EXPRESSO MODELO<small>Transportes</small></span>
+        </a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html">Início</a>
             <a href="a-empresa.html" aria-current="page">A empresa</a>
             <a href="servicos.html">Serviços</a>
             <a href="frota.html">Frota e regiões</a>
             <a href="cotacao.html">Cotação</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="cotacao.html">Pedir cotação</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
+        <a class="btn btn--accent header__cta" href="cotacao.html">Solicitar cotação</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+          <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
         </button>
       </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__nav" aria-label="Menu móvel">
             <a href="index.html">Início</a>
             <a href="a-empresa.html" aria-current="page">A empresa</a>
             <a href="servicos.html">Serviços</a>
             <a href="frota.html">Frota e regiões</a>
             <a href="cotacao.html">Cotação</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="cotacao.html">Pedir cotação</a>
-        </div>
+            <a class="btn btn--accent" href="cotacao.html">Solicitar cotação</a>
+        </nav>
       </div>
     </header>
 
     <main id="conteudo">
       <section class="page-hero">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>A empresa</span></nav>
-          <p class="eyebrow">A empresa</p>
-          <h1>Uma transportadora regional, com atendimento de perto.</h1>
-          <p>A TransModelo Logística é uma empresa fictícia usada para demonstrar o modelo. No site real, entram a história, as certificações e os números da sua transportadora.</p>
+        <img class="page-hero__photo" src="assets/img/fotos/t2-empresa-1600.webp" srcset="assets/img/fotos/t2-empresa-900.webp 900w, assets/img/fotos/t2-empresa-1600.webp 1600w, assets/img/fotos/t2-empresa-2400.webp 2400w" sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" />
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span aria-current="page">A empresa</span></nav>
+          <h1>Uma história construída na estrada</h1>
+          <p>Desde 1999 levando cargas com prazo, segurança e atendimento próximo.</p>
         </div>
       </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
+
+      <section class="section" id="historia" aria-labelledby="historia-titulo">
+        <div class="container split">
+          <div class="split__copy">
             <p class="eyebrow">Nossa história</p>
-            <h2>Duas décadas na estrada.</h2>
+            <h2 id="historia-titulo">De três caminhões a uma das transportadoras de referência da região</h2>
+            <p>A Expresso Modelo nasceu em Campinas, quando o fundador decidiu oferecer às indústrias da região um transporte em que o prazo combinado fosse levado a sério.</p>
+            <p>A confiança dos primeiros clientes trouxe novas rotas, filiais no Sul e um centro de distribuição próprio. O jeito de trabalhar continua o mesmo: cada cliente tem um consultor e cada carga é acompanhada até a entrega.</p>
           </div>
+          <figure class="split__media">
+            <img src="assets/img/fotos/t2-servicos-600.webp" srcset="assets/img/fotos/t2-servicos-600.webp 600w, assets/img/fotos/t2-servicos-1200.webp 1200w" sizes="(min-width: 960px) 560px, 100vw" alt="Centro de distribuição com prateleiras e empilhadeira" width="600" height="400" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="linha-titulo">
+        <div class="container">
+          <header class="section-head ">
+            <p class="eyebrow">Linha do tempo</p>
+            <h2 id="linha-titulo">Marcos da nossa trajetória</h2>
+          </header>
           <ol class="timeline">
-            <li><strong>2002</strong><p>Início com dois caminhões, atendendo o comércio da capital.</p></li>
-            <li><strong>2010</strong><p>Novo galpão e início das rotas para o interior.</p></li>
-            <li><strong>2018</strong><p>Rastreamento das entregas e atendimento pelo WhatsApp.</p></li>
-            <li><strong>2025</strong><p>45 veículos e 120 cidades atendidas.</p></li>
+            <li><span class="timeline__year">1999</span><h3>Fundação</h3><p>Início em Campinas, com três caminhões e rotas para a capital.</p></li>
+            <li><span class="timeline__year">2006</span><h3>Chegada ao Sul</h3><p>Primeira filial em Curitiba e rotas diárias para o Paraná.</p></li>
+            <li><span class="timeline__year">2012</span><h3>Centro de distribuição</h3><p>Inauguração do CD de 12.000 m² com armazenagem e cross-docking.</p></li>
+            <li><span class="timeline__year">2018</span><h3>Central 24 horas</h3><p>Monitoramento próprio de toda a frota, dia e noite.</p></li>
+            <li><span class="timeline__year">2024</span><h3>Frota renovada</h3><p>Novos caminhões com motores mais econômicos e menos poluentes.</p></li>
           </ol>
         </div>
       </section>
-      <section class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Diferenciais</p>
-            <h2>Por que escolher a TransModelo.</h2>
-          </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Diferencial 01</p>
-              <h3>Rastreamento</h3>
-              <p>O cliente acompanha coleta, saída e entrega.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Diferencial 02</p>
-              <h3>Seguro de carga</h3>
-              <p>Todas as cargas seguradas, conforme a operação.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Diferencial 03</p>
-              <h3>Atendimento dedicado</h3>
-              <p>Um contato fixo para cada empresa cliente.</p>
-            </article>
+
+      <section class="section" aria-labelledby="valores-titulo">
+        <div class="container">
+          <header class="section-head ">
+            <p class="eyebrow">Propósito</p>
+            <h2 id="valores-titulo">O que nos move</h2>
+          </header>
+          <div class="values">
+            <article class="value"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg><h3>Missão</h3><p>Transportar a carga dos nossos clientes com segurança, no prazo combinado e com atendimento próximo.</p></article>
+            <article class="value"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Visão</h3><p>Ser a transportadora mais confiável do Sul e Sudeste para empresas que não podem atrasar.</p></article>
+            <article class="value"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg><h3>Valores</h3><p>Compromisso com o prazo, segurança nas estradas, respeito às pessoas e transparência em cada etapa.</p></article>
           </div>
         </div>
       </section>
+
+      <section class="numbers-band" aria-label="A Expresso Modelo em números">
+        <div class="container numbers-band__grid">
+          <div><strong>25</strong><span>anos de estrada</span></div>
+          <div><strong>95</strong><span>veículos próprios</span></div>
+          <div><strong>12.000 m²</strong><span>de armazém</span></div>
+          <div><strong>4</strong><span>filiais no Sul e Sudeste</span></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="estrutura-titulo">
+        <div class="container split split--reverse">
+          <figure class="split__media">
+            <img src="assets/img/fotos/t2-equipe-600.webp" srcset="assets/img/fotos/t2-equipe-600.webp 600w, assets/img/fotos/t2-equipe-1200.webp 1200w" sizes="(min-width: 960px) 560px, 100vw" alt="Equipe conferindo pedidos com tablet ao lado de empilhadeira" width="600" height="400" loading="lazy" />
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">Estrutura</p>
+            <h2 id="estrutura-titulo">Tudo o que a operação precisa, sob o mesmo teto</h2>
+            <ul class="feature-list">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l9-5 9 5v12"/><path d="M7 21v-8h10v8M7 17h10"/></svg><span><strong>Matriz e CD em Campinas</strong>12.000 m² com docas, armazenagem e separação.</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20a16 16 0 0 1 16-16"/><path d="M8 20a12 12 0 0 1 12-12"/><circle cx="18" cy="18" r="2.5"/><path d="M12 20a8 8 0 0 1 8-8"/></svg><span><strong>Central de monitoramento</strong>Equipe própria acompanhando a frota 24 horas.</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5a4 4 0 0 0 5 5L12 18l-3 3-3-3 3-3 7.5-7.5z"/><path d="M14.5 5.5 18 2l4 4-3.5 3.5"/></svg><span><strong>Oficina própria</strong>Manutenção preventiva para não parar na estrada.</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 5.5"/></svg><span><strong>Motoristas da casa</strong>Contratados, treinados e avaliados todo ano.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="compromissos-titulo">
+        <div class="container">
+          <header class="section-head ">
+            <p class="eyebrow">Compromissos</p>
+            <h2 id="compromissos-titulo">Segurança, regularidade e cuidado com o ambiente</h2>
+          </header>
+          <div class="values">
+            <article class="value"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><h3>Segurança</h3><p>Programa de direção defensiva, controle de jornada e gerenciamento de risco em todas as viagens.</p></article>
+            <article class="value"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><h3>Regularidade</h3><p>Registro na ANTT, seguro RCTR-C e RC-DC e documentação fiscal em dia.</p></article>
+            <article class="value"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="M5 19 13 11"/></svg><h3>Meio ambiente</h3><p>Frota renovada, rotas planejadas para rodar menos e destinação correta de resíduos da oficina.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Quer conhecer a nossa operação?</h2>
+            <p>Agende uma visita ao centro de distribuição ou peça uma cotação.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--dark btn--lg" href="cotacao.html">Solicitar cotação</a>
+            <a class="cta-band__phone" href="tel:+550040000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><small>Central de atendimento</small>(00) 4000-0000</span></a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="48" height="48" />
-              <strong>TransModelo Logística</strong>
-            </div>
-            <p>Transportadora regional com frota própria, rastreamento e cotação rápida pelo WhatsApp.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-empresa.html">A empresa</a></li>
-              <li><a href="servicos.html">Serviços</a></li>
-              <li><a href="frota.html">Frota e regiões</a></li>
-              <li><a href="cotacao.html">Cotação</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 800, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand brand--light" href="index.html">
+            <img src="assets/img/logo-expresso-modelo.svg" alt="" width="46" height="46" />
+            <span class="brand__name">EXPRESSO MODELO<small>Transportes</small></span>
+          </a>
+          <p>Transporte rodoviário de cargas no Sul e Sudeste desde 1999, com frota própria e monitoramento 24 horas.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> TransModelo Logística. Empresa fictícia: demonstração do modelo Transportadora Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
+        <div>
+          <h2>Institucional</h2>
+          <ul>
+            <li><a href="a-empresa.html">A empresa</a></li>
+            <li><a href="a-empresa.html#historia">Nossa história</a></li>
+            <li><a href="frota.html">Frota</a></li>
+            <li><a href="frota.html#regioes">Regiões e filiais</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Serviços</h2>
+          <ul>
+            <li><a href="servicos.html#fracionada">Carga fracionada</a></li>
+            <li><a href="servicos.html#dedicada">Carga dedicada</a></li>
+            <li><a href="servicos.html#urbana">Distribuição urbana</a></li>
+            <li><a href="servicos.html#armazenagem">Armazenagem</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Atendimento</h2>
+          <ul class="footer__contact">
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550040000000">(00) 4000-0000</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000">(00) 90000-0000</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:comercial@expressomodelo.com.br">comercial@expressomodelo.com.br</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rod. Exemplo, km 100, Campinas/SP</span></li>
+          </ul>
         </div>
       </div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Expresso Modelo Transportes · CNPJ 00.000.000/0001-00 · Registro ANTT 000000</span>
+        <span>Empresa fictícia: demonstração do modelo Transportadora Institucional da GSA. <a href="../">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
 
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
 
     <script src="assets/js/demo.js"></script>
   </body>

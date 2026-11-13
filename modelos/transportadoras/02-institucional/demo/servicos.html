@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serviços | TransModelo Logística | Demonstração Transportadora Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para transportadora, com várias páginas e cotação pelo WhatsApp." />
+    <title>Serviços | Expresso Modelo Transportes</title>
+    <meta name="description" content="Carga fracionada, carga dedicada, distribuição urbana, armazenagem e serviços complementares da Expresso Modelo Transportes, empresa fictícia de demonstração." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0b3b5c" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-expresso-modelo.svg" />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
   <body>
@@ -15,148 +18,202 @@
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 800, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 18h · Plantão 24 h para clientes</p>
+        <div class="topbar__links">
+          <a class="topbar__item topbar__hide-sm" href="mailto:comercial@expressomodelo.com.br"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>comercial@expressomodelo.com.br</a>
+          <a class="topbar__item" href="tel:+550040000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 4000-0000</a>
+          <a class="topbar__item" href="https://wa.me/5500000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a>
         </div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da TransModelo Logística">
-          <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">TransModelo Logística</strong>
-            <span class="brand__subtitle">Transporte de cargas desde 2002</span>
-          </span>
-        </a>
 
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Expresso Modelo Transportes, página inicial">
+          <img src="assets/img/logo-expresso-modelo.svg" alt="" width="46" height="46" />
+          <span class="brand__name">EXPRESSO MODELO<small>Transportes</small></span>
+        </a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html">Início</a>
             <a href="a-empresa.html">A empresa</a>
             <a href="servicos.html" aria-current="page">Serviços</a>
             <a href="frota.html">Frota e regiões</a>
             <a href="cotacao.html">Cotação</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="cotacao.html">Pedir cotação</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
+        <a class="btn btn--accent header__cta" href="cotacao.html">Solicitar cotação</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+          <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
         </button>
       </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__nav" aria-label="Menu móvel">
             <a href="index.html">Início</a>
             <a href="a-empresa.html">A empresa</a>
             <a href="servicos.html" aria-current="page">Serviços</a>
             <a href="frota.html">Frota e regiões</a>
             <a href="cotacao.html">Cotação</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="cotacao.html">Pedir cotação</a>
-        </div>
+            <a class="btn btn--accent" href="cotacao.html">Solicitar cotação</a>
+        </nav>
       </div>
     </header>
 
     <main id="conteudo">
       <section class="page-hero">
+        <img class="page-hero__photo" src="assets/img/fotos/t2-servicos-1600.webp" srcset="assets/img/fotos/t2-servicos-900.webp 900w, assets/img/fotos/t2-servicos-1600.webp 1600w, assets/img/fotos/t2-servicos-2400.webp 2400w" sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" />
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span aria-current="page">Serviços</span></nav>
+          <h1>Serviços de transporte e logística</h1>
+          <p>Soluções para cada tipo de carga, do envio de poucas caixas à operação dedicada.</p>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-label="Lista de serviços">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Serviços</span></nav>
-          <p class="eyebrow">Serviços</p>
-          <h1>Soluções para cada tipo de carga.</h1>
-          <p>Do envio de poucas caixas à carga completa, com prazo combinado e acompanhamento.</p>
+          <nav class="jump" aria-label="Ir para o serviço"><a href="#fracionada">Carga fracionada</a><a href="#dedicada">Carga dedicada</a><a href="#urbana">Distribuição urbana</a><a href="#armazenagem">Armazenagem e cross-docking</a><a href="#complementares">Outros serviços</a></nav>
+          <div class="svc-rows">
+          <article class="svc-row" id="fracionada">
+            <figure class="svc-row__media">
+              <img src="assets/img/fotos/t2-van-600.webp" srcset="assets/img/fotos/t2-van-600.webp 600w, assets/img/fotos/t2-van-1200.webp 1200w" sizes="(min-width: 960px) 560px, 100vw" alt="Utilitário de carga sendo carregado com caixas" width="600" height="400" loading="lazy" />
+            </figure>
+            <div class="svc-row__copy">
+              <h2>Carga fracionada</h2>
+              <p>Para quem envia poucos volumes com frequência. A sua carga divide espaço com a de outros clientes e você paga só pelo que usa.</p>
+              <ul class="checks"><li>Coleta a partir de um volume</li><li>Saídas diárias para os quatro estados</li><li>Aviso de coleta e de entrega pelo WhatsApp</li><li>Comprovante de entrega por foto</li></ul>
+              <p class="svc-row__ideal"><strong>Ideal para:</strong> Indústrias, distribuidores e lojas virtuais</p>
+              <a class="btn btn--primary" href="cotacao.html?servico=Carga+fracionada">Cotar carga fracionada</a>
+            </div>
+          </article>
+          <article class="svc-row svc-row--reverse" id="dedicada">
+            <figure class="svc-row__media">
+              <img src="assets/img/fotos/t2-carreta-600.webp" srcset="assets/img/fotos/t2-carreta-600.webp 600w, assets/img/fotos/t2-carreta-1200.webp 1200w" sizes="(min-width: 960px) 560px, 100vw" alt="Carreta na rodovia" width="600" height="400" loading="lazy" />
+            </figure>
+            <div class="svc-row__copy">
+              <h2>Carga dedicada</h2>
+              <p>Um veículo exclusivo para a sua carga, da coleta à entrega, sem paradas e sem transbordo. Mais rapidez e menos manuseio.</p>
+              <ul class="checks"><li>Utilitários, caminhões e carretas</li><li>Até 32 toneladas por viagem</li><li>Escolta e gerenciamento de risco quando preciso</li><li>Rotas planejadas pela central</li></ul>
+              <p class="svc-row__ideal"><strong>Ideal para:</strong> Cargas completas, urgentes ou de alto valor</p>
+              <a class="btn btn--primary" href="cotacao.html?servico=Carga+dedicada">Cotar carga dedicada</a>
+            </div>
+          </article>
+          <article class="svc-row" id="urbana">
+            <figure class="svc-row__media">
+              <img src="assets/img/fotos/t2-entrega-600.webp" srcset="assets/img/fotos/t2-entrega-600.webp 600w, assets/img/fotos/t2-entrega-1200.webp 1200w" sizes="(min-width: 960px) 560px, 100vw" alt="Entregador conferindo volumes com prancheta" width="600" height="400" loading="lazy" />
+            </figure>
+            <div class="svc-row__copy">
+              <h2>Distribuição urbana</h2>
+              <p>Entregas na cidade com janela de horário, para abastecer lojas e redes ou atender o cliente final.</p>
+              <ul class="checks"><li>Roteirização diária</li><li>Entrega agendada com o recebedor</li><li>Veículos do tamanho certo para o centro</li><li>Baixa de entrega no mesmo dia</li></ul>
+              <p class="svc-row__ideal"><strong>Ideal para:</strong> Redes de lojas, farmácias e comércio eletrônico</p>
+              <a class="btn btn--primary" href="cotacao.html?servico=Distribuição+urbana">Cotar distribuição urbana</a>
+            </div>
+          </article>
+          <article class="svc-row svc-row--reverse" id="armazenagem">
+            <figure class="svc-row__media">
+              <img src="assets/img/fotos/t2-servicos-600.webp" srcset="assets/img/fotos/t2-servicos-600.webp 600w, assets/img/fotos/t2-servicos-1200.webp 1200w" sizes="(min-width: 960px) 560px, 100vw" alt="Corredor do centro de distribuição com empilhadeira" width="600" height="400" loading="lazy" />
+            </figure>
+            <div class="svc-row__copy">
+              <h2>Armazenagem e cross-docking</h2>
+              <p>Guarde o estoque perto dos seus clientes. Recebemos, armazenamos, separamos os pedidos e despachamos no mesmo fluxo.</p>
+              <ul class="checks"><li>12.000 m² de área com docas</li><li>Controle de estoque por sistema</li><li>Separação e etiquetagem de pedidos</li><li>Cross-docking para reduzir prazos</li></ul>
+              <p class="svc-row__ideal"><strong>Ideal para:</strong> Indústrias e distribuidores que vendem para o Sul</p>
+              <a class="btn btn--primary" href="cotacao.html?servico=Armazenagem">Cotar armazenagem</a>
+            </div>
+          </article>
+          </div>
         </div>
       </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Serviços</p>
-            <h2>Escolha o serviço certo para a sua carga.</h2>
+
+      <section class="section section--soft" id="complementares" aria-labelledby="comp-titulo">
+        <div class="container">
+          <header class="section-head ">
+            <p class="eyebrow">Complementares</p>
+            <h2 id="comp-titulo">Outros serviços para a sua operação</h2>
+          </header>
+          <div class="svc-grid">
+            <div class="svc-card svc-card--static"><span class="svc-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M12 10.5v6M9 13.5h6"/></svg></span><h3>Transporte farmacêutico</h3><p>Rotas para farmácias e distribuidoras, com conferência de volumes e janela de recebimento.</p></div>
+            <div class="svc-card svc-card--static"><span class="svc-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></span><h3>Logística reversa</h3><p>Coleta de devoluções, trocas e embalagens retornáveis nos seus clientes.</p></div>
+            <div class="svc-card svc-card--static"><span class="svc-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="m9 15 2 2 4-4"/></svg></span><h3>Coleta programada</h3><p>Rotas fixas em dias combinados para quem envia toda semana.</p></div>
+            <div class="svc-card svc-card--static"><span class="svc-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17h18M5 17v3M12 17v3M19 17v3"/><rect x="5" y="6" width="6" height="11"/><rect x="13" y="9" width="6" height="8"/></svg></span><h3>Paletização</h3><p>Montagem e filmagem de paletes para cargas mais protegidas.</p></div>
+            <div class="svc-card svc-card--static"><span class="svc-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Entrega agendada</h3><p>Combinamos dia e horário com quem vai receber a mercadoria.</p></div>
+            <div class="svc-card svc-card--static"><span class="svc-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h3>Seguro de carga</h3><p>Cobertura RCTR-C e RC-DC em todas as viagens, com seguro adicional sob consulta.</p></div>
           </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 01</p>
-              <h3>Carga fracionada</h3>
-              <p>Para poucos volumes, pagando só pelo espaço usado.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 02</p>
-              <h3>Carga lotação</h3>
-              <p>Veículo dedicado da coleta ao destino.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 03</p>
-              <h3>Entregas urbanas</h3>
-              <p>Distribuição na cidade para lojas e clientes finais.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 04</p>
-              <h3>Coleta programada</h3>
-              <p>Rotas fixas em dias combinados.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 05</p>
-              <h3>Farmácias e distribuidoras</h3>
-              <p>Entregas para o varejo farmacêutico com conferência.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 06</p>
-              <h3>Armazenagem e cross-docking</h3>
-              <p>Espaço para estoque e transbordo de mercadorias.</p>
-            </article>
-          </div>
-          <p class="section-note">Prazos e valores dependem de origem, destino, peso e volume.</p>
         </div>
       </section>
+
+      <section class="section" aria-labelledby="etapas-titulo">
+        <div class="container">
+          <header class="section-head ">
+            <p class="eyebrow">Como funciona</p>
+            <h2 id="etapas-titulo">Da cotação à entrega</h2>
+          </header>
+          <ol class="steps">
+            <li><span class="steps__n">1</span><h3>Cotação</h3><p>Você envia origem, destino e dados da carga. Respondemos em até 1 hora útil.</p></li>
+            <li><span class="steps__n">2</span><h3>Coleta</h3><p>Agendamos a coleta e conferimos volumes e notas fiscais.</p></li>
+            <li><span class="steps__n">3</span><h3>Transporte</h3><p>A carga segue em veículo rastreado, acompanhada pela central 24 horas.</p></li>
+            <li><span class="steps__n">4</span><h3>Entrega</h3><p>Entregamos na janela combinada e enviamos o comprovante por foto.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Vamos levar a sua carga?</h2>
+            <p>Receba valor e prazo do seu frete em até 1 hora útil.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--dark btn--lg" href="cotacao.html">Solicitar cotação</a>
+            <a class="cta-band__phone" href="tel:+550040000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><small>Central de atendimento</small>(00) 4000-0000</span></a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="48" height="48" />
-              <strong>TransModelo Logística</strong>
-            </div>
-            <p>Transportadora regional com frota própria, rastreamento e cotação rápida pelo WhatsApp.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-empresa.html">A empresa</a></li>
-              <li><a href="servicos.html">Serviços</a></li>
-              <li><a href="frota.html">Frota e regiões</a></li>
-              <li><a href="cotacao.html">Cotação</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 800, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand brand--light" href="index.html">
+            <img src="assets/img/logo-expresso-modelo.svg" alt="" width="46" height="46" />
+            <span class="brand__name">EXPRESSO MODELO<small>Transportes</small></span>
+          </a>
+          <p>Transporte rodoviário de cargas no Sul e Sudeste desde 1999, com frota própria e monitoramento 24 horas.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> TransModelo Logística. Empresa fictícia: demonstração do modelo Transportadora Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
+        <div>
+          <h2>Institucional</h2>
+          <ul>
+            <li><a href="a-empresa.html">A empresa</a></li>
+            <li><a href="a-empresa.html#historia">Nossa história</a></li>
+            <li><a href="frota.html">Frota</a></li>
+            <li><a href="frota.html#regioes">Regiões e filiais</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Serviços</h2>
+          <ul>
+            <li><a href="servicos.html#fracionada">Carga fracionada</a></li>
+            <li><a href="servicos.html#dedicada">Carga dedicada</a></li>
+            <li><a href="servicos.html#urbana">Distribuição urbana</a></li>
+            <li><a href="servicos.html#armazenagem">Armazenagem</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Atendimento</h2>
+          <ul class="footer__contact">
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550040000000">(00) 4000-0000</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000">(00) 90000-0000</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:comercial@expressomodelo.com.br">comercial@expressomodelo.com.br</a></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rod. Exemplo, km 100, Campinas/SP</span></li>
+          </ul>
         </div>
       </div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Expresso Modelo Transportes · CNPJ 00.000.000/0001-00 · Registro ANTT 000000</span>
+        <span>Empresa fictícia: demonstração do modelo Transportadora Institucional da GSA. <a href="../">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
 
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
 
     <script src="assets/js/demo.js"></script>
   </body>
