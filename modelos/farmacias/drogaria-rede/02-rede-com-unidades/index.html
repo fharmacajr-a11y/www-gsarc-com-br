@@ -1,273 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rede com Unidades | Modelo de site para redes de drogarias | GSA</title>
-  <meta
-    name="description"
-    content="Modelo de site para redes de drogarias mostrarem todas as lojas com busca por cidade, horário, serviços e WhatsApp de cada unidade."
-  >
-  <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png">
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-  <link rel="stylesheet" href="../../../../assets/css/tailwind.css">
-  <link rel="stylesheet" href="../../../../assets/css/custom.css">
-  <link rel="stylesheet" href="../../../assets/css/styles.css">
-</head>
-<body class="models-page antialiased">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Pular para o conteúdo</a>
-    <div class="border-b border-white/10 bg-brand-dark text-white">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 text-sm">
-        <p class="font-medium">Divisão de tecnologia - Regularize Consultoria</p>
-        <p class="hidden text-white/70 lg:block">Sites para farmácias, distribuidoras, transportadoras e outras empresas.</p>
-      </div>
-    </div>
-
-    <header class="site-header sticky top-0 z-50" data-site-header>
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="header-main flex items-center justify-between">
-          <a href="../../../../" class="brand-lockup brand-lockup--header" aria-label="Página inicial - Gestor de Sites &amp; Apps">
-            <img
-              src="../../../../assets/img/brand/gsa-logo-simbolo.png"
-              alt=""
-              class="brand-lockup__image"
-              width="200"
-              height="201"
-            />
-            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
-          </a>
-
-          <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
-            <a href="../../../../" class="nav-link text-sm font-semibold" data-nav-link>Início</a>
-            <a href="../../../../sobre/" class="nav-link text-sm font-semibold" data-nav-link>Sobre</a>
-            <a href="../../../../servicos/" class="nav-link text-sm font-semibold" data-nav-link>Serviços</a>
-            <a href="../../../" class="nav-link text-sm font-semibold" data-nav-link>Modelos</a>
-            <a href="../../../../projetos/" class="nav-link text-sm font-semibold" data-nav-link>Projetos</a>
-            <a href="../../../../contato/" class="nav-link text-sm font-semibold" data-nav-link>Contato</a>
-          </nav>
-
-          <div class="hidden lg:block">
-            <a
-              href="../../../../contato/"
-              class="inline-flex items-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark"
-              >Solicitar orçamento</a
-            >
-          </div>
-
-          <button
-            type="button"
-            class="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-4 py-2 text-sm font-semibold text-brand-dark lg:hidden"
-            data-menu-button
-            aria-expanded="false"
-            aria-controls="menu-mobile"
-          >
-            <span data-menu-label>Abrir menu</span>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rede com Unidades | Site com busca de lojas para redes | GSA</title>
+    <meta name="description" content="Modelo de site para rede de drogarias: o cliente busca a loja por cidade e vê endereço, horário e WhatsApp de cada unidade. Veja a demonstração.">
+    <link rel="canonical" href="https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GSA - Gestor de Sites e Apps">
+    <meta property="og:title" content="Rede com Unidades | Site com busca de lojas para redes | GSA">
+    <meta property="og:description" content="Modelo de site para rede de drogarias: o cliente busca a loja por cidade e vê endereço, horário e WhatsApp de cada unidade. Veja a demonstração.">
+    <meta property="og:url" content="https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/">
+    <meta property="og:image" content="https://gsarc.com.br/assets/img/brand/gsa-og-image.png">
+    <meta property="og:image:alt" content="Gestor de Sites e Apps - imagem social da GSA">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rede com Unidades | Site com busca de lojas para redes | GSA">
+    <meta name="twitter:description" content="Modelo de site para rede de drogarias: o cliente busca a loja por cidade e vê endereço, horário e WhatsApp de cada unidade. Veja a demonstração.">
+    <meta name="twitter:image" content="https://gsarc.com.br/assets/img/brand/gsa-og-image.png">
+    <meta name="theme-color" content="#0a1f44">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <!-- gsa:head -->
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/pages/modelo.css">
+    <!-- /gsa:head -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/#pagina",
+            "url": "https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/",
+            "name": "Rede com Unidades",
+            "description": "Modelo de site para rede de drogarias: o cliente busca a loja por cidade e vê endereço, horário e WhatsApp de cada unidade. Veja a demonstração.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://gsarc.com.br/#site"
+            },
+            "breadcrumb": {
+              "@id": "https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/#trilha"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/#trilha",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://gsarc.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Modelos",
+                "item": "https://gsarc.com.br/modelos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Rede com Unidades",
+                "item": "https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- gsa:shell-top -->
+    <div id="topo"></div>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header" data-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="/">
+          <img class="brand__symbol" src="/assets/img/brand/gsa-logo-simbolo.png" alt="GSA" width="40" height="40">
+          <span class="brand__name">Gestor de Sites &amp; Apps</span>
+        </a>
+        <nav class="site-nav" aria-label="Principal">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/" data-nav-link>Início</a></li>
+            <li><a class="site-nav__link" href="/modelos/" data-nav-link aria-current="page">Modelos</a></li>
+            <li><a class="site-nav__link" href="/servicos/" data-nav-link>Serviços</a></li>
+            <li><a class="site-nav__link" href="/sobre/" data-nav-link>Sobre</a></li>
+            <li><a class="site-nav__link" href="/contato/" data-nav-link>Contato</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="btn btn--primary btn--sm site-header__cta" href="/monte-seu-site/?modelo=rede-unidades" data-nav-link>Pedir orçamento</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+            <span class="menu-toggle__label" data-menu-label>Menu</span>
+            <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
           </button>
-        </div>
-
-        <div id="menu-mobile" class="hidden border-t border-brand/10 pb-4 pt-3 lg:hidden" data-mobile-menu>
-          <nav class="grid gap-2" aria-label="Navegação móvel">
-            <a href="../../../../" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Início</a
-            >
-            <a href="../../../../sobre/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Sobre</a
-            >
-            <a href="../../../../servicos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Serviços</a
-            >
-            <a href="../../../" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Modelos</a
-            >
-            <a href="../../../../projetos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Projetos</a
-            >
-            <a href="../../../../contato/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Contato</a
-            >
-          </nav>
+          <a class="menu-fallback" href="#rodape-navegacao">Menu</a>
         </div>
       </div>
     </header>
-  <main id="conteudo" class="page-shell">
-    <section class="hero">
-      <div class="hero-layout">
-        <div>
-          <a class="back-link" href="../../">← Todos os modelos</a>
-          <p class="eyebrow">Modelo com demonstração</p>
-          <h1>Rede com Unidades</h1>
-          <p class="hero-copy">
-            Um site para redes de drogarias mostrarem todas as lojas, com busca por cidade, horário, serviços e WhatsApp de cada unidade, para o cliente achar a loja mais perto e falar direto com ela.
-          </p>
-          <div class="badge-row">
-            <span class="preview-badge">Rede de drogarias</span>
-            <span class="preview-badge">Busca de unidades</span>
-            <span class="preview-badge">Sem backend</span>
-          </div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="demo/">Ver demonstração</a>
-            <a class="button button-secondary" href="../../../../contato/">Quero este modelo</a>
-          </div>
-        </div>
-        <div class="model-shots">
-          <div class="shot-frame">
-            <div class="shot-frame__bar" aria-hidden="true"><i></i><i></i><i></i><span>demonstração</span></div>
-            <img src="preview.webp" alt="Tela da demonstração do modelo Rede com Unidades no computador" width="1280" height="800" fetchpriority="high" />
-          </div>
-          <div class="shot-phone model-shots__phone">
-            <img src="preview-mobile.webp" alt="Tela da demonstração do modelo Rede com Unidades no celular" width="585" height="1170" />
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="menu-panel" id="menu" data-menu hidden>
+      <nav aria-label="Menu">
+        <ul class="menu-panel__list">
+          <li><a href="/" data-nav-link>Início<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/modelos/" data-nav-link aria-current="page">Modelos<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/servicos/" data-nav-link>Serviços<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/sobre/" data-nav-link>Sobre<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/contato/" data-nav-link>Contato<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a class="btn btn--primary btn--lg btn--block menu-panel__cta" href="/monte-seu-site/?modelo=rede-unidades" data-nav-link>Pedir orçamento</a>
+        <p class="menu-panel__contact"><a href="https://wa.me/5511999129999" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg>WhatsApp <span class="nowrap">(11) 9 9912-9999</span></a></p>
+      </nav>
+    </div>
+    <!-- /gsa:shell-top -->
 
-    <section class="section-block">
-      <div class="section-heading">
-        <p class="eyebrow">O que vai ter</p>
-        <h2>O que este modelo inclui</h2>
-        <p>Tudo isso já funciona na demonstração navegável, com uma empresa fictícia.</p>
-      </div>
-      <ul class="summary-list">
-            <li>Lista de lojas com filtro por cidade, endereço e horário de cada uma.</li>
-            <li>Etiquetas por unidade: 24 horas, entrega, estacionamento e serviços.</li>
-            <li>Botão de WhatsApp próprio para cada loja.</li>
-            <li>Serviços farmacêuticos, convênios e atendimento central da rede.</li>
+    <main id="conteudo">
+      <section class="page-hero model-hero" aria-labelledby="modelo-titulo">
+        <div class="container">
+          <a class="back-link" href="/modelos/#redes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Voltar aos modelos</a>
+          <div class="model-hero__grid">
+            <div class="model-hero__copy">
+              <p class="eyebrow model-hero__eyebrow"><span class="model-hero__kicker"><span>Rede de drogarias</span> <span class="model-hero__kind">Modelo com demonstração</span></span></p>
+              <h1 class="h1 page-hero__title" id="modelo-titulo">Rede com Unidades</h1>
+              <p class="lead model-hero__lead">Um site para redes de drogarias mostrarem todas as lojas, com busca por cidade, horário, serviços e&nbsp;WhatsApp de cada unidade, para o&nbsp;cliente achar a&nbsp;loja mais perto e&nbsp;falar direto com ela.</p>
+              <ul class="model-facts" aria-label="Destaques do modelo">
+                <li class="model-fact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M9 9v11"/></svg><span>1 página</span></li>
+                <li class="model-fact"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg><span>Atendimento pelo WhatsApp</span></li>
+              </ul>
+              <div class="actions actions--stack model-hero__actions">
+                <a class="btn btn--primary btn--lg" href="/modelos/farmacias/drogaria-rede/02-rede-com-unidades/demo/">Ver demonstração</a>
+                <a class="btn btn--secondary btn--lg" href="https://wa.me/5511999129999?text=Ol%C3%A1!%20Vi%20o%20modelo%20Rede%20com%20Unidades%20no%20site%20da%20GSA%20e%20quero%20um%20site%20assim." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg>Quero um site assim</a>
+              </div>
+              <p class="note model-hero__note"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></svg>A&nbsp;demonstração usa uma empresa fictícia.</p>
+            </div>
+            <div class="model-hero__visual">
+              <a class="stage" href="/modelos/farmacias/drogaria-rede/02-rede-com-unidades/demo/" aria-label="Modelo Rede com Unidades: ver demonstração">
+                <span class="stage__devices">
+                  <span class="browser browser--dark">
+                    <span class="browser__bar" aria-hidden="true"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url">suaempresa.com.br</span></span>
+                    <img src="/modelos/farmacias/drogaria-rede/02-rede-com-unidades/preview.webp" alt="Tela da demonstração do modelo Rede com Unidades no computador" width="1280" height="800" fetchpriority="high" decoding="async">
+                  </span>
+                  <span class="phone">
+                    <img src="/modelos/farmacias/drogaria-rede/02-rede-com-unidades/preview-mobile.webp" alt="Tela da demonstração do modelo Rede com Unidades no celular" width="585" height="1170" decoding="async">
+                  </span>
+                </span>
+                <span class="stage__caption"><span>Modelo Rede com Unidades</span> <span class="stage__cta">Ver demonstração<svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="o-que-vem" aria-labelledby="o-que-vem-titulo">
+        <div class="container">
+          <div class="model-includes">
+            <div class="model-includes__intro">
+              <h2 class="h2" id="o-que-vem-titulo">O&nbsp;que vem no modelo</h2>
+              <p class="lead">Tudo isso já funciona na demonstração.</p>
+            </div>
+            <ul class="model-summary">
+              <li>Lista de lojas com filtro por cidade, endereço e&nbsp;horário de cada uma.</li>
+              <li>Etiquetas por unidade: 24 horas, entrega, estacionamento e&nbsp;serviços.</li>
+              <li>Botão de WhatsApp próprio para cada loja.</li>
+              <li>Serviços farmacêuticos, convênios e&nbsp;atendimento central da rede.</li>
+            </ul>
+          </div>
+          <ul class="model-features">
+            <li class="model-feature"><span class="model-feature__num" aria-hidden="true">01</span><h3 class="model-feature__title">Busca de unidades</h3><p class="model-feature__text">Filtro por cidade com contador de lojas encontradas.</p></li>
+            <li class="model-feature"><span class="model-feature__num" aria-hidden="true">02</span><h3 class="model-feature__title">Ficha de cada loja</h3><p class="model-feature__text">Endereço, horário, etiquetas de serviço e&nbsp;WhatsApp da unidade.</p></li>
+            <li class="model-feature"><span class="model-feature__num" aria-hidden="true">03</span><h3 class="model-feature__title">Lojas 24 horas em destaque</h3><p class="model-feature__text">Etiqueta própria para o&nbsp;cliente achar o&nbsp;plantão na hora.</p></li>
+            <li class="model-feature"><span class="model-feature__num" aria-hidden="true">04</span><h3 class="model-feature__title">Serviços farmacêuticos</h3><p class="model-feature__text">Aferição de pressão, injetáveis, testes rápidos e&nbsp;entrega.</p></li>
+            <li class="model-feature"><span class="model-feature__num" aria-hidden="true">05</span><h3 class="model-feature__title">Convênios e&nbsp;vantagens</h3><p class="model-feature__text">Farmácia Popular, convênios de empresas e&nbsp;programa de fidelidade.</p></li>
+            <li class="model-feature"><span class="model-feature__num" aria-hidden="true">06</span><h3 class="model-feature__title">Atendimento central</h3><p class="model-feature__text">SAC, WhatsApp central e&nbsp;trabalhe conosco.</p></li>
           </ul>
-      <div class="feature-grid feature-grid--three">
-        <article class="showcase-card">
-          <h3>Busca de unidades</h3>
-          <p>Filtro por cidade com contador de lojas encontradas.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Ficha de cada loja</h3>
-          <p>Endereço, horário, etiquetas de serviço e WhatsApp da unidade.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Lojas 24 horas em destaque</h3>
-          <p>Etiqueta própria para o cliente achar o plantão na hora.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Serviços farmacêuticos</h3>
-          <p>Aferição de pressão, injetáveis, testes rápidos e entrega.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Convênios e vantagens</h3>
-          <p>Farmácia Popular, convênios de empresas e programa de fidelidade.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Atendimento central</h3>
-          <p>SAC, WhatsApp central e trabalhe conosco.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-heading">
-        <p class="eyebrow">Para quem é</p>
-        <h2>Para quem este modelo é indicado</h2>
-      </div>
-      <div class="card-grid">
-        <article class="showcase-card">
-          <h3>Rede de drogarias regional</h3>
-          <p>Para redes com várias lojas na cidade ou na região que querem facilitar a vida do cliente.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Rede com lojas 24 horas</h3>
-          <p>Para destacar as unidades de plantão, que são as mais procuradas no Google à noite.</p>
-        </article>
-        <article class="showcase-card">
-          <h3>Farmácia que abriu a segunda loja</h3>
-          <p>Para quem cresceu e precisa mostrar mais de um endereço sem confundir o cliente.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-split">
-        <article class="info-panel">
-          <p class="eyebrow">Bom saber</p>
-          <h2>O que fica de fora</h2>
-          <ul class="check-list">
-            <li>Não mostra produtos nem preços.</li>
-            <li>Não tem carrinho nem pagamento online.</li>
-            <li>Não localiza o cliente pelo GPS.</li>
-            <li>Não se integra ao sistema das lojas.</li>
-          </ul>
-        </article>
-        <article class="info-panel">
-          <p class="eyebrow">Teste antes de pedir</p>
-          <h2>Veja o modelo funcionando</h2>
-          <p>Abra a demonstração navegável e teste os botões, os filtros e o envio pelo WhatsApp, do jeito que o seu cliente vai usar.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="demo/">Abrir demonstração</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-block cta-panel">
-      <div class="section-heading">
-        <p class="eyebrow">Próximo passo</p>
-        <h2>Quer uma versão deste modelo para a sua rede?</h2>
-        <p>Adaptamos cores, logo, textos, serviços e contatos para a realidade da sua empresa.</p>
-      </div>
-      <div class="hero-actions">
-        <a class="button button-primary" href="../../../../contato/">Quero este modelo</a>
-        <a class="button button-secondary" href="../../">Ver outros modelos</a>
-      </div>
-    </section>
-  </main>
-    <footer class="footer-shell py-12">
-      <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
-        <div>
-          <a href="../../../../" class="brand-lockup brand-lockup--footer" aria-label="Página inicial - Gestor de Sites &amp; Apps">
-            <img
-              src="../../../../assets/img/brand/gsa-logo-simbolo.png"
-              alt=""
-              class="brand-lockup__image"
-              width="200"
-              height="201"
-            />
-            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
-          </a>
-          <p class="mt-5 max-w-xl text-sm leading-7 text-slate-600">
-            Divisão de tecnologia da Regularize Consultoria. Sites para farmácias, distribuidoras, transportadoras e outras empresas, além de sistemas e aplicativos sob medida.
-          </p>
         </div>
+      </section>
 
-        <div>
-          <h2 class="font-display text-lg font-bold text-brand-dark">Navegação</h2>
-          <nav class="mt-4 grid gap-3 text-sm text-slate-600">
-            <a href="../../../../" class="transition hover:text-brand-dark">Início</a>
-            <a href="../../../../sobre/" class="transition hover:text-brand-dark">Sobre</a>
-            <a href="../../../../servicos/" class="transition hover:text-brand-dark">Serviços</a>
-            <a href="../../../" class="transition hover:text-brand-dark">Modelos</a>
-            <a href="../../../../projetos/" class="transition hover:text-brand-dark">Projetos</a>
-            <a href="../../../../contato/" class="transition hover:text-brand-dark">Contato</a>
+      <section class="section section--alt" id="para-quem" aria-labelledby="para-quem-titulo">
+        <div class="container">
+          <div class="section-head model-audience-head">
+            <h2 class="h2" id="para-quem-titulo">Para quem é</h2>
+          </div>
+          <ul class="model-audience">
+            <li class="model-audience__item"><h3 class="model-audience__title">Rede de drogarias regional</h3><p class="model-audience__text">Para redes com várias lojas na cidade ou na região que querem facilitar a&nbsp;vida do cliente.</p></li>
+            <li class="model-audience__item"><h3 class="model-audience__title">Rede com lojas 24 horas</h3><p class="model-audience__text">Para destacar as unidades de plantão, que são as mais procuradas no Google à&nbsp;noite.</p></li>
+            <li class="model-audience__item"><h3 class="model-audience__title">Farmácia que abriu a&nbsp;segunda loja</h3><p class="model-audience__text">Para quem cresceu e&nbsp;precisa mostrar mais de um endereço sem confundir o&nbsp;cliente.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="o-que-nao-tem" aria-labelledby="o-que-nao-tem-titulo">
+        <div class="container split model-limits">
+          <h2 class="h2" id="o-que-nao-tem-titulo">O&nbsp;que não tem</h2>
+          <div class="model-limits__body">
+            <ul class="model-limits__list">
+              <li>Não mostra produtos nem preços.</li>
+              <li>Não tem carrinho nem pagamento online.</li>
+              <li>Não localiza o&nbsp;cliente pelo GPS.</li>
+              <li>Não se integra ao sistema das lojas.</li>
+            </ul>
+            <p class="model-limits__foot"><strong>Precisa de algo a&nbsp;mais?</strong> Conte para a&nbsp;gente e&nbsp;avaliamos como projeto sob medida.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- gsa:footer -->
+    <footer class="site-footer" id="rodape">
+      <section class="cta-band cta-band--3" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div class="cta-band__copy">
+            <h2 class="h2 cta-band__title" id="cta-titulo">Quer um site assim para a&nbsp;sua rede?</h2>
+            <p class="lead cta-band__text">Adaptamos logo, cores, textos, serviços e&nbsp;contatos e&nbsp;colocamos o&nbsp;site no ar.</p>
+          </div>
+          <div class="actions actions--stack cta-band__actions">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/5511999129999?text=Ol%C3%A1!%20Vi%20o%20modelo%20Rede%20com%20Unidades%20no%20site%20da%20GSA%20e%20quero%20um%20site%20assim." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg>Quero um site assim</a>
+            <a class="btn btn--secondary btn--lg" href="/modelos/farmacias/drogaria-rede/02-rede-com-unidades/demo/">Ver demonstração</a>
+            <a class="link-arrow" href="/modelos/#redes">Ver outros modelos<svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </section>
+      <div class="container site-footer__main">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="brand brand--footer" href="/">
+              <span class="brand__tile"><img src="/assets/img/brand/gsa-logo-simbolo.png" alt="GSA" width="34" height="34" loading="lazy"></span>
+              <span class="brand__name">Gestor de Sites &amp; Apps</span>
+            </a>
+            <p class="site-footer__about">Divisão de tecnologia da Regularize Consultoria. Sites para farmácias, distribuidoras, transportadoras e&nbsp;outras empresas, além de sistemas e&nbsp;aplicativos sob medida.</p>
+          </div>
+          <nav class="site-footer__col" aria-labelledby="rodape-navegacao">
+            <h2 class="site-footer__title" id="rodape-navegacao">Navegação</h2>
+            <ul class="site-footer__list">
+              <li><a href="/">Início</a></li>
+              <li><a href="/modelos/">Modelos</a></li>
+              <li><a href="/servicos/">Serviços</a></li>
+              <li><a href="/sobre/">Sobre</a></li>
+              <li><a href="/contato/">Contato</a></li>
+              <li><a href="/monte-seu-site/">Pedir orçamento</a></li>
+            </ul>
           </nav>
-        </div>
-
-        <div>
-          <h2 class="font-display text-lg font-bold text-brand-dark">Contato inicial</h2>
-          <div class="mt-4 grid gap-3 text-sm text-slate-600">
-            <a href="https://wa.me/5511999129999" class="transition hover:text-brand-dark">WhatsApp: (11) 9 9912-9999</a>
-            <a href="mailto:contato@gsa.com" class="transition hover:text-brand-dark"
-              >E-mail: contato@gsa.com</a
-            >
-            <p>Atendimento comercial sob agendamento.</p>
+          <nav class="site-footer__col" aria-labelledby="rodape-modelos">
+            <h2 class="site-footer__title" id="rodape-modelos">Modelos</h2>
+            <ul class="site-footer__list">
+              <li><a href="/modelos/#farmacias">Farmácias</a></li>
+              <li><a href="/modelos/#redes">Redes de drogarias</a></li>
+              <li><a href="/modelos/#distribuidoras">Distribuidoras</a></li>
+              <li><a href="/modelos/#transportadoras">Transportadoras</a></li>
+              <li><a href="/modelos/#outras-empresas">Outras empresas</a></li>
+            </ul>
+          </nav>
+          <div class="site-footer__contact">
+            <h2 class="site-footer__title">Fale com a&nbsp;gente</h2>
+            <ul class="site-footer__list">
+              <li><a href="https://wa.me/5511999129999" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg><span>WhatsApp: <span class="nowrap">(11) 9 9912-9999</span></span></a></li>
+              <li><a href="mailto:contato@gsa.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.2l8.5 6 8.5-6"/></svg><span>E-mail: <span class="nowrap">contato@gsa.com</span></span></a></li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div class="mx-auto mt-10 max-w-7xl border-t border-brand/10 px-6 pt-6 text-sm text-slate-500">
-        <p>&copy; <span data-current-year></span> GSA - Gestor de Sites &amp; Apps. Todos os direitos reservados.</p>
+        <div class="site-footer__bottom">
+          <p>&copy; <span data-current-year>2026</span> GSA - Gestor de Sites &amp; Apps. Todos os direitos reservados.</p>
+          <a class="site-footer__top" href="#topo">Voltar ao topo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+        </div>
       </div>
     </footer>
-  <script src="../../../../assets/js/main.js"></script>
-</body>
+    <!-- /gsa:footer -->
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>

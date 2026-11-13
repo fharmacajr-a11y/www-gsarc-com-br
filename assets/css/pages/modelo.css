@@ -1,0 +1,267 @@
+/* ==========================================================================
+   GSA - Página de modelo (/modelos/<pasta>/): as 16 páginas de detalhe.
+   Carregada depois de /assets/css/site.css. Só regras destas páginas;
+   tudo o que é compartilhado vem de site.css (DESIGN.md).
+
+   1. Herói do modelo (.model-hero): link de voltar, texto + palco
+   2. Fatos do modelo (.model-facts): páginas e WhatsApp
+   3. O que vem no modelo (.model-includes, .model-summary, .model-features)
+   4. Para quem é (.model-audience)
+   5. O que não tem (.model-limits)
+   (A faixa final com três ações usa .cta-band--3 de site.css; a legenda do
+   palco e o text-wrap das listas também vêm de site.css.)
+   Gerado por scratchpad/pages/modelo/build_models.py (HTML) - edite os dois
+   juntos.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. Herói do modelo
+   Faixa azul-marinho (.page-hero) com o link de voltar no topo; a partir de
+   900 px, texto à esquerda e palco (navegador + celular) à direita.
+   ========================================================================== */
+.model-hero {
+  padding-top: clamp(16px, 0.5rem + 1.5vw, 40px);
+}
+.model-hero .back-link { margin: 0 0 var(--s-4) -2px; }
+
+/* Sobretítulo "{tipo} · Modelo com demonstração": se não couber em uma linha,
+   quebra entre as duas partes e o ponto some (fica fora da caixa recortada) */
+.model-hero__eyebrow { align-items: flex-start; }
+.model-hero__eyebrow::before { margin-top: 0.61em; } /* traço na altura da 1a linha */
+.model-hero__kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 1.2em;
+  min-width: 0;
+  overflow: hidden;
+}
+.model-hero__kind { position: relative; }
+.model-hero__kind::before {
+  content: "\00B7";
+  position: absolute;
+  left: -0.74em;
+}
+
+.model-hero__grid {
+  display: grid;
+  gap: var(--s-12);
+}
+.model-hero__copy { min-width: 0; }
+.model-hero .page-hero__title { max-width: none; }
+.model-hero__lead { max-width: 36rem; }
+.model-hero__actions { margin-top: var(--s-8); }
+.model-hero__note { margin-top: var(--s-4); }
+/* o palco precisa de largura definida (container queries) */
+.model-hero__visual { width: 100%; max-width: 620px; min-width: 0; }
+
+@media (min-width: 900px) {
+  .model-hero .back-link { margin-bottom: var(--s-6); }
+  /* a coluna do texto nunca fica mais estreita que os dois botões lado a
+     lado (195 + 12 + 237 px): entre 900 e ~940 o palco cede a largura,
+     em vez de "Quero um site assim" cair sozinho para a linha de baixo */
+  .model-hero__grid {
+    grid-template-columns: minmax(min(100%, 28.5rem), 13fr) minmax(0, 11fr);
+    align-items: center;
+    gap: clamp(40px, 4.5vw, 72px);
+  }
+  .model-hero__visual { max-width: none; }
+}
+
+
+/* ==========================================================================
+   2. Fatos do modelo (etiquetas, não são botões)
+   ========================================================================== */
+.model-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--s-6);
+}
+.model-fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.07);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--c-heading);
+}
+.model-fact .icon { width: 16px; height: 16px; color: var(--c-num); }
+
+
+/* ==========================================================================
+   3. O que vem no modelo
+   Título + frase à esquerda e resumo à direita (a partir de 900); abaixo,
+   as 6 funções em colunas abertas com linha fina e número.
+   ========================================================================== */
+.model-includes {
+  display: grid;
+  gap: var(--s-8);
+  margin-bottom: var(--head-gap);
+}
+.model-includes__intro .lead { margin-top: var(--s-5); text-wrap: balance; }
+
+/* resumo: linhas finas, traço azul (neutro: alguns itens dizem "Sem ...") */
+.model-summary { border-top: 1px solid var(--c-heading); }
+.model-summary li {
+  position: relative;
+  padding: 16px 0 16px 32px;
+  border-bottom: 1px solid var(--c-rule-strong);
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--c-heading);
+}
+.model-summary li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(16px + 0.75em - 1px);
+  width: 16px;
+  height: 2px;
+  background: var(--blue);
+}
+
+.model-features { display: grid; }
+.model-feature {
+  padding: var(--s-5) 0 var(--s-8);
+  border-top: 1px solid var(--c-rule-strong);
+}
+.model-feature:last-child { padding-bottom: 0; }
+.model-feature__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--c-num);
+  font-variant-numeric: tabular-nums;
+}
+.model-feature__title { margin-top: var(--s-3); }
+.model-feature__text { margin-top: var(--s-2); max-width: 30rem; color: var(--c-text); text-wrap: balance; }
+
+/* empilhado: a última linha do resumo some (a linha da função 01 já separa) */
+@media (max-width: 899px) {
+  .model-summary li:last-child { border-bottom: 0; padding-bottom: 0; }
+}
+@media (min-width: 600px) {
+  .model-features { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-8); }
+  .model-feature:nth-last-child(2):nth-child(odd) { padding-bottom: 0; }
+}
+@media (min-width: 900px) {
+  .model-includes {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--s-16);
+    align-items: start;
+  }
+  .model-features { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--s-10); }
+  .model-feature { padding-bottom: var(--s-10); }
+  .model-feature:nth-last-child(-n + 3) { padding-bottom: 0; }
+}
+@media (min-width: 1100px) {
+  .model-includes { column-gap: clamp(64px, 8vw, 112px); }
+  .model-features { column-gap: var(--s-12); }
+}
+
+
+/* ==========================================================================
+   4. Para quem é (faixa cinza)
+   < 600: linhas; 600-899: título à esquerda e texto à direita;
+   >= 900: três colunas abertas sob linha escura.
+   ========================================================================== */
+.model-audience { border-top: 1px solid var(--c-heading); }
+.model-audience__item {
+  padding-block: var(--s-6);
+  border-bottom: 1px solid var(--c-rule-strong);
+}
+.model-audience__item:last-child { border-bottom: 0; padding-bottom: 0; }
+.model-audience__title {
+  font-size: clamp(1.1875rem, 1.1rem + 0.4vw, 1.4375rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.model-audience__text { margin-top: var(--s-2); max-width: 34rem; color: var(--c-text); text-wrap: balance; }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .model-audience__item {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    column-gap: var(--s-8);
+    align-items: baseline;
+  }
+  .model-audience__text { margin-top: 0; }
+}
+@media (min-width: 900px) {
+  .model-audience {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--s-10);
+    border-top: 0;
+  }
+  .model-audience__item,
+  .model-audience__item:last-child {
+    padding: var(--s-8) 0 0;
+    border-top: 1px solid var(--c-heading);
+    border-bottom: 0;
+  }
+  .model-audience__text { margin-top: var(--s-3); }
+}
+@media (min-width: 1100px) {
+  .model-audience { column-gap: var(--s-16); }
+}
+
+
+/* ==========================================================================
+   5. O que não tem
+   Título à esquerda (a partir de 900); lista com sinal de "menos" e a
+   frase de fechamento à direita.
+   ========================================================================== */
+.model-limits__list { border-top: 1px solid var(--c-heading); }
+.model-limits__list li {
+  position: relative;
+  padding: 16px 0 16px 34px;
+  border-bottom: 1px solid var(--c-rule-strong);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--c-heading);
+}
+/* círculo com traço: "não vem no modelo" (sem o alarme de um X vermelho) */
+.model-limits__list li::before,
+.model-limits__list li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.model-limits__list li::before {
+  top: calc(16px + 0.75em - 9px);
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--hairline-hover);
+  border-radius: 50%;
+}
+.model-limits__list li::after {
+  left: 5px;
+  top: calc(16px + 0.75em - 0.75px);
+  width: 8px;
+  height: 1.5px;
+  background: var(--ink-muted);
+}
+.model-limits__foot {
+  margin-top: var(--s-6);
+  max-width: 36rem;
+  color: var(--c-text);
+}
+/* duas linhas equilibradas (sem "sob medida." sobrando); no celular o
+   "pretty" dos parágrafos já resolve e o "balance" estreitaria demais */
+@media (min-width: 600px) {
+  .model-limits__foot { text-wrap: balance; }
+}
+.model-limits__foot strong { color: var(--c-heading); font-weight: 600; }
+

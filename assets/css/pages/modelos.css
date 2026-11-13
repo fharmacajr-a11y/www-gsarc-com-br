@@ -1,0 +1,408 @@
+/* ==========================================================================
+   GSA · /modelos/ · galeria dos 16 modelos (só esta página, depois de site.css)
+
+   1. Herói compacto + linha de 3 passos
+   2. Filtro: rótulo, barra fixa sob o cabeçalho, chips
+   3. Linha de resultado
+   4. Catálogo e cabeçalho dos grupos
+   5. Filtro ativo: <html data-filtro="grupo"> esconde os outros grupos
+   6. Grade sem fileira pela metade (pares de grupos e item largo)
+   7. "Não achou o modelo certo?"
+   9. Sem JavaScript
+   Vêm de site.css: a altura do herói (.page-hero), o estado grudado da
+   barra (.filter-bar.is-stuck + html.has-stuck-bar, posto pelo modelos.js),
+   a barra parada em tela baixa, a linha "tipo · páginas" em duas linhas nas
+   colunas estreitas e as linhas mais fortes do FAQ cinza (.section--alt).
+   ========================================================================== */
+
+:root {
+  --grupo-gap: clamp(56px, 2rem + 4vw, 96px);   /* entre grupos */
+  --filtro-h: 65px;   /* altura da barra de chips (uma fileira); o modelos.js grava a medida real */
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  :root { --filtro-h: 117px; }                   /* chips em duas fileiras */
+}
+
+
+/* ==========================================================================
+   1. Herói (sem botões: a galeria começa na primeira tela)
+   ========================================================================== */
+.page-hero--modelos .page-hero__title { max-width: none; }
+.page-hero--modelos .lead { max-width: 47rem; }
+@media (min-width: 1100px) {
+  .page-hero--modelos .lead { max-width: 54rem; }
+}
+
+/* 1 Filtre · 2 Abra · 3 Peça (escondida no celular) */
+.hero-steps { display: none; }
+
+@media (min-width: 600px) {
+  .hero-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-6);
+    margin-top: clamp(24px, 1rem + 1vw, 32px);
+    padding-top: var(--s-4);
+    border-top: 1px solid var(--c-rule);
+  }
+  .hero-steps__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: var(--fs-small);
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--c-heading);
+  }
+  /* 600-899 (três colunas estreitas): linhas equilibradas, sem palavra sozinha */
+  .hero-steps__text { min-width: 0; text-wrap: balance; }
+  .hero-steps__num {
+    flex: none;
+    display: inline-grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    margin-top: -2px;
+    border: 1px solid var(--c-rule-strong);
+    border-radius: 50%;
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--c-num);
+    font-variant-numeric: tabular-nums;
+  }
+}
+@media (min-width: 900px) {
+  .hero-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3) clamp(32px, 4vw, 64px);
+  }
+  .hero-steps__item { align-items: center; }
+  .hero-steps__num { margin-top: 0; }
+}
+
+
+/* ==========================================================================
+   2. Filtro
+   O rótulo e a linha de resultado ficam no fluxo; só a barra de chips gruda
+   sob o cabeçalho, e só enquanto a galeria está na tela (a barra é filha
+   direta de .galeria).
+   < 600: uma fileira com rolagem lateral, bordas esmaecidas quando há mais
+          chips daquele lado e o chip ativo sempre à vista (modelos.js).
+   >= 600: os chips quebram linha; 900-1099: chips um pouco mais justos
+          para caber em uma fileira.
+   ========================================================================== */
+.galeria {
+  padding-block: clamp(24px, 0.75rem + 1.5vw, 36px) var(--section-y);
+}
+
+.filtro__topo { padding-bottom: var(--s-2); }
+.filtro__label { margin-bottom: 0; }
+
+.filtro__barra { padding-block: 10px; }
+
+@property --fade-esq {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --fade-dir {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@media (max-width: 599px) {
+  .filtro__barra { padding-block: 4px; }
+  .filtro__chips {
+    --fade-esq: 0px;
+    --fade-dir: 0px;
+    position: relative;
+    flex-wrap: nowrap;
+    margin-inline: calc(-1 * var(--gutter));
+    padding: 6px var(--gutter);
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-esq), #000 calc(100% - var(--fade-dir)), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 var(--fade-esq), #000 calc(100% - var(--fade-dir)), transparent 100%);
+    transition: --fade-esq 0.2s ease, --fade-dir 0.2s ease;
+  }
+  .filtro__chips::-webkit-scrollbar { display: none; }
+  .filtro__chips .chip { flex: none; }
+  .filtro__chips.tem-mais-esq { --fade-esq: 44px; }
+  .filtro__chips.tem-mais-dir { --fade-dir: 56px; }
+}
+
+/* 600-899: duas fileiras de três (farmácias e redes em cima; distribuidoras,
+   transportadoras e outras embaixo), em vez de 4 + 2 ou de um chip sozinho */
+@media (min-width: 600px) and (max-width: 899px) {
+  .filtro__chips { max-width: 33rem; }
+}
+
+/* 900-1099: os seis chips em uma fileira já em 900px (com folga para a
+   fonte do sistema), sem "Outras empresas" sozinho embaixo */
+@media (min-width: 900px) and (max-width: 1099px) {
+  .filtro__chips { gap: 6px; }
+  .filtro__chips .chip { gap: 6px; padding: 0 10px; font-size: var(--fs-xs); }
+}
+
+
+/* ==========================================================================
+   3. Linha de resultado (aria-live)
+   ========================================================================== */
+.filtro__resultado { margin-top: var(--s-4); }
+
+
+/* ==========================================================================
+   4. Catálogo e grupos
+   Flex com gap: grupos escondidos (display: none) não deixam espaço sobrando.
+   ========================================================================== */
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grupo-gap);
+  margin-top: var(--s-6);
+}
+.catalogo__par {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grupo-gap);
+}
+
+.grupo__head {
+  margin-bottom: clamp(24px, 1rem + 1.5vw, 40px);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--c-heading);
+}
+.grupo__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 12px;
+}
+.grupo__title {
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.grupo__count {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+.grupo__text {
+  max-width: 38rem;
+  margin-top: 6px;
+  color: var(--c-text);
+}
+
+/* Rolagem com a barra grudada: o espaço reservado no topo inclui a barra de
+   chips, então o item focado pelo teclado (Tab e Shift+Tab) nunca fica
+   escondido atrás dela, e a âncora #grupo para logo abaixo da barra, com a
+   linha de resultado à vista entre as duas. */
+html.js { scroll-padding-top: calc(var(--header-h) + var(--filtro-h) + 16px); }
+html.js .grupo { scroll-margin-top: 48px; }
+/* tela baixa: a barra não gruda (site.css), então só o cabeçalho conta */
+@media (max-height: 500px) {
+  html.js { scroll-padding-top: calc(var(--header-h) + 24px); }
+}
+
+
+/* ==========================================================================
+   5. Filtro ativo (o estado vem do endereço antes da primeira pintura e
+      depois do modelos.js)
+   ========================================================================== */
+html[data-filtro="farmacias"] .grupo:not(#farmacias),
+html[data-filtro="redes"] .grupo:not(#redes),
+html[data-filtro="distribuidoras"] .grupo:not(#distribuidoras),
+html[data-filtro="transportadoras"] .grupo:not(#transportadoras),
+html[data-filtro="outras-empresas"] .grupo:not(#outras-empresas),
+html[data-filtro="farmacias"] .catalogo__par--dt,
+html[data-filtro="redes"] .catalogo__par--dt,
+html[data-filtro="outras-empresas"] .catalogo__par--dt { display: none; }
+
+
+/* ==========================================================================
+   6. Grade sem fileira pela metade
+   >= 900 (3 colunas), vista "Todos": Distribuidoras (4, em 2x2) ao lado de
+   Transportadoras (2, uma coluna); Outras empresas (1) ao lado de "Não achou".
+   600-899 (2 colunas): Outras empresas ao lado de "Não achou"; o último item
+   de um grupo ímpar (Redes) ocupa a fileira inteira, com a imagem à esquerda.
+   Filtrado em >= 900: Distribuidoras e Transportadoras em 2 colunas.
+   As linhas dos pares usam subgrid para alinhar imagens, títulos e links.
+   ========================================================================== */
+@media (min-width: 600px) and (max-width: 899px) {
+  .grupo:not(#outras-empresas) .grupo__grid > .model-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-6);
+    align-items: stretch;
+  }
+  .grupo:not(#outras-empresas) .grupo__grid > .model-item:last-child:nth-child(odd) .model-item__body {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  html[data-filtro="distribuidoras"] #distribuidoras .grupo__grid,
+  html[data-filtro="transportadoras"] #transportadoras .grupo__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@supports (grid-template-rows: subgrid) {
+  /* Outras empresas + "Não achou o modelo certo?" */
+  @media (min-width: 600px) {
+    html:not([data-filtro]) .catalogo__par--oe,
+    html[data-filtro="outras-empresas"] .catalogo__par--oe {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 var(--s-6);
+    }
+    html:not([data-filtro]) #outras-empresas,
+    html[data-filtro="outras-empresas"] #outras-empresas {
+      display: grid;
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      grid-template-rows: subgrid;
+    }
+    html:not([data-filtro]) #outras-empresas .grupo__grid,
+    html[data-filtro="outras-empresas"] #outras-empresas .grupo__grid {
+      grid-row: 2;
+      grid-template-columns: minmax(0, 1fr);
+    }
+    html:not([data-filtro]) .catalogo__par--oe .nao-achou,
+    html[data-filtro="outras-empresas"] .catalogo__par--oe .nao-achou {
+      grid-column: 2 / -1;
+      grid-row: 2;
+    }
+  }
+  @media (min-width: 900px) {
+    html:not([data-filtro]) .catalogo__par--oe,
+    html[data-filtro="outras-empresas"] .catalogo__par--oe {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: var(--s-8);
+    }
+
+    /* Distribuidoras (2 colunas) + Transportadoras (1 coluna) */
+    html:not([data-filtro]) .catalogo__par--dt {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0 var(--s-8);
+    }
+    html:not([data-filtro]) .catalogo__par--dt > .grupo {
+      display: grid;
+      grid-row: span 3;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+    }
+    html:not([data-filtro]) #distribuidoras { grid-column: 1 / span 2; }
+    html:not([data-filtro]) #transportadoras { grid-column: 3 / span 1; }
+    html:not([data-filtro]) .catalogo__par--dt .grupo__head {
+      grid-column: 1 / -1;
+      grid-row: 1;
+    }
+    html:not([data-filtro]) .catalogo__par--dt .grupo__grid {
+      grid-column: 1 / -1;
+      grid-row: 2 / -1;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   7. "Não achou o modelo certo?"
+   Na vista "Todos" (e em "Outras empresas") fica ao lado do último modelo,
+   da altura dele: ícone em cima, texto e botões embaixo. Nos outros filtros,
+   e no celular, vira uma faixa abaixo dos modelos.
+   ========================================================================== */
+.nao-achou {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s-8);
+  padding: clamp(24px, 1rem + 2vw, 40px);
+  border: 1px solid var(--ice-line);
+  border-radius: var(--r-md);
+  background: var(--ice);
+}
+.nao-achou__icon { display: none; }
+.nao-achou__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-6);
+}
+.nao-achou__title {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+.nao-achou__text {
+  max-width: 30rem;
+  margin-top: var(--s-3);
+  color: var(--c-text);
+}
+@media (max-width: 599px) {
+  .nao-achou__actions .btn { flex: 1 1 100%; }
+}
+
+/* ao lado do último modelo (>= 600) */
+@media (min-width: 600px) {
+  html:not([data-filtro]) .nao-achou__icon,
+  html[data-filtro="outras-empresas"] .nao-achou__icon {
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--ice-line);
+    border-radius: var(--r-sm);
+    background: #ffffff;
+    color: var(--link);
+  }
+  .nao-achou__icon .icon { width: 24px; height: 24px; stroke-width: 1.6; }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  html:not([data-filtro]) .nao-achou__actions .btn,
+  html[data-filtro="outras-empresas"] .nao-achou__actions .btn { flex: 1 1 100%; }
+}
+
+/* faixa larga (filtros sem "Outras empresas"): texto à esquerda, botões à
+   direita a partir de 900; antes disso os dois botões ficam lado a lado
+   embaixo do texto (na coluna estreita eles quebravam com larguras diferentes) */
+@media (min-width: 900px) {
+  html[data-filtro]:not([data-filtro="outras-empresas"]) .nao-achou__body {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-8);
+  }
+  /* os botões ficam sempre lado a lado; quem se ajusta é o texto */
+  html[data-filtro]:not([data-filtro="outras-empresas"]) .nao-achou__actions {
+    flex: none;
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+/* ==========================================================================
+   9. Sem JavaScript: os chips não funcionariam; todos os grupos aparecem e
+      os links /modelos/#grupo levam direto à seção. A linha de passos
+      ("1 Filtre pelo tipo de empresa") sai junto com o filtro.
+   ========================================================================== */
+html:not(.js) .hero-steps,
+html:not(.js) .filtro__topo,
+html:not(.js) .filtro__barra,
+html:not(.js) .filtro__resultado { display: none; }
+html:not(.js) .catalogo { margin-top: 0; }

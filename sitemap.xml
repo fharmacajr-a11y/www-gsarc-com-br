@@ -4,43 +4,10 @@
     <loc>https://gsarc.com.br/</loc>
   </url>
   <url>
-    <loc>https://gsarc.com.br/sobre/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/servicos/</loc>
-  </url>
-  <url>
     <loc>https://gsarc.com.br/modelos/</loc>
   </url>
   <url>
-    <loc>https://gsarc.com.br/modelos/farmacias/</loc>
-  </url>
-  <url>
     <loc>https://gsarc.com.br/modelos/farmacias/farmacia/01-onepage/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/modelos/transportadoras/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/modelos/transportadoras/01-onepage/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/modelos/distribuidoras/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/modelos/distribuidoras/01-onepage/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/projetos/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/contato/</loc>
-  </url>
-  <url>
-    <loc>https://gsarc.com.br/monte-seu-site/</loc>
   </url>
   <url>
     <loc>https://gsarc.com.br/modelos/farmacias/farmacia/02-institucional/</loc>
@@ -55,7 +22,13 @@
     <loc>https://gsarc.com.br/modelos/farmacias/farmacia/05-delivery-assistido/</loc>
   </url>
   <url>
+    <loc>https://gsarc.com.br/modelos/farmacias/farmacia/06-manipulacao/</loc>
+  </url>
+  <url>
     <loc>https://gsarc.com.br/modelos/farmacias/drogaria-rede/01-institucional-rede/</loc>
+  </url>
+  <url>
+    <loc>https://gsarc.com.br/modelos/farmacias/drogaria-rede/02-rede-com-unidades/</loc>
   </url>
   <url>
     <loc>https://gsarc.com.br/modelos/farmacias/drogaria-rede/03-rede-com-ofertas/</loc>
@@ -67,18 +40,30 @@
     <loc>https://gsarc.com.br/modelos/farmacias/distribuidora/02-catalogo-b2b-sem-precos/</loc>
   </url>
   <url>
-    <loc>https://gsarc.com.br/modelos/outras-empresas/</loc>
+    <loc>https://gsarc.com.br/modelos/distribuidoras/01-onepage/</loc>
   </url>
   <url>
-    <loc>https://gsarc.com.br/modelos/outras-empresas/01-onepage/</loc>
+    <loc>https://gsarc.com.br/modelos/distribuidoras/02-catalogo-b2b/</loc>
   </url>
   <url>
-    <loc>https://gsarc.com.br/modelos/farmacias/farmacia/06-manipulacao/</loc>
+    <loc>https://gsarc.com.br/modelos/transportadoras/01-onepage/</loc>
   </url>
   <url>
     <loc>https://gsarc.com.br/modelos/transportadoras/02-institucional/</loc>
   </url>
   <url>
-    <loc>https://gsarc.com.br/modelos/distribuidoras/02-catalogo-b2b/</loc>
+    <loc>https://gsarc.com.br/modelos/outras-empresas/01-onepage/</loc>
+  </url>
+  <url>
+    <loc>https://gsarc.com.br/servicos/</loc>
+  </url>
+  <url>
+    <loc>https://gsarc.com.br/sobre/</loc>
+  </url>
+  <url>
+    <loc>https://gsarc.com.br/contato/</loc>
+  </url>
+  <url>
+    <loc>https://gsarc.com.br/monte-seu-site/</loc>
   </url>
 </urlset>
