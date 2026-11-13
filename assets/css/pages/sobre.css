@@ -1,0 +1,284 @@
+/* ==========================================================================
+   Sobre (/sobre/) - regras só desta página. Carregada depois de site.css.
+   Usa os tokens e as variáveis de contexto (--c-*) de site.css.
+
+   0. Herói compacto: título à esquerda, texto à direita (a partir de 900)
+   1. Nossa história: linha do tempo (vertical; horizontal a partir de 900)
+   2. Regularize Consultoria e GSA: quadro "empresa principal > divisão"
+   3. Como trabalhamos: quatro princípios sob linhas finas
+   4. Para quem fazemos: lista de atalhos para a galeria
+   5. Missão: frase em destaque
+   ========================================================================== */
+
+
+/* ==========================================================================
+   0. Herói compacto (.page-hero--split, igual em /contato/)
+   Usa .page-hero__grid--aside de site.css; o texto de abertura ocupa a
+   coluna da direita e alinha pela última linha com o título.
+   ========================================================================== */
+.page-hero--split .page-hero__grid { row-gap: var(--s-5); }
+.page-hero--split .page-hero__intro { margin-top: 0; }
+@media (min-width: 900px) {
+  .page-hero--split .page-hero__grid--aside {
+    align-items: end;
+    align-items: last baseline;
+  }
+}
+
+
+/* ==========================================================================
+   1. Nossa história
+   < 900: linha vertical à esquerda com pontos em anel (como .timeline).
+   >= 900: três colunas sob uma linha horizontal; o último ponto é cheio
+   (a GSA de hoje).
+   ========================================================================== */
+.historia {
+  position: relative;
+  display: grid;
+  gap: var(--s-10);
+  margin-left: 5px;
+  padding: 2px 0 4px 30px;
+  border-left: 1px solid var(--c-rule-strong);
+}
+.historia__item { position: relative; }
+.historia__item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--dot-fill);
+  box-shadow: 0 0 0 2px var(--dot-ring);
+}
+.historia__item:last-child::before { background: var(--dot-ring); }
+.historia__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: var(--c-num);
+  font-variant-numeric: tabular-nums;
+}
+.historia__title { margin-top: var(--s-2); }
+.historia__text { margin-top: var(--s-3); max-width: 30rem; color: var(--c-text); }
+
+@media (min-width: 900px) {
+  .historia {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 var(--s-10);
+    margin-left: 0;
+    padding: 40px 0 0;
+    border-left: 0;
+  }
+  /* a linha horizontal passa pelo centro dos pontos */
+  .historia::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7px;
+    height: 1px;
+    background: var(--c-rule-strong);
+  }
+  .historia__item::before { left: 2px; top: -38px; }
+}
+@media (min-width: 1100px) {
+  .historia { column-gap: var(--s-16); }
+}
+
+
+/* ==========================================================================
+   2. Regularize Consultoria e GSA
+   Quadro claro (empresa principal) com o quadro azul-marinho da GSA dentro:
+   mostra em um olhar que a GSA é uma divisão da Regularize.
+   ========================================================================== */
+.org {
+  width: 100%;
+  max-width: 34rem;
+  padding: clamp(20px, 0.9rem + 1.6vw, 32px);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--r-md);
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+}
+.org__role {
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+.org__name {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--c-heading);
+  text-wrap: balance;
+}
+.org__inner {
+  margin-top: clamp(20px, 0.9rem + 1.6vw, 32px);
+  padding: clamp(20px, 0.9rem + 1.4vw, 28px);
+  border-radius: var(--r-sm);
+  box-shadow: var(--shadow-md);
+}
+.org__inner .org__role { color: var(--c-eyebrow); }
+.org__brand { display: flex; align-items: center; gap: 16px; }
+.org__brand > div { min-width: 0; }
+/* quadro estreito: o símbolo fica acima do nome, que usa a largura toda */
+@media (max-width: 459px) {
+  .org__brand { flex-direction: column; align-items: flex-start; gap: var(--s-4); }
+}
+.org__note {
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--c-rule);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--c-text);
+}
+@media (min-width: 900px) {
+  .org { justify-self: end; }
+}
+
+
+/* ==========================================================================
+   3. Como trabalhamos
+   < 600: linhas com o ícone à esquerda. >= 600: 2 x 2 sob linhas fortes;
+   >= 1100: quatro colunas.
+   ========================================================================== */
+.principios { display: grid; }
+.principio {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  column-gap: var(--s-4);
+  padding-block: var(--s-6);
+  border-top: 1px solid var(--c-rule-strong);
+}
+.principio:first-child { border-top-color: var(--c-heading); }
+.principio:last-child { padding-bottom: 0; }
+.principio .icon {
+  grid-row: span 2;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  stroke-width: 1.6;
+  color: var(--c-num);
+}
+.principio__title { grid-column: 2; }
+.principio__text { grid-column: 2; margin-top: var(--s-2); max-width: 26rem; color: var(--c-text); }
+
+@media (min-width: 600px) {
+  .principios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-12) var(--s-8);
+  }
+  .principio,
+  .principio:first-child,
+  .principio:last-child {
+    display: block;
+    padding: var(--s-6) 0 0;
+    border-top-color: var(--c-heading);
+  }
+  .principio .icon { margin: 0 0 var(--s-5); }
+  .principio__text { margin-top: var(--s-3); }
+}
+@media (min-width: 1100px) {
+  .principios { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-10); }
+}
+
+
+/* ==========================================================================
+   4. Para quem fazemos
+   < 900: título, lista, botão. >= 900: título e botão à esquerda, lista à
+   direita. Cada linha leva ao grupo da galeria (ou a Serviços).
+   ========================================================================== */
+.para-quem { display: grid; gap: var(--s-8); }
+.publico { border-top: 1px solid var(--c-rule-strong); }
+.publico__link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18px;
+  align-items: center;
+  column-gap: var(--s-4);
+  min-height: 64px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--c-rule-strong);
+  color: var(--c-heading);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.publico__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.publico__meta {
+  grid-column: 1;
+  margin-top: 2px;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--c-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.publico__link .icon {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 18px;
+  height: 18px;
+  color: var(--c-muted);
+  transition: transform 0.2s var(--ease), color 0.15s ease;
+}
+.publico__link:hover { color: var(--c-link); }
+.publico__link:hover .icon { color: var(--c-link); transform: translateX(3px); }
+.publico__link:focus-visible { outline-offset: -2px; }
+
+@media (max-width: 599px) {
+  .para-quem__action .btn { width: 100%; }
+}
+@media (min-width: 600px) {
+  .publico__link { grid-template-columns: minmax(0, 1fr) auto 18px; }
+  .publico__meta { grid-column: 2; margin-top: 0; }
+  .publico__link .icon { grid-column: 3; grid-row: 1; }
+}
+@media (min-width: 900px) {
+  .para-quem {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto 1fr;
+    gap: var(--s-8) var(--s-16);
+    align-items: start;
+  }
+  .para-quem__title { grid-column: 1; grid-row: 1; }
+  .para-quem__action { grid-column: 1; grid-row: 2; }
+  .publico { grid-column: 2; grid-row: 1 / span 2; }
+}
+@media (min-width: 1100px) {
+  .para-quem { column-gap: clamp(64px, 8vw, 112px); }
+}
+
+
+/* ==========================================================================
+   5. Missão
+   ========================================================================== */
+.missao .eyebrow { margin-bottom: var(--s-6); }
+.missao__text {
+  max-width: 21em;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.15rem + 2.1vw, 3.125rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--c-heading);
+  text-wrap: balance;
+}

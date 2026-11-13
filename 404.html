@@ -1,187 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Página não encontrada | GSA</title>
-    <meta name="description" content="A página que você procurou não existe ou mudou de endereço. Volte para o início ou veja os modelos de site da GSA." />
-    <meta name="robots" content="noindex" />
-    <meta name="theme-color" content="#0A1F44" />
-    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
-    <link rel="stylesheet" href="/assets/css/custom.css" />
+    <meta name="description" content="Esta página não existe ou mudou de endereço. Veja os 16 modelos de site da GSA ou fale com a gente pelo WhatsApp.">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#0a1f44">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <!-- gsa:head -->
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <!-- /gsa:head -->
   </head>
-  <body class="antialiased">
-    <a
-      href="#conteudo"
-      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
-      >Pular para o conteúdo</a
-    >
-
-    <div class="border-b border-white/10 bg-brand-dark text-white">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3 text-sm">
-        <p class="font-medium">Divisão de tecnologia - Regularize Consultoria</p>
-        <p class="hidden text-white/70 lg:block">Sites para farmácias, distribuidoras, transportadoras e outras empresas.</p>
-      </div>
-    </div>
-
-    <header class="site-header sticky top-0 z-50" data-site-header>
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="header-main flex items-center justify-between">
-          <a href="/" class="brand-lockup brand-lockup--header" aria-label="Página inicial - Gestor de Sites &amp; Apps">
-            <img
-              src="/assets/img/brand/gsa-logo-simbolo.png"
-              alt=""
-              class="brand-lockup__image"
-              width="200"
-              height="201"
-            />
-            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
-          </a>
-
-          <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
-            <a href="/" class="nav-link text-sm font-semibold" data-nav-link>Início</a>
-            <a href="/sobre/" class="nav-link text-sm font-semibold" data-nav-link>Sobre</a>
-            <a href="/servicos/" class="nav-link text-sm font-semibold" data-nav-link>Serviços</a>
-            <a href="/modelos/" class="nav-link text-sm font-semibold" data-nav-link>Modelos</a>
-            <a href="/projetos/" class="nav-link text-sm font-semibold" data-nav-link>Projetos</a>
-            <a href="/contato/" class="nav-link text-sm font-semibold" data-nav-link>Contato</a>
-          </nav>
-
-          <div class="hidden lg:block">
-            <a
-              href="/contato/"
-              class="inline-flex items-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark"
-              >Falar sobre um projeto</a
-            >
-          </div>
-
-          <button
-            type="button"
-            class="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-4 py-2 text-sm font-semibold text-brand-dark lg:hidden"
-            data-menu-button
-            aria-expanded="false"
-            aria-controls="menu-mobile"
-          >
-            <span data-menu-label>Abrir menu</span>
+  <body>
+    <!-- gsa:shell-top -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header" id="topo" data-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="/">
+          <img class="brand__symbol" src="/assets/img/brand/gsa-logo-simbolo.png" alt="GSA" width="40" height="40">
+          <span class="brand__name">Gestor de Sites &amp; Apps</span>
+        </a>
+        <nav class="site-nav" aria-label="Principal">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="/" data-nav-link>Início</a></li>
+            <li><a class="site-nav__link" href="/modelos/" data-nav-link>Modelos</a></li>
+            <li><a class="site-nav__link" href="/servicos/" data-nav-link>Serviços</a></li>
+            <li><a class="site-nav__link" href="/sobre/" data-nav-link>Sobre</a></li>
+            <li><a class="site-nav__link" href="/contato/" data-nav-link>Contato</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="btn btn--primary btn--sm site-header__cta" href="/monte-seu-site/" data-nav-link>Pedir orçamento</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+            <span class="menu-toggle__label" data-menu-label>Menu</span>
+            <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
           </button>
-        </div>
-
-        <div
-          id="menu-mobile"
-          class="hidden border-t border-brand/10 pb-4 pt-3 lg:hidden"
-          data-mobile-menu
-        >
-          <nav class="grid gap-2" aria-label="Navegação móvel">
-            <a href="/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Início</a
-            >
-            <a href="/sobre/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Sobre</a
-            >
-            <a href="/servicos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Serviços</a
-            >
-            <a href="/modelos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Modelos</a
-            >
-            <a href="/projetos/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Projetos</a
-            >
-            <a href="/contato/" class="mobile-link rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700" data-nav-link
-              >Contato</a
-            >
-          </nav>
+          <a class="menu-fallback" href="#rodape-navegacao">Menu</a>
         </div>
       </div>
     </header>
+    <div class="menu-panel" id="menu" data-menu hidden>
+      <nav aria-label="Menu">
+        <ul class="menu-panel__list">
+          <li><a href="/" data-nav-link>Início<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/modelos/" data-nav-link>Modelos<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/servicos/" data-nav-link>Serviços<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/sobre/" data-nav-link>Sobre<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+          <li><a href="/contato/" data-nav-link>Contato<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--lg btn--block menu-panel__cta" href="/monte-seu-site/" data-nav-link>Pedir orçamento</a>
+      <p class="menu-panel__contact"><a href="https://wa.me/5511999129999" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg>WhatsApp <span class="nowrap">(11) 9 9912-9999</span></a></p>
+    </div>
+    <!-- /gsa:shell-top -->
 
     <main id="conteudo">
-      <section class="px-6 pb-20 pt-8 md:pb-24 md:pt-12">
-        <div class="hero-shell mx-auto max-w-7xl px-6 py-14 md:px-10 md:py-20">
-          <div class="hero-mesh" aria-hidden="true"></div>
-          <div class="relative z-10 mx-auto max-w-3xl text-center">
-            <p class="eyebrow justify-center">Erro 404</p>
-            <h1 class="mt-5 font-display text-4xl font-bold leading-tight text-brand-dark md:text-6xl">Página não encontrada</h1>
-            <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              O endereço que você abriu não existe ou mudou de lugar. Use os atalhos abaixo para continuar navegando.
-            </p>
-            <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <a
-                href="/"
-                class="inline-flex items-center justify-center rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
-                >Voltar para o início</a
-              >
-              <a
-                href="/modelos/"
-                class="inline-flex items-center justify-center rounded-full border border-brand/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark transition hover:border-brand/30 hover:bg-brand-ice"
-                >Ver modelos de site</a
-              >
-              <a
-                href="/contato/"
-                class="inline-flex items-center justify-center rounded-full border border-brand/15 bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark transition hover:border-brand/30 hover:bg-brand-ice"
-                >Falar com a GSA</a
-              >
-            </div>
+      <section class="page-hero page-hero--erro" aria-labelledby="pagina-titulo">
+        <div class="container">
+          <p class="eyebrow">Erro 404</p>
+          <h1 class="h1 page-hero__title" id="pagina-titulo">Página não encontrada</h1>
+          <p class="lead">Este endereço mudou ou não existe. Os modelos de site agora ficam todos em uma página.</p>
+          <div class="actions actions--stack page-hero__actions">
+            <a class="btn btn--primary btn--lg" href="/modelos/">Ver os modelos</a>
+            <a class="btn btn--secondary btn--lg" href="/">Ir para o início</a>
+            <a class="link-arrow" href="https://wa.me/5511999129999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GSA%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Falar no WhatsApp<svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </section>
-    </main>
 
-    <footer class="footer-shell py-12">
-      <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
-        <div>
-          <a href="/" class="brand-lockup brand-lockup--footer" aria-label="Página inicial - Gestor de Sites &amp; Apps">
-            <img
-              src="/assets/img/brand/gsa-logo-simbolo.png"
-              alt=""
-              class="brand-lockup__image"
-              width="200"
-              height="201"
-            />
-            <span class="brand-lockup__text">Gestor de Sites &amp; Apps</span>
-          </a>
-          <p class="mt-5 max-w-xl text-sm leading-7 text-slate-600">
-            Divisão de tecnologia da Regularize Consultoria. Sites para farmácias, distribuidoras, transportadoras e outras empresas, além de sistemas e aplicativos sob medida.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="font-display text-lg font-bold text-brand-dark">Navegação</h2>
-          <nav class="mt-4 grid gap-3 text-sm text-slate-600">
-            <a href="/" class="transition hover:text-brand-dark">Início</a>
-            <a href="/sobre/" class="transition hover:text-brand-dark">Sobre</a>
-            <a href="/servicos/" class="transition hover:text-brand-dark">Serviços</a>
-            <a href="/modelos/" class="transition hover:text-brand-dark">Modelos</a>
-            <a href="/projetos/" class="transition hover:text-brand-dark">Projetos</a>
-            <a href="/contato/" class="transition hover:text-brand-dark">Contato</a>
+      <div class="section section--tight">
+        <div class="container">
+          <nav class="seg-index mb-0" aria-labelledby="seg-index-titulo">
+            <p class="seg-index__label label-caps" id="seg-index-titulo">Modelos por tipo de empresa</p>
+            <ul class="seg-index__list">
+              <li><a class="seg-index__link" href="/modelos/#farmacias"><span class="seg-index__name">Farmácias</span><span class="seg-index__count">6<span class="visually-hidden"> modelos</span></span><svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+              <li><a class="seg-index__link" href="/modelos/#redes"><span class="seg-index__name">Redes de drogarias</span><span class="seg-index__count">3<span class="visually-hidden"> modelos</span></span><svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+              <li><a class="seg-index__link" href="/modelos/#distribuidoras"><span class="seg-index__name">Distribuidoras</span><span class="seg-index__count">4<span class="visually-hidden"> modelos</span></span><svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+              <li><a class="seg-index__link" href="/modelos/#transportadoras"><span class="seg-index__name">Transportadoras</span><span class="seg-index__count">2<span class="visually-hidden"> modelos</span></span><svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+              <li><a class="seg-index__link" href="/modelos/#outras-empresas"><span class="seg-index__name">Outras empresas</span><span class="seg-index__count">1<span class="visually-hidden"> modelo</span></span><svg class="icon icon--arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+            </ul>
           </nav>
         </div>
+      </div>
+    </main>
 
-        <div>
-          <h2 class="font-display text-lg font-bold text-brand-dark">Contato inicial</h2>
-          <div class="mt-4 grid gap-3 text-sm text-slate-600">
-            <a href="https://wa.me/5511999129999" class="transition hover:text-brand-dark">WhatsApp: (11) 9 9912-9999</a>
-            <a href="mailto:contato@gsa.com" class="transition hover:text-brand-dark"
-              >E-mail: contato@gsa.com</a
-            >
-            <p>Atendimento comercial sob agendamento.</p>
+    <!-- gsa:footer -->
+    <footer class="site-footer" id="rodape">
+      <div class="container site-footer__main">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="brand brand--footer" href="/">
+              <span class="brand__tile"><img src="/assets/img/brand/gsa-logo-simbolo.png" alt="GSA" width="34" height="34" loading="lazy"></span>
+              <span class="brand__name">Gestor de Sites &amp; Apps</span>
+            </a>
+            <p class="site-footer__about">Divisão de tecnologia da Regularize Consultoria. Sites para farmácias, distribuidoras, transportadoras e outras empresas, além de sistemas e aplicativos sob medida.</p>
+          </div>
+          <nav class="site-footer__col" aria-labelledby="rodape-navegacao">
+            <h2 class="site-footer__title" id="rodape-navegacao">Navegação</h2>
+            <ul class="site-footer__list">
+              <li><a href="/">Início</a></li>
+              <li><a href="/modelos/">Modelos</a></li>
+              <li><a href="/servicos/">Serviços</a></li>
+              <li><a href="/sobre/">Sobre</a></li>
+              <li><a href="/contato/">Contato</a></li>
+              <li><a href="/monte-seu-site/">Pedir orçamento</a></li>
+            </ul>
+          </nav>
+          <nav class="site-footer__col" aria-labelledby="rodape-modelos">
+            <h2 class="site-footer__title" id="rodape-modelos">Modelos</h2>
+            <ul class="site-footer__list">
+              <li><a href="/modelos/#farmacias">Farmácias</a></li>
+              <li><a href="/modelos/#redes">Redes de drogarias</a></li>
+              <li><a href="/modelos/#distribuidoras">Distribuidoras</a></li>
+              <li><a href="/modelos/#transportadoras">Transportadoras</a></li>
+              <li><a href="/modelos/#outras-empresas">Outras empresas</a></li>
+            </ul>
+          </nav>
+          <div class="site-footer__contact">
+            <h2 class="site-footer__title">Fale com a gente</h2>
+            <ul class="site-footer__list">
+              <li><a href="https://wa.me/5511999129999" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.4a8.4 8.4 0 1 1 15.6-4.5z"/><path d="M8.6 10.2h6.8M8.6 13.4h4.4"/></svg><span>WhatsApp: <span class="nowrap">(11) 9 9912-9999</span></span></a></li>
+              <li><a href="mailto:contato@gsa.com"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.2l8.5 6 8.5-6"/></svg><span>E-mail: <span class="nowrap">contato@gsa.com</span></span></a></li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div class="mx-auto mt-10 max-w-7xl border-t border-brand/10 px-6 pt-6 text-sm text-slate-500">
-        <p>&copy; <span data-current-year></span> GSA - Gestor de Sites &amp; Apps. Todos os direitos reservados.</p>
+        <div class="site-footer__bottom">
+          <p>&copy; <span data-current-year>2026</span> GSA - Gestor de Sites &amp; Apps. Todos os direitos reservados.</p>
+          <a class="site-footer__top" href="#topo">Voltar ao topo<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+        </div>
       </div>
     </footer>
-
+    <!-- /gsa:footer -->
     <script src="/assets/js/main.js"></script>
   </body>
 </html>

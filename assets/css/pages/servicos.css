@@ -1,0 +1,342 @@
+/* ==========================================================================
+   GSA · /servicos/ (só esta página, depois de site.css)
+
+   1. Herói compacto + índice "O que fazemos" (a partir de 900)
+   2. Serviço em duas colunas: texto + moldura (Sites, Catálogos)
+   3. Ofertas: itens abertos com ícone e linha fina
+   4. Vitrine do catálogo: moldura de navegador com legenda (um só link)
+   5. Sistemas e aplicativos (faixa azul-marinho) + "Projeto real"
+   6. Ilustração abstrata do aplicativo (SVG; não é a tela real)
+   7. Domínio, e-mail e suporte
+   8. Como trabalhamos: 4 passos
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. Herói compacto
+   ========================================================================== */
+.page-hero--servicos {
+  padding-block: clamp(32px, 1rem + 2vw, 52px) clamp(44px, 1.5rem + 2.2vw, 64px);
+}
+/* o título usa a coluna toda: 2 linhas a partir de 1100 */
+.page-hero--servicos .page-hero__title { max-width: none; }
+.page-hero--servicos .lead { max-width: 37rem; }
+
+/* índice das seções: só com espaço ao lado do texto */
+.indice { display: none; }
+
+@media (min-width: 900px) {
+  .indice { display: block; }
+  .indice__lista { border-top: 1px solid var(--c-rule); }
+  .indice__link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 48px;
+    padding-block: 10px;
+    border-bottom: 1px solid var(--c-rule);
+    color: var(--c-heading);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+  .indice__num {
+    flex: none;
+    min-width: 1.6em;
+    font-family: var(--font-display);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--c-num);
+    font-variant-numeric: tabular-nums;
+  }
+  .indice__nome { margin-right: auto; }
+  .indice__link .icon {
+    width: 18px;
+    height: 18px;
+    color: var(--c-muted);
+    transition: transform 0.2s var(--ease), color 0.15s ease;
+  }
+  .indice__link:hover { color: var(--c-link); }
+  .indice__link:hover .icon { color: var(--c-link); transform: translateY(2px); }
+  .indice__link:focus-visible { outline-offset: -2px; border-radius: 4px; }
+}
+
+
+/* ==========================================================================
+   2. Serviço em duas colunas (texto + moldura)
+   Sites: cabeçalho (título | texto), ofertas e o palco. < 600 tudo empilhado;
+          600-1099 ofertas lado a lado e o palco embaixo, centralizado;
+          >= 1100 ofertas à esquerda e o palco à direita.
+   Catálogos: texto e moldura; >= 900 lado a lado com a moldura à esquerda.
+   O cabeçalho dividido usa as mesmas colunas do conteúdo de baixo, para
+   o texto de apoio alinhar com a segunda coluna.
+   ========================================================================== */
+.servico--sites { padding-top: clamp(48px, 1.25rem + 3.6vw, 88px); }
+
+.sites__grid {
+  display: grid;
+  gap: var(--s-12);
+}
+.sites__visual { min-width: 0; }
+
+@media (min-width: 600px) and (max-width: 1099px) {
+  .sites__visual { width: min(100%, 680px); margin-inline: auto; }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .servico__head {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-8);
+  }
+}
+@media (min-width: 1100px) {
+  .servico__head,
+  .sites__grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: clamp(48px, 6vw, 96px);
+  }
+  /* a lista começa na mesma linha que o topo do navegador da demonstração */
+  .sites__grid { align-items: start; }
+}
+
+.servico__grid {
+  display: grid;
+  gap: var(--s-12);
+}
+.servico__lead { margin-top: var(--s-5); max-width: 38rem; }
+.servico__visual { min-width: 0; }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .servico__visual { width: min(100%, 680px); }
+}
+@media (min-width: 900px) {
+  .servico__grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: center;
+    column-gap: clamp(48px, 6vw, 96px);
+  }
+  .servico__grid--reverse .servico__visual { order: -1; }
+}
+
+
+/* ==========================================================================
+   3. Ofertas (Sites e Sistemas): título com ícone, texto e link opcional
+   ========================================================================== */
+.ofertas {
+  display: grid;
+  margin-top: var(--s-10);
+  border-top: 1px solid var(--c-rule-strong);
+}
+.oferta {
+  padding-block: var(--s-6);
+  border-bottom: 1px solid var(--c-rule);
+}
+.oferta:last-child { border-bottom: 0; padding-bottom: 0; }
+.oferta__titulo {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: var(--fs-h3);
+  line-height: 1.3;
+}
+/* ícone centrado na primeira linha, também quando o título quebra */
+.oferta__titulo .icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin-top: calc((1.3em - 24px) / 2);
+  stroke-width: 1.6;
+  color: var(--c-num);
+}
+.oferta__texto { margin-top: var(--s-3); max-width: 34rem; color: var(--c-text); }
+.oferta__link { margin-top: var(--s-2); margin-bottom: calc(-1 * var(--s-2)); }
+
+/* Sites: a lista começa logo abaixo do cabeçalho; 600-1099 lado a lado */
+.ofertas--sites { margin-top: 0; }
+@media (min-width: 600px) and (max-width: 1099px) {
+  .ofertas--sites {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-8);
+  }
+  .ofertas--sites .oferta { padding-bottom: 0; border-bottom: 0; }
+}
+
+/* Sistemas: duas colunas a partir de 768 */
+.ofertas--2 { margin-top: 0; }
+@media (min-width: 768px) {
+  .ofertas--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-8);
+  }
+  .ofertas--2 .oferta { padding-bottom: 0; border-bottom: 0; }
+}
+@media (min-width: 1100px) {
+  .ofertas--2 { column-gap: clamp(64px, 8vw, 112px); }
+}
+
+
+/* ==========================================================================
+   4. Vitrine do catálogo: a moldura e a legenda formam UM link
+   ========================================================================== */
+.vitrine {
+  container-type: inline-size;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--r-md);
+}
+.vitrine .browser { transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+.vitrine:hover .browser {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgba(10, 31, 68, 0.1), 0 2px 4px rgba(10, 31, 68, 0.04), 0 28px 48px -26px rgba(10, 31, 68, 0.45);
+}
+.vitrine:hover .stage__cta { text-decoration-line: underline; }
+.vitrine:hover .stage__cta .icon { transform: translateX(3px); }
+.vitrine:focus-visible { outline-offset: 8px; }
+@container (max-width: 379px) {
+  .vitrine .stage__caption { flex-direction: column; align-items: flex-start; }
+  .vitrine .stage__sep { display: none; }
+}
+
+
+/* ==========================================================================
+   5. Sistemas e aplicativos (faixa azul-marinho)
+   ========================================================================== */
+.sistemas .oferta__texto { max-width: 32rem; }
+/* título | texto nas mesmas colunas dos dois itens de baixo */
+@media (min-width: 900px) {
+  .sistemas__head {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--s-8);
+  }
+}
+@media (min-width: 1100px) {
+  .sistemas__head { column-gap: clamp(64px, 8vw, 112px); }
+}
+
+/* "Projeto real": painel com a ilustração e o texto */
+.projeto {
+  display: grid;
+  gap: var(--s-8);
+  margin-top: clamp(40px, 1.5rem + 3vw, 64px);
+  padding: clamp(20px, 0.75rem + 2vw, 40px);
+  border: 1px solid var(--hairline-navy);
+  border-radius: var(--r-md);
+  background: var(--navy-2);
+}
+.projeto__arte { min-width: 0; width: min(100%, 460px); margin-inline: auto; }
+/* .eyebrow é flex: aqui o texto precisa quebrar como uma linha só */
+.projeto__rotulo { display: block; margin: 0; }
+.projeto__titulo {
+  margin-top: var(--s-3);
+  font-size: clamp(1.375rem, 1.15rem + 0.8vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+}
+.projeto__texto { margin-top: var(--s-4); max-width: 34rem; color: var(--c-text); }
+.projeto__link { margin-top: var(--s-4); margin-bottom: calc(-1 * var(--s-2)); }
+
+@media (min-width: 900px) {
+  .projeto {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    align-items: center;
+    gap: clamp(40px, 5vw, 72px);
+  }
+  .projeto__arte { width: auto; margin-inline: 0; }
+}
+
+.sistemas__foot { margin-top: clamp(40px, 1.5rem + 3vw, 56px); }
+@media (max-width: 599px) {
+  .sistemas__foot { justify-items: stretch; }
+}
+
+
+/* ==========================================================================
+   6. Ilustração abstrata do aplicativo (só formas: não é a tela real)
+   ========================================================================== */
+.arte { display: block; width: 100%; height: auto; overflow: visible; }
+.arte__win { fill: var(--bezel); stroke: var(--hairline-navy-strong); stroke-width: 1; }
+.arte__top { fill: rgba(255, 255, 255, 0.04); }
+.arte__rule { fill: none; stroke: var(--hairline-navy); stroke-width: 1; }
+.arte__logo { fill: var(--sky); }
+.arte__ctl { fill: none; stroke: rgba(255, 255, 255, 0.4); stroke-width: 1.6; stroke-linecap: round; }
+.arte__side { fill: rgba(255, 255, 255, 0.025); }
+.arte__side-on { fill: rgba(121, 203, 255, 0.12); }
+.arte__dot { fill: rgba(255, 255, 255, 0.2); }
+.arte__dot-on { fill: var(--sky); }
+.arte__t1 { fill: rgba(255, 255, 255, 0.82); }
+.arte__t2 { fill: rgba(255, 255, 255, 0.5); }
+.arte__t3 { fill: rgba(255, 255, 255, 0.2); }
+.arte__btn { fill: var(--blue); }
+.arte__btn-t { fill: rgba(255, 255, 255, 0.9); }
+.arte__col { fill: rgba(255, 255, 255, 0.035); }
+.arte__c1 { fill: rgba(255, 255, 255, 0.45); }
+.arte__c2 { fill: var(--sky); }
+.arte__c3 { fill: var(--blue); }
+.arte__card { fill: rgba(255, 255, 255, 0.06); stroke: rgba(255, 255, 255, 0.08); stroke-width: 1; }
+.arte__card--on { fill: rgba(121, 203, 255, 0.1); stroke: var(--sky); }
+.arte__ava { fill: rgba(121, 203, 255, 0.55); }
+.arte__ava--2 { fill: rgba(255, 255, 255, 0.28); }
+.arte__track { fill: rgba(255, 255, 255, 0.14); }
+.arte__prog { fill: var(--sky); }
+.arte__ok { fill: none; stroke: var(--sky); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.arte__ok--lg { stroke: var(--navy); stroke-width: 2.4; }
+.arte__ok-bg { fill: var(--sky); }
+.arte__float { filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.45)); }
+.arte__float-bg { fill: var(--navy-2); stroke: var(--hairline-navy-strong); stroke-width: 1; }
+
+
+/* ==========================================================================
+   7. Domínio, e-mail e suporte (duas colunas a partir de 768)
+   ========================================================================== */
+.extras__grid { display: grid; }
+.extra + .extra {
+  margin-top: var(--s-10);
+  padding-top: var(--s-10);
+  border-top: 1px solid var(--hairline);
+}
+.extra__titulo {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: clamp(1.375rem, 1.15rem + 0.8vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+}
+.extra__titulo .icon {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  margin-top: calc((1.2em - 28px) / 2);
+  stroke-width: 1.6;
+  color: var(--c-num);
+}
+.extra__texto { margin-top: var(--s-4); max-width: 32rem; color: var(--c-text); }
+
+@media (min-width: 768px) {
+  .extras__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .extra + .extra {
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: clamp(32px, 5vw, 80px);
+    border-top: 0;
+    border-left: 1px solid var(--hairline);
+  }
+  .extra:first-child { padding-right: clamp(32px, 5vw, 80px); }
+}
+
+
+/* ==========================================================================
+   8. Como trabalhamos: 4 passos (2 colunas de 600, 4 de 1100)
+   ========================================================================== */
+@media (min-width: 600px) {
+  .steps--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-10); }
+  /* mesmo tratamento que site.css aplica aos passos a partir de 768 */
+  .steps--4 .step,
+  .steps--4 .step:first-child { padding: var(--s-8) 0 0; border-top-color: var(--c-heading); }
+}
+@media (min-width: 1100px) {
+  .steps--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-10); }
+  .steps--4 .step__num { font-size: 3rem; }
+}
