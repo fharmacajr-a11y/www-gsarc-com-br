@@ -3,161 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Serviços | Farmácia Bem Estar | Demonstração Farmácia Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional de farmácia com várias páginas." />
+    <title>Serviços farmacêuticos | Farmácia Cedro</title>
+    <meta name="description" content="Aferição de pressão, teste de glicemia, aplicação de injetáveis, perfuração de lóbulo e revisão de medicamentos na Farmácia Cedro." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#5e1320" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-cedro.svg" />
+    <link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [8, 21], "2": [8, 21], "3": [8, 21], "4": [8, 21], "5": [8, 21], "6": [8, 21], "0": [8, 13]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 250, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-open-status>Seg a sáb, 8h às 21h</span></p>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20dos%20Ip%C3%AAs%2C%201.120%2C%20Centro%2C%20Ribeir%C3%A3o%20Preto%20%E2%80%93%20SP"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Avenida dos Ipês, 1.120 · Centro</a><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da Farmácia Bem Estar">
-          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Farmácia Bem Estar</strong>
-            <span class="brand__subtitle">Cuidado de verdade desde 1998</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Farmácia Cedro, página inicial"><img src="assets/img/logo-cedro.svg" alt="" width="44" height="44" /><span class="brand__name">Farmácia Cedro<small>Desde 1987</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html">Início</a>
             <a href="sobre.html">A farmácia</a>
             <a href="servicos.html" aria-current="page">Serviços</a>
             <a href="convenios.html">Convênios</a>
             <a href="contato.html">Contato</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html">Início</a>
-            <a href="sobre.html">A farmácia</a>
-            <a href="servicos.html" aria-current="page">Serviços</a>
-            <a href="convenios.html">Convênios</a>
-            <a href="contato.html">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+        <div class="header__actions">
+          <a class="btn btn--primary header__cta" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Fale conosco</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">A farmácia</a>
+          <a href="servicos.html" aria-current="page">Serviços</a>
+          <a href="convenios.html">Convênios</a>
+          <a href="contato.html">Contato</a>
+          <a class="btn btn--primary btn--block" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Fale conosco</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section class="page-hero">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Serviços</span></nav>
-          <p class="eyebrow">Serviços</p>
-          <h1>Serviços farmacêuticos na loja.</h1>
-          <p>Atendimento com profissional habilitado, sem precisar agendar. Os serviços podem mudar conforme a farmácia.</p>
+      
+      <section class="page-hero" aria-labelledby="titulo">
+        <div class="hero__media"><img src="assets/img/fotos/f-pressao-1600x900.webp" srcset="assets/img/fotos/f-pressao-960x540.webp 960w, assets/img/fotos/f-pressao-1600x900.webp 1600w, assets/img/fotos/f-pressao-2400x1350.webp 2400w" sizes="100vw" alt="Farmacêutico medindo a pressão arterial de uma cliente" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Serviços</span></nav>
+          <h1 id="titulo">Serviços farmacêuticos</h1>
+          <p>Atendimento em sala reservada, feito por farmacêutico, para acompanhar a sua saúde de perto.</p>
         </div>
       </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
+
+      <section class="section" aria-labelledby="lista-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Serviços</p>
-            <h2>Cuidado além do balcão.</h2>
+          <p class="eyebrow">O que fazemos</p>
+          <h2 id="lista-titulo">Escolha o serviço</h2>
+          <p class="lead">A maioria dos serviços não precisa de agendamento. É só chegar no horário da loja.</p>
+        </div>
+          <div class="grid grid--3">
+            <article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span><h3>Aferição de pressão</h3><p>Medição com aparelho calibrado e registro na sua carteirinha para levar ao médico.</p><div class="svc-meta"><span class="pill">Gratuito</span><span class="pill">Sem agendamento</span></div></article>
+            <article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Teste de glicemia</h3><p>Resultado em cerca de 5 minutos, com orientação sobre os valores encontrados.</p><div class="svc-meta"><span class="pill">R$ 10</span><span class="pill">Sem agendamento</span></div></article>
+            <article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 3 6 6M17.5 5.5 8 15l-3 1 1-3 9.5-9.5M13 7l4 4M10 10l2 2M4 20l2.5-2.5"/></svg></span><h3>Aplicação de injetáveis</h3><p>Aplicação de medicamentos injetáveis com receita, em sala reservada e com material descartável.</p><div class="svc-meta"><span class="pill">Com receita</span><span class="pill">Sala reservada</span></div></article>
+            <article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-5.5 1.7"/><path d="M10 9a2 2 0 0 1 4 0c0 1.2-1 1.6-1.5 2.5"/></svg></span><h3>Perfuração de lóbulo</h3><p>Com aparelho próprio e brinco hipoalergênico incluso. Para crianças, com autorização dos pais.</p><div class="svc-meta"><span class="pill">R$ 45</span><span class="pill">Brinco incluso</span></div></article>
+            <article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg></span><h3>Revisão de medicamentos</h3><p>Traga todos os remédios que você usa. Montamos uma tabela de horários e conferimos interações.</p><div class="svc-meta"><span class="pill">Gratuito</span><span class="pill">Com hora marcada</span></div></article>
+            <article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 19H4.5a1.5 1.5 0 0 1-1.3-2.2L5 13.5M11 5.2l1-1.7a1.5 1.5 0 0 1 2.6 0L17 7.5M17 19h2.5a1.5 1.5 0 0 0 1.3-2.2L18.5 13"/><path d="M14 19h3M7 16l-2-2.5 3-.8M14 7.5l3 0 .8-3M10 22l-3-3 3-3"/></svg></span><h3>Descarte consciente</h3><p>Recebemos remédios vencidos ou que sobraram para descarte correto, sem custo.</p><div class="svc-meta"><span class="pill">Gratuito</span><span class="pill">Na loja</span></div></article>
           </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 01</p>
-              <h3>Aferição de pressão</h3>
-              <p>Medição com orientação do farmacêutico, sem agendamento.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 02</p>
-              <h3>Aplicação de injetáveis</h3>
-              <p>Sala reservada e profissional habilitado, com receita.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 03</p>
-              <h3>Testes rápidos</h3>
-              <p>Glicemia e outros testes com resultado na hora.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 04</p>
-              <h3>Perfuração de orelha</h3>
-              <p>Com material estéril e brincos hipoalergênicos.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 05</p>
-              <h3>Acompanhamento farmacêutico</h3>
-              <p>Orientação sobre o uso correto dos medicamentos.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 06</p>
-              <h3>Entrega no bairro</h3>
-              <p>Peça pelo WhatsApp e receba em casa.</p>
-            </article>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="pressao-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/f-idoso-1000x1250.webp" srcset="assets/img/fotos/f-idoso-560x700.webp 560w, assets/img/fotos/f-idoso-1000x1250.webp 1000w" sizes="(min-width: 960px) 540px, 92vw" alt="Profissional de saúde medindo a pressão de um senhor sentado" width="1000" height="1250" loading="lazy" decoding="async" />
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">Programa Pressão em Dia</p>
+            <h2 id="pressao-titulo">Acompanhamento para quem tem pressão alta.</h2>
+            <p>Para clientes hipertensos, oferecemos um acompanhamento simples e gratuito. A cada visita, medimos a pressão, anotamos o resultado e mostramos a evolução do mês.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Carteirinha com o histórico das medições</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Lembrete de recompra do remédio de uso contínuo</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Relatório para levar na consulta médica</span></li></ul>
+            <a class="btn btn--primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20participar%20do%20programa%20Press%C3%A3o%20em%20Dia."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Quero participar</a>
           </div>
-          <p class="section-note">Alguns serviços exigem receita médica.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="como-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="como-titulo">Simples, do começo ao fim</h2>
+        </div>
+          <ol class="steps steps--3"><li><span class="steps__n" aria-hidden="true">1</span><h3>Chegue à loja</h3><p>Venha no horário de funcionamento. Para revisão de medicamentos, marque pelo WhatsApp.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Atendimento reservado</h3><p>O farmacêutico faz o serviço em sala própria, com privacidade.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Leve o registro</h3><p>Você sai com o resultado anotado e orientação sobre os próximos passos.</p></li></ol>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas sobre os serviços</h2>
+          </div>
+          <div class="faq"><details><summary>O farmacêutico pode me dar diagnóstico?</summary><p>Não. Os serviços farmacêuticos ajudam a acompanhar a sua saúde, mas não substituem a consulta médica. Quando necessário, orientamos a procurar o médico.</p></details><details><summary>Preciso estar em jejum para o teste de glicemia?</summary><p>Depende do que o seu médico pediu. O teste pode ser feito em jejum ou após as refeições; informe ao farmacêutico para ele interpretar o resultado.</p></details><details><summary>Vocês aplicam injeção sem receita?</summary><p>Não. A aplicação de injetáveis só é feita com a apresentação da receita médica.</p></details><details><summary>Quanto tempo leva a perfuração de lóbulo?</summary><p>Cerca de 15 minutos, contando a orientação sobre os cuidados nos primeiros dias.</p></details></div>
+        </div>
+      </section>
+      
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Estamos aqui para ajudar.</h2>
+            <p>Tire dúvidas, consulte preços ou peça a entrega pelo WhatsApp.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar no WhatsApp</a>
+            <a class="btn btn--light btn--lg" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="48" height="48" />
-              <strong>Farmácia Bem Estar</strong>
-            </div>
-            <p>Farmácia de bairro com atendimento próximo, farmacêutico presente e entrega rápida.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="sobre.html">A farmácia</a></li>
-              <li><a href="servicos.html">Serviços</a></li>
-              <li><a href="convenios.html">Convênios</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 250, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Farmácia Cedro, página inicial"><img src="assets/img/logo-cedro.svg" alt="" width="44" height="44" /><span class="brand__name">Farmácia Cedro<small>Desde 1987</small></span></a>
+          <p class="footer__about">Farmácia de família no Centro de Ribeirão Preto desde 1987. Atendimento farmacêutico, serviços de saúde e convênios.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Farmácia Bem Estar. Empresa fictícia: demonstração do modelo Farmácia Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Páginas</h2><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">A farmácia</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="convenios.html">Convênios</a></li><li><a href="contato.html">Contato</a></li><li><a href="contato.html#privacidade">Política de privacidade</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:contato@farmaciacedro.com.br">contato@farmaciacedro.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida dos Ipês, 1.120, Centro</span></li></ul></div><div><h2>Horário</h2><ul><li>Segunda a sábado: 8h às 21h</li><li>Domingo e feriados: 8h às 13h</li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Farmacêutica responsável:</strong> Dra. Helena Albuquerque · CRF-SP 00000</p><p>Drogaria Cedro Ltda. · CNPJ 00.000.000/0001-00 · Licença sanitária nº 000000/2026 · AFE nº 0.00000-0</p><p>Em caso de dúvida, procure o farmacêutico. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Farmácia Cedro · <a href="contato.html#privacidade">Política de privacidade</a></span>
+        <span>Empresa fictícia: demonstração do modelo Farmácia Institucional da GSA. <a href="/modelos/farmacias/farmacia/02-institucional/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

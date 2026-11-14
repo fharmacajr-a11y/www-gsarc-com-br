@@ -3,398 +3,598 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TransModelo Logística | Demonstração OnePage</title>
+    <title>TransModelo Logística | Transporte de cargas no prazo combinado</title>
     <meta
       name="description"
-      content="Demonstração fictícia de um site OnePage para transportadoras apresentarem serviços, regiões atendidas e receberem pedidos de cotação pelo WhatsApp."
+      content="Demonstração fictícia de site de página única para transportadora: carga fracionada, lotação, entregas urbanas, frota, regiões atendidas e cotação pelo WhatsApp."
     />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0b1f33" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-transmodelo.svg" />
+    <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
   <body>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <div class="topbar">
+    <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 800, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
+        <p class="topbar__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+          Seg a sex, 7h às 19h · Sáb, 8h às 12h
+        </p>
+        <div class="topbar__links">
+          <a class="topbar__item topbar__item--hide-sm" href="mailto:comercial@transmodelo.com.br">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
+            comercial@transmodelo.com.br
+          </a>
+          <a class="topbar__item" href="tel:+550030000000">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z" /></svg>
+            (00) 3000-0000
+          </a>
         </div>
       </div>
     </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da TransModelo Logística">
-          <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">TransModelo Logística</strong>
-            <span class="brand__subtitle">Coleta e entrega com prazo combinado</span>
-          </span>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="#inicio" aria-label="TransModelo Logística, ir para o início">
+          <img src="assets/img/logo-transmodelo.svg" alt="" width="44" height="44" />
+          <span class="brand__name">TransModelo<small>Logística</small></span>
         </a>
 
-        <nav class="site-nav" aria-label="Menu principal da transportadora">
-          <a href="#inicio">Início</a>
+        <nav class="nav" aria-label="Menu principal">
           <a href="#servicos">Serviços</a>
+          <a href="#empresa">Empresa</a>
+          <a href="#frota">Frota</a>
+          <a href="#rastreamento">Acompanhar carga</a>
           <a href="#regioes">Regiões</a>
-          <a href="#cotacao">Cotação</a>
           <a href="#contato">Contato</a>
         </nav>
 
-        <a class="button button-primary header-cta" href="#cotacao">Pedir cotação</a>
+        <a class="btn btn--primary header__cta" href="#cotacao">Cotar frete</a>
 
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-expanded="false"
-          aria-controls="menu-mobile"
-        >
-          Abrir menu
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+          <span class="menu-btn__bars" aria-hidden="true"></span>
+          <span class="menu-btn__label">Menu</span>
         </button>
       </div>
 
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel da transportadora">
-            <a href="#inicio">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#regioes">Regiões</a>
-            <a href="#cotacao">Cotação</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#cotacao">Pedir cotação</a>
-        </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__nav" aria-label="Menu móvel">
+          <a href="#servicos">Serviços</a>
+          <a href="#empresa">Empresa</a>
+          <a href="#frota">Frota</a>
+          <a href="#rastreamento">Acompanhar carga</a>
+          <a href="#regioes">Regiões</a>
+          <a href="#contato">Contato</a>
+          <a class="btn btn--primary" href="#cotacao">Cotar frete</a>
+        </nav>
       </div>
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Transporte de cargas</p>
-            <h1>Sua carga coletada e entregue no prazo combinado.</h1>
-            <p class="lead">
-              Carga fracionada, lotação e entregas urbanas para empresas da região, com cotação rápida e acompanhamento
-              direto pelo WhatsApp.
+      <!-- HERO -->
+      <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+        <img
+          class="hero__photo"
+          src="assets/img/fotos/t1-hero-1600.webp"
+          srcset="assets/img/fotos/t1-hero-900.webp 900w, assets/img/fotos/t1-hero-1600.webp 1600w, assets/img/fotos/t1-hero-2400.webp 2400w"
+          sizes="100vw"
+          alt=""
+          width="1600"
+          height="900"
+          fetchpriority="high"
+        />
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="hero__eyebrow">Transporte rodoviário de cargas · SP, MG e PR</p>
+            <h1 id="hero-titulo">Sua carga no destino, no prazo combinado.</h1>
+            <p class="hero__lead">
+              Carga fracionada, lotação e entregas urbanas com frota própria, veículos rastreados e seguro em todas
+              as viagens.
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#cotacao">Pedir cotação</a>
-              <a class="button button-secondary" href="#servicos">Ver serviços</a>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#cotacao">Cotar frete agora</a>
+              <a class="btn btn--ghost btn--lg" href="#rastreamento">Acompanhar carga</a>
             </div>
+            <ul class="hero__proof">
+              <li><strong>4,9</strong> <span class="stars" aria-hidden="true">★★★★★</span> avaliação dos clientes</li>
+              <li><strong>+1.500</strong> empresas atendidas</li>
+            </ul>
           </div>
 
-          <div class="hero-visual">
-            <div class="illustration-card">
+        </div>
+      </section>
+
+      <!-- COTAÇÃO RÁPIDA -->
+      <section class="quickbar" aria-labelledby="qq-titulo">
+        <div class="container">
+          <form class="quick-quote" data-quick-quote>
+            <div class="quick-quote__title">
+              <h2 id="qq-titulo">Cotação rápida</h2>
+              <p>Resposta em até 30 minutos</p>
+            </div>
+            <label>
+              Origem
+              <input type="text" name="origem" placeholder="Cidade ou CEP de coleta" autocomplete="off" />
+            </label>
+            <label>
+              Destino
+              <input type="text" name="destino" placeholder="Cidade ou CEP de entrega" autocomplete="off" />
+            </label>
+            <label>
+              Tipo de carga
+              <select name="carga">
+                <option value="">Selecione</option>
+                <option>Carga fracionada</option>
+                <option>Carga lotação</option>
+                <option>Entrega urbana</option>
+                <option>Produtos de farmácia e saúde</option>
+                <option>Outro tipo de carga</option>
+              </select>
+            </label>
+            <button class="btn btn--primary" type="submit">Continuar cotação</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SERVIÇOS -->
+      <section class="section" id="servicos" aria-labelledby="servicos-titulo">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">O que fazemos</p>
+            <h2 id="servicos-titulo">Transporte para cada tipo de carga</h2>
+            <p>Da caixa avulsa ao caminhão fechado, com coleta agendada, conferência de volumes e aviso em cada etapa.</p>
+          </header>
+
+          <div class="services">
+            <article class="service">
               <img
-                src="assets/img/hero-transportadora.svg"
-                alt="Ilustração de um caminhão fictício da TransModelo Logística em rota"
-                width="640"
-                height="460"
+                src="assets/img/fotos/t1-fracionada-600.webp"
+                srcset="assets/img/fotos/t1-fracionada-600.webp 600w, assets/img/fotos/t1-fracionada-1200.webp 1200w"
+                sizes="(min-width: 1100px) 270px, (min-width: 600px) 45vw, 100vw"
+                alt="Caixas e paletes sendo carregados em um caminhão"
+                width="600"
+                height="400"
+                loading="lazy"
               />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques rápidos da transportadora fictícia">
-              <article class="meta-card">
-                <p class="meta-card__label">Atendimento</p>
-                <h2>7h às 18h</h2>
-                <p>Segunda a sexta, com coletas agendadas no dia anterior.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Frota</p>
-                <h2>Vans e caminhões</h2>
-                <p>Veículos para volumes pequenos e cargas completas.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Avisos</p>
-                <h2>Pelo WhatsApp</h2>
-                <p>Aviso de coleta, saída para entrega e comprovante.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Frota própria</strong><span>Vans, 3/4, toco e truck.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
-            <div><strong>Rastreamento</strong><span>Acompanhe a sua carga em tempo real.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <div><strong>Carga segurada</strong><span>Seguro em todas as entregas.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-            <div><strong>Cotação em minutos</strong><span>Resposta rápida pelo WhatsApp.</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicos" class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Serviços</p>
-            <h2>Do envio de poucas caixas à carga completa.</h2>
-            <p>
-              Esta demonstração mostra como um site de página única apresenta os serviços de uma transportadora de forma
-              clara para quem precisa contratar frete.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 01</p>
-              <h3>Carga fracionada</h3>
-              <p>Para quem envia poucos volumes e quer pagar só pelo espaço que usa no veículo.</p>
+              <div class="service__body">
+                <h3>Carga fracionada</h3>
+                <p>Para quem envia poucos volumes e paga só pelo espaço que usa no caminhão.</p>
+                <ul class="chips"><li>A partir de 1 volume</li><li>Coleta agendada</li></ul>
+                <a class="service__link" href="#cotacao" data-service="Carga fracionada">Cotar este serviço</a>
+              </div>
             </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 02</p>
-              <h3>Carga lotação</h3>
-              <p>Veículo dedicado do ponto de coleta até o destino, sem paradas intermediárias.</p>
+            <article class="service">
+              <img
+                src="assets/img/fotos/t1-lotacao-600.webp"
+                srcset="assets/img/fotos/t1-lotacao-600.webp 600w, assets/img/fotos/t1-lotacao-1200.webp 1200w"
+                sizes="(min-width: 1100px) 270px, (min-width: 600px) 45vw, 100vw"
+                alt="Carreta na rodovia"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="service__body">
+                <h3>Carga lotação</h3>
+                <p>Veículo dedicado da coleta ao destino, sem paradas e sem transbordo.</p>
+                <ul class="chips"><li>Até 32 toneladas</li><li>Porta a porta</li></ul>
+                <a class="service__link" href="#cotacao" data-service="Carga lotação">Cotar este serviço</a>
+              </div>
             </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 03</p>
-              <h3>Entregas urbanas</h3>
-              <p>Distribuição dentro da cidade para lojas, clientes finais e pontos de venda.</p>
+            <article class="service">
+              <img
+                src="assets/img/fotos/t1-urbana-600.webp"
+                srcset="assets/img/fotos/t1-urbana-600.webp 600w, assets/img/fotos/t1-urbana-1200.webp 1200w"
+                sizes="(min-width: 1100px) 270px, (min-width: 600px) 45vw, 100vw"
+                alt="Entregador com caixa ao lado de uma van de entregas"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="service__body">
+                <h3>Entregas urbanas</h3>
+                <p>Distribuição na cidade para lojas, farmácias e clientes finais, com janela de horário.</p>
+                <ul class="chips"><li>Vans e 3/4</li><li>Comprovante digital</li></ul>
+                <a class="service__link" href="#cotacao" data-service="Entrega urbana">Cotar este serviço</a>
+              </div>
             </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 04</p>
-              <h3>Coleta programada</h3>
-              <p>Rotas fixas em dias combinados para empresas com envios frequentes.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 05</p>
-              <h3>Farmácias e distribuidoras</h3>
-              <p>Entregas para o varejo farmacêutico, com conferência de volumes e horários de recebimento.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 06</p>
-              <h3>Armazenagem, se disponível</h3>
-              <p>Bloco opcional para comunicar espaço de armazenagem ou cross-docking.</p>
+            <article class="service">
+              <img
+                src="assets/img/fotos/t1-armazenagem-600.webp"
+                srcset="assets/img/fotos/t1-armazenagem-600.webp 600w, assets/img/fotos/t1-armazenagem-1200.webp 1200w"
+                sizes="(min-width: 1100px) 270px, (min-width: 600px) 45vw, 100vw"
+                alt="Armazém com prateleiras porta-paletes"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+              <div class="service__body">
+                <h3>Armazenagem</h3>
+                <p>Galpão de 6.000 m² em Campinas para estoque, separação e cross-docking.</p>
+                <ul class="chips"><li>Controle de estoque</li><li>Picking</li></ul>
+                <a class="service__link" href="#cotacao" data-service="Outro tipo de carga">Falar com o comercial</a>
+              </div>
             </article>
           </div>
 
-          <p class="section-note">Prazos e valores dependem de origem, destino, peso e volume da carga.</p>
-        </div>
-      </section>
-
-      <section id="regioes" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Regiões atendidas</p>
-            <h2>Rotas diárias na capital, na região metropolitana e no interior.</h2>
-            <p>Lista fictícia. No site real, entram as cidades e regiões que a transportadora atende de verdade.</p>
-          </div>
-          <ul class="regions-list">
-            <li>São Paulo (capital)</li>
-            <li>Grande São Paulo</li>
-            <li>Campinas e região</li>
-            <li>Vale do Paraíba</li>
-            <li>Baixada Santista</li>
-            <li>Sul de Minas</li>
+          <ul class="extras" aria-label="Também atendemos">
+            <li>
+              <span class="extras__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2" /><path d="M8 3v4M16 3v4M4 10h16" /><path d="m9 15 2 2 4-4" /></svg></span>
+              <div><strong>Coleta programada</strong><span>Rotas fixas em dias combinados.</span></div>
+            </li>
+            <li>
+              <span class="extras__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M9 7V5h6v2M12 11v5M9.5 13.5h5" /></svg></span>
+              <div><strong>Farmácia e saúde</strong><span>Conferência e horário de recebimento.</span></div>
+            </li>
+            <li>
+              <span class="extras__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9" /><path d="M20 4v5h-5" /><path d="M20 12a8 8 0 0 1-14 5.3L4 15" /><path d="M4 20v-5h5" /></svg></span>
+              <div><strong>Logística reversa</strong><span>Coleta de devoluções e trocas.</span></div>
+            </li>
+            <li>
+              <span class="extras__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" /><path d="m8.5 12 2.5 2.5 4.5-5" /></svg></span>
+              <div><strong>Carga segurada</strong><span>RCTR-C e RC-DC em toda viagem.</span></div>
+            </li>
           </ul>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Peça a cotação</h3>
-              <p>Informe origem, destino, tipo de carga, peso e volumes.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Receba prazo e valor</h3>
-              <p>A equipe responde pelo WhatsApp com o valor do frete e a data de coleta.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Acompanhe a entrega</h3>
-              <p>Você recebe aviso na coleta, na saída para entrega e o comprovante no final.</p>
-            </article>
-          </div>
         </div>
       </section>
 
-      <section id="cotacao" class="section anchor-target">
-        <div class="container about-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Cotação</p>
-              <h2>Peça sua cotação de frete.</h2>
-              <p>Preencha os dados e a mensagem abre pronta no WhatsApp da transportadora.</p>
-            </div>
-
-            <form class="quote-form" data-quote-form data-whatsapp="5500000000000" novalidate>
-              <div class="quote-form__row">
-                <label>
-                  Cidade de origem
-                  <input type="text" name="origem" autocomplete="off" required />
-                </label>
-                <label>
-                  Cidade de destino
-                  <input type="text" name="destino" autocomplete="off" required />
-                </label>
-              </div>
-              <div class="quote-form__row">
-                <label>
-                  Tipo de carga
-                  <select name="carga" required>
-                    <option value="">Selecione</option>
-                    <option>Caixas e volumes pequenos</option>
-                    <option>Carga paletizada</option>
-                    <option>Carga completa (lotação)</option>
-                    <option>Medicamentos e produtos de farmácia</option>
-                    <option>Outro tipo de carga</option>
-                  </select>
-                </label>
-                <label>
-                  Peso aproximado
-                  <input type="text" name="peso" placeholder="Ex.: 300 kg" />
-                </label>
-              </div>
-              <label>
-                Quantidade de volumes
-                <input type="text" name="volumes" placeholder="Ex.: 12 caixas" />
-              </label>
-              <label>
-                Observações
-                <textarea name="observacoes" rows="4"></textarea>
-              </label>
-              <p class="quote-form__error" data-quote-error role="alert" hidden></p>
-              <div class="hero-actions">
-                <button class="button button-primary" type="submit">Enviar pelo WhatsApp</button>
-              </div>
-            </form>
-          </article>
-          <aside class="info-card">
-            <p class="info-card__label">Demonstração</p>
+      <!-- EMPRESA -->
+      <section class="section section--soft" id="empresa" aria-labelledby="empresa-titulo">
+        <div class="container about">
+          <figure class="about__media">
+            <img
+              src="assets/img/fotos/t1-sobre-500.webp"
+              srcset="assets/img/fotos/t1-sobre-500.webp 500w, assets/img/fotos/t1-sobre-1000.webp 1000w"
+              sizes="(min-width: 900px) 440px, 100vw"
+              alt="Equipe da transportadora conferindo cargas no galpão"
+              width="500"
+              height="625"
+              loading="lazy"
+            />
+            <figcaption class="about__badge"><strong>Desde 2008</strong><span>no transporte de cargas</span></figcaption>
+          </figure>
+          <div class="about__copy">
+            <p class="eyebrow">Quem somos</p>
+            <h2 id="empresa-titulo">Uma transportadora regional que trata a sua carga como se fosse nossa</h2>
             <p>
-              A TransModelo Logística é uma empresa fictícia usada apenas para demonstrar o layout do modelo. O número de
-              WhatsApp desta página não é real; no site do cliente, a cotação chega direto no WhatsApp da empresa.
+              A TransModelo nasceu em Campinas com dois caminhões e um compromisso: cumprir o prazo combinado. Hoje são
+              120 veículos próprios, três filiais e uma central que acompanha cada viagem do começo ao fim.
             </p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
-          </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Cotação respondida no mesmo dia e a carga chegou no prazo. Viramos clientes fixos.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">R</span><span><strong>Roberto S.</strong><span>Indústria Modelo</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“As entregas para a Grande São Paulo são rápidas e o rastreio ajuda no atendimento.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">C</span><span><strong>Camila R.</strong><span>Loja Online Exemplo</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Equipe atenciosa e motoristas cuidadosos com a mercadoria.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">E</span><span><strong>Eduardo P.</strong><span>Atacado Regional</span></span></figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com a nossa equipe comercial.</h2>
-            </div>
-
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Av. Exemplo, 1000, Galpão 3, Distrito Industrial</dd>
-              </div>
-              <div>
-                <dt>Horário</dt>
-                <dd>Segunda a sexta, das 7h às 18h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:comercial@transportadoramodelo.com.br">comercial@transportadoramodelo.com.br</a></dd>
-              </div>
+            <ul class="checklist">
+              <li>Frota própria com idade média de 4 anos</li>
+              <li>Motoristas contratados e treinados na casa</li>
+              <li>Monitoramento 24 horas em todos os veículos</li>
+              <li>Atendimento por um consultor que conhece a sua operação</li>
+            </ul>
+            <dl class="numbers">
+              <div><dt>anos de estrada</dt><dd data-count="17">17</dd></div>
+              <div><dt>veículos próprios</dt><dd data-count="120">120</dd></div>
+              <div><dt>entregas no prazo</dt><dd><span data-count="98.7" data-decimals="1">98,7</span>%</dd></div>
+              <div><dt>filiais: Campinas, BH e Curitiba</dt><dd data-count="3">3</dd></div>
             </dl>
-          </article>
+          </div>
+        </div>
+      </section>
 
-          <aside class="contact-card">
-            <p class="contact-card__label">Atendimento fictício</p>
-            <h2>Contato para demonstração do modelo</h2>
-            <p>Os dados desta página são fictícios e mostram como o site final organiza os canais da transportadora.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#cotacao">Pedir cotação</a>
-              <a class="button button-secondary" href="#regioes">Ver regiões</a>
+      <!-- COMO FUNCIONA -->
+      <section class="process" aria-labelledby="processo-titulo">
+        <div class="container">
+          <header class="section-head section-head--light">
+            <p class="eyebrow">Como funciona</p>
+            <h2 id="processo-titulo">Do pedido à entrega em quatro passos</h2>
+          </header>
+          <ol class="steps">
+            <li>
+              <span class="steps__n">01</span>
+              <h3>Cotação</h3>
+              <p>Você informa origem, destino e carga. Respondemos com valor e prazo em até 30 minutos.</p>
+            </li>
+            <li>
+              <span class="steps__n">02</span>
+              <h3>Coleta</h3>
+              <p>Agendamos a coleta no seu endereço, com conferência de volumes e notas.</p>
+            </li>
+            <li>
+              <span class="steps__n">03</span>
+              <h3>Transporte monitorado</h3>
+              <p>A carga viaja em veículo rastreado e você recebe aviso de cada etapa pelo WhatsApp.</p>
+            </li>
+            <li>
+              <span class="steps__n">04</span>
+              <h3>Entrega</h3>
+              <p>Entregamos na janela combinada e enviamos o comprovante assinado.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FROTA -->
+      <section class="section" id="frota" aria-labelledby="frota-titulo">
+        <div class="container fleet">
+          <div class="fleet__copy">
+            <header class="section-head section-head--left">
+              <p class="eyebrow">Frota própria</p>
+              <h2 id="frota-titulo">O veículo certo para o tamanho da sua carga</h2>
+              <p>Todos com rastreador, seguro e manutenção preventiva em oficina própria.</p>
+            </header>
+            <div class="fleet__table" role="region" aria-label="Tipos de veículo" tabindex="0">
+              <table>
+                <thead>
+                  <tr><th scope="col">Veículo</th><th scope="col">Capacidade</th><th scope="col">Indicado para</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Van de carga</th><td data-label="Capacidade">até 1,5 t · 12 m³</td><td data-label="Indicado para">Entregas urbanas e urgentes</td></tr>
+                  <tr><th scope="row">Caminhão 3/4</th><td data-label="Capacidade">até 4 t · 25 m³</td><td data-label="Indicado para">Distribuição na cidade</td></tr>
+                  <tr><th scope="row">Toco</th><td data-label="Capacidade">até 7 t · 40 m³</td><td data-label="Indicado para">Rotas regionais</td></tr>
+                  <tr><th scope="row">Truck</th><td data-label="Capacidade">até 14 t · 55 m³</td><td data-label="Indicado para">Cargas paletizadas</td></tr>
+                  <tr><th scope="row">Carreta</th><td data-label="Capacidade">até 32 t · 90 m³</td><td data-label="Indicado para">Lotação e longas distâncias</td></tr>
+                </tbody>
+              </table>
             </div>
-          </aside>
+          </div>
+          <figure class="fleet__media">
+            <img
+              src="assets/img/fotos/t1-frota-600.webp"
+              srcset="assets/img/fotos/t1-frota-600.webp 600w, assets/img/fotos/t1-frota-1200.webp 1200w"
+              sizes="(min-width: 900px) 520px, 100vw"
+              alt="Caminhões da frota estacionados no pátio"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <figcaption>Pátio e oficina própria em Campinas</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- RASTREAMENTO -->
+      <section class="tracking" id="rastreamento" aria-labelledby="rastreio-titulo">
+        <div class="container tracking__inner">
+          <div class="tracking__copy">
+            <p class="eyebrow">Acompanhe sua carga</p>
+            <h2 id="rastreio-titulo">Quer saber onde está a sua carga?</h2>
+            <p>Digite o número da nota fiscal. A mensagem abre pronta no WhatsApp e a nossa central responde com a posição da carga e a previsão de entrega.</p>
+            <form class="track-form" data-track-form data-whatsapp="5500000000000" novalidate>
+              <label class="sr-only" for="codigo-rastreio">Número da nota fiscal</label>
+              <input id="codigo-rastreio" name="codigo" type="text" inputmode="numeric" placeholder="Número da nota fiscal" autocomplete="off" />
+              <button class="btn btn--primary" type="submit">Consultar</button>
+            </form>
+            <p class="track-form__error" data-track-error role="alert" hidden></p>
+            <ul class="track-points">
+              <li>Aviso na coleta, na saída para entrega e na entrega</li>
+              <li>Comprovante assinado enviado por foto</li>
+            </ul>
+          </div>
+
+          <figure class="tracking__media">
+            <img
+              src="assets/img/fotos/t1-rastreio-600.webp"
+              srcset="assets/img/fotos/t1-rastreio-600.webp 600w, assets/img/fotos/t1-rastreio-1200.webp 1200w"
+              sizes="(min-width: 900px) 480px, 100vw"
+              alt="Funcionário conferindo volumes com um leitor no galpão"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- REGIÕES -->
+      <section class="section" id="regioes" aria-labelledby="regioes-titulo">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Onde atendemos</p>
+            <h2 id="regioes-titulo">Rotas diárias em três estados</h2>
+            <p>Prazos contados a partir da coleta, em dias úteis.</p>
+          </header>
+          <ul class="regions">
+            <li><div><strong>São Paulo e Grande SP</strong><span>Capital, ABC, Guarulhos e Osasco</span></div><em>1 dia</em></li>
+            <li><div><strong>Campinas e região</strong><span>Jundiaí, Americana, Sumaré e Indaiatuba</span></div><em>1 dia</em></li>
+            <li><div><strong>Vale do Paraíba e litoral</strong><span>São José dos Campos, Taubaté e Santos</span></div><em>1 a 2 dias</em></li>
+            <li><div><strong>Interior de SP</strong><span>Ribeirão Preto, Piracicaba e Sorocaba</span></div><em>1 a 2 dias</em></li>
+            <li><div><strong>Minas Gerais</strong><span>Belo Horizonte e Sul de Minas</span></div><em>2 dias</em></li>
+            <li><div><strong>Paraná</strong><span>Curitiba, Londrina e Maringá</span></div><em>2 a 3 dias</em></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DEPOIMENTOS -->
+      <section class="section section--soft" aria-labelledby="depoimentos-titulo">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Clientes</p>
+            <h2 id="depoimentos-titulo">Quem envia com a gente, continua enviando</h2>
+          </header>
+          <div class="reviews">
+            <figure class="review">
+              <p class="review__stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              <blockquote>“Mandamos carga para o interior toda semana. Cotação no mesmo dia e nunca tivemos problema com prazo.”</blockquote>
+              <figcaption><span class="review__avatar" aria-hidden="true">RS</span><span><strong>Roberto Silva</strong>Gerente de logística, indústria de embalagens</span></figcaption>
+            </figure>
+            <figure class="review">
+              <p class="review__stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              <blockquote>“Os avisos pelo WhatsApp acabaram com as ligações dos nossos clientes perguntando do pedido.”</blockquote>
+              <figcaption><span class="review__avatar" aria-hidden="true">CR</span><span><strong>Camila Rocha</strong>Sócia, loja virtual de decoração</span></figcaption>
+            </figure>
+            <figure class="review">
+              <p class="review__stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              <blockquote>“Entregam nas nossas 14 lojas dentro do horário de recebimento. Equipe muito cuidadosa.”</blockquote>
+              <figcaption><span class="review__avatar" aria-hidden="true">EP</span><span><strong>Eduardo Pereira</strong>Compras, rede de farmácias</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- COTAÇÃO -->
+      <section class="section" id="cotacao" aria-labelledby="cotacao-titulo">
+        <div class="container quote">
+          <div class="quote__intro">
+            <p class="eyebrow">Cotação</p>
+            <h2 id="cotacao-titulo">Peça sua cotação de frete</h2>
+            <p>Preencha os dados e a mensagem abre pronta no WhatsApp da nossa central. Respondemos em até 30 minutos no horário comercial.</p>
+            <ul class="quote__contacts">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z" /></svg>
+                <span><small>Central de cotação</small><a href="tel:+550030000000">(00) 3000-0000</a></span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" /><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z" /></svg>
+                <span><small>WhatsApp</small><a href="https://wa.me/5500000000000">(00) 90000-0000</a></span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
+                <span><small>E-mail</small><a href="mailto:comercial@transmodelo.com.br">comercial@transmodelo.com.br</a></span>
+              </li>
+            </ul>
+            <div class="quote__hours">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+              <p><strong>Seg a sex, 7h às 19h · Sáb, 8h às 12h</strong>Pedidos fora do horário são respondidos no próximo dia útil, até as 9h.</p>
+            </div>
+          </div>
+
+          <form class="quote-form" data-quote-form data-whatsapp="5500000000000" novalidate>
+            <p class="quote-form__req">Campos com <span class="req">*</span> são obrigatórios.</p>
+            <div class="quote-form__grid">
+              <label><span>Nome <span class="req" aria-hidden="true">*</span></span><input type="text" name="nome" autocomplete="name" required /></label>
+              <label>Empresa<input type="text" name="empresa" autocomplete="organization" /></label>
+              <label><span>Cidade de origem <span class="req" aria-hidden="true">*</span></span><input type="text" name="origem" autocomplete="off" required /></label>
+              <label><span>Cidade de destino <span class="req" aria-hidden="true">*</span></span><input type="text" name="destino" autocomplete="off" required /></label>
+              <label>
+                <span>Tipo de carga <span class="req" aria-hidden="true">*</span></span>
+                <select name="carga" required>
+                  <option value="">Selecione</option>
+                  <option>Carga fracionada</option>
+                  <option>Carga lotação</option>
+                  <option>Entrega urbana</option>
+                  <option>Produtos de farmácia e saúde</option>
+                  <option>Outro tipo de carga</option>
+                </select>
+              </label>
+              <label>Peso aproximado<input type="text" name="peso" placeholder="Ex.: 300 kg" /></label>
+              <label>Volumes<input type="text" name="volumes" placeholder="Ex.: 12 caixas" /></label>
+              <label>Valor da nota fiscal<input type="text" name="valor" inputmode="decimal" placeholder="Ex.: R$ 8.000" /></label>
+              <label class="quote-form__full">Observações<textarea name="observacoes" rows="3" placeholder="Horário de coleta, carga frágil, agendamento…"></textarea></label>
+            </div>
+            <p class="quote-form__error" data-quote-error role="alert" hidden></p>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">Enviar cotação pelo WhatsApp</button>
+            <p class="quote-form__note">Ao enviar, abrimos o WhatsApp com a mensagem pronta. Nada é enviado sem você confirmar.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--soft" aria-labelledby="faq-titulo">
+        <div class="container faq">
+          <header class="section-head section-head--left">
+            <p class="eyebrow">Dúvidas frequentes</p>
+            <h2 id="faq-titulo">Antes de enviar a sua carga</h2>
+            <p>Não achou a resposta? Fale com a central pelo WhatsApp.</p>
+          </header>
+          <div class="faq__list">
+            <details>
+              <summary>Qual o volume mínimo para enviar?</summary>
+              <p>Na carga fracionada não há mínimo: coletamos a partir de um volume. O valor considera peso, medidas e destino.</p>
+            </details>
+            <details>
+              <summary>Vocês coletam no meu endereço?</summary>
+              <p>Sim. A coleta é agendada no dia útil seguinte à aprovação da cotação, ou no mesmo dia para pedidos até as 10h.</p>
+            </details>
+            <details>
+              <summary>A carga tem seguro?</summary>
+              <p>Todas as viagens têm seguro RCTR-C e RC-DC. Para mercadorias de alto valor, avaliamos seguro adicional.</p>
+            </details>
+            <details>
+              <summary>Como recebo o comprovante de entrega?</summary>
+              <p>O comprovante assinado chega pelo WhatsApp e por e-mail logo após a entrega, com foto e horário.</p>
+            </details>
+            <details>
+              <summary>Atendem cargas de farmácias e distribuidoras?</summary>
+              <p>Sim. Temos rotas diárias para redes de farmácias, com conferência de volumes e respeito à janela de recebimento de cada loja.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta" aria-labelledby="cta-titulo">
+        <img
+          class="cta__photo"
+          src="assets/img/fotos/t1-cta-1600.webp"
+          srcset="assets/img/fotos/t1-cta-900.webp 900w, assets/img/fotos/t1-cta-1600.webp 1600w, assets/img/fotos/t1-cta-2400.webp 2400w"
+          sizes="100vw"
+          alt=""
+          width="1600"
+          height="900"
+          loading="lazy"
+        />
+        <div class="container cta__inner">
+          <h2 id="cta-titulo">Precisa de frete para amanhã?</h2>
+          <p>Fale agora com a nossa central e garanta a coleta.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/5500000000000">Chamar no WhatsApp</a>
+            <a class="btn btn--ghost btn--lg" href="tel:+550030000000">Ligar (00) 3000-0000</a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-transportadora-modelo.svg" alt="" width="48" height="48" />
-              <strong>TransModelo Logística</strong>
-            </div>
-            <p>Transportadora regional com frota própria, rastreamento e cotação rápida pelo WhatsApp.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#regioes">Regiões</a></li>
-              <li><a href="#cotacao">Cotação</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 800, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h · Sáb, 8h às 12h</span></li>
-            </ul>
+    <footer class="footer" id="contato">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand brand--light" href="#inicio">
+            <img src="assets/img/logo-transmodelo.svg" alt="" width="44" height="44" />
+            <span class="brand__name">TransModelo<small>Logística</small></span>
+          </a>
+          <p>Transporte rodoviário de cargas com frota própria, veículos rastreados e seguro em todas as viagens.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram (exemplo)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r=".6" /></svg></a>
+            <a href="#" aria-label="LinkedIn (exemplo)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3" /><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5c0-2 1.2-3 2.6-3S17 11.3 17 13v4" /></svg></a>
+            <a href="#" aria-label="Facebook (exemplo)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z" /></svg></a>
           </div>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> TransModelo Logística. Empresa fictícia: demonstração do modelo Transportadora OnePage.</span>
-          <a href="../">Voltar para a GSA</a>
+        <div>
+          <h2>Serviços</h2>
+          <ul>
+            <li><a href="#servicos">Carga fracionada</a></li>
+            <li><a href="#servicos">Carga lotação</a></li>
+            <li><a href="#servicos">Entregas urbanas</a></li>
+            <li><a href="#servicos">Armazenagem</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Empresa</h2>
+          <ul>
+            <li><a href="#empresa">Quem somos</a></li>
+            <li><a href="#frota">Frota</a></li>
+            <li><a href="#regioes">Regiões atendidas</a></li>
+            <li><a href="#rastreamento">Acompanhar carga</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contato</h2>
+          <ul class="footer__contact">
+            <li>Av. Exemplo, 1000, Galpão 3<br />Distrito Industrial, Campinas/SP</li>
+            <li><a href="tel:+550030000000">(00) 3000-0000</a></li>
+            <li><a href="mailto:comercial@transmodelo.com.br">comercial@transmodelo.com.br</a></li>
+            <li>Seg a sex, 7h às 19h · Sáb, 8h às 12h</li>
+          </ul>
         </div>
       </div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> TransModelo Logística · CNPJ 00.000.000/0001-00</span>
+        <span>Empresa fictícia: demonstração do modelo Transportadora OnePage da GSA. <a href="../">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
 
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
+    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" /><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z" /></svg>
+      <span>WhatsApp</span>
+    </a>
 
     <script src="assets/js/demo.js"></script>
   </body>

@@ -3,356 +3,241 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Farmácia Bem Estar | Demonstração OnePage</title>
-    <meta
-      name="description"
-      content="Demonstração fictícia de um site OnePage para farmácias de bairro divulgarem serviços, horário, endereço e atendimento por WhatsApp."
-    />
-    <meta name="robots" content="noindex" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <title>Farmácia Bem Estar | Farmácia no Jardim Primavera, Campinas</title>
+    <meta name="description" content="Demonstração fictícia de site de farmácia em uma página: serviços farmacêuticos, entrega no bairro, horário, endereço e pedido pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#064e3b" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-bem-estar.svg" />
+    <link rel="preload" href="assets/fonts/nunito-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [7, 22], "2": [7, 22], "3": [7, 22], "4": [7, 22], "5": [7, 22], "6": [7, 20], "0": [8, 14]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <div class="topbar">
+    <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 250, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-open-status>Seg a sex, 7h às 22h</span></p>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20das%20Palmeiras%2C%20245%2C%20Jardim%20Primavera%2C%20Campinas%20%E2%80%93%20SP"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua das Palmeiras, 245 · Jardim Primavera</a><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a></div>
       </div>
     </div>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da Farmácia Bem Estar">
-          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Farmácia Bem Estar</strong>
-            <span class="brand__subtitle">Atendimento humanizado perto de você</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal da farmácia">
-          <a href="#inicio">Início</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <a class="button button-primary header-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
-
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-expanded="false"
-          aria-controls="menu-mobile"
-        >
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel da farmácia">
-            <a href="#inicio">Início</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Farmácia Bem Estar, página inicial"><img src="assets/img/logo-bem-estar.svg" alt="" width="44" height="44" /><span class="brand__name">Bem Estar<small>Farmácia</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="#servicos">Serviços</a>
-            <a href="#como-funciona">Como funciona</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+            <a href="#sobre">A farmácia</a>
+            <a href="#entrega">Entrega</a>
+            <a href="#visite">Horário e endereço</a>
+            <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <div class="header__actions">
+          <a class="btn btn--primary header__cta" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir pelo WhatsApp</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">A farmácia</a>
+          <a href="#entrega">Entrega</a>
+          <a href="#visite">Horário e endereço</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a class="btn btn--primary btn--block" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir pelo WhatsApp</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Farmácia de bairro</p>
-            <h1>Atendimento próximo, rápido e confiável para sua saúde no dia a dia.</h1>
-            <p class="lead">
-              Uma farmácia de bairro com atendimento humanizado, retirada na loja, entrega local e orientação
-              farmacêutica.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
-              <a class="button button-secondary" href="#servicos">Ver serviços</a>
+      <section class="hero-split" id="inicio" aria-labelledby="inicio-titulo">
+        <div class="container hero-split__inner">
+          <div class="hero-split__copy">
+            <p class="tag tag--soft open-status" data-open-status>Seg a sex, 7h às 22h</p>
+            <h1 id="inicio-titulo">Cuidado de perto, todos os dias, no seu bairro.</h1>
+            <p class="hero__lead">Atendimento farmacêutico sem pressa, serviços de saúde sem agendamento e entrega rápida no Jardim Primavera e região.</p>
+            <div class="hero__actions">
+              <a class="btn btn--whats btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir pelo WhatsApp</a>
+              <a class="btn btn--ghost btn--lg" href="#servicos">Ver serviços</a>
             </div>
+            <ul class="hero__facts">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Farmacêutico o dia todo</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg>Entrega no bairro</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Aceitamos convênios</li>
+            </ul>
           </div>
-
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-farmacia.svg" alt="Ilustração da fachada fictícia da Farmácia Bem Estar" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques rápidos da farmácia fictícia">
-              <article class="meta-card">
-                <p class="meta-card__label">Horário</p>
-                <h2>8h às 20h</h2>
-                <p>Segunda a sábado, com atendimento direto na unidade.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Entrega local</p>
-                <h2>Bairro e entorno</h2>
-                <p>Condições combinadas com a equipe conforme disponibilidade.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Retirada</p>
-                <h2>Na loja</h2>
-                <p>Pedido assistido com retirada rápida no balcão.</p>
-              </article>
-            </div>
+          <div class="hero-split__media">
+            <img src="assets/img/fotos/g-farmaceutica-1000x1250.webp" srcset="assets/img/fotos/g-farmaceutica-560x700.webp 560w, assets/img/fotos/g-farmaceutica-1000x1250.webp 1000w" sizes="(min-width: 960px) 470px, 92vw" alt="Farmacêutica de jaleco sorrindo em frente às prateleiras da farmácia" width="1000" height="1250" fetchpriority="high" decoding="async" />
+            <p class="float-card float-card--a"><span class="float-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg></span><span><strong>Entrega em até 40 min</strong>Grátis acima de R$&nbsp;60</span></p>
+            <p class="float-card float-card--b"><span class="float-card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg></span><span><strong>4,9 no Google</strong>Mais de 300 avaliações</span></p>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Farmacêutico presente</strong><span>Em todo o horário de funcionamento.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Entrega no bairro</strong><span>Seu pedido em casa em poucos minutos.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <div><strong>Convênios aceitos</strong><span>Farmácia Popular e convênios de empresas.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
-            <div><strong>Pague como quiser</strong><span>Pix, cartão ou dinheiro na entrega.</span></div>
-          </div>
+      <section class="section" id="servicos" aria-labelledby="servicos-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Serviços farmacêuticos</p>
+          <h2 id="servicos-titulo">Mais que remédio: cuidado com a sua saúde</h2>
+          <p class="lead">Serviços feitos por farmacêutico, em sala reservada e sem precisar marcar hora.</p>
         </div>
-      </section>
-
-      <section id="servicos" class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Serviços</p>
-            <h2>Soluções do dia a dia para atendimento local e comunicação clara.</h2>
-            <p>
-              Esta demonstração mostra como um site OnePage pode organizar serviços, diferenciais e canais de contato de
-              forma simples e profissional.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 01</p>
-              <h3>Entrega local</h3>
-              <p>Canal para combinar atendimento e entrega na região atendida pela unidade.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 02</p>
-              <h3>Retirada na loja</h3>
-              <p>Opção prática para clientes que preferem confirmar atendimento e passar no balcão.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 03</p>
-              <h3>Orientação farmacêutica</h3>
-              <p>Espaço institucional para destacar acolhimento, proximidade e atenção responsável.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 04</p>
-              <h3>Aferição de pressão, se disponível</h3>
-              <p>Bloco opcional para comunicar serviços adicionais oferecidos na loja.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 05</p>
-              <h3>Produtos de higiene e beleza</h3>
-              <p>Linha institucional para mostrar itens complementares sem simular catálogo completo.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 06</p>
-              <h3>Suplementos e vitaminas</h3>
-              <p>Comunicação simples de categoria, sempre conforme disponibilidade da unidade.</p>
-            </article>
-          </div>
-
-          <p class="section-note">
-            Serviços sujeitos à disponibilidade da unidade e validação do responsável técnico.
-          </p>
-        </div>
-      </section>
-
-      <section id="como-funciona" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Como funciona</p>
-            <h2>Uma jornada simples para atendimento local sem carrinho e sem checkout.</h2>
-          </div>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Fale com a farmácia pelo WhatsApp</h3>
-              <p>O primeiro contato concentra dúvidas, horários e orientação inicial de atendimento.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Confirme disponibilidade e forma de atendimento</h3>
-              <p>A equipe alinha retirada na loja, entrega local ou atendimento disponível.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Retire na loja ou combine entrega local</h3>
-              <p>Fluxo assistido, sem carrinho, sem pagamento online e sem prometer operação fora do escopo.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container about-grid">
-          <article class="section-panel section-panel--soft">
-            <p class="eyebrow">Cuidado perto de você</p>
-            <h2>Cuidado perto de você</h2>
-            <p>
-              A Farmácia Bem Estar é uma farmácia fictícia usada apenas para demonstrar o layout do template. O
-              conteúdo final é adaptado para cada cliente.
-            </p>
+          <div class="grid grid--4">
+            <article class="card">
+            <div class="card__media"><img src="assets/img/fotos/f-pressao-1200x800.webp" srcset="assets/img/fotos/f-pressao-640x427.webp 640w, assets/img/fotos/f-pressao-1200x800.webp 1200w" sizes="(min-width: 1000px) 270px, (min-width: 640px) 45vw, 92vw" alt="Farmacêutico medindo a pressão arterial de uma cliente" width="1200" height="800" loading="lazy" decoding="async" /></div>
+            <div class="card__body"><span class="card__tag">Sem agendamento</span><h3>Aferição de pressão</h3><p>Medição com aparelho calibrado e anotação na sua carteirinha de controle.</p></div>
           </article>
-          <article class="info-card">
-            <p class="info-card__label">Demonstração responsável</p>
-            <p>
-              Este site não realiza venda online e não substitui revisão regulatória, conteúdo institucional do cliente ou
-              validação do responsável técnico.
-            </p>
+            <article class="card">
+            <div class="card__media"><img src="assets/img/fotos/g-teste-1200x800.webp" srcset="assets/img/fotos/g-teste-640x427.webp 640w, assets/img/fotos/g-teste-1200x800.webp 1200w" sizes="(min-width: 1000px) 270px, (min-width: 640px) 45vw, 92vw" alt="Teste de glicemia com furo no dedo e glicosímetro" width="1200" height="800" loading="lazy" decoding="async" /></div>
+            <div class="card__body"><span class="card__tag">Resultado na hora</span><h3>Teste de glicemia</h3><p>Resultado em poucos minutos, com orientação sobre os valores e os próximos passos.</p></div>
           </article>
-        </div>
-      </section>
-
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
-          </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Pedi pelo WhatsApp e em meia hora o remédio estava em casa. Atendimento muito educado.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Mariana S.</strong><span>Centro</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“O farmacêutico sempre tira as minhas dúvidas com paciência. Confio muito.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>José R.</strong><span>Vila Nova</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Gosto de ver as ofertas pelo site antes de passar na loja. Facilita a vida.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">C</span><span><strong>Carla M.</strong><span>Jardim América</span></span></figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com a unidade e organize seu atendimento.</h2>
-            </div>
-
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Rua Exemplo, 123 — Centro</dd>
-              </div>
-              <div>
-                <dt>Horário</dt>
-                <dd>Segunda a sábado, das 8h às 20h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:contato@farmaciamodelo.com.br">contato@farmaciamodelo.com.br</a></dd>
-              </div>
-            </dl>
+            <article class="card">
+            <div class="card__media"><img src="assets/img/fotos/g-vacina-1200x800.webp" srcset="assets/img/fotos/g-vacina-640x427.webp 640w, assets/img/fotos/g-vacina-1200x800.webp 1200w" sizes="(min-width: 1000px) 270px, (min-width: 640px) 45vw, 92vw" alt="Profissional de luvas aplicando vacina no braço de uma pessoa" width="1200" height="800" loading="lazy" decoding="async" /></div>
+            <div class="card__body"><span class="card__tag">Consulte as vacinas</span><h3>Vacinação</h3><p>Vacinas aplicadas por farmacêutico habilitado, com registro na sua carteira de vacinação.</p></div>
           </article>
-
-          <aside class="contact-card">
-            <p class="contact-card__label">Atendimento fictício</p>
-            <h2>Contato direto para demonstração do template</h2>
-            <p>
-              Os dados abaixo são fictícios e servem apenas para mostrar como a estrutura final pode organizar o contato do cliente.
-            </p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
-              <a class="button button-secondary" href="#contato">Como chegar</a>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section section-compact">
-        <div class="container regulatory-card">
-          <p class="eyebrow">Avisos regulatórios</p>
-          <ul class="regulatory-list">
-            <li>Este modelo não realiza venda online.</li>
-            <li>Medicamentos com prescrição e controlados exigem atendimento conforme legislação aplicável.</li>
-            <li>O conteúdo final deve ser revisado pelo cliente e responsável técnico.</li>
+            <article class="card">
+            <div class="card__media"><img src="assets/img/fotos/f-skincare-1200x800.webp" srcset="assets/img/fotos/f-skincare-640x427.webp 640w, assets/img/fotos/f-skincare-1200x800.webp 1200w" sizes="(min-width: 1000px) 270px, (min-width: 640px) 45vw, 92vw" alt="Mulher com toalha no cabelo cuidando da pele do rosto" width="1200" height="800" loading="lazy" decoding="async" /></div>
+            <div class="card__body"><span class="card__tag">Orientação grátis</span><h3>Dermocosméticos</h3><p>Ajuda para escolher protetor solar, hidratante e o cuidado certo para o seu tipo de pele.</p></div>
+          </article>
+          </div>
+          <ul class="more" aria-label="Outros serviços">
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 3 6 6M17.5 5.5 8 15l-3 1 1-3 9.5-9.5M13 7l4 4M10 10l2 2M4 20l2.5-2.5"/></svg>Aplicação de injetáveis</li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-5.5 1.7"/><path d="M10 9a2 2 0 0 1 4 0c0 1.2-1 1.6-1.5 2.5"/></svg>Perfuração de lóbulo</li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Revisão dos seus remédios</li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 19H4.5a1.5 1.5 0 0 1-1.3-2.2L5 13.5M11 5.2l1-1.7a1.5 1.5 0 0 1 2.6 0L17 7.5M17 19h2.5a1.5 1.5 0 0 0 1.3-2.2L18.5 13"/><path d="M14 19h3M7 16l-2-2.5 3-.8M14 7.5l3 0 .8-3M10 22l-3-3 3-3"/></svg>Descarte de vencidos</li>
           </ul>
         </div>
       </section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="48" height="48" />
-              <strong>Farmácia Bem Estar</strong>
+      <section class="section section--soft" id="sobre" aria-labelledby="sobre-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/g-atendimento-1200x900.webp" srcset="assets/img/fotos/g-atendimento-640x480.webp 640w, assets/img/fotos/g-atendimento-1200x900.webp 1200w" sizes="(min-width: 960px) 540px, 92vw" alt="Farmacêutico atendendo uma cliente no balcão e mostrando um produto" width="1200" height="900" loading="lazy" decoding="async" />
+            <p class="split__badge"><strong>Desde 2008</strong>no Jardim Primavera</p>
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">A farmácia</p>
+            <h2 id="sobre-titulo">Uma farmácia de bairro, com tempo para ouvir você.</h2>
+            <p>A Bem Estar nasceu para ser a farmácia em que você é chamado pelo nome. A equipe conhece os clientes, lembra do remédio de uso contínuo e explica com calma como tomar cada um.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Farmacêutico presente em todo o horário de funcionamento</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Convênios de empresas e desconto para maiores de 60 anos</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Programa de pontos que vira desconto nas próximas compras</span></li></ul>
+            <div class="pharmacist">
+              <span class="pharmacist__avatar" aria-hidden="true">MS</span>
+              <div>
+                <strong>Dra. Marina Souza</strong>
+                <p>Farmacêutica responsável · CRF-SP 00000. Especialista em farmácia clínica, atende a comunidade do bairro desde a abertura da loja.</p>
+              </div>
             </div>
-            <p>Farmácia de bairro com atendimento próximo, farmacêutico presente e entrega rápida.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#como-funciona">Como funciona</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 250, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
-            </ul>
           </div>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Farmácia Bem Estar. Empresa fictícia: demonstração do modelo Farmácia OnePage.</span>
-          <a href="../">Voltar para a GSA</a>
+      </section>
+
+      <section class="section section--brand" id="entrega" aria-labelledby="entrega-titulo">
+        <div class="container">
+          <div class="delivery">
+            <div class="section-head" style="margin-bottom:0">
+              <p class="eyebrow">Entrega no bairro</p>
+              <h2 id="entrega-titulo">Pediu, chegou. Sem sair de casa.</h2>
+              <p class="lead">Entregamos no Jardim Primavera e bairros vizinhos das 8h às 21h30. Grátis em pedidos acima de R$&nbsp;60.</p>
+            </div>
+            <a class="btn btn--accent btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20fazer%20um%20pedido%20para%20entrega."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Fazer meu pedido</a>
+          </div>
+          <ol class="steps steps--3"><li><span class="steps__n" aria-hidden="true">1</span><h3>Mande a lista</h3><p>Escreva o que precisa ou envie a foto da receita pelo WhatsApp.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Confirmamos tudo</h3><p>O farmacêutico confere o pedido e passa o valor e o prazo de entrega.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Receba em casa</h3><p>O entregador leva a maquininha. Pague com Pix, cartão ou dinheiro.</p></li></ol>
         </div>
+      </section>
+
+      <section class="section" id="avaliacoes" aria-labelledby="avaliacoes-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Quem compra aqui</p>
+          <h2 id="avaliacoes-titulo">O que os clientes dizem</h2>
+        </div>
+          <div class="reviews"><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Sempre me atendem com paciência e explicam direitinho como tomar cada remédio. Virou a farmácia da família.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">CR</span><span><strong>Cláudia Ramos</strong>Cliente desde 2012</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Meço a pressão toda semana e já sabem o meu histórico. Atendimento de primeira.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">AM</span><span><strong>Antônio Moreira</strong>Aposentado, morador do bairro</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Pedi pelo WhatsApp às oito da noite e em meia hora estava em casa. Muito prático com bebê pequeno.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">JP</span><span><strong>Juliana Prado</strong>Mãe do Theo</span></figcaption>
+          </figure></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="visite" aria-labelledby="visite-titulo">
+        <div class="container">
+          <div class="section-head">
+          <p class="eyebrow">Visite a loja</p>
+          <h2 id="visite-titulo">Horário e endereço</h2>
+          <p class="lead">Estamos na rua principal do bairro, com estacionamento na frente.</p>
+        </div>
+          <div class="visit visit--3">
+            <div class="visit__card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horário</h3>
+              <dl class="hours"><div data-day="1,2,3,4,5"><dt>Segunda a sexta</dt><dd>7h às 22h</dd></div><div data-day="6"><dt>Sábado</dt><dd>7h às 20h</dd></div><div data-day="0"><dt>Domingo e feriados</dt><dd>8h às 14h</dd></div></dl>
+              <p class="tag tag--soft open-status" data-open-status style="margin-top:18px">Seg a sex, 7h às 22h</p>
+            </div>
+            <div class="visit__card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Endereço</h3>
+              <ul class="address">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><strong>Rua das Palmeiras, 245</strong><span>Jardim Primavera · Campinas – SP</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3zM5 11h14"/><circle cx="7.5" cy="16" r="1"/><circle cx="16.5" cy="16" r="1"/></svg><span><strong>Estacionamento</strong><span>Vagas para clientes na frente da loja</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><strong><a href="tel:+550030000000">(00) 3000-0000</a></strong><span>Telefone fixo</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span><strong><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar.">(00) 90000-0000</a></strong><span>WhatsApp para pedidos</span></span></li>
+              </ul>
+              <div class="visit__actions">
+                <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=Rua%20das%20Palmeiras%2C%20245%2C%20Jardim%20Primavera%2C%20Campinas%20%E2%80%93%20SP" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar</a>
+              </div>
+            </div>
+            <div class="visit__photo"><img src="assets/img/fotos/f-fachada-1000x1250.webp" srcset="assets/img/fotos/f-fachada-560x700.webp 560w, assets/img/fotos/f-fachada-1000x1250.webp 1000w" sizes="(min-width: 1100px) 400px, (min-width: 760px) 45vw, 92vw" alt="Fachada de farmácia com a cruz verde iluminada" width="1000" height="1250" loading="lazy" decoding="async" /></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="duvidas" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+            <p class="lead">Não achou a sua? Mande uma mensagem que a gente responde.</p>
+            <a class="link-arrow" style="margin-top:20px" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida.">Perguntar pelo WhatsApp<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="faq"><details><summary>Vocês entregam em casa?</summary><p>Entregamos no Jardim Primavera e bairros vizinhos, das 8h às 21h30. A entrega é grátis em pedidos acima de R$ 60; abaixo disso, a taxa é de R$ 5.</p></details><details><summary>Preciso agendar para medir a pressão ou a glicemia?</summary><p>Não. É só chegar no horário de funcionamento. O teste de glicemia leva cerca de 5 minutos e o resultado sai na hora.</p></details><details><summary>Quais vacinas vocês aplicam?</summary><p>As vacinas mudam conforme a época do ano e a disponibilidade. Pergunte pelo WhatsApp quais estão disponíveis na semana e se é preciso agendar.</p></details><details><summary>Posso mandar a receita pelo WhatsApp?</summary><p>Pode. Mande a foto da receita que confirmamos se temos o medicamento e o valor. Medicamentos de controle especial exigem a receita original na retirada ou na entrega.</p></details><details><summary>Quais formas de pagamento vocês aceitam?</summary><p>Pix, cartões de débito e crédito, dinheiro e convênios de empresas parceiras. Na entrega, o entregador leva a maquininha.</p></details></div>
+        </div>
+      </section>
+
+      <section class="cta-band" id="contato" aria-labelledby="contato-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="contato-titulo">Precisa de alguma coisa agora?</h2>
+            <p>Mande a sua lista ou a foto da receita. Respondemos em poucos minutos.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar no WhatsApp</a>
+            <a class="btn btn--light btn--lg" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Farmácia Bem Estar, página inicial"><img src="assets/img/logo-bem-estar.svg" alt="" width="44" height="44" /><span class="brand__name">Bem Estar<small>Farmácia</small></span></a>
+          <p class="footer__about">Farmácia de bairro com atendimento farmacêutico, serviços de saúde e entrega no Jardim Primavera, em Campinas.</p>
+        </div>
+        <div><h2>Navegação</h2><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">A farmácia</a></li><li><a href="#entrega">Entrega</a></li><li><a href="#visite">Horário e endereço</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:contato@farmaciabemestar.com.br">contato@farmaciabemestar.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua das Palmeiras, 245, Jardim Primavera</span></li></ul></div><div><h2>Horário</h2><ul><li>Segunda a sexta: 7h às 22h</li><li>Sábado: 7h às 20h</li><li>Domingo e feriados: 8h às 14h</li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Farmacêutica responsável:</strong> Dra. Marina Souza · CRF-SP 00000</p><p>Farmácia Bem Estar Ltda. · CNPJ 00.000.000/0001-00 · Licença sanitária nº 000000/2026</p><p>Em caso de dúvida, procure o farmacêutico. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Farmácia Bem Estar. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Farmácia OnePage da GSA. <a href="/modelos/farmacias/farmacia/01-onepage/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Bem%20Estar." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

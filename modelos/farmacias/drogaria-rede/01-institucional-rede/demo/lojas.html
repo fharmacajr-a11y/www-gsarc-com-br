@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lojas | Rede DrogaModelo | Demonstração Rede Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para rede de drogarias, com várias páginas." />
+    <title>Lojas | Drogarias Horizonte</title>
+    <meta name="description" content="Endereço, horário e WhatsApp das 18 lojas das Drogarias Horizonte, rede fictícia de drogarias do Sul de Minas." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#08306e" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-horizonte.svg" />
+    <link rel="preload" href="assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
   <body>
@@ -15,177 +18,350 @@
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lojas abertas todos os dias · 3 lojas 24 horas</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Matriz: Rua Exemplo, 1000, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <a class="topbar__item" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg>SAC 0800 000 0000 · seg a sáb, 8h às 20h</a>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>18 lojas</a><a class="topbar__item topbar__hide-sm" href="trabalhe-conosco.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg>Trabalhe conosco</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp central</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da Rede DrogaModelo">
-          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Rede DrogaModelo</strong>
-            <span class="brand__subtitle">Drogarias perto de você</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
-            <a href="index.html">Início</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Drogarias Horizonte, página inicial"><img src="assets/img/logo-horizonte.svg" alt="" width="44" height="44" /><span class="brand__name">Horizonte<small>Drogarias</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="a-rede.html">A rede</a>
             <a href="lojas.html" aria-current="page">Lojas</a>
+            <a href="index.html#servicos">Serviços</a>
             <a href="trabalhe-conosco.html">Trabalhe conosco</a>
             <a href="contato.html">Contato</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="lojas.html">Encontrar loja</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html">Início</a>
-            <a href="a-rede.html">A rede</a>
-            <a href="lojas.html" aria-current="page">Lojas</a>
-            <a href="trabalhe-conosco.html">Trabalhe conosco</a>
-            <a href="contato.html">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="lojas.html">Encontrar loja</a>
+        <div class="header__actions">
+          <a class="btn btn--primary header__cta" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="a-rede.html">A rede</a>
+          <a href="lojas.html" aria-current="page">Lojas</a>
+          <a href="index.html#servicos">Serviços</a>
+          <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+          <a href="contato.html">Contato</a>
+          <a class="btn btn--primary btn--block" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section class="page-hero">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Lojas</span></nav>
-          <p class="eyebrow">Lojas</p>
-          <h1>Encontre a loja mais perto de você.</h1>
-          <p>Escolha a cidade e fale direto com a unidade pelo WhatsApp.</p>
+      
+      <section class="page-hero page-hero--plain" aria-labelledby="titulo">
+        
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Lojas</span></nav>
+          <h1 id="titulo">Nossas lojas</h1>
+          <p>18 lojas em 6 cidades do Sul de Minas. Escolha a cidade e fale direto com a loja pelo WhatsApp.</p>
         </div>
       </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Unidades</p>
-            <h2>Nossas lojas.</h2>
-          </div>
-          <div data-filter-scope data-count-label="unidade|unidades|encontrada|encontradas">
-          <div class="toolbar">
-            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
-              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
-              <button type="button" data-filter="sao-paulo" aria-pressed="false">São Paulo</button>
-              <button type="button" data-filter="guarulhos" aria-pressed="false">Guarulhos</button>
-              <button type="button" data-filter="osasco" aria-pressed="false">Osasco</button>
+      <section class="section section--tight" aria-labelledby="lista-titulo">
+        <div class="container">
+          <h2 class="sr-only" id="lista-titulo">Lista de lojas</h2>
+          <div class="units-finder" data-filter data-filter-noun="lojas" data-filter-noun-one="loja" data-filter-fem data-filter-param="cidade" data-filter-q="busca">
+            <div class="toolbar">
+              <div class="chips" role="group" aria-label="Filtrar por cidade"><button class="chip" type="button" data-filter-btn="todos" aria-pressed="true">Todas <span class="chip__n">18</span></button><button class="chip" type="button" data-filter-btn="pouso-alegre" aria-pressed="false">Pouso Alegre <span class="chip__n">4</span></button><button class="chip" type="button" data-filter-btn="varginha" aria-pressed="false">Varginha <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="pocos" aria-pressed="false">Poços de Caldas <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="lavras" aria-pressed="false">Lavras <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="itajuba" aria-pressed="false">Itajubá <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="tres-coracoes" aria-pressed="false">Três Corações <span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="24h" aria-pressed="false">24 horas <span class="chip__n">3</span></button></div>
+              <label class="search"><span class="sr-only">Buscar bairro ou endereço</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" placeholder="Buscar bairro ou endereço" data-filter-search /></label>
             </div>
+            <p class="toolbar__count" data-filter-count aria-live="polite" style="margin:-8px 0 18px">18 lojas encontradas.</p>
+            <div class="units">
+            <article class="unit" id="loja-01" data-item data-cat="pouso-alegre 24h entrega vacina" data-text="Horizonte Centro Pouso Alegre Centro Rua Comendador José Garcia, 410 24 horas Entrega Vacinação">
+              <p class="unit__city">Pouso Alegre</p>
+              <h3>Horizonte Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Comendador José Garcia, 410 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Comendador%20Jos%C3%A9%20Garcia%2C%20410%2C%20Centro%2C%20Pouso%20Alegre" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-02" data-item data-cat="pouso-alegre entrega estac" data-text="Horizonte São Geraldo Pouso Alegre São Geraldo Avenida Vereador Antônio da Costa Rios, 1.200 Entrega Estacionamento">
+              <p class="unit__city">Pouso Alegre</p>
+              <h3>Horizonte São Geraldo</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Vereador Antônio da Costa Rios, 1.200 · São Geraldo</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20S%C3%A3o%20Geraldo%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Vereador%20Ant%C3%B4nio%20da%20Costa%20Rios%2C%201.200%2C%20S%C3%A3o%20Geraldo%2C%20Pouso%20Alegre" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-03" data-item data-cat="pouso-alegre entrega" data-text="Horizonte Jardim Yara Pouso Alegre Jardim Yara Rua Silviano Brandão, 85 Entrega">
+              <p class="unit__city">Pouso Alegre</p>
+              <h3>Horizonte Jardim Yara</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Silviano Brandão, 85 · Jardim Yara</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Jardim%20Yara%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Silviano%20Brand%C3%A3o%2C%2085%2C%20Jardim%20Yara%2C%20Pouso%20Alegre" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-04" data-item data-cat="pouso-alegre estac vacina" data-text="Horizonte Shopping Pouso Alegre Aeroporto Avenida Prefeito Olavo Gomes de Oliveira, 4.550, loja 112 Estacionamento Vacinação">
+              <p class="unit__city">Pouso Alegre</p>
+              <h3>Horizonte Shopping</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Prefeito Olavo Gomes de Oliveira, 4.550, loja 112 · Aeroporto</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 10h às 22h · Dom, 14h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Estacionamento</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Shopping%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Prefeito%20Olavo%20Gomes%20de%20Oliveira%2C%204.550%2C%20loja%20112%2C%20Aeroporto%2C%20Pouso%20Alegre" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-05" data-item data-cat="varginha 24h entrega vacina" data-text="Horizonte Varginha Centro Varginha Centro Avenida Rio Branco, 530 24 horas Entrega Vacinação">
+              <p class="unit__city">Varginha</p>
+              <h3>Horizonte Varginha Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Rio Branco, 530 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Varginha%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Rio%20Branco%2C%20530%2C%20Centro%2C%20Varginha" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-06" data-item data-cat="varginha entrega estac" data-text="Horizonte Vila Pinto Varginha Vila Pinto Rua Delfim Moreira, 1.040 Entrega Estacionamento">
+              <p class="unit__city">Varginha</p>
+              <h3>Horizonte Vila Pinto</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Delfim Moreira, 1.040 · Vila Pinto</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Vila%20Pinto%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Delfim%20Moreira%2C%201.040%2C%20Vila%20Pinto%2C%20Varginha" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-07" data-item data-cat="varginha drive estac" data-text="Horizonte Sion Varginha Sion Avenida Princesa do Sul, 2.210 Drive-thru Estacionamento">
+              <p class="unit__city">Varginha</p>
+              <h3>Horizonte Sion</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Princesa do Sul, 2.210 · Sion</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Sion%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Princesa%20do%20Sul%2C%202.210%2C%20Sion%2C%20Varginha" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-08" data-item data-cat="pocos 24h entrega" data-text="Horizonte Poços Centro Poços de Caldas Centro Rua Assis Figueiredo, 760 24 horas Entrega">
+              <p class="unit__city">Poços de Caldas</p>
+              <h3>Horizonte Poços Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Assis Figueiredo, 760 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Po%C3%A7os%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Assis%20Figueiredo%2C%20760%2C%20Centro%2C%20Po%C3%A7os%20de%20Caldas" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-09" data-item data-cat="pocos entrega vacina" data-text="Horizonte Jardim dos Estados Poços de Caldas Jardim dos Estados Avenida João Pinheiro, 1.380 Entrega Vacinação">
+              <p class="unit__city">Poços de Caldas</p>
+              <h3>Horizonte Jardim dos Estados</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida João Pinheiro, 1.380 · Jardim dos Estados</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Jardim%20dos%20Estados%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Jo%C3%A3o%20Pinheiro%2C%201.380%2C%20Jardim%20dos%20Estados%2C%20Po%C3%A7os%20de%20Caldas" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-10" data-item data-cat="pocos drive estac" data-text="Horizonte Country Club Poços de Caldas Country Club Avenida Santo Antônio, 3.020 Drive-thru Estacionamento">
+              <p class="unit__city">Poços de Caldas</p>
+              <h3>Horizonte Country Club</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Santo Antônio, 3.020 · Country Club</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Country%20Club%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Santo%20Ant%C3%B4nio%2C%203.020%2C%20Country%20Club%2C%20Po%C3%A7os%20de%20Caldas" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-11" data-item data-cat="lavras entrega vacina" data-text="Horizonte Lavras Centro Lavras Centro Praça Doutor Augusto Silva, 120 Entrega Vacinação">
+              <p class="unit__city">Lavras</p>
+              <h3>Horizonte Lavras Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Praça Doutor Augusto Silva, 120 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Lavras%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Doutor%20Augusto%20Silva%2C%20120%2C%20Centro%2C%20Lavras" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-12" data-item data-cat="lavras entrega" data-text="Horizonte Jardim Glória Lavras Jardim Glória Rua Comandante Nelson, 455 Entrega">
+              <p class="unit__city">Lavras</p>
+              <h3>Horizonte Jardim Glória</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Comandante Nelson, 455 · Jardim Glória</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Jardim%20Gl%C3%B3ria%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Comandante%20Nelson%2C%20455%2C%20Jardim%20Gl%C3%B3ria%2C%20Lavras" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-13" data-item data-cat="lavras estac drive" data-text="Horizonte Avenida Lavras Kennedy Avenida Doutor Sylvio Menicucci, 1.700 Estacionamento Drive-thru">
+              <p class="unit__city">Lavras</p>
+              <h3>Horizonte Avenida</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Doutor Sylvio Menicucci, 1.700 · Kennedy</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Estacionamento</span><span class="pill">Drive-thru</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Avenida%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Doutor%20Sylvio%20Menicucci%2C%201.700%2C%20Kennedy%2C%20Lavras" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-14" data-item data-cat="itajuba entrega vacina" data-text="Horizonte Itajubá Centro Itajubá Centro Rua Coronel Rennó, 300 Entrega Vacinação">
+              <p class="unit__city">Itajubá</p>
+              <h3>Horizonte Itajubá Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Coronel Rennó, 300 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Itajub%C3%A1%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Coronel%20Renn%C3%B3%2C%20300%2C%20Centro%2C%20Itajub%C3%A1" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-15" data-item data-cat="itajuba entrega estac" data-text="Horizonte BPS Itajubá Pinheirinho Avenida BPS, 1.150 Entrega Estacionamento">
+              <p class="unit__city">Itajubá</p>
+              <h3>Horizonte BPS</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida BPS, 1.150 · Pinheirinho</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20BPS%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20BPS%2C%201.150%2C%20Pinheirinho%2C%20Itajub%C3%A1" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-16" data-item data-cat="itajuba entrega" data-text="Horizonte Varginha (bairro) Itajubá Varginha Rua Doutor Antônio Braga Filho, 640 Entrega">
+              <p class="unit__city">Itajubá</p>
+              <h3>Horizonte Varginha (bairro)</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Doutor Antônio Braga Filho, 640 · Varginha</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Varginha%20%28bairro%29%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Doutor%20Ant%C3%B4nio%20Braga%20Filho%2C%20640%2C%20Varginha%2C%20Itajub%C3%A1" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-17" data-item data-cat="tres-coracoes entrega vacina" data-text="Horizonte Três Corações Três Corações Centro Avenida Deputado Renato Azeredo, 890 Entrega Vacinação">
+              <p class="unit__city">Três Corações</p>
+              <h3>Horizonte Três Corações</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Deputado Renato Azeredo, 890 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Tr%C3%AAs%20Cora%C3%A7%C3%B5es%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Deputado%20Renato%20Azeredo%2C%20890%2C%20Centro%2C%20Tr%C3%AAs%20Cora%C3%A7%C3%B5es" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-18" data-item data-cat="tres-coracoes entrega estac" data-text="Horizonte Jardim Paraíso Três Corações Jardim Paraíso Rua Joaquim Bento, 215 Entrega Estacionamento">
+              <p class="unit__city">Três Corações</p>
+              <h3>Horizonte Jardim Paraíso</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Joaquim Bento, 215 · Jardim Paraíso</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Horizonte%20Jardim%20Para%C3%ADso%21%20Vim%20pelo%20site%20da%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Joaquim%20Bento%2C%20215%2C%20Jardim%20Para%C3%ADso%2C%20Tr%C3%AAs%20Cora%C3%A7%C3%B5es" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article>
+            </div>
+            <p class="empty-state" data-filter-empty hidden>Nenhuma loja encontrada. Tente outro bairro ou veja todas as cidades.</p>
           </div>
-          <p class="result-count" data-filter-count aria-live="polite"></p>
-          <div class="units-grid">
-            <article class="unit-card" data-item data-tags="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Centro</h3>
-              <p>Rua Exemplo, 120, Centro</p>
-              <p>Aberta 24 horas</p>
-              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Vila Modelo</h3>
-              <p>Av. Fictícia, 900, Vila Modelo</p>
-              <p>7h às 22h</p>
-              <ul class="unit-badges"><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Modelo.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Parque Modelo</h3>
-              <p>Av. do Parque, 2.300</p>
-              <p>Aberta 24 horas</p>
-              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Parque%20Modelo.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="guarulhos">
-              <p class="unit-card__city">Guarulhos</p>
-              <h3>Unidade Centro de Guarulhos</h3>
-              <p>Rua Exemplo, 77, Centro</p>
-              <p>7h às 22h</p>
-              <ul class="unit-badges"><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Guarulhos.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="guarulhos">
-              <p class="unit-card__city">Guarulhos</p>
-              <h3>Unidade Vila Amostra</h3>
-              <p>Av. Fictícia, 1.500</p>
-              <p>Aberta 24 horas</p>
-              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Amostra.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="osasco">
-              <p class="unit-card__city">Osasco</p>
-              <h3>Unidade Centro de Osasco</h3>
-              <p>Rua Exemplo, 300, Centro</p>
-              <p>7h às 22h</p>
-              <ul class="unit-badges"><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Osasco.">WhatsApp da loja</a>
-            </article>
+          <div class="note-band">
+            <p><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></svg><span>Horários de feriado podem mudar. Na dúvida, chame a loja no WhatsApp antes de sair de casa. Para dúvidas sobre qualquer unidade, fale com o SAC.</span></p>
+            <a class="btn btn--primary" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg>SAC 0800 000 0000</a>
           </div>
+        </div>
+      </section>
+      
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Tem uma Horizonte perto de você.</h2>
+            <p>Encontre a loja mais próxima e fale direto com ela pelo WhatsApp.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar uma loja</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp central</a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="48" height="48" />
-              <strong>Rede DrogaModelo</strong>
-            </div>
-            <p>Rede de drogarias com lojas em várias cidades da região e farmacêutico em todas as unidades.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-rede.html">A rede</a></li>
-              <li><a href="lojas.html">Lojas</a></li>
-              <li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Matriz: Rua Exemplo, 1000, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lojas abertas todos os dias · 3 lojas 24 horas</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Drogarias Horizonte, página inicial"><img src="assets/img/logo-horizonte.svg" alt="" width="44" height="44" /><span class="brand__name">Horizonte<small>Drogarias</small></span></a>
+          <p class="footer__about">Rede de drogarias do Sul de Minas desde 1994. São 18 lojas em 6 cidades, com farmacêutico em todas.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Rede DrogaModelo. Empresa fictícia: demonstração do modelo Rede Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>A rede</h2><ul><li><a href="index.html">Início</a></li><li><a href="a-rede.html">Nossa história</a></li><li><a href="lojas.html">Lojas</a></li><li><a href="index.html#servicos">Serviços</a></li></ul></div><div><h2>Atendimento</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg><a href="tel:08000000000">SAC 0800 000 0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:sac@redehorizonte.com.br">sac@redehorizonte.com.br</a></li></ul></div><div><h2>Institucional</h2><ul><li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li><li><a href="contato.html#fornecedores">Fornecedores</a></li><li><a href="contato.html#imprensa">Imprensa</a></li><li><a href="contato.html#privacidade">Política de privacidade</a></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Drogarias Horizonte S.A.</strong> · CNPJ 00.000.000/0001-00 · Escritório central: Avenida Doutor Lisboa, 1.900, Centro, Pouso Alegre – MG</p><p>Cada loja tem farmacêutico responsável e licença sanitária próprios, informados na loja. Em caso de dúvida, procure o farmacêutico. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Drogarias Horizonte. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Rede Institucional da GSA. <a href="/modelos/farmacias/drogaria-rede/01-institucional-rede/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>
