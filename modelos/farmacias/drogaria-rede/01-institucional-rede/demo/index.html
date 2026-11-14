@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rede DrogaModelo | Demonstração Rede Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para rede de drogarias, com várias páginas." />
+    <title>Drogarias Horizonte | Rede de drogarias do Sul de Minas</title>
+    <meta name="description" content="Demonstração fictícia de site institucional para rede de drogarias: a rede, unidades, serviços, trabalhe conosco e canais oficiais." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#08306e" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-horizonte.svg" />
+    <link rel="preload" href="assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
   <body>
@@ -15,232 +18,150 @@
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lojas abertas todos os dias · 3 lojas 24 horas</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Matriz: Rua Exemplo, 1000, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <a class="topbar__item" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg>SAC 0800 000 0000 · seg a sáb, 8h às 20h</a>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>18 lojas</a><a class="topbar__item topbar__hide-sm" href="trabalhe-conosco.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg>Trabalhe conosco</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp central</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da Rede DrogaModelo">
-          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Rede DrogaModelo</strong>
-            <span class="brand__subtitle">Drogarias perto de você</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
-            <a href="index.html" aria-current="page">Início</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Drogarias Horizonte, página inicial"><img src="assets/img/logo-horizonte.svg" alt="" width="44" height="44" /><span class="brand__name">Horizonte<small>Drogarias</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="a-rede.html">A rede</a>
             <a href="lojas.html">Lojas</a>
+            <a href="index.html#servicos">Serviços</a>
             <a href="trabalhe-conosco.html">Trabalhe conosco</a>
             <a href="contato.html">Contato</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="lojas.html">Encontrar loja</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html" aria-current="page">Início</a>
-            <a href="a-rede.html">A rede</a>
-            <a href="lojas.html">Lojas</a>
-            <a href="trabalhe-conosco.html">Trabalhe conosco</a>
-            <a href="contato.html">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="lojas.html">Encontrar loja</a>
+        <div class="header__actions">
+          <a class="btn btn--primary header__cta" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="a-rede.html">A rede</a>
+          <a href="lojas.html">Lojas</a>
+          <a href="index.html#servicos">Serviços</a>
+          <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+          <a href="contato.html">Contato</a>
+          <a class="btn btn--primary btn--block" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Rede de drogarias</p>
-            <h1>Há 20 anos cuidando da saúde da região.</h1>
-            <p class="lead">A DrogaModelo nasceu em 2005 com uma loja no centro e hoje está em 3 cidades, com lojas 24 horas, farmacêutico em todas as unidades e o mesmo atendimento em cada balcão.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="a-rede.html">Conheça a rede</a>
-              <a class="button button-secondary" href="lojas.html">Encontrar loja</a>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-drogaria.svg" alt="Ilustração de um mapa com as lojas da rede fictícia" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques">
-              <article class="meta-card">
-                <p class="meta-card__label">Lojas</p>
-                <h2>8 unidades</h2>
-                <p>Em 3 cidades da região.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Equipe</p>
-                <h2>180 pessoas</h2>
-                <p>Farmacêutico em todas as lojas.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Desde</p>
-                <h2>2005</h2>
-                <p>Duas décadas de história.</p>
-              </article>
+      <section class="hero" aria-labelledby="titulo">
+        <div class="hero__media"><img src="assets/img/fotos/g-cliente-1600x900.webp" srcset="assets/img/fotos/g-cliente-960x540.webp 960w, assets/img/fotos/g-cliente-1600x900.webp 1600w, assets/img/fotos/g-cliente-2400x1350.webp 2400w" sizes="100vw" alt="Farmacêutico de jaleco mostrando um produto para uma cliente entre as prateleiras da drogaria" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="tag tag--glass hero-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>18 lojas em 6 cidades do Sul de Minas</p>
+            <h1 id="titulo">Saúde perto de você, com o mesmo cuidado em cada loja.</h1>
+            <p class="hero__lead">Há mais de 30 anos a Horizonte cuida das famílias do Sul de Minas, com farmacêutico em todas as lojas, preço justo e atendimento de quem conhece o bairro.</p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar uma loja</a>
+              <a class="btn btn--light btn--lg" href="a-rede.html">Conhecer a rede</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
-            <div><strong>Lojas em 6 cidades</strong><span>Encontre a unidade mais perto de você.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Farmacêutico em todas</strong><span>Atendimento de confiança em cada loja.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span>
-            <div><strong>Ofertas toda semana</strong><span>Promoções da rede e da sua cidade.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
-            <div><strong>Clube de vantagens</strong><span>Descontos para clientes cadastrados.</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Números da rede</p>
-            <h2>Uma rede regional, com atendimento de bairro.</h2>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-card"><strong>8</strong><span>lojas</span></div>
-            <div class="stat-card"><strong>3</strong><span>cidades</span></div>
-            <div class="stat-card"><strong>3</strong><span>lojas 24 horas</span></div>
-            <div class="stat-card"><strong>20</strong><span>anos de história</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Nossos compromissos</p>
-            <h2>O que vale em todas as lojas.</h2>
-          </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Compromisso 01</p>
-              <h3>Farmacêutico presente</h3>
-              <p>Em todo o horário de funcionamento de cada unidade.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Compromisso 02</p>
-              <h3>Preço justo</h3>
-              <p>A mesma política de preços e descontos em toda a rede.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Compromisso 03</p>
-              <h3>Serviços de saúde</h3>
-              <p>Aferição de pressão, injetáveis e testes rápidos.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section">
+
+      <div class="info-strip">
         <div class="container">
-          <div class="campaign-banner">
-            <div>
-              <p class="eyebrow">Trabalhe conosco</p>
-              <h2>Venha fazer parte da rede</h2>
-              <p>Página para receber currículos e divulgar as vagas abertas.</p>
-            </div>
-            <a class="button button-secondary" href="trabalhe-conosco.html">Ver vagas</a>
+          <div class="info-strip__grid">
+            <a class="info-item" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg><span><strong>18 lojas</strong><span>Em 6 cidades do Sul de Minas</span></span></a>
+            <a class="info-item" href="lojas.html?cidade=24h"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><span><strong>3 lojas 24 horas</strong><span>Pouso Alegre, Varginha e Poços</span></span></a>
+            <div class="info-item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span><strong>Farmacêutico em todas</strong><span>Durante todo o horário da loja</span></span></div>
+            <a class="info-item" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg><span><strong>SAC 0800 000 0000</strong><span>Segunda a sábado, 8h às 20h</span></span></a>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" id="servicos" aria-labelledby="servicos-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Serviços padronizados</p>
+          <h2 id="servicos-titulo">Os mesmos serviços em toda a rede</h2>
+          <p class="lead">Feitos por farmacêutico, com o mesmo protocolo e o mesmo preço em qualquer loja Horizonte.</p>
+        </div>
+          <div class="grid grid--4"><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><h3>Aferição de pressão</h3><p>Sem agendamento, com registro na carteirinha de controle.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Teste de glicemia</h3><p>Resultado em 5 minutos e orientação sobre os valores.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 3 6 6M17.5 5.5 8 15l-3 1 1-3 9.5-9.5M13 7l4 4M10 10l2 2M4 20l2.5-2.5"/></svg></span><h3>Aplicação de injetáveis</h3><p>Em sala reservada, com a receita do seu médico.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h3>Vacinação</h3><p>Em 8 lojas, com agenda pelo WhatsApp da unidade.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg></span><h3>Entrega em casa</h3><p>Em todas as cidades da rede, pedindo à loja mais perto.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>Farmácia Popular</h3><p>Medicamentos gratuitos ou com desconto, com receita.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 19H4.5a1.5 1.5 0 0 1-1.3-2.2L5 13.5M11 5.2l1-1.7a1.5 1.5 0 0 1 2.6 0L17 7.5M17 19h2.5a1.5 1.5 0 0 0 1.3-2.2L18.5 13"/><path d="M14 19h3M7 16l-2-2.5 3-.8M14 7.5l3 0 .8-3M10 22l-3-3 3-3"/></svg></span><h3>Descarte consciente</h3><p>Coletor de remédios vencidos em todas as lojas.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12"/><path d="M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8zM12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg></span><h3>Clube Horizonte</h3><p>Pontos que viram desconto em qualquer loja da rede.</p></article></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="padrao-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/f-idoso-1200x900.webp" srcset="assets/img/fotos/f-idoso-640x480.webp 640w, assets/img/fotos/f-idoso-1200x900.webp 1200w" sizes="(min-width: 960px) 540px, 92vw" alt="Farmacêutica conversando com um casal de idosos no balcão da drogaria" width="1200" height="900" loading="lazy" decoding="async" />
+            <p class="split__badge"><strong>Desde 1994</strong>no Sul de Minas</p>
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">Um só padrão</p>
+            <h2 id="padrao-titulo">Em qualquer loja, você é atendido do mesmo jeito.</h2>
+            <p>A Horizonte cresceu loja por loja sem perder o jeito de farmácia de bairro. A equipe é treinada no mesmo padrão e o seu histórico vale em todas as unidades.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Preço igual em todas as lojas da rede</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Cadastro e histórico de compras compartilhados entre as lojas</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Pontos do Clube Horizonte valem em qualquer unidade</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Reposição diária a partir do centro de distribuição próprio</span></li></ul>
+            <a class="link-arrow" href="a-rede.html">Conheça a história da rede<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </section>
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+
+      <section class="section" aria-labelledby="cidades-titulo">
+        <div class="container">
+          <div class="section-head section-head--row">
+            <div>
+              <p class="eyebrow">Unidades</p>
+              <h2 id="cidades-titulo">Encontre a loja mais perto</h2>
+            </div>
+            <a class="link-arrow" href="lojas.html">Ver todas as 18 lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Achei a loja 24 horas mais perto pelo site, de madrugada. Salvou a noite.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">A</span><span><strong>Ana P.</strong><span>Osasco</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Uso o WhatsApp da minha loja para reservar os remédios. Chego e já está separado.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Marcos T.</strong><span>Barueri</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“As ofertas da semana compensam muito. Sempre confiro antes de comprar.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">L</span><span><strong>Luciana F.</strong><span>Carapicuíba</span></span></figcaption>
-            </figure>
+          <div class="city-grid"><a class="city-card" href="lojas.html?cidade=pouso-alegre"><strong>Pouso Alegre</strong><span>4 lojas</span><span class="pill pill--hot">Loja 24 horas</span><span class="link-arrow">Ver lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="city-card" href="lojas.html?cidade=varginha"><strong>Varginha</strong><span>3 lojas</span><span class="pill pill--hot">Loja 24 horas</span><span class="link-arrow">Ver lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="city-card" href="lojas.html?cidade=pocos"><strong>Poços de Caldas</strong><span>3 lojas</span><span class="pill pill--hot">Loja 24 horas</span><span class="link-arrow">Ver lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="city-card" href="lojas.html?cidade=lavras"><strong>Lavras</strong><span>3 lojas</span><span class="link-arrow">Ver lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="city-card" href="lojas.html?cidade=itajuba"><strong>Itajubá</strong><span>3 lojas</span><span class="link-arrow">Ver lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="city-card" href="lojas.html?cidade=tres-coracoes"><strong>Três Corações</strong><span>2 lojas</span><span class="link-arrow">Ver lojas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="canais-titulo">
+        <div class="container">
+          <div class="section-head">
+          <p class="eyebrow">Canais oficiais</p>
+          <h2 id="canais-titulo">Fale com a Horizonte</h2>
+          <p class="lead">Cada assunto tem um canal próprio, para a sua mensagem chegar direto em quem resolve.</p>
+        </div>
+          <div class="channels-grid channels-grid--4">
+            <article class="channel"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg></span><h3>SAC</h3><p>Dúvidas, elogios e reclamações sobre qualquer loja.</p><a class="link-arrow" href="contato.html">Falar com o SAC<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+            <article class="channel"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></span><h3>Trabalhe conosco</h3><p>Vagas abertas e cadastro no banco de talentos.</p><a class="link-arrow" href="trabalhe-conosco.html">Ver vagas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+            <article class="channel"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg></span><h3>Fornecedores</h3><p>Propostas comerciais e cadastro de novos fornecedores.</p><a class="link-arrow" href="contato.html#fornecedores">Canal do fornecedor<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+            <article class="channel"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l9 5V5L7 10z"/><path d="M19 9.5a3.5 3.5 0 0 1 0 5M7 14l1.5 5h3L10 14"/></svg></span><h3>Imprensa</h3><p>Entrevistas, dados da rede e materiais da marca.</p><a class="link-arrow" href="contato.html#imprensa">Contato de imprensa<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+          </div>
+        </div>
+      </section>
+      
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Tem uma Horizonte perto de você.</h2>
+            <p>Encontre a loja mais próxima e fale direto com ela pelo WhatsApp.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="lojas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar uma loja</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp central</a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="48" height="48" />
-              <strong>Rede DrogaModelo</strong>
-            </div>
-            <p>Rede de drogarias com lojas em várias cidades da região e farmacêutico em todas as unidades.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-rede.html">A rede</a></li>
-              <li><a href="lojas.html">Lojas</a></li>
-              <li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Matriz: Rua Exemplo, 1000, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lojas abertas todos os dias · 3 lojas 24 horas</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Drogarias Horizonte, página inicial"><img src="assets/img/logo-horizonte.svg" alt="" width="44" height="44" /><span class="brand__name">Horizonte<small>Drogarias</small></span></a>
+          <p class="footer__about">Rede de drogarias do Sul de Minas desde 1994. São 18 lojas em 6 cidades, com farmacêutico em todas.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Rede DrogaModelo. Empresa fictícia: demonstração do modelo Rede Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>A rede</h2><ul><li><a href="index.html">Início</a></li><li><a href="a-rede.html">Nossa história</a></li><li><a href="lojas.html">Lojas</a></li><li><a href="index.html#servicos">Serviços</a></li></ul></div><div><h2>Atendimento</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg><a href="tel:08000000000">SAC 0800 000 0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:sac@redehorizonte.com.br">sac@redehorizonte.com.br</a></li></ul></div><div><h2>Institucional</h2><ul><li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li><li><a href="contato.html#fornecedores">Fornecedores</a></li><li><a href="contato.html#imprensa">Imprensa</a></li><li><a href="contato.html#privacidade">Política de privacidade</a></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Drogarias Horizonte S.A.</strong> · CNPJ 00.000.000/0001-00 · Escritório central: Avenida Doutor Lisboa, 1.900, Centro, Pouso Alegre – MG</p><p>Cada loja tem farmacêutico responsável e licença sanitária próprios, informados na loja. Em caso de dúvida, procure o farmacêutico. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Drogarias Horizonte. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Rede Institucional da GSA. <a href="/modelos/farmacias/drogaria-rede/01-institucional-rede/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Horizonte." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

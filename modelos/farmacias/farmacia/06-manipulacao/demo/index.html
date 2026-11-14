@@ -3,357 +3,266 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fórmula Bem Estar | Demonstração Farmácia de Manipulação</title>
-    <meta name="description" content="Demonstração fictícia de site para farmácia de manipulação com envio de receita e orçamento pelo WhatsApp." />
+    <title>Fórmula Viva | Farmácia de manipulação em Curitiba</title>
+    <meta name="description" content="Demonstração fictícia de site de farmácia de manipulação: linhas manipuladas, como funciona, qualidade do laboratório e orçamento pelo WhatsApp com a foto da receita." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#2f4229" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-formula-viva.svg" />
+    <link rel="preload" href="assets/fonts/josefin-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [8, 19], "2": [8, 19], "3": [8, 19], "4": [8, 19], "5": [8, 19], "6": [8, 13], "0": null}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 19h · Sáb, 8h às 13h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 250, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-open-status>Seg a sex, 8h às 19h</span></p>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Padre%20Anchieta%2C%201.450%2C%20Bigorrilho%2C%20Curitiba%20%E2%80%93%20PR"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Padre Anchieta, 1.450 · Bigorrilho</a><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20F%C3%B3rmula%20Viva%20e%20quero%20um%20or%C3%A7amento."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da Fórmula Bem Estar">
-          <img src="assets/img/logo-formula-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Fórmula Bem Estar</strong>
-            <span class="brand__subtitle">Farmácia de manipulação</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
-            <a href="#inicio">Início</a>
-            <a href="#manipulados">O que manipulamos</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Fórmula Viva, página inicial"><img src="assets/img/logo-formula-viva.svg" alt="" width="44" height="44" /><span class="brand__name">Fórmula Viva<small>Farmácia de manipulação</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
+            <a href="#linhas">Linhas</a>
             <a href="#como-funciona">Como funciona</a>
-            <a href="#receita">Enviar receita</a>
-            <a href="#contato">Contato</a>
+            <a href="#qualidade">Qualidade</a>
+            <a href="#orcamento">Orçamento</a>
+            <a href="#visite">Endereço</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="#receita">Enviar receita</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="#inicio">Início</a>
-            <a href="#manipulados">O que manipulamos</a>
-            <a href="#como-funciona">Como funciona</a>
-            <a href="#receita">Enviar receita</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#receita">Enviar receita</a>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Enviar receita</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="#linhas">Linhas</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#qualidade">Qualidade</a>
+          <a href="#orcamento">Orçamento</a>
+          <a href="#visite">Endereço</a>
+          <a class="btn btn--accent btn--block" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Enviar receita</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Farmácia de manipulação</p>
-            <h1>Sua fórmula manipulada com orçamento rápido pelo WhatsApp.</h1>
-            <p class="lead">Envie a foto da receita, receba o orçamento em minutos e retire a fórmula pronta na loja ou receba em casa.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#receita">Enviar receita</a>
-              <a class="button button-secondary" href="#como-funciona">Como funciona</a>
+      <section class="hero hero--formula" id="inicio" aria-labelledby="inicio-titulo">
+        <div class="hero__media"><img src="assets/img/fotos/g-capsulas-1600x900.webp" srcset="assets/img/fotos/g-capsulas-960x540.webp 960w, assets/img/fotos/g-capsulas-1600x900.webp 1600w, assets/img/fotos/g-capsulas-2400x1350.webp 2400w" sizes="100vw" alt="Cápsula aberta com o pó da fórmula manipulada sobre fundo escuro" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="tag tag--glass"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 21h8M13 11l6-8"/></svg>Farmácia de manipulação em Curitiba</p>
+            <h1 id="inicio-titulo">Sua fórmula, feita <em>sob medida</em> e conferida em cada etapa.</h1>
+            <p class="hero__lead">Mande a foto da receita pelo WhatsApp e receba o orçamento em até 2 horas. Manipulamos com laudo de cada matéria-prima e controle de qualidade em todos os lotes.</p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Enviar receita</a>
+              <a class="btn btn--light btn--lg" href="#linhas">Ver o que manipulamos</a>
             </div>
-          </div>
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-farmacia.svg" alt="Ilustração da fachada da farmácia fictícia" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques">
-              <article class="meta-card">
-                <p class="meta-card__label">Orçamento</p>
-                <h2>Em minutos</h2>
-                <p>Pelo WhatsApp, com a foto da receita.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Prazo</p>
-                <h2>A partir de 48 h</h2>
-                <p>Conforme a fórmula.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Entrega</p>
-                <h2>Em casa</h2>
-                <p>Ou retire no balcão.</p>
-              </article>
-            </div>
+            <ul class="hero__facts">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Orçamento em até 2h</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M7.5 15h9"/></svg>Pronta em 24 a 48h</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg>Entrega em Curitiba</li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Farmacêutico responsável</strong><span>Confere cada receita antes de manipular.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 15h9"/></svg></span>
-            <div><strong>Matérias-primas com laudo</strong><span>Fornecedores qualificados e rastreados.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-            <div><strong>Pronta em até 48 h</strong><span>Na maioria das fórmulas.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Entrega em casa</strong><span>Ou retire no balcão.</span></div>
-          </div>
-        </div>
-      </section>
-      <section id="manipulados" class="section anchor-target">
-        <div class="container section-panel">
+
+      <section class="section" id="linhas" aria-labelledby="linhas-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">O que manipulamos</p>
-            <h2>Fórmulas sob medida para cada receita.</h2>
+          <p class="eyebrow">Linhas manipuladas</p>
+          <h2 id="linhas-titulo">Uma fórmula para cada necessidade</h2>
+          <p class="lead">Do creme para a pele ao petisco medicado do seu cachorro: manipulamos a receita do jeito que o médico, o dentista ou o veterinário pediu.</p>
+        </div>
+          <div class="lines">
+            <figure class="lines__feature">
+              <img src="assets/img/fotos/f-higiene-1000x1250.webp" srcset="assets/img/fotos/f-higiene-560x700.webp 560w, assets/img/fotos/f-higiene-1000x1250.webp 1000w" sizes="(min-width: 1100px) 400px, 92vw" alt="Frasco de vidro azul de loção manipulada ao lado de toalhas brancas dobradas" width="1000" height="1250" loading="lazy" decoding="async" />
+              <div><span>A linha mais pedida</span><h3>Dermatologia sob medida</h3><p>Ativos na concentração exata da receita, em creme, gel, sérum ou loção.</p></div>
+            </figure>
+            <div class="lines__grid"><article class="line-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Dermatológicos</h3><p>Fórmulas para acne, manchas, queda de cabelo e cuidados diários, na textura e na concentração da receita.</p><p class="line-card__ex">Ex.: <b>ácidos, clareadores, loções capilares</b></p></article><article class="line-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="8.5" width="18.4" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 8 5.6 8"/></svg></span><h3>Suplementos e vitaminas</h3><p>Cápsulas com a dose exata de cada ativo, em vez de vários frascos diferentes.</p><p class="line-card__ex">Ex.: <b>vitamina D, magnésio, colágeno</b></p></article><article class="line-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="M5 19 13 11"/></svg></span><h3>Fitoterápicos</h3><p>Extratos padronizados de plantas, em cápsulas, tinturas ou chás, sempre com orientação.</p><p class="line-card__ex">Ex.: <b>passiflora, valeriana, cúrcuma</b></p></article><article class="line-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M10.5 8h.01M13.5 8h.01M10.8 10c.7.6 1.7.6 2.4 0"/><path d="M6 21a6 6 0 0 1 12 0"/></svg></span><h3>Pediátricos</h3><p>Doses ajustadas ao peso da criança, em xarope ou suspensão com sabor que ela aceita.</p><p class="line-card__ex">Ex.: <b>suspensões, xaropes sem açúcar</b></p></article><article class="line-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="9" r="1.8"/><circle cx="12" cy="6.5" r="1.8"/><circle cx="17" cy="9" r="1.8"/><path d="M12 12c-3 0-5.5 3.5-5.5 5.5 0 2 2 2.5 3 2 1.5-.6 3.5-.6 5 0 1 .5 3 0 3-2 0-2-2.5-5.5-5.5-5.5z"/></svg></span><h3>Veterinários</h3><p>Fórmulas para cães e gatos na dose do peso, em petisco, pasta ou cápsula.</p><p class="line-card__ex">Ex.: <b>biscoito medicado, pasta oral</b></p></article><article class="line-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 4.5 2 7.5.4 2.5 1 6 2.5 6s1.8-3 2.5-5c.4-1 1.6-1 2 0 .7 2 1 5 2.5 5s2.1-3.5 2.5-6c.5-3 2-4.5 2-7.5C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/></svg></span><h3>Odontológicos</h3><p>Géis, enxaguantes e pastas com prescrição do dentista, em embalagem de uso diário.</p><p class="line-card__ex">Ex.: <b>flúor gel, enxaguante sem álcool</b></p></article></div>
           </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Linha 01</p>
-              <h3>Dermatológicos</h3>
-              <p>Cremes, loções e séruns prescritos pelo dermatologista.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 02</p>
-              <h3>Suplementos e vitaminas</h3>
-              <p>Cápsulas com a dose exata indicada na receita.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 03</p>
-              <h3>Fitoterápicos</h3>
-              <p>Fórmulas com extratos vegetais padronizados.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 04</p>
-              <h3>Pediátricos</h3>
-              <p>Xaropes e suspensões em doses para crianças.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 05</p>
-              <h3>Veterinários</h3>
-              <p>Medicamentos em dose e sabor adequados para pets.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 06</p>
-              <h3>Odontológicos</h3>
-              <p>Géis, enxaguantes e fórmulas prescritas pelo dentista.</p>
-            </article>
-          </div>
-          <p class="section-note">Manipulação somente com receita, quando exigida. Prazos e valores dependem da fórmula.</p>
         </div>
       </section>
-      <section id="como-funciona" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Como funciona</p>
-            <h2>Da receita à fórmula pronta em três passos.</h2>
-          </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Envie a receita</h3>
-              <p>Mande a foto da receita pelo formulário ou direto no WhatsApp.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Receba o orçamento</h3>
-              <p>O farmacêutico confere a fórmula e envia o valor e o prazo.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Retire ou receba</h3>
-              <p>Busque no balcão ou receba em casa na data combinada.</p>
-            </article>
-          </div>
-          <ul class="segments-list">
-            <li>Farmacêutico responsável em todo o horário</li>
-            <li>Matérias-primas com laudo de análise</li>
-            <li>Controle de qualidade em cada lote</li>
-            <li>Embalagem com orientações de uso</li>
-          </ul>
-        </div>
-      </section>
-      <section id="receita" class="section anchor-target">
-        <div class="container about-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Enviar receita</p>
-              <h2>Peça o orçamento da sua fórmula.</h2>
-              <p>Preencha os dados. A mensagem abre no WhatsApp, e você anexa a foto da receita na conversa.</p>
+
+      <section class="section section--brand" id="como-funciona" aria-labelledby="como-titulo">
+        <div class="container">
+          <div class="how">
+            <div class="section-head" style="margin-bottom:0">
+              <p class="eyebrow">Como funciona</p>
+              <h2 id="como-titulo">Da receita à fórmula pronta, sem sair de casa.</h2>
+              <p class="lead">Você manda a receita, a gente cuida do resto. E acompanha cada etapa pelo WhatsApp.</p>
             </div>
-            <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero um orçamento de fórmula manipulada. Vou enviar a foto da receita em seguida." novalidate>
-              <div class="quote-form__row">
-                <label>
-                  Seu nome
-                  <input type="text" name="nome" required />
-                </label>
-                <label>
-                  Cidade ou bairro
-                  <input type="text" name="cidade" />
-                </label>
-              </div>
-              <div class="quote-form__row">
-                <label>
-                  Tipo de receita
-                  <select name="tipo" required>
-                    <option value="">Selecione</option>
-                    <option>Médica</option>
-                    <option>Dermatológica</option>
-                    <option>Odontológica</option>
-                    <option>Veterinária</option>
-                    <option>Sem receita (suplemento)</option>
-                  </select>
-                </label>
-                <label>
-                  Como prefere receber
-                  <select name="recebimento" required>
-                    <option value="">Selecione</option>
-                    <option>Retirar na loja</option>
-                    <option>Entrega em casa</option>
-                  </select>
-                </label>
-              </div>
-              <label>
-                Observações
-                <textarea name="obs" rows="4" placeholder="Ex.: preciso para sexta-feira; tenho alergia a lactose"></textarea>
-              </label>
-              <p class="quote-form__error" data-form-error role="alert" hidden></p>
-              <div class="hero-actions">
-                <button class="button button-primary" type="submit">Enviar pelo WhatsApp</button>
-              </div>
-            </form>
-          </article>
-          <aside class="info-card">
-            <p class="info-card__label">Privacidade</p>
-            <p>Receitas são dados de saúde. No site real, entra o aviso de privacidade sobre como a farmácia trata essas informações.</p>
-          </aside>
+            <a class="btn btn--accent btn--lg" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Enviar minha receita</a>
+          </div>
+          <ol class="steps steps--4"><li><span class="steps__n" aria-hidden="true">1</span><h3>Envie a receita</h3><p>Preencha o formulário e mande a foto da receita na conversa do WhatsApp.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Receba o orçamento</h3><p>Em até 2 horas no horário comercial, com valor, prazo e forma de uso.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Manipulamos e conferimos</h3><p>A fórmula é pesada, conferida por um segundo farmacêutico e rotulada com o lote.</p></li><li><span class="steps__n" aria-hidden="true">4</span><h3>Retire ou receba</h3><p>Retire na farmácia ou receba em casa. Controlados exigem a receita original.</p></li></ol>
+          <p class="how__note"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></svg><span>Prazo médio de 24 a 48 horas depois da aprovação do orçamento. Fórmulas com ativos importados podem levar até 5 dias úteis: avisamos antes.</span></p>
         </div>
       </section>
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
-          </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Mandei a foto da receita e recebi o orçamento em poucos minutos. Muito prático.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">P</span><span><strong>Patrícia L.</strong><span>Centro</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Faço minhas cápsulas aqui há anos. Qualidade e atendimento excelentes.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">R</span><span><strong>Ricardo A.</strong><span>Bela Vista</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Manipularam o remédio do meu cachorro com sabor que ele aceita. Recomendo.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">F</span><span><strong>Fernanda C.</strong><span>Jardim das Flores</span></span></figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com o farmacêutico.</h2>
+
+      <section class="section" id="qualidade" aria-labelledby="qualidade-titulo">
+        <div class="container split">
+          <figure class="duo">
+            <img src="assets/img/fotos/g-lab-1000x1250.webp" srcset="assets/img/fotos/g-lab-560x700.webp 560w, assets/img/fotos/g-lab-1000x1250.webp 1000w" sizes="(min-width: 960px) 520px, 92vw" alt="Farmacêutico de óculos e luvas usando uma pipeta no laboratório" width="1000" height="1250" loading="lazy" decoding="async" />
+            <div class="duo__inset"><img src="assets/img/fotos/f-manipulacao-1000x1000.webp" srcset="assets/img/fotos/f-manipulacao-560x560.webp 560w, assets/img/fotos/f-manipulacao-1000x1000.webp 1000w" sizes="(min-width: 960px) 240px, 40vw" alt="Balança de precisão com o pó da fórmula e o farmacêutico de jaleco ao fundo" width="1000" height="1000" loading="lazy" decoding="async" /></div>
+            <p class="split__badge"><strong>Laudo em cada lote</strong>guardado por 5 anos</p>
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">Qualidade</p>
+            <h2 id="qualidade-titulo">Do laudo da matéria-prima ao rótulo da sua fórmula.</h2>
+            <p>Cada fórmula sai do laboratório com rastreio completo: de qual lote veio cada ativo, quem pesou, quem conferiu e quando foi feita.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Matérias-primas só de fornecedores qualificados, com laudo de análise</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Pesagem conferida por um segundo farmacêutico antes de encapsular</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Laboratório com salas separadas para cada tipo de fórmula</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Amostra de cada lote guardada para análise se for preciso</span></li></ul>
+            <div class="pharmacist">
+              <span class="pharmacist__avatar" aria-hidden="true">HC</span>
+              <div>
+                <strong>Dra. Helena Carvalho</strong>
+                <p>Farmacêutica responsável · CRF-PR 00000. Especialista em manipulação magistral, revisa pessoalmente cada orçamento antes de ser enviado.</p>
+              </div>
             </div>
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Rua Exemplo, 250, Centro</dd>
-              </div>
-              <div>
-                <dt>Horário</dt>
-                <dd>Segunda a sexta, das 8h às 19h. Sábado, das 8h às 13h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>Farmacêutico responsável</dt>
-                <dd>Nome e CRF (fictício nesta demonstração)</dd>
-              </div>
+            <dl class="stats quality-stats">
+              <div><dt>fórmulas por ano</dt><dd>38 mil</dd></div>
+              <div><dt>anos de laboratório</dt><dd>19</dd></div>
+              <div><dt>farmacêuticas na equipe</dt><dd>4</dd></div>
             </dl>
-          </article>
-          <aside class="contact-card">
-            <p class="contact-card__label">Demonstração</p>
-            <h2>Farmácia fictícia para mostrar o modelo</h2>
-            <p>A Fórmula Bem Estar não existe. Endereço, contatos e responsável técnico desta página são fictícios.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#receita">Enviar receita</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="orcamento" aria-label="Orçamento">
+        <div class="container quote-grid">
+          <form class="form-card" data-wa-form data-whatsapp="5500000000000" data-wa-title="Olá! Quero um orçamento de fórmula manipulada:" data-wa-footer="Se eu tiver receita, mando a foto a seguir nesta conversa." novalidate aria-labelledby="orcamento-titulo">
+            <h2 id="orcamento-titulo">Peça o seu orçamento</h2>
+            <p>Preencha e toque em enviar. A conversa abre pronta no nosso WhatsApp, e aí é só mandar a foto da receita.</p>
+            <p class="form-req">Campos com <span class="req">*</span> são obrigatórios.</p>
+            <div class="form-grid">
+              <label class="field"><span>Nome <span class="req" aria-hidden="true">*</span></span><input type="text" name="nome" required autocomplete="name" /></label>
+              <label class="field"><span>Telefone com DDD <span class="req" aria-hidden="true">*</span></span><input type="tel" name="telefone" required autocomplete="tel" inputmode="tel" /></label>
+              <label class="field form-grid__full"><span>Tipo de fórmula <span class="req" aria-hidden="true">*</span></span><select name="tipo" required><option value="">Selecione</option><option>Dermatológica</option><option>Suplemento ou vitamina</option><option>Fitoterápica</option><option>Pediátrica</option><option>Veterinária</option><option>Odontológica</option><option>Outra</option></select></label>
+              <fieldset class="form-grid__full"><legend>Você tem receita? <span class="req" aria-hidden="true">*</span></legend><div class="radio-row"><label class="radio-pill"><input type="radio" name="receita" value="Sim, vou mandar a foto" required /><span>Sim, vou mandar a foto</span></label><label class="radio-pill"><input type="radio" name="receita" value="Quero repetir uma fórmula daqui" /><span>Quero repetir uma fórmula daqui</span></label><label class="radio-pill"><input type="radio" name="receita" value="Ainda não, quero tirar dúvidas" /><span>Ainda não, quero tirar dúvidas</span></label></div></fieldset>
+              <fieldset class="form-grid__full"><legend>Como quer receber <span class="req" aria-hidden="true">*</span></legend><div class="radio-row"><label class="radio-pill"><input type="radio" name="entrega" value="Retirar na farmácia" required /><span>Retirar na farmácia</span></label><label class="radio-pill"><input type="radio" name="entrega" value="Entrega em casa" /><span>Entrega em casa</span></label></div></fieldset>
+              <label class="field" data-delivery-only hidden><span>Bairro <span class="req" aria-hidden="true">*</span></span><input type="text" name="bairro" required /></label>
+              <label class="field" data-delivery-only hidden><span>CEP</span><input type="text" name="cep" inputmode="numeric" autocomplete="postal-code" /></label>
+              <label class="field form-grid__full"><span>Observações</span><textarea name="observacoes" rows="4" placeholder="Ex.: alergia a algum componente, cápsula vegetal, sabor para criança"></textarea></label>
             </div>
-          </aside>
+            <p class="form-error" data-form-error role="alert" hidden></p>
+            <div class="form-actions"><button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir orçamento</button></div>
+            <p class="form-note">A receita não é enviada pelo site: ela vai só na conversa do WhatsApp. <a href="#privacidade">Como cuidamos dos seus dados</a>.</p>
+          </form>
+          <div class="quote-aside">
+            <div class="tip-card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Como fotografar a receita</h3>
+              <ol>
+                <li>Coloque a receita em uma superfície lisa e bem iluminada.</li>
+                <li>Enquadre a folha inteira, com o carimbo e a assinatura do médico.</li>
+                <li>Confira se a dose e a quantidade estão legíveis antes de enviar.</li>
+              </ol>
+            </div>
+            <div class="privacy-card" id="privacidade">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Seus dados de saúde ficam com a gente</h3>
+              <p>O site não guarda receitas nem dados pessoais. As informações vão direto para o nosso WhatsApp, por sua iniciativa, e são usadas só para o orçamento e a manipulação, conforme a Lei Geral de Proteção de Dados.</p>
+              <p>Quer apagar o histórico? Peça pelo WhatsApp ou por receitas@formulaviva.com.br.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="avaliacoes" aria-labelledby="avaliacoes-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Quem manipula aqui</p>
+          <h2 id="avaliacoes-titulo">O que os clientes dizem</h2>
+        </div>
+          <div class="reviews"><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Mandei a receita da dermatologista às 9h e antes do almoço já tinha o orçamento. A fórmula chegou em casa no dia seguinte.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">PL</span><span><strong>Patrícia Lemos</strong>Cliente desde 2019</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Faço as vitaminas da família toda aqui. Explicam cada cápsula e sempre lembram quando está na hora de repetir.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">RA</span><span><strong>Rogério Antunes</strong>Morador do Bigorrilho</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“O petisco medicado da Mel foi a única forma de ela tomar o remédio. Atendimento muito cuidadoso.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">FK</span><span><strong>Fernanda Kowalski</strong>Tutora da Mel</span></figcaption>
+          </figure></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="visite" aria-labelledby="visite-titulo">
+        <div class="container">
+          <div class="section-head">
+          <p class="eyebrow">Visite a farmácia</p>
+          <h2 id="visite-titulo">Horário e endereço</h2>
+          <p class="lead">Atendimento no balcão e retirada de fórmulas no Bigorrilho, com estacionamento conveniado.</p>
+        </div>
+          <div class="visit visit--3">
+            <div class="visit__card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horário</h3>
+              <dl class="hours"><div data-day="1,2,3,4,5"><dt>Segunda a sexta</dt><dd>8h às 19h</dd></div><div data-day="6"><dt>Sábado</dt><dd>8h às 13h</dd></div><div data-day="0"><dt>Domingo e feriados</dt><dd>Fechado</dd></div></dl>
+              <p class="tag tag--soft open-status" data-open-status style="margin-top:18px">Seg a sex, 8h às 19h</p>
+            </div>
+            <div class="visit__card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Endereço</h3>
+              <ul class="address">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><strong>Rua Padre Anchieta, 1.450</strong><span>Bigorrilho · Curitiba – PR</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 17V7h3.5a3 3 0 0 1 0 6H10"/></svg><span><strong>Estacionamento conveniado</strong><span>30 minutos grátis no Estapar ao lado</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><strong><a href="tel:+550030000000">(00) 3000-0000</a></strong><span>Telefone fixo</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span><strong><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20F%C3%B3rmula%20Viva%20e%20quero%20um%20or%C3%A7amento.">(00) 90000-0000</a></strong><span>WhatsApp para receitas e orçamentos</span></span></li>
+              </ul>
+              <div class="visit__actions">
+                <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=Rua%20Padre%20Anchieta%2C%201.450%2C%20Bigorrilho%2C%20Curitiba%20%E2%80%93%20PR" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar</a>
+              </div>
+            </div>
+            <div class="visit__photo"><img src="assets/img/fotos/f-equipe-1000x1250.webp" srcset="assets/img/fotos/f-equipe-560x700.webp 560w, assets/img/fotos/f-equipe-1000x1250.webp 1000w" sizes="(min-width: 1100px) 400px, (min-width: 760px) 45vw, 92vw" alt="Dois farmacêuticos de jaleco no balcão de madeira da farmácia, conferindo um pedido no notebook" width="1000" height="1250" loading="lazy" decoding="async" /></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="duvidas" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+            <p class="lead">Não achou a sua? A farmacêutica responde pelo WhatsApp.</p>
+            <a class="link-arrow" style="margin-top:20px" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20f%C3%B3rmula%20manipulada.">Perguntar pelo WhatsApp<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="faq"><details><summary>Em quanto tempo recebo o orçamento?</summary><p>Em até 2 horas, de segunda a sexta das 8h às 19h e aos sábados até as 13h. Receitas enviadas fora desse horário são respondidas na manhã seguinte.</p></details><details><summary>Quanto tempo leva para a fórmula ficar pronta?</summary><p>De 24 a 48 horas depois da aprovação do orçamento. Algumas fórmulas com ativos importados levam até 5 dias úteis, e avisamos antes de começar.</p></details><details><summary>Posso repetir uma fórmula que já fiz aqui?</summary><p>Pode. Guardamos o histórico das suas fórmulas. Se a receita ainda estiver na validade, é só pedir a repetição pelo formulário ou pelo WhatsApp.</p></details><details><summary>Vocês manipulam fórmulas veterinárias?</summary><p>Sim. Fazemos fórmulas para cães e gatos com receita do veterinário, em petisco, pasta oral, suspensão ou cápsula, na dose do peso do animal.</p></details><details><summary>Entregam em casa?</summary><p>Entregamos em Curitiba e na região metropolitana. A taxa depende do bairro e é informada junto com o orçamento. Medicamentos controlados exigem a receita original na entrega.</p></details><details><summary>Quais são as formas de pagamento?</summary><p>Pix, cartão de débito ou crédito em até 3 vezes e dinheiro na retirada. Na entrega, o entregador leva a maquininha.</p></details></div>
+        </div>
+      </section>
+
+      <section class="cta-band" id="contato" aria-labelledby="contato-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="contato-titulo">Tem uma receita para manipular?</h2>
+            <p>Mande a foto e receba o orçamento em até 2 horas.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20F%C3%B3rmula%20Viva%20e%20quero%20um%20or%C3%A7amento."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Enviar pelo WhatsApp</a>
+            <a class="btn btn--light btn--lg" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-formula-modelo.svg" alt="" width="48" height="48" />
-              <strong>Fórmula Bem Estar</strong>
-            </div>
-            <p>Farmácia de manipulação com fórmulas sob medida, controle de qualidade e entrega em casa.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#manipulados">O que manipulamos</a></li>
-              <li><a href="#como-funciona">Como funciona</a></li>
-              <li><a href="#receita">Enviar receita</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 250, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 19h · Sáb, 8h às 13h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Fórmula Viva, página inicial"><img src="assets/img/logo-formula-viva.svg" alt="" width="44" height="44" /><span class="brand__name">Fórmula Viva<small>Farmácia de manipulação</small></span></a>
+          <p class="footer__about">Farmácia de manipulação no Bigorrilho, em Curitiba. Fórmulas dermatológicas, suplementos, fitoterápicos, pediátricos, veterinários e odontológicos.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Fórmula Bem Estar. Empresa fictícia: demonstração do modelo Farmácia de Manipulação.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Navegação</h2><ul><li><a href="#linhas">Linhas</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#qualidade">Qualidade</a></li><li><a href="#orcamento">Orçamento</a></li><li><a href="#visite">Endereço</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20F%C3%B3rmula%20Viva%20e%20quero%20um%20or%C3%A7amento.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:receitas@formulaviva.com.br">receitas@formulaviva.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Padre Anchieta, 1.450, Bigorrilho</span></li></ul></div><div><h2>Horário</h2><ul><li>Segunda a sexta: 8h às 19h</li><li>Sábado: 8h às 13h</li><li>Domingo e feriados: fechado</li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Farmacêutica responsável:</strong> Dra. Helena Carvalho · CRF-PR 00000</p><p>Fórmula Viva Farmácia de Manipulação Ltda. · CNPJ 00.000.000/0001-00 · Licença sanitária nº 000000/2026</p><p>Fórmulas manipuladas somente com prescrição. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Fórmula Viva. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Farmácia de Manipulação da GSA. <a href="/modelos/farmacias/farmacia/06-manipulacao/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20F%C3%B3rmula%20Viva%20e%20quero%20um%20or%C3%A7amento." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

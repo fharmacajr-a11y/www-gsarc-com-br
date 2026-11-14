@@ -6,6 +6,36 @@ As empresas, pessoas e depoimentos das demonstrações são fictícios.
 
 | Foto | Fotógrafo | Banco | Licença | Página original |
 |---|---|---|---|---|
+| f-balcao | Cottonbro (perfil @cottonbro) | Pexels | Licença Pexels | https://www.pexels.com/photo/8657373/ |
+| f-bebe | Laura Garcia (perfil @laura-garcia-1667452) | Pexels | Licença Pexels | https://www.pexels.com/photo/3766464/ |
+| f-beleza | Kamaji Ogino (perfil @kamaji-ogino) | Pexels | Licença Pexels | https://www.pexels.com/photo/5065854/ |
+| f-caixa | Tillhub (perfil @tillhub) | Pexels | Licença Pexels | https://www.pexels.com/photo/6925800/ |
+| f-delivery | Rdne (perfil @rdne) | Pexels | Licença Pexels | https://www.pexels.com/photo/7363190/ |
+| f-equipe | Cottonbro (perfil @cottonbro) | Pexels | Licença Pexels | https://www.pexels.com/photo/8657290/ |
+| f-fachada | Joaquin Carfagna (perfil @joaquin-carfagna-3131171) | Pexels | Licença Pexels | https://www.pexels.com/photo/17976150/ |
+| f-hero | Cheung Yin | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/pharmacy-interior-with-stocked-product-shelves-lile4HrTcvQ |
+| f-hero-b | Cottonbro (perfil @cottonbro) | Pexels | Licença Pexels | https://www.pexels.com/photo/8657368/ |
+| f-higiene | Castorlystock (perfil @castorlystock) | Pexels | Licença Pexels | https://www.pexels.com/photo/3872899/ |
+| f-idoso | Shkrabaanthony (perfil @shkrabaanthony) | Pexels | Licença Pexels | https://www.pexels.com/photo/7345476/ |
+| f-manipulacao | Cottonbro (perfil @cottonbro) | Pexels | Licença Pexels | https://www.pexels.com/photo/8666810/ |
+| f-pressao | Thirdman (perfil @thirdman) | Pexels | Licença Pexels | https://www.pexels.com/photo/7659573/ |
+| f-skincare | Shkrabaanthony (perfil @shkrabaanthony) | Pexels | Licença Pexels | https://www.pexels.com/photo/5205669/ |
+| f-skincare-b | Gustavo Fring (perfil @gustavo-fring) | Pexels | Licença Pexels | https://www.pexels.com/photo/4920513/ |
+| g-atendimento | National Cancer Institute | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/pharmacist-showing-pill-bottle-to-woman-NNpo-liY5aU |
+| g-banner-bebe | Rdne (perfil @rdne) | Pexels | Licença Pexels | https://www.pexels.com/photo/6849421/ |
+| g-banner-bem-estar | Nigel Msipa | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/man-in-white-crew-neck-t-shirt-drinking-from-black-sports-bottle-0w5qb6RPtGk |
+| g-banner-cabelo | Rdne (perfil @rdne) | Pexels | Licença Pexels | https://www.pexels.com/photo/7755474/ |
+| g-banner-pele | Henry Davidson | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/skincare-cream-serum-eucalyptus-and-fluffy-elements-on-marble-E30Dik5cHO8 |
+| g-banner-sol | Mikhail Nilov (perfil @mikhail-nilov) | Pexels | Licença Pexels | https://www.pexels.com/photo/8157145/ |
+| g-capsulas | Fabrizio Lucente (perfil @fabrizio-lucente-1615313239) | Pexels | Licença Pexels | https://www.pexels.com/photo/27515660/ |
+| g-celular | Jakub Żerdzicki | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/woman-uses-phone-while-drinking-tea-AvEYas-wFs0 |
+| g-cliente | Ninthgrid | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/a-man-and-a-woman-looking-at-items-in-a-store-uNawp6qgpcE |
+| g-entrega | Vitaly Gariev | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/couple-signing-for-a-package-delivery-at-the-door-Kd27X69pYyo |
+| g-farmaceutica | Byb Byb (perfil @byb-byb-412101727) | Pexels | Licença Pexels | https://www.pexels.com/photo/19471013/ |
+| g-lab | Mikhail Nilov (perfil @mikhail-nilov) | Pexels | Licença Pexels | https://www.pexels.com/photo/8863037/ |
+| g-noite | Serkan Yildiz | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/a-building-with-a-large-white-cross-on-its-side-W28dHvdQ0YE |
+| g-teste | Artempodrez (perfil @artempodrez) | Pexels | Licença Pexels | https://www.pexels.com/photo/6823510/ |
+| g-vacina | Franco30 (perfil @franco30) | Pexels | Licença Pexels | https://www.pexels.com/photo/6958380/ |
 | t1-armazenagem | Tiger Lily (perfil @tiger-lily) | Pexels | Licença Pexels | https://www.pexels.com/photo/4483610/ |
 | t1-cta | Josh Hild (perfil @josh-hild-1270765) | Pexels | Licença Pexels | https://www.pexels.com/photo/2801312/ |
 | t1-fracionada | Tiger Lily (perfil @tiger-lily) | Pexels | Licença Pexels | https://www.pexels.com/photo/4487382/ |

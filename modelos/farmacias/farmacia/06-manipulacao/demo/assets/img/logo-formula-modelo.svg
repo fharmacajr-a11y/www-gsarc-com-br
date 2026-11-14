@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
-  <title id="title">Logo da Fórmula Bem Estar</title>
-  <desc id="desc">Gral e pistilo de farmácia de manipulação em branco sobre fundo verde.</desc>
-  <rect x="6" y="6" width="84" height="84" rx="24" fill="#157A52" />
-  <path d="M24 46h48c0 14-10 24-24 24S24 60 24 46z" fill="#FFFFFF" />
-  <rect x="36" y="70" width="24" height="6" rx="3" fill="#FFFFFF" />
-  <path d="M58 22l-12 22" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" />
-  <circle cx="64" cy="30" r="5" fill="#2A7FBF" stroke="#FFFFFF" stroke-width="3" />
-</svg>

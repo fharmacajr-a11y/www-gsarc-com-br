@@ -3,445 +3,429 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rede DrogaModelo | Demonstração Rede com Unidades</title>
-    <meta
-      name="description"
-      content="Demonstração fictícia de um site para rede de drogarias, com busca de unidades por cidade, horários, serviços e WhatsApp de cada loja."
-    />
+    <title>Drogarias Aurora | Lojas em Fortaleza e região, 4 abertas 24 horas</title>
+    <meta name="description" content="Demonstração fictícia de site para rede de drogarias com busca de lojas por cidade, lojas 24 horas, serviços, convênios e WhatsApp de cada unidade." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#004d43" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-aurora.svg" />
+    <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
   <body>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <div class="topbar">
+    <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lojas abertas todos os dias · 3 lojas 24 horas</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Matriz: Rua Exemplo, 1000, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <a class="topbar__item" href="?cidade=24h#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>4 lojas abertas 24 horas</a>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg>SAC 0800 000 0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp central</a></div>
       </div>
     </div>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da Rede DrogaModelo">
-          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Rede DrogaModelo</strong>
-            <span class="brand__subtitle">Drogarias perto de você</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal da rede">
-          <a href="#inicio">Início</a>
-          <a href="#unidades">Unidades</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#vantagens">Vantagens</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <a class="button button-primary header-cta" href="#unidades">Encontrar loja</a>
-
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-expanded="false"
-          aria-controls="menu-mobile"
-        >
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel da rede">
-            <a href="#inicio">Início</a>
-            <a href="#unidades">Unidades</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Drogarias Aurora, página inicial"><img src="assets/img/logo-aurora.svg" alt="" width="44" height="44" /><span class="brand__name">Aurora<small>Drogarias</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
+            <a href="#lojas">Lojas</a>
             <a href="#servicos">Serviços</a>
-            <a href="#vantagens">Vantagens</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#unidades">Encontrar loja</a>
+            <a href="#vantagens">Convênios</a>
+            <a href="#atendimento">Atendimento</a>
+            <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="#lojas">Lojas</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#vantagens">Convênios</a>
+          <a href="#atendimento">Atendimento</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a class="btn btn--accent btn--block" href="#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Rede de drogarias</p>
-            <h1>Tem uma DrogaModelo perto de você.</h1>
-            <p class="lead">
-              São 8 lojas na capital e na região, com unidades 24 horas, entrega no bairro e atendimento farmacêutico. Encontre a
-              loja mais próxima e fale direto com ela pelo WhatsApp.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#unidades">Encontrar loja</a>
-              <a class="button button-secondary" href="#servicos">Ver serviços</a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img
-                src="assets/img/hero-drogaria.svg"
-                alt="Ilustração de um mapa com as lojas da rede fictícia marcadas"
-                width="640"
-                height="460"
-              />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques rápidos da rede fictícia">
-              <article class="meta-card">
-                <p class="meta-card__label">Lojas</p>
-                <h2>8 unidades</h2>
-                <p>Em 3 cidades, com endereço e horário de cada uma.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Plantão</p>
-                <h2>Lojas 24h</h2>
-                <p>Unidades abertas todos os dias, a qualquer hora.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Entrega</p>
-                <h2>No bairro</h2>
-                <p>Pedido pelo WhatsApp da loja mais próxima.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
-            <div><strong>Lojas em 6 cidades</strong><span>Encontre a unidade mais perto de você.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Farmacêutico em todas</strong><span>Atendimento de confiança em cada loja.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span>
-            <div><strong>Ofertas toda semana</strong><span>Promoções da rede e da sua cidade.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
-            <div><strong>Clube de vantagens</strong><span>Descontos para clientes cadastrados.</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="unidades" class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Nossas unidades</p>
-            <h2>Escolha a cidade e veja as lojas.</h2>
-            <p>Cada unidade tem o próprio horário, serviços e WhatsApp. No site real, entram os endereços de verdade da rede.</p>
-          </div>
-
-          <div class="unit-filter" role="group" aria-label="Filtrar unidades por cidade">
-            <button type="button" data-unit-filter="todas" aria-pressed="true">Todas</button>
-            <button type="button" data-unit-filter="sao-paulo" aria-pressed="false">São Paulo</button>
-            <button type="button" data-unit-filter="guarulhos" aria-pressed="false">Guarulhos</button>
-            <button type="button" data-unit-filter="osasco" aria-pressed="false">Osasco</button>
-          </div>
-          <p class="units-count" data-units-count aria-live="polite">8 unidades encontradas.</p>
-
-          <div class="units-grid">
-            <article class="unit-card" data-unit-city="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Centro</h3>
-              <p>Rua Exemplo, 120, Centro</p>
-              <p>Aberta 24 horas, todos os dias</p>
-              <ul class="unit-badges">
-                <li class="is-24h">24 horas</li>
-                <li>Entrega</li>
-                <li>Aferição de pressão</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Vila Modelo</h3>
-              <p>Av. Fictícia, 900, Vila Modelo</p>
-              <p>Segunda a sábado, 7h às 22h. Domingo, 8h às 20h</p>
-              <ul class="unit-badges">
-                <li>Entrega</li>
-                <li>Estacionamento</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Jardim Exemplo</h3>
-              <p>Rua das Amostras, 45, Jardim Exemplo</p>
-              <p>Segunda a sábado, 7h às 22h</p>
-              <ul class="unit-badges">
-                <li>Aplicação de injetáveis</li>
-                <li>Testes rápidos</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Parque Modelo</h3>
-              <p>Av. do Parque, 2.300, Parque Modelo</p>
-              <p>Aberta 24 horas, todos os dias</p>
-              <ul class="unit-badges">
-                <li class="is-24h">24 horas</li>
-                <li>Drive-thru</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="guarulhos">
-              <p class="unit-card__city">Guarulhos</p>
-              <h3>Unidade Centro de Guarulhos</h3>
-              <p>Rua Exemplo, 77, Centro</p>
-              <p>Segunda a sábado, 7h às 22h. Domingo, 8h às 18h</p>
-              <ul class="unit-badges">
-                <li>Entrega</li>
-                <li>Aferição de pressão</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="guarulhos">
-              <p class="unit-card__city">Guarulhos</p>
-              <h3>Unidade Vila Amostra</h3>
-              <p>Av. Fictícia, 1.500, Vila Amostra</p>
-              <p>Aberta 24 horas, todos os dias</p>
-              <ul class="unit-badges">
-                <li class="is-24h">24 horas</li>
-                <li>Entrega</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="osasco">
-              <p class="unit-card__city">Osasco</p>
-              <h3>Unidade Centro de Osasco</h3>
-              <p>Rua Exemplo, 300, Centro</p>
-              <p>Segunda a sábado, 7h às 22h</p>
-              <ul class="unit-badges">
-                <li>Testes rápidos</li>
-                <li>Estacionamento</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-unit-city="osasco">
-              <p class="unit-card__city">Osasco</p>
-              <h3>Unidade Jardim Modelo</h3>
-              <p>Av. das Demonstrações, 610, Jardim Modelo</p>
-              <p>Segunda a domingo, 8h às 22h</p>
-              <ul class="unit-badges">
-                <li>Entrega</li>
-                <li>Aplicação de injetáveis</li>
-              </ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000">WhatsApp da loja</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicos" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Serviços farmacêuticos</p>
-            <h2>Cuidado além do balcão.</h2>
-            <p>Os serviços variam por unidade. Confira as etiquetas de cada loja na lista acima.</p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 01</p>
-              <h3>Aferição de pressão</h3>
-              <p>Medição rápida com orientação do farmacêutico, sem precisar agendar.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 02</p>
-              <h3>Aplicação de injetáveis</h3>
-              <p>Sala reservada e profissional habilitado, mediante apresentação da receita.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 03</p>
-              <h3>Testes rápidos</h3>
-              <p>Glicemia e outros testes rápidos com resultado na hora.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 04</p>
-              <h3>Entrega no bairro</h3>
-              <p>Peça pelo WhatsApp da loja mais próxima e receba em casa.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 05</p>
-              <h3>Lojas 24 horas</h3>
-              <p>Unidades de plantão abertas todos os dias, inclusive feriados.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Serviço 06</p>
-              <h3>Drive-thru, se houver</h3>
-              <p>Bloco opcional para unidades com retirada sem sair do carro.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="vantagens" class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Vantagens</p>
-            <h2>Descontos e convênios em todas as lojas.</h2>
-            <p>Lista fictícia. No site real, entram os convênios e programas que a rede oferece de verdade.</p>
-          </div>
-          <ul class="segments-list">
-            <li>Farmácia Popular</li>
-            <li>Convênios de empresas</li>
-            <li>Programa de fidelidade</li>
-            <li>Desconto para idosos</li>
-            <li>Laboratórios parceiros</li>
-          </ul>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Escolha a loja</h3>
-              <p>Filtre pela sua cidade e veja a unidade mais perto de você.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Chame no WhatsApp</h3>
-              <p>Envie a foto da receita ou a lista de produtos para a loja.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Retire ou receba</h3>
-              <p>Busque no balcão ou receba em casa com a entrega do bairro.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
-          </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Achei a loja 24 horas mais perto pelo site, de madrugada. Salvou a noite.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">A</span><span><strong>Ana P.</strong><span>Osasco</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Uso o WhatsApp da minha loja para reservar os remédios. Chego e já está separado.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Marcos T.</strong><span>Barueri</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“As ofertas da semana compensam muito. Sempre confiro antes de comprar.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">L</span><span><strong>Luciana F.</strong><span>Carapicuíba</span></span></figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Fale com a rede</p>
-              <h2>Atendimento central da DrogaModelo.</h2>
-            </div>
-
-            <dl class="contact-list">
-              <div>
-                <dt>SAC</dt>
-                <dd>Segunda a sexta, das 8h às 18h</dd>
+      <section class="hero" aria-labelledby="titulo">
+        <div class="hero__media"><img src="assets/img/fotos/g-noite-1600x900.webp" srcset="assets/img/fotos/g-noite-960x540.webp 960w, assets/img/fotos/g-noite-1600x900.webp 1600w, assets/img/fotos/g-noite-2400x1350.webp 2400w" sizes="100vw" alt="Cruz verde iluminada na fachada de uma farmácia à noite" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="tag tag--glass"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>14 lojas em Fortaleza e região</p>
+            <h1 id="titulo">Tem uma Aurora <em>perto de você.</em> De dia e de noite.</h1>
+            <p class="hero__lead">Encontre a loja mais próxima, veja o horário e fale direto com ela pelo WhatsApp. 4 lojas ficam abertas 24 horas.</p>
+            <form class="finder" data-jump-filter="#lojas" role="search" aria-label="Encontrar loja">
+              <label for="cidade-hero">Em qual cidade você está?</label>
+              <div class="finder__row">
+                <select id="cidade-hero" name="cidade-hero" data-wa-skip><option value="">Todas as cidades</option><option value="fortaleza">Fortaleza (7 lojas)</option><option value="caucaia">Caucaia (2 lojas)</option><option value="maracanau">Maracanaú (2 lojas)</option><option value="eusebio">Eusébio (2 lojas)</option><option value="aquiraz">Aquiraz (1 lojas)</option><option value="24h">Só lojas 24 horas</option></select>
+                <button class="btn btn--accent btn--lg" type="submit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>Ver lojas</button>
               </div>
-              <div>
-                <dt>WhatsApp central</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:sac@drogariamodelo.com.br">sac@drogariamodelo.com.br</a></dd>
-              </div>
-              <div>
-                <dt>Trabalhe conosco</dt>
-                <dd><a href="mailto:rh@drogariamodelo.com.br">rh@drogariamodelo.com.br</a></dd>
-              </div>
-            </dl>
-          </article>
+              <p class="finder__quick"><span>Atalhos:</span><a href="?cidade=24h#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Lojas 24 horas</a><a href="?cidade=drive#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16V11l2-5h10l2 5v5"/><path d="M3 16h18v3H3zM5 11h14"/><circle cx="7.5" cy="16" r="1"/><circle cx="16.5" cy="16" r="1"/></svg>Drive-thru</a><a href="?cidade=vacina#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 3 6 6M17.5 5.5 8 15l-3 1 1-3 9.5-9.5M13 7l4 4M10 10l2 2M4 20l2.5-2.5"/></svg>Vacinação</a></p>
+            </form>
+          </div>
+        </div>
+      </section>
 
-          <aside class="contact-card">
-            <p class="contact-card__label">Demonstração</p>
-            <h2>Rede fictícia para mostrar o modelo</h2>
-            <p>
-              A Rede DrogaModelo não existe. Endereços, horários e números de WhatsApp desta página são fictícios e mostram
-              como o site final organiza as lojas da rede.
-            </p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#unidades">Encontrar loja</a>
-              <a class="button button-secondary" href="#servicos">Ver serviços</a>
+      <section class="plantao" aria-labelledby="plantao-titulo">
+        <div class="container plantao__inner">
+          <div class="plantao__head">
+            <h2 id="plantao-titulo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Plantão 24 horas</h2>
+            <p>Precisou de madrugada? Estas lojas não fecham, nem em feriado.</p>
+          </div>
+          <div class="plantao__grid"><article class="p-card">
+              <strong>Aldeota</strong>
+              <span>Avenida Santos Dumont, 2.450</span>
+              <span>Fortaleza</span>
+              <div class="p-card__actions">
+                <a class="btn btn--accent btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Aldeota%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar</a>
+              </div>
+            </article><article class="p-card">
+              <strong>Benfica</strong>
+              <span>Avenida Treze de Maio, 1.800</span>
+              <span>Fortaleza</span>
+              <div class="p-card__actions">
+                <a class="btn btn--accent btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Benfica%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar</a>
+              </div>
+            </article><article class="p-card">
+              <strong>Messejana</strong>
+              <span>Avenida Frei Cirilo, 3.400</span>
+              <span>Fortaleza</span>
+              <div class="p-card__actions">
+                <a class="btn btn--accent btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Messejana%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar</a>
+              </div>
+            </article><article class="p-card">
+              <strong>Maracanaú</strong>
+              <span>Avenida Carlos Jereissati, 1.200</span>
+              <span>Maracanaú</span>
+              <div class="p-card__actions">
+                <a class="btn btn--accent btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Maracana%C3%BA%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar</a>
+              </div>
+            </article></div>
+        </div>
+      </section>
+
+      <section class="section" id="lojas" aria-labelledby="lojas-titulo">
+        <div class="container">
+          <div class="section-head section-head--row">
+            <div>
+              <p class="eyebrow">Nossas lojas</p>
+              <h2 id="lojas-titulo">Encontre a sua Aurora</h2>
             </div>
-          </aside>
+            <p style="color:var(--muted);max-width:420px">Cada loja tem WhatsApp próprio: o pedido vai direto para quem está no balcão.</p>
+          </div>
+          <div class="units-finder" data-filter data-filter-noun="lojas" data-filter-noun-one="loja" data-filter-fem data-filter-param="cidade" data-filter-q="busca">
+            <div class="toolbar">
+              <div class="chips" role="group" aria-label="Filtrar por cidade"><button class="chip" type="button" data-filter-btn="todos" aria-pressed="true">Todas <span class="chip__n">14</span></button><button class="chip" type="button" data-filter-btn="fortaleza" aria-pressed="false">Fortaleza <span class="chip__n">7</span></button><button class="chip" type="button" data-filter-btn="caucaia" aria-pressed="false">Caucaia <span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="maracanau" aria-pressed="false">Maracanaú <span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="eusebio" aria-pressed="false">Eusébio <span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="aquiraz" aria-pressed="false">Aquiraz <span class="chip__n">1</span></button><button class="chip" type="button" data-filter-btn="24h" aria-pressed="false">24 horas <span class="chip__n">4</span></button><button class="chip" type="button" data-filter-btn="entrega" aria-pressed="false">Entrega <span class="chip__n">9</span></button><button class="chip" type="button" data-filter-btn="drive" aria-pressed="false">Drive-thru <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="vacina" aria-pressed="false">Vacinação <span class="chip__n">5</span></button></div>
+              <label class="search"><span class="sr-only">Buscar bairro ou endereço</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" placeholder="Buscar bairro ou endereço" data-filter-search /></label>
+            </div>
+            <p class="toolbar__count" data-filter-count aria-live="polite" style="margin:-8px 0 18px">14 lojas encontradas.</p>
+            <div class="units">
+            <article class="unit" id="loja-01" data-item data-cat="fortaleza 24h entrega estac vacina" data-text="Aurora Aldeota Fortaleza Aldeota Avenida Santos Dumont, 2.450 24 horas Entrega Estacionamento Vacinação">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Aldeota</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Santos Dumont, 2.450 · Aldeota</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Estacionamento</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Aldeota%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Santos%20Dumont%2C%202.450%2C%20Aldeota%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-02" data-item data-cat="fortaleza entrega" data-text="Aurora Meireles Fortaleza Meireles Avenida da Abolição, 3.100 Entrega">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Meireles</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida da Abolição, 3.100 · Meireles</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Meireles%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20da%20Aboli%C3%A7%C3%A3o%2C%203.100%2C%20Meireles%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-03" data-item data-cat="fortaleza 24h entrega" data-text="Aurora Benfica Fortaleza Benfica Avenida Treze de Maio, 1.800 24 horas Entrega">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Benfica</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Treze de Maio, 1.800 · Benfica</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Benfica%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Treze%20de%20Maio%2C%201.800%2C%20Benfica%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-04" data-item data-cat="fortaleza 24h drive estac" data-text="Aurora Messejana Fortaleza Messejana Avenida Frei Cirilo, 3.400 24 horas Drive-thru Estacionamento">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Messejana</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Frei Cirilo, 3.400 · Messejana</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Messejana%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Frei%20Cirilo%2C%203.400%2C%20Messejana%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-05" data-item data-cat="fortaleza entrega vacina" data-text="Aurora Parangaba Fortaleza Parangaba Avenida João Pessoa, 5.900 Entrega Vacinação">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Parangaba</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida João Pessoa, 5.900 · Parangaba</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Parangaba%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Jo%C3%A3o%20Pessoa%2C%205.900%2C%20Parangaba%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-06" data-item data-cat="fortaleza drive estac vacina" data-text="Aurora Cocó Fortaleza Cocó Avenida Engenheiro Santana Júnior, 2.900 Drive-thru Estacionamento Vacinação">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Cocó</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Engenheiro Santana Júnior, 2.900 · Cocó</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Coc%C3%B3%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Engenheiro%20Santana%20J%C3%BAnior%2C%202.900%2C%20Coc%C3%B3%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-07" data-item data-cat="fortaleza entrega" data-text="Aurora Centro Fortaleza Centro Rua Senador Pompeu, 700 Entrega">
+              <p class="unit__city">Fortaleza</p>
+              <h3>Aurora Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Senador Pompeu, 700 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Senador%20Pompeu%2C%20700%2C%20Centro%2C%20Fortaleza" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-08" data-item data-cat="caucaia entrega vacina" data-text="Aurora Caucaia Caucaia Centro Rua Coronel Correia, 900 Entrega Vacinação">
+              <p class="unit__city">Caucaia</p>
+              <h3>Aurora Caucaia</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Coronel Correia, 900 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Caucaia%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Coronel%20Correia%2C%20900%2C%20Centro%2C%20Caucaia" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-09" data-item data-cat="caucaia estac" data-text="Aurora Icaraí Caucaia Icaraí Avenida Dom Almeida Lustosa, 1.500 Estacionamento">
+              <p class="unit__city">Caucaia</p>
+              <h3>Aurora Icaraí</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Dom Almeida Lustosa, 1.500 · Icaraí</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Icara%C3%AD%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Dom%20Almeida%20Lustosa%2C%201.500%2C%20Icara%C3%AD%2C%20Caucaia" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-10" data-item data-cat="maracanau 24h entrega estac" data-text="Aurora Maracanaú Maracanaú Centro Avenida Carlos Jereissati, 1.200 24 horas Entrega Estacionamento">
+              <p class="unit__city">Maracanaú</p>
+              <h3>Aurora Maracanaú</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Carlos Jereissati, 1.200 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Maracana%C3%BA%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Carlos%20Jereissati%2C%201.200%2C%20Centro%2C%20Maracana%C3%BA" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-11" data-item data-cat="maracanau entrega" data-text="Aurora Jereissati Maracanaú Jereissati Rua Vinte e Dois, 300 Entrega">
+              <p class="unit__city">Maracanaú</p>
+              <h3>Aurora Jereissati</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Vinte e Dois, 300 · Jereissati</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Jereissati%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Vinte%20e%20Dois%2C%20300%2C%20Jereissati%2C%20Maracana%C3%BA" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-12" data-item data-cat="eusebio drive estac vacina" data-text="Aurora Eusébio Eusébio Centro Avenida Eusébio de Queiroz, 2.000 Drive-thru Estacionamento Vacinação">
+              <p class="unit__city">Eusébio</p>
+              <h3>Aurora Eusébio</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Eusébio de Queiroz, 2.000 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Eus%C3%A9bio%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Eus%C3%A9bio%20de%20Queiroz%2C%202.000%2C%20Centro%2C%20Eus%C3%A9bio" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-13" data-item data-cat="eusebio estac" data-text="Aurora Coaçu Eusébio Coaçu Rodovia CE-040, km 12 Estacionamento">
+              <p class="unit__city">Eusébio</p>
+              <h3>Aurora Coaçu</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rodovia CE-040, km 12 · Coaçu</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Coa%C3%A7u%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rodovia%20CE-040%2C%20km%2012%2C%20Coa%C3%A7u%2C%20Eus%C3%A9bio" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-14" data-item data-cat="aquiraz entrega" data-text="Aurora Aquiraz Aquiraz Centro Rua Santos Dumont, 150 Entrega">
+              <p class="unit__city">Aquiraz</p>
+              <h3>Aurora Aquiraz</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Santos Dumont, 150 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 23h · Dom, 8h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Aurora%20Aquiraz%21%20Vim%20pelo%20site%20da%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Santos%20Dumont%2C%20150%2C%20Centro%2C%20Aquiraz" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article>
+            </div>
+            <p class="empty-state" data-filter-empty hidden>Nenhuma loja encontrada. Tente outro bairro ou veja todas as cidades.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="servicos" aria-labelledby="servicos-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Serviços farmacêuticos</p>
+          <h2 id="servicos-titulo">Cuidado de farmacêutico em toda loja</h2>
+          <p class="lead">Sem agendamento e com o mesmo padrão em qualquer unidade Aurora. Vacinação nas lojas com a etiqueta.</p>
+        </div>
+          <div class="grid grid--4"><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><h3>Aferição de pressão</h3><p>Com registro na carteirinha para levar à consulta.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Testes rápidos</h3><p>Glicemia e colesterol, com resultado em minutos.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 3 6 6M17.5 5.5 8 15l-3 1 1-3 9.5-9.5M13 7l4 4M10 10l2 2M4 20l2.5-2.5"/></svg></span><h3>Injetáveis</h3><p>Aplicação em sala reservada, com receita.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h3>Vacinação</h3><p>Gripe, HPV e outras, nas lojas com vacinação.</p></article></div>
+        </div>
+      </section>
+
+      <section class="section" id="entrega" aria-labelledby="entrega-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/f-delivery-1200x900.webp" srcset="assets/img/fotos/f-delivery-640x480.webp 640w, assets/img/fotos/f-delivery-1200x900.webp 1200w" sizes="(min-width: 960px) 540px, 92vw" alt="Entregador de moto com a bolsa de entrega passando por uma rua da cidade" width="1200" height="900" loading="lazy" decoding="async" />
+            <p class="split__badge"><strong>Até 60 min</strong>na maior parte dos bairros</p>
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">Entrega</p>
+            <h2 id="entrega-titulo">Peça para a loja mais perto e receba em casa.</h2>
+            <p>As lojas com a etiqueta Entrega levam o pedido até você. É só chamar a loja no WhatsApp, mandar a lista ou a foto da receita e combinar o pagamento.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Pague na entrega com Pix, cartão ou dinheiro</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Lojas 24 horas também entregam de madrugada</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Medicamentos controlados exigem a receita original na entrega</span></li></ul>
+            <a class="btn btn--primary" href="?cidade=entrega#lojas" style="margin-top:26px"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg>Ver lojas com entrega</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--brand" id="vantagens" aria-labelledby="vantagens-titulo">
+        <div class="container">
+          <div class="section-head">
+          <p class="eyebrow">Convênios e vantagens</p>
+          <h2 id="vantagens-titulo">Mais desconto em qualquer loja</h2>
+        </div>
+          <div class="perks">
+            <article class="perk"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>Farmácia Popular</h3><p>Medicamentos gratuitos ou com até 90% de desconto em todas as lojas.</p><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Hipertensão, diabetes e asma</li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Leve receita, documento com foto e CPF</li></ul></article>
+            <article class="perk"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></span><h3>Convênio empresa</h3><p>Desconto em folha para os funcionários de mais de 200 empresas parceiras.</p><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Compra com o crachá ou CPF</li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Sua empresa pode aderir sem custo</li></ul></article>
+            <article class="perk"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12"/><path d="M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8zM12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg></span><h3>Aurora+</h3><p>Programa de fidelidade: cada compra vira pontos e desconto na próxima.</p><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Cadastro grátis com o CPF</li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Ofertas exclusivas no WhatsApp</li></ul></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="atendimento" aria-labelledby="atendimento-titulo">
+        <div class="container">
+          <div class="section-head">
+          <p class="eyebrow">Atendimento central</p>
+          <h2 id="atendimento-titulo">Fale com a rede</h2>
+          <p class="lead">Para assuntos que não são de uma loja só.</p>
+        </div>
+          <div class="central">
+            <article class="central__item"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg></span><h3>SAC</h3><strong>0800 000 0000</strong><p>Segunda a sábado, 8h às 20h. Dúvidas, elogios e reclamações.</p><a class="btn btn--ghost btn--sm" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>Ligar para o SAC</a></article>
+            <article class="central__item"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg></span><h3>WhatsApp central</h3><strong>(00) 90000-0000</strong><p>Não sabe qual loja chamar? A central passa o seu pedido para a mais perto.</p><a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar a central</a></article>
+            <article class="central__item"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></span><h3>Trabalhe conosco</h3><strong>rh@drogariasaurora.com.br</strong><p>Mande o currículo com a cidade e a vaga de interesse no assunto.</p><a class="btn btn--ghost btn--sm" href="mailto:rh@drogariasaurora.com.br"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Enviar currículo</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="duvidas" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+          </div>
+          <div class="faq"><details><summary>Quais lojas ficam abertas 24 horas?</summary><p>Aldeota, Benfica e Messejana, em Fortaleza, e a loja do Centro de Maracanaú. Todas abrem também em domingos e feriados.</p></details><details><summary>O preço é o mesmo em todas as lojas?</summary><p>Sim. Preços e promoções valem em todas as lojas Aurora. Algumas ofertas são só para o WhatsApp ou para o Aurora+, e isso fica avisado.</p></details><details><summary>Como peço para entregar?</summary><p>Chame no WhatsApp a loja mais perto, com a etiqueta Entrega. A loja confirma o valor, a taxa e o prazo antes de sair.</p></details><details><summary>Preciso agendar para vacinar?</summary><p>Nas lojas com vacinação, é melhor confirmar pelo WhatsApp da loja quais vacinas estão disponíveis no dia.</p></details><details><summary>Como funciona o drive-thru?</summary><p>Nas lojas com drive-thru você pede e paga sem sair do carro. Funciona no mesmo horário da loja.</p></details></div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Não sabe qual loja chamar?</h2>
+            <p>A central do WhatsApp passa o seu pedido para a Aurora mais perto.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp central</a>
+            <a class="btn btn--light btn--lg" href="#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ver lojas</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="48" height="48" />
-              <strong>Rede DrogaModelo</strong>
-            </div>
-            <p>Rede de drogarias com lojas em várias cidades da região e farmacêutico em todas as unidades.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#unidades">Unidades</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#vantagens">Vantagens</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Matriz: Rua Exemplo, 1000, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lojas abertas todos os dias · 3 lojas 24 horas</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Drogarias Aurora, página inicial"><img src="assets/img/logo-aurora.svg" alt="" width="44" height="44" /><span class="brand__name">Aurora<small>Drogarias</small></span></a>
+          <p class="footer__about">Rede de drogarias com 14 lojas em Fortaleza, Caucaia, Maracanaú, Eusébio e Aquiraz. 4 lojas abertas 24 horas.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Rede DrogaModelo. Empresa fictícia: demonstração do modelo Rede com Unidades.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Navegação</h2><ul><li><a href="#lojas">Lojas</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#vantagens">Convênios</a></li><li><a href="#atendimento">Atendimento</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div><div><h2>Cidades</h2><ul><li><a href="?cidade=fortaleza#lojas">Fortaleza</a></li><li><a href="?cidade=caucaia#lojas">Caucaia</a></li><li><a href="?cidade=maracanau#lojas">Maracanaú</a></li><li><a href="?cidade=eusebio#lojas">Eusébio</a></li><li><a href="?cidade=aquiraz#lojas">Aquiraz</a></li></ul></div><div><h2>Atendimento</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg><a href="tel:08000000000">SAC 0800 000 0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:sac@drogariasaurora.com.br">sac@drogariasaurora.com.br</a></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Drogarias Aurora Ltda.</strong> · CNPJ 00.000.000/0001-00 · Escritório central: Avenida Santos Dumont, 2.450, Aldeota, Fortaleza – CE</p><p>Cada loja tem farmacêutico responsável e licença sanitária próprios. Em caso de dúvida, procure o farmacêutico. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Drogarias Aurora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Rede com Unidades da GSA. <a href="/modelos/farmacias/drogaria-rede/02-rede-com-unidades/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Aurora." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

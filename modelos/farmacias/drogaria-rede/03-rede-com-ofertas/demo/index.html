@@ -3,418 +3,618 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rede DrogaModelo | Demonstração Rede com Ofertas</title>
-    <meta name="description" content="Demonstração fictícia de site de rede de drogarias com ofertas da rede, ofertas por cidade e pedido pelo WhatsApp." />
+    <title>Drogarias Viva Mais | Ofertas da semana em BH, Contagem e Betim</title>
+    <meta name="description" content="Demonstração fictícia de site para rede de drogarias com encarte de ofertas, ofertas por cidade, pedido pelo WhatsApp da loja e busca de lojas." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#4a0f6e" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-viva-mais.svg" />
+    <link rel="preload" href="assets/fonts/quicksand-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-whatsapp="5500000000000">
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lojas abertas todos os dias · 3 lojas 24 horas</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Matriz: Rua Exemplo, 1000, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <a class="topbar__item" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Encarte da semana: 17 a 23/11</a>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>12 lojas</a><a class="topbar__item topbar__hide-sm" href="tel:08000000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg>SAC 0800 000 0000</a><a class="topbar__item" href="#clube"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></svg>@drogariasvivamais</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da Rede DrogaModelo">
-          <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Rede DrogaModelo</strong>
-            <span class="brand__subtitle">Ofertas em todas as lojas</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
-            <a href="#inicio">Início</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Drogarias Viva Mais, página inicial"><img src="assets/img/logo-viva-mais.svg" alt="" width="44" height="44" /><span class="brand__name">Viva Mais<small>Drogarias</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="#ofertas">Ofertas</a>
-            <a href="#unidades">Lojas</a>
-            <a href="#como-pedir">Como pedir</a>
-            <a href="#contato">Contato</a>
+            <a href="#campanhas">Campanhas</a>
+            <a href="#lojas">Lojas</a>
+            <a href="#clube">Clube</a>
+            <a href="#duvidas">Dúvidas</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="#ofertas">Ver ofertas</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="#inicio">Início</a>
-            <a href="#ofertas">Ofertas</a>
-            <a href="#unidades">Lojas</a>
-            <a href="#como-pedir">Como pedir</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#ofertas">Ver ofertas</a>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver ofertas</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="#ofertas">Ofertas</a>
+          <a href="#campanhas">Campanhas</a>
+          <a href="#lojas">Lojas</a>
+          <a href="#clube">Clube</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a class="btn btn--accent btn--block" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver ofertas</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Ofertas da rede</p>
-            <h1>Ofertas que valem na loja perto de você.</h1>
-            <p class="lead">Ofertas da rede inteira e promoções exclusivas de cada cidade. Escolha a oferta e peça pelo WhatsApp da loja mais próxima.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
-              <a class="button button-secondary" href="#unidades">Encontrar loja</a>
+      <section class="promo" id="inicio" aria-labelledby="titulo">
+        <div class="container promo__inner">
+          <div>
+            <p class="tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Encarte da semana · 17 a 23/11</p>
+            <h1 id="titulo">Semana Viva Mais: até <em>33% off</em> no cuidado de todo dia.</h1>
+            <p class="hero__lead">Ofertas que valem nas 12 lojas de BH, Contagem e Betim, e promoções só da sua cidade. Escolha a loja e peça pelo WhatsApp.</p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver as ofertas</a>
+              <a class="btn btn--light btn--lg" href="#lojas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Encontrar loja</a>
             </div>
+            <ul class="promo__facts">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>12 lojas</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>3 abertas 24 horas</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg>Entrega em 9 lojas</li>
+            </ul>
           </div>
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-drogaria.svg" alt="Ilustração de um mapa com as lojas da rede fictícia" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques">
-              <article class="meta-card">
-                <p class="meta-card__label">Validade</p>
-                <h2>Até domingo</h2>
-                <p>Novas ofertas toda segunda.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Regionais</p>
-                <h2>Por cidade</h2>
-                <p>Promoções só de algumas lojas.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Pedido</p>
-                <h2>Na loja certa</h2>
-                <p>Pelo WhatsApp da unidade.</p>
-              </article>
-            </div>
+          <div class="collage">
+            <img src="assets/img/fotos/g-banner-bem-estar-1000x1250.webp" srcset="assets/img/fotos/g-banner-bem-estar-560x700.webp 560w, assets/img/fotos/g-banner-bem-estar-1000x1250.webp 1000w" sizes="(min-width: 960px) 440px, 86vw" alt="Homem de camiseta branca bebendo água depois de correr ao ar livre" width="1000" height="1250" fetchpriority="high" decoding="async" />
+            <p class="burst"><span><b>-33%</b>no sérum</span></p>
+            <a class="ticket" href="#oferta-protetor-solar-facial-fps-50">
+              <img src="assets/img/produtos/protetor_facial-recorte-320.webp" alt="" width="114" height="320" decoding="async" />
+              <span><small>Oferta da semana</small><strong>Protetor Solar Facial FPS 50</strong>
+              <span class="price"><span class="price__old"><span class="sr-only">De </span>R$ 72,90</span><span class="price__now"><span class="sr-only">por </span>R$ 54,90</span></span></span>
+            </a>
           </div>
         </div>
       </section>
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span>
-            <div><strong>Lojas em 6 cidades</strong><span>Encontre a unidade mais perto de você.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Farmacêutico em todas</strong><span>Atendimento de confiança em cada loja.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span>
-            <div><strong>Ofertas toda semana</strong><span>Promoções da rede e da sua cidade.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></span>
-            <div><strong>Clube de vantagens</strong><span>Descontos para clientes cadastrados.</span></div>
-          </div>
-        </div>
-      </section>
-      <section id="ofertas" class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Ofertas da semana</p>
-            <h2>Escolha sua cidade e veja as ofertas válidas.</h2>
-            <p>As ofertas de toda a rede aparecem em todas as cidades. As regionais, só onde valem.</p>
-          </div>
-          <div data-filter-scope data-count-label="oferta|ofertas|encontrada|encontradas">
-          <div class="toolbar">
-            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
-              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
-              <button type="button" data-filter="sao-paulo" aria-pressed="false">São Paulo</button>
-              <button type="button" data-filter="guarulhos" aria-pressed="false">Guarulhos</button>
-              <button type="button" data-filter="osasco" aria-pressed="false">Osasco</button>
-            </div>
-          </div>
-          <p class="result-count" data-filter-count aria-live="polite"></p>
-          <div class="product-grid">
-            <article class="product-card" data-item data-tags="rede sao-paulo guarulhos osasco">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Protetor solar</span></div>
-              <span class="offer-badge">-31%</span>
-              <p class="product-meta">Toda a rede</p>
-              <h3>Protetor solar FPS 50, 200 ml</h3>
-              <div class="price-row"><span class="price-old">R$ 69,90</span><span class="price">R$ 47,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Protetor%20solar%20FPS%2050%2C%20200%20ml%20por%20R%24%2047%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="rede sao-paulo guarulhos osasco">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Fralda G</span></div>
-              <span class="offer-badge">-23%</span>
-              <p class="product-meta">Toda a rede</p>
-              <h3>Fralda infantil tamanho G, 40 un.</h3>
-              <div class="price-row"><span class="price-old">R$ 74,90</span><span class="price">R$ 57,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Fralda%20infantil%20tamanho%20G%2C%2040%20un.%20por%20R%24%2057%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="rede sao-paulo guarulhos osasco">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Vitamina C</span></div>
-              <span class="offer-badge">-34%</span>
-              <p class="product-meta">Toda a rede</p>
-              <h3>Vitamina C 1 g, 30 comprimidos</h3>
-              <div class="price-row"><span class="price-old">R$ 34,90</span><span class="price">R$ 22,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Vitamina%20C%201%20g%2C%2030%20comprimidos%20por%20R%24%2022%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="sao-paulo">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Shampoo</span></div>
-              <span class="offer-badge">Regional</span>
-              <p class="product-meta">Só em São Paulo</p>
-              <h3>Shampoo 400 ml</h3>
-              <div class="price-row"><span class="price-old">R$ 26,90</span><span class="price">R$ 17,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Shampoo%20400%20ml%20por%20R%24%2017%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="sao-paulo">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Desodorante</span></div>
-              <span class="offer-badge">Leve 3</span>
-              <p class="product-meta">Só em São Paulo</p>
-              <h3>Desodorante aerossol, leve 3</h3>
-              <div class="price-row"><span class="price-old">R$ 41,70</span><span class="price">R$ 29,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Desodorante%20aerossol%2C%20leve%203%20por%20R%24%2029%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="guarulhos">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Hidratante</span></div>
-              <span class="offer-badge">Regional</span>
-              <p class="product-meta">Só em Guarulhos</p>
-              <h3>Hidratante corporal 400 ml</h3>
-              <div class="price-row"><span class="price-old">R$ 39,90</span><span class="price">R$ 24,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Hidratante%20corporal%20400%20ml%20por%20R%24%2024%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="osasco">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Escova dental</span></div>
-              <span class="offer-badge">Regional</span>
-              <p class="product-meta">Só em Osasco</p>
-              <h3>Escova dental, 4 un.</h3>
-              <div class="price-row"><span class="price-old">R$ 21,90</span><span class="price">R$ 12,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Escova%20dental%2C%204%20un.%20por%20R%24%2012%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="osasco">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Álcool em gel</span></div>
-              <span class="offer-badge">Regional</span>
-              <p class="product-meta">Só em Osasco</p>
-              <h3>Álcool em gel 500 ml</h3>
-              <div class="price-row"><span class="price-old">R$ 13,90</span><span class="price">R$ 8,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20%C3%81lcool%20em%20gel%20500%20ml%20por%20R%24%208%2C90.">Pedir no WhatsApp</a>
-            </article>
-          </div>
-          </div>
-          <p class="section-note">Preços fictícios, válidos apenas para esta demonstração.</p>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <div class="campaign-banner">
+
+      <section class="section" id="ofertas" aria-labelledby="ofertas-titulo">
+        <div class="container" data-filter data-filter-noun="ofertas" data-filter-noun-one="oferta" data-filter-fem data-filter-param="regiao">
+          <div class="section-head section-head--row">
             <div>
-              <p class="eyebrow">Campanha da rede</p>
-              <h2>Semana do bebê DrogaModelo</h2>
-              <p>Fraldas, lenços e cuidados infantis com desconto em todas as lojas. Página de campanha que a rede troca a cada ação.</p>
+              <p class="eyebrow">Ofertas da semana</p>
+              <h2 id="ofertas-titulo">Ofertas da rede e da sua cidade</h2>
             </div>
-            <a class="button button-secondary" href="#ofertas">Ver ofertas infantis</a>
+            <p class="valid" style="font-size:.9rem"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Encarte válido de 17 a 23/11/2026</p>
           </div>
-        </div>
-      </section>
-      <section id="unidades" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Lojas</p>
-            <h2>Peça na loja mais perto de você.</h2>
+          <div class="storebar">
+            <label for="loja"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>Sua loja</label>
+            <select id="loja" name="loja" data-store-select><option value="">Escolha a loja mais perto</option><optgroup label="Belo Horizonte"><option value="savassi" data-wa="5500000000000" data-region="bh" data-name="Viva Mais Savassi, Belo Horizonte">Savassi</option><option value="pampulha" data-wa="5500000000000" data-region="bh" data-name="Viva Mais Pampulha, Belo Horizonte">Pampulha</option><option value="buritis" data-wa="5500000000000" data-region="bh" data-name="Viva Mais Buritis, Belo Horizonte">Buritis</option><option value="centro-bh" data-wa="5500000000000" data-region="bh" data-name="Viva Mais Centro, Belo Horizonte">Centro</option><option value="barreiro" data-wa="5500000000000" data-region="bh" data-name="Viva Mais Barreiro, Belo Horizonte">Barreiro</option><option value="venda-nova" data-wa="5500000000000" data-region="bh" data-name="Viva Mais Venda Nova, Belo Horizonte">Venda Nova</option></optgroup><optgroup label="Contagem"><option value="eldorado" data-wa="5500000000000" data-region="contagem" data-name="Viva Mais Eldorado, Contagem">Eldorado</option><option value="industrial" data-wa="5500000000000" data-region="contagem" data-name="Viva Mais Industrial, Contagem">Industrial</option><option value="riacho" data-wa="5500000000000" data-region="contagem" data-name="Viva Mais Riacho, Contagem">Riacho</option></optgroup><optgroup label="Betim"><option value="betim-centro" data-wa="5500000000000" data-region="betim" data-name="Viva Mais Betim Centro, Betim">Betim Centro</option><option value="angola" data-wa="5500000000000" data-region="betim" data-name="Viva Mais Angola, Betim">Angola</option><option value="partage" data-wa="5500000000000" data-region="betim" data-name="Viva Mais Shopping, Betim">Shopping</option></optgroup></select>
+            <p>O pedido vai para o WhatsApp da loja escolhida. Ao escolher, mostramos as ofertas da sua cidade.</p>
           </div>
-          <div data-filter-scope data-count-label="unidade|unidades|encontrada|encontradas">
           <div class="toolbar">
-            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
-              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
-              <button type="button" data-filter="sao-paulo" aria-pressed="false">São Paulo</button>
-              <button type="button" data-filter="guarulhos" aria-pressed="false">Guarulhos</button>
-              <button type="button" data-filter="osasco" aria-pressed="false">Osasco</button>
-            </div>
+            <div class="chips" role="group" aria-label="Filtrar por cidade"><button class="chip" type="button" data-filter-btn="todos" aria-pressed="true">Todas as ofertas</button><button class="chip" type="button" data-filter-btn="bh" aria-pressed="false">Belo Horizonte <span class="chip__n">12</span></button><button class="chip" type="button" data-filter-btn="contagem" aria-pressed="false">Contagem <span class="chip__n">12</span></button><button class="chip" type="button" data-filter-btn="betim" aria-pressed="false">Betim <span class="chip__n">12</span></button></div>
+            <label class="search"><span class="sr-only">Buscar oferta</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" placeholder="Buscar oferta" data-filter-search /></label>
           </div>
-          <p class="result-count" data-filter-count aria-live="polite"></p>
-          <div class="units-grid">
-            <article class="unit-card" data-item data-tags="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Centro</h3>
-              <p>Rua Exemplo, 120, Centro</p>
-              <p>Aberta 24 horas</p>
-              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Vila Modelo</h3>
-              <p>Av. Fictícia, 900, Vila Modelo</p>
-              <p>7h às 22h</p>
-              <ul class="unit-badges"><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Modelo.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="sao-paulo">
-              <p class="unit-card__city">São Paulo</p>
-              <h3>Unidade Parque Modelo</h3>
-              <p>Av. do Parque, 2.300</p>
-              <p>Aberta 24 horas</p>
-              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Parque%20Modelo.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="guarulhos">
-              <p class="unit-card__city">Guarulhos</p>
-              <h3>Unidade Centro de Guarulhos</h3>
-              <p>Rua Exemplo, 77, Centro</p>
-              <p>7h às 22h</p>
-              <ul class="unit-badges"><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Guarulhos.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="guarulhos">
-              <p class="unit-card__city">Guarulhos</p>
-              <h3>Unidade Vila Amostra</h3>
-              <p>Av. Fictícia, 1.500</p>
-              <p>Aberta 24 horas</p>
-              <ul class="unit-badges"><li class="is-24h">24 horas</li><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Vila%20Amostra.">WhatsApp da loja</a>
-            </article>
-            <article class="unit-card" data-item data-tags="osasco">
-              <p class="unit-card__city">Osasco</p>
-              <h3>Unidade Centro de Osasco</h3>
-              <p>Rua Exemplo, 300, Centro</p>
-              <p>7h às 22h</p>
-              <ul class="unit-badges"><li>Entrega</li></ul>
-              <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20rede%20e%20quero%20falar%20com%20a%20Unidade%20Centro%20de%20Osasco.">WhatsApp da loja</a>
+          <p class="toolbar__count" data-filter-count aria-live="polite" style="margin:-8px 0 18px">16 ofertas encontradas.</p>
+          <div class="prod-grid prod-grid--4">
+            <article class="prod" id="oferta-serum-vitamina-c" data-item data-cat="todas" data-text="Sérum Vitamina C 10% Aurévie Sérum antioxidante que uniformiza o tom e devolve o viço da pele. ">
+              <span class="prod__badge">-33%</span>
+              <div class="prod__media"><img src="assets/img/produtos/serum-480.webp" srcset="assets/img/produtos/serum-480.webp 480w, assets/img/produtos/serum-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Sérum Vitamina C 10% Aurévie, 30 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Aurévie</p>
+                <h3 class="prod__name">Sérum Vitamina C 10%</h3>
+                <p class="prod__size">30 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 119,90</span><span class="price__now"><span class="sr-only">por </span>R$ 79,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Sérum Vitamina C 10% (30 ml), marca Aurévie, por R$ 79,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-serum-vitamina-c" aria-label="Copiar o link da oferta Sérum Vitamina C 10%"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-protetor-solar-facial-fps-50" data-item data-cat="todas" data-text="Protetor Solar Facial FPS 50 Solmare Proteção alta contra UVA e UVB com toque seco e sem cor. ">
+              <span class="prod__badge">-25%</span>
+              <div class="prod__media"><img src="assets/img/produtos/protetor_facial-480.webp" srcset="assets/img/produtos/protetor_facial-480.webp 480w, assets/img/produtos/protetor_facial-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Protetor Solar Facial FPS 50 Solmare, 60 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Solmare</p>
+                <h3 class="prod__name">Protetor Solar Facial FPS 50</h3>
+                <p class="prod__size">60 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 72,90</span><span class="price__now"><span class="sr-only">por </span>R$ 54,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Protetor Solar Facial FPS 50 (60 g), marca Solmare, por R$ 54,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-protetor-solar-facial-fps-50" aria-label="Copiar o link da oferta Protetor Solar Facial FPS 50"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-agua-micelar" data-item data-cat="todas" data-text="Água Micelar Pele Sensível Aurévie Limpa, demaquila e acalma a pele sem precisar de enxágue. ">
+              <span class="prod__badge">-26%</span>
+              <div class="prod__media"><img src="assets/img/produtos/micelar-480.webp" srcset="assets/img/produtos/micelar-480.webp 480w, assets/img/produtos/micelar-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Água Micelar Pele Sensível Aurévie, 200 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Aurévie</p>
+                <h3 class="prod__name">Água Micelar Pele Sensível</h3>
+                <p class="prod__size">200 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 49,90</span><span class="price__now"><span class="sr-only">por </span>R$ 36,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Água Micelar Pele Sensível (200 ml), marca Aurévie, por R$ 36,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-agua-micelar" aria-label="Copiar o link da oferta Água Micelar Pele Sensível"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-locao-hidratante-corporal" data-item data-cat="todas" data-text="Loção Hidratante Corporal Verdelis Hidratação de 24 horas com aveia e óleo de amêndoas para pele seca. ">
+              <span class="prod__badge">-27%</span>
+              <div class="prod__media"><img src="assets/img/produtos/locao-480.webp" srcset="assets/img/produtos/locao-480.webp 480w, assets/img/produtos/locao-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Loção Hidratante Corporal Verdelis, 400 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Verdelis</p>
+                <h3 class="prod__name">Loção Hidratante Corporal</h3>
+                <p class="prod__size">400 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 54,90</span><span class="price__now"><span class="sr-only">por </span>R$ 39,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Loção Hidratante Corporal (400 ml), marca Verdelis, por R$ 39,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-locao-hidratante-corporal" aria-label="Copiar o link da oferta Loção Hidratante Corporal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-fraldas-noites-secas-m" data-item data-cat="todas" data-text="Fraldas Noites Secas M Petiz Até 12 horas sequinho, com cintura elástica e indicador de xixi. ">
+              <span class="prod__badge">-25%</span>
+              <div class="prod__media"><img src="assets/img/produtos/fraldas-480.webp" srcset="assets/img/produtos/fraldas-480.webp 480w, assets/img/produtos/fraldas-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Fraldas Noites Secas M Petiz, 48 fraldas" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Fraldas Noites Secas M</h3>
+                <p class="prod__size">48 fraldas</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 79,90</span><span class="price__now"><span class="sr-only">por </span>R$ 59,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Fraldas Noites Secas M (48 fraldas), marca Petiz, por R$ 59,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-fraldas-noites-secas-m" aria-label="Copiar o link da oferta Fraldas Noites Secas M"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-desodorante-roll-on" data-item data-cat="todas" data-text="Desodorante Roll-on 48 h Fresca Proteção antitranspirante de 48 horas, sem álcool. ">
+              <span class="prod__badge">-32%</span>
+              <div class="prod__media"><img src="assets/img/produtos/desodorante-480.webp" srcset="assets/img/produtos/desodorante-480.webp 480w, assets/img/produtos/desodorante-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Desodorante Roll-on 48 h Fresca, 50 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Fresca</p>
+                <h3 class="prod__name">Desodorante Roll-on 48 h</h3>
+                <p class="prod__size">50 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 18,90</span><span class="price__now"><span class="sr-only">por </span>R$ 12,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Desodorante Roll-on 48 h (50 ml), marca Fresca, por R$ 12,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-desodorante-roll-on" aria-label="Copiar o link da oferta Desodorante Roll-on 48 h"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-creme-dental-branqueador" data-item data-cat="todas" data-text="Creme Dental Branqueador Dentiva Remove manchas do dia a dia com flúor para proteção contra cáries. ">
+              <span class="prod__badge">-31%</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_dental-480.webp" srcset="assets/img/produtos/creme_dental-480.webp 480w, assets/img/produtos/creme_dental-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Creme Dental Branqueador Dentiva, 90 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Dentiva</p>
+                <h3 class="prod__name">Creme Dental Branqueador</h3>
+                <p class="prod__size">90 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 12,90</span><span class="price__now"><span class="sr-only">por </span>R$ 8,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Creme Dental Branqueador (90 g), marca Dentiva, por R$ 8,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-creme-dental-branqueador" aria-label="Copiar o link da oferta Creme Dental Branqueador"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-condicionador-reparacao" data-item data-cat="todas" data-text="Condicionador Reparação Capilé Desembaraça e sela as pontas, com brilho sem pesar. ">
+              <span class="prod__badge">-23%</span>
+              <div class="prod__media"><img src="assets/img/produtos/condicionador-480.webp" srcset="assets/img/produtos/condicionador-480.webp 480w, assets/img/produtos/condicionador-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Condicionador Reparação Capilé, 300 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Capilé</p>
+                <h3 class="prod__name">Condicionador Reparação</h3>
+                <p class="prod__size">300 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 42,90</span><span class="price__now"><span class="sr-only">por </span>R$ 32,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Condicionador Reparação (300 ml), marca Capilé, por R$ 32,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-condicionador-reparacao" aria-label="Copiar o link da oferta Condicionador Reparação"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-creme-para-as-maos" data-item data-cat="todas" data-text="Creme para as Mãos Verdelis Nutre e protege as mãos ressecadas, com absorção rápida. ">
+              <span class="prod__badge">-24%</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_maos-480.webp" srcset="assets/img/produtos/creme_maos-480.webp 480w, assets/img/produtos/creme_maos-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Creme para as Mãos Verdelis, 75 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Verdelis</p>
+                <h3 class="prod__name">Creme para as Mãos</h3>
+                <p class="prod__size">75 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 36,90</span><span class="price__now"><span class="sr-only">por </span>R$ 27,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Creme para as Mãos (75 g), marca Verdelis, por R$ 27,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-creme-para-as-maos" aria-label="Copiar o link da oferta Creme para as Mãos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-protetor-labial-fps-30" data-item data-cat="todas" data-text="Protetor Labial FPS 30 Solmare Protege e hidrata os lábios no sol e no frio. ">
+              <span class="prod__badge">-27%</span>
+              <div class="prod__media"><img src="assets/img/produtos/labial-480.webp" srcset="assets/img/produtos/labial-480.webp 480w, assets/img/produtos/labial-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Protetor Labial FPS 30 Solmare, 4,5 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Solmare</p>
+                <h3 class="prod__name">Protetor Labial FPS 30</h3>
+                <p class="prod__size">4,5 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 21,90</span><span class="price__now"><span class="sr-only">por </span>R$ 15,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 23/11, em todas as lojas</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Protetor Labial FPS 30 (4,5 g), marca Solmare, por R$ 15,90 (oferta válida até 23/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-protetor-labial-fps-30" aria-label="Copiar o link da oferta Protetor Labial FPS 30"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-shampoo-reparacao" data-item data-cat="bh" data-text="Shampoo Reparação Capilé Limpa e recupera fios danificados com queratina e óleo de argan. Belo Horizonte">
+              <span class="prod__badge">-18%</span><span class="prod__region">Só em BH</span>
+              <div class="prod__media"><img src="assets/img/produtos/shampoo-480.webp" srcset="assets/img/produtos/shampoo-480.webp 480w, assets/img/produtos/shampoo-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Shampoo Reparação Capilé, 300 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Capilé</p>
+                <h3 class="prod__name">Shampoo Reparação</h3>
+                <p class="prod__size">300 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 32,90</span><span class="price__now"><span class="sr-only">por </span>R$ 26,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 20/11, só nas lojas de Belo Horizonte</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Shampoo Reparação (300 ml), marca Capilé, por R$ 26,90 (oferta válida até 20/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-shampoo-reparacao" aria-label="Copiar o link da oferta Shampoo Reparação"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-termometro-digital" data-item data-cat="bh" data-text="Termômetro Digital Medix Resultado em 60 segundos, com aviso sonoro e memória da última medição. Belo Horizonte">
+              <span class="prod__badge">-30%</span><span class="prod__region">Só em BH</span>
+              <div class="prod__media"><img src="assets/img/produtos/termometro-480.webp" srcset="assets/img/produtos/termometro-480.webp 480w, assets/img/produtos/termometro-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Termômetro Digital Medix, 1 unidade" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Medix</p>
+                <h3 class="prod__name">Termômetro Digital</h3>
+                <p class="prod__size">1 unidade</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 39,90</span><span class="price__now"><span class="sr-only">por </span>R$ 27,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 20/11, só nas lojas de Belo Horizonte</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Termômetro Digital (1 unidade), marca Medix, por R$ 27,90 (oferta válida até 20/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-termometro-digital" aria-label="Copiar o link da oferta Termômetro Digital"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-enxaguante-bucal" data-item data-cat="contagem" data-text="Enxaguante Bucal Sem Álcool Dentiva Hálito fresco por 12 horas, sem arder. Contagem">
+              <span class="prod__badge">-22%</span><span class="prod__region">Só em Contagem</span>
+              <div class="prod__media"><img src="assets/img/produtos/enxaguante-480.webp" srcset="assets/img/produtos/enxaguante-480.webp 480w, assets/img/produtos/enxaguante-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Enxaguante Bucal Sem Álcool Dentiva, 500 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Dentiva</p>
+                <h3 class="prod__name">Enxaguante Bucal Sem Álcool</h3>
+                <p class="prod__size">500 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 22,90</span><span class="price__now"><span class="sr-only">por </span>R$ 17,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 20/11, só nas lojas de Contagem</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Enxaguante Bucal Sem Álcool (500 ml), marca Dentiva, por R$ 17,90 (oferta válida até 20/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-enxaguante-bucal" aria-label="Copiar o link da oferta Enxaguante Bucal Sem Álcool"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-lencos-umedecidos" data-item data-cat="contagem" data-text="Lenços Umedecidos Petiz Lenços macios com aloe vera, sem perfume e sem álcool. Contagem">
+              <span class="prod__badge">-23%</span><span class="prod__region">Só em Contagem</span>
+              <div class="prod__media"><img src="assets/img/produtos/lenco-480.webp" srcset="assets/img/produtos/lenco-480.webp 480w, assets/img/produtos/lenco-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Lenços Umedecidos Petiz, 48 unidades" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Lenços Umedecidos</h3>
+                <p class="prod__size">48 unidades</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 12,90</span><span class="price__now"><span class="sr-only">por </span>R$ 9,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 20/11, só nas lojas de Contagem</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Lenços Umedecidos (48 unidades), marca Petiz, por R$ 9,90 (oferta válida até 20/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-lencos-umedecidos" aria-label="Copiar o link da oferta Lenços Umedecidos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-sabonete-liquido-maos" data-item data-cat="betim" data-text="Sabonete Líquido para as Mãos Verdelis Limpa sem ressecar, com perfume suave de alecrim e lavanda. Betim">
+              <span class="prod__badge">-20%</span><span class="prod__region">Só em Betim</span>
+              <div class="prod__media"><img src="assets/img/produtos/sabonete-480.webp" srcset="assets/img/produtos/sabonete-480.webp 480w, assets/img/produtos/sabonete-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Sabonete Líquido para as Mãos Verdelis, 250 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Verdelis</p>
+                <h3 class="prod__name">Sabonete Líquido para as Mãos</h3>
+                <p class="prod__size">250 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 24,90</span><span class="price__now"><span class="sr-only">por </span>R$ 19,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 20/11, só nas lojas de Betim</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Sabonete Líquido para as Mãos (250 ml), marca Verdelis, por R$ 19,90 (oferta válida até 20/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-sabonete-liquido-maos" aria-label="Copiar o link da oferta Sabonete Líquido para as Mãos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-creme-preventivo-assaduras" data-item data-cat="betim" data-text="Creme Preventivo de Assaduras Petiz Forma uma camada protetora na pele do bebê a cada troca. Betim">
+              <span class="prod__badge">-24%</span><span class="prod__region">Só em Betim</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_assadura-480.webp" srcset="assets/img/produtos/creme_assadura-480.webp 480w, assets/img/produtos/creme_assadura-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Creme Preventivo de Assaduras Petiz, 45 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Creme Preventivo de Assaduras</h3>
+                <p class="prod__size">45 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 24,90</span><span class="price__now"><span class="sr-only">por </span>R$ 18,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Até 20/11, só nas lojas de Betim</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Creme Preventivo de Assaduras (45 g), marca Petiz, por R$ 18,90 (oferta válida até 20/11)"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir<span class="lbl-long"> na loja</span></button>
+                  <button class="icon-btn" type="button" data-share="oferta-creme-preventivo-assaduras" aria-label="Copiar o link da oferta Creme Preventivo de Assaduras"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
             </article>
           </div>
-          </div>
+          <p class="empty-state" data-filter-empty hidden>Nenhuma oferta encontrada. Tente outra palavra ou veja todas as ofertas.</p>
+          <p class="fine">Ofertas da rede válidas de 17/11/2026 a 23/11/2026; ofertas regionais até 20/11/2026, ou enquanto durarem os estoques. Limite de 5 unidades por cliente. Preços para compra na loja ou pelo WhatsApp. Imagens ilustrativas.</p>
         </div>
       </section>
-      <section id="como-pedir" class="section anchor-target">
-        <div class="container section-panel">
+
+      <section class="section section--soft" id="campanhas" aria-labelledby="campanhas-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Como pedir</p>
-            <h2>Simples como mandar uma mensagem.</h2>
+          <p class="eyebrow">Campanhas</p>
+          <h2 id="campanhas-titulo">Ofertas especiais por tema</h2>
+          <p class="lead">Cada campanha junta as ofertas de um assunto, com página própria para divulgar nas redes.</p>
+        </div>
+          <div class="banners">
+            <a class="banner" href="?q=protetor#ofertas">
+            <img src="assets/img/fotos/g-banner-sol-1200x900.webp" srcset="assets/img/fotos/g-banner-sol-640x480.webp 640w, assets/img/fotos/g-banner-sol-1200x900.webp 1200w" sizes="(min-width: 900px) 420px, 92vw" alt="Mulher passando protetor solar no braço sob o céu azul" width="1200" height="900" loading="lazy" decoding="async" />
+            <span class="pill">Verão</span>
+            <strong>Verão protegido</strong>
+            <span>Protetores para rosto, corpo e lábios com até 27% off.</span>
+            <span class="link-arrow">Ver as ofertas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+            <a class="banner" href="?q=petiz#ofertas">
+            <img src="assets/img/fotos/g-banner-bebe-1200x900.webp" srcset="assets/img/fotos/g-banner-bebe-640x480.webp 640w, assets/img/fotos/g-banner-bebe-1200x900.webp 1200w" sizes="(min-width: 900px) 420px, 92vw" alt="Bebê sorrindo deitado em uma manta clara" width="1200" height="900" loading="lazy" decoding="async" />
+            <span class="pill">Mês do bebê</span>
+            <strong>Tudo para o bebê</strong>
+            <span>Fraldas, lenços e cuidados com a pele.</span>
+            <span class="link-arrow">Ver as ofertas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+            <a class="banner" href="?q=capile#ofertas">
+            <img src="assets/img/fotos/g-banner-cabelo-1200x900.webp" srcset="assets/img/fotos/g-banner-cabelo-640x480.webp 640w, assets/img/fotos/g-banner-cabelo-1200x900.webp 1200w" sizes="(min-width: 900px) 420px, 92vw" alt="Mulher de cabelos longos e brilhantes sorrindo" width="1200" height="900" loading="lazy" decoding="async" />
+            <span class="pill">Cabelos</span>
+            <strong>Cabelo em dia</strong>
+            <span>Shampoo e condicionador da linha Reparação.</span>
+            <span class="link-arrow">Ver as ofertas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
           </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Escolha a oferta</h3>
-              <p>Filtre pela sua cidade e toque em &quot;Pedir no WhatsApp&quot;.</p>
+          <p class="season"><span>Próximas campanhas:</span><span class="pill">Semana da Saúde · 24/11</span><span class="pill">Natal Viva Mais · dezembro</span><span class="pill">Volta às aulas · janeiro</span></p>
+        </div>
+      </section>
+
+      <section class="section" id="lojas" aria-labelledby="lojas-titulo">
+        <div class="container">
+          <div class="section-head section-head--row">
+            <div>
+              <p class="eyebrow">Nossas lojas</p>
+              <h2 id="lojas-titulo">Encontre a Viva Mais mais perto</h2>
+            </div>
+            <p style="color:var(--muted);max-width:420px">Cada loja tem WhatsApp próprio para pedidos, receitas e entrega.</p>
+          </div>
+          <div class="units-finder" data-filter data-filter-noun="lojas" data-filter-noun-one="loja" data-filter-fem data-filter-param="cidade" data-filter-q="busca">
+            <div class="toolbar">
+              <div class="chips" role="group" aria-label="Filtrar por cidade"><button class="chip" type="button" data-filter-btn="todos" aria-pressed="true">Todas <span class="chip__n">12</span></button><button class="chip" type="button" data-filter-btn="bh" aria-pressed="false">Belo Horizonte <span class="chip__n">6</span></button><button class="chip" type="button" data-filter-btn="contagem" aria-pressed="false">Contagem <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="betim" aria-pressed="false">Betim <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="24h" aria-pressed="false">24 horas <span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="entrega" aria-pressed="false">Entrega <span class="chip__n">9</span></button></div>
+              <label class="search"><span class="sr-only">Buscar bairro ou endereço</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" placeholder="Buscar bairro ou endereço" data-filter-search /></label>
+            </div>
+            <p class="toolbar__count" data-filter-count aria-live="polite" style="margin:-8px 0 18px">12 lojas encontradas.</p>
+            <div class="units">
+            <article class="unit" id="loja-savassi" data-item data-cat="bh 24h entrega vacina" data-text="Viva Mais Savassi Belo Horizonte Savassi Rua Pernambuco, 1.050 24 horas Entrega Vacinação">
+              <p class="unit__city">Belo Horizonte</p>
+              <h3>Viva Mais Savassi</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Pernambuco, 1.050 · Savassi</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Savassi%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Pernambuco%2C%201.050%2C%20Savassi%2C%20Belo%20Horizonte" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-pampulha" data-item data-cat="bh entrega estac" data-text="Viva Mais Pampulha Belo Horizonte Pampulha Avenida Otacílio Negrão de Lima, 4.200 Entrega Estacionamento">
+              <p class="unit__city">Belo Horizonte</p>
+              <h3>Viva Mais Pampulha</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Otacílio Negrão de Lima, 4.200 · Pampulha</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Pampulha%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Otac%C3%ADlio%20Negr%C3%A3o%20de%20Lima%2C%204.200%2C%20Pampulha%2C%20Belo%20Horizonte" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-buritis" data-item data-cat="bh entrega vacina" data-text="Viva Mais Buritis Belo Horizonte Buritis Avenida Professor Mário Werneck, 1.700 Entrega Vacinação">
+              <p class="unit__city">Belo Horizonte</p>
+              <h3>Viva Mais Buritis</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Professor Mário Werneck, 1.700 · Buritis</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Buritis%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Professor%20M%C3%A1rio%20Werneck%2C%201.700%2C%20Buritis%2C%20Belo%20Horizonte" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-centro-bh" data-item data-cat="bh entrega" data-text="Viva Mais Centro Belo Horizonte Centro Avenida Amazonas, 640 Entrega">
+              <p class="unit__city">Belo Horizonte</p>
+              <h3>Viva Mais Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Amazonas, 640 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Amazonas%2C%20640%2C%20Centro%2C%20Belo%20Horizonte" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-barreiro" data-item data-cat="bh drive estac" data-text="Viva Mais Barreiro Belo Horizonte Barreiro Avenida Afonso Vaz de Melo, 980 Drive-thru Estacionamento">
+              <p class="unit__city">Belo Horizonte</p>
+              <h3>Viva Mais Barreiro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Afonso Vaz de Melo, 980 · Barreiro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Barreiro%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Afonso%20Vaz%20de%20Melo%2C%20980%2C%20Barreiro%2C%20Belo%20Horizonte" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-venda-nova" data-item data-cat="bh 24h entrega estac" data-text="Viva Mais Venda Nova Belo Horizonte Venda Nova Avenida Vilarinho, 2.300 24 horas Entrega Estacionamento">
+              <p class="unit__city">Belo Horizonte</p>
+              <h3>Viva Mais Venda Nova</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Vilarinho, 2.300 · Venda Nova</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Venda%20Nova%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Vilarinho%2C%202.300%2C%20Venda%20Nova%2C%20Belo%20Horizonte" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-eldorado" data-item data-cat="contagem 24h entrega vacina" data-text="Viva Mais Eldorado Contagem Eldorado Avenida João César de Oliveira, 1.500 24 horas Entrega Vacinação">
+              <p class="unit__city">Contagem</p>
+              <h3>Viva Mais Eldorado</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida João César de Oliveira, 1.500 · Eldorado</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Aberta 24 horas, todos os dias</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill pill--hot">24 horas</span><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Eldorado%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Jo%C3%A3o%20C%C3%A9sar%20de%20Oliveira%2C%201.500%2C%20Eldorado%2C%20Contagem" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-industrial" data-item data-cat="contagem entrega" data-text="Viva Mais Industrial Contagem Cidade Industrial Avenida Cardeal Eugênio Pacelli, 2.100 Entrega">
+              <p class="unit__city">Contagem</p>
+              <h3>Viva Mais Industrial</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Cardeal Eugênio Pacelli, 2.100 · Cidade Industrial</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Industrial%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Cardeal%20Eug%C3%AAnio%20Pacelli%2C%202.100%2C%20Cidade%20Industrial%2C%20Contagem" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-riacho" data-item data-cat="contagem drive estac" data-text="Viva Mais Riacho Contagem Riacho Avenida Severino Ballesteros, 760 Drive-thru Estacionamento">
+              <p class="unit__city">Contagem</p>
+              <h3>Viva Mais Riacho</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Severino Ballesteros, 760 · Riacho</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Drive-thru</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Riacho%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Severino%20Ballesteros%2C%20760%2C%20Riacho%2C%20Contagem" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-betim-centro" data-item data-cat="betim entrega vacina" data-text="Viva Mais Betim Centro Betim Centro Rua do Rosário, 310 Entrega Vacinação">
+              <p class="unit__city">Betim</p>
+              <h3>Viva Mais Betim Centro</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua do Rosário, 310 · Centro</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Vacinação</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Betim%20Centro%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20do%20Ros%C3%A1rio%2C%20310%2C%20Centro%2C%20Betim" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-angola" data-item data-cat="betim entrega estac" data-text="Viva Mais Angola Betim Angola Avenida Governador Valadares, 1.900 Entrega Estacionamento">
+              <p class="unit__city">Betim</p>
+              <h3>Viva Mais Angola</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida Governador Valadares, 1.900 · Angola</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 18h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Entrega</span><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Angola%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Governador%20Valadares%2C%201.900%2C%20Angola%2C%20Betim" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
+            </article><article class="unit" id="loja-partage" data-item data-cat="betim estac" data-text="Viva Mais Shopping Betim Horto Rua Rio de Janeiro, 2.000, loja 140 Estacionamento">
+              <p class="unit__city">Betim</p>
+              <h3>Viva Mais Shopping</h3>
+              <ul class="unit__meta">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Rio de Janeiro, 2.000, loja 140 · Horto</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 10h às 22h · Dom, 14h às 20h</span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span>(00) 3000-0000</span></li>
+              </ul>
+              <div class="unit__tags"><span class="pill">Estacionamento</span></div>
+              <div class="unit__actions">
+                <a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Viva%20Mais%20Shopping%21%20Vim%20pelo%20site%20da%20Drogarias%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp da loja</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Rio%20de%20Janeiro%2C%202.000%2C%20loja%20140%2C%20Horto%2C%20Betim" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost btn--sm" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span class="sr-only">Ligar para a </span>Ligar</a>
+              </div>
             </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Escolha a loja</h3>
-              <p>A central encaminha o pedido para a loja mais próxima.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Retire ou receba</h3>
-              <p>Busque no balcão ou receba em casa com a entrega da loja.</p>
-            </article>
+            </div>
+            <p class="empty-state" data-filter-empty hidden>Nenhuma loja encontrada. Tente outro bairro ou veja todas as cidades.</p>
           </div>
         </div>
       </section>
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+
+      <section class="section section--brand" id="clube" aria-labelledby="clube-titulo">
+        <div class="container club">
+          <div>
+            <p class="eyebrow">Clube Viva Mais</p>
+            <h2 id="clube-titulo">Ofertas antes de todo mundo, direto no seu celular.</h2>
+            <ul>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12"/><path d="M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8zM12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg><span>Cadastro grátis com o CPF em qualquer loja: cada R$&nbsp;1 vira 1 ponto.</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><span>Preço de clube em mais de 300 produtos, todos os dias.</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l9 5V5L7 10z"/><path d="M19 9.5a3.5 3.5 0 0 1 0 5M7 14l1.5 5h3L10 14"/></svg><span>Encarte da semana toda segunda-feira, na lista de ofertas do WhatsApp.</span></li>
+            </ul>
           </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Achei a loja 24 horas mais perto pelo site, de madrugada. Salvou a noite.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">A</span><span><strong>Ana P.</strong><span>Osasco</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Uso o WhatsApp da minha loja para reservar os remédios. Chego e já está separado.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Marcos T.</strong><span>Barueri</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“As ofertas da semana compensam muito. Sempre confiro antes de comprar.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">L</span><span><strong>Luciana F.</strong><span>Carapicuíba</span></span></figcaption>
-            </figure>
+          <div class="social-card">
+            <h3>Siga a Viva Mais</h3>
+            <p>Cada oferta tem um link próprio: toque no botão de compartilhar do card para copiar e mandar para quem precisa.</p>
+            <a class="btn btn--accent" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20ofertas%20da%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Entrar na lista de ofertas</a>
+            <a class="btn btn--light" href="#"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></svg>@drogariasvivamais</a>
+            <a class="btn btn--light" href="#"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-7h3l.5-3.5H14V8.5c0-1 .4-1.7 1.8-1.7H18V3.6A20 20 0 0 0 15.3 3.4C12.7 3.4 11 5 11 7.9v2.6H8V14h3v7"/></svg>Drogarias Viva Mais</a>
           </div>
         </div>
       </section>
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Atendimento central da DrogaModelo.</h2>
-            </div>
-            <dl class="contact-list">
-              <div>
-                <dt>SAC</dt>
-                <dd>Segunda a sexta, das 8h às 18h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp central</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:sac@drogariamodelo.com.br">sac@drogariamodelo.com.br</a></dd>
-              </div>
-            </dl>
-          </article>
-          <aside class="contact-card">
-            <p class="contact-card__label">Demonstração</p>
-            <h2>Rede fictícia para mostrar o modelo</h2>
-            <p>A Rede DrogaModelo não existe. Ofertas, preços e contatos desta página são fictícios.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
-            </div>
-          </aside>
+
+      <section class="section" id="duvidas" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+          </div>
+          <div class="faq"><details><summary>As ofertas valem em todas as lojas?</summary><p>As ofertas da rede valem nas 12 lojas. As ofertas marcadas com "Só em" valem apenas nas lojas daquela cidade, e a data de validade aparece em cada card.</p></details><details><summary>Como faço o pedido de uma oferta?</summary><p>Escolha a sua loja no topo das ofertas e toque em "Pedir na loja". A mensagem abre pronta no WhatsApp da loja escolhida, com o produto e o preço.</p></details><details><summary>Posso compartilhar uma oferta?</summary><p>Pode. Toque no botão de compartilhar do card para copiar o link daquela oferta e mande para quem quiser.</p></details><details><summary>Tem limite de quantidade?</summary><p>Sim, até 5 unidades de cada oferta por cliente, enquanto durarem os estoques da loja.</p></details><details><summary>As lojas entregam?</summary><p>As lojas com a etiqueta Entrega levam o pedido até você. A taxa e o prazo são combinados com a loja pelo WhatsApp.</p></details></div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Receba o encarte toda segunda.</h2>
+            <p>Entre na lista de ofertas e escolha a sua loja para pedir pelo WhatsApp.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20entrar%20na%20lista%20de%20ofertas%20da%20Viva%20Mais."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Quero receber</a>
+            <a class="btn btn--light btn--lg" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver ofertas</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-drogaria-modelo.svg" alt="" width="48" height="48" />
-              <strong>Rede DrogaModelo</strong>
-            </div>
-            <p>Rede de drogarias com lojas em várias cidades da região e farmacêutico em todas as unidades.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#ofertas">Ofertas</a></li>
-              <li><a href="#unidades">Lojas</a></li>
-              <li><a href="#como-pedir">Como pedir</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Matriz: Rua Exemplo, 1000, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lojas abertas todos os dias · 3 lojas 24 horas</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Drogarias Viva Mais, página inicial"><img src="assets/img/logo-viva-mais.svg" alt="" width="44" height="44" /><span class="brand__name">Viva Mais<small>Drogarias</small></span></a>
+          <p class="footer__about">Rede de drogarias com 12 lojas em Belo Horizonte, Contagem e Betim. Ofertas toda semana e pedido pelo WhatsApp da loja.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Rede DrogaModelo. Empresa fictícia: demonstração do modelo Rede com Ofertas.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Navegação</h2><ul><li><a href="#ofertas">Ofertas</a></li><li><a href="#campanhas">Campanhas</a></li><li><a href="#lojas">Lojas</a></li><li><a href="#clube">Clube</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div><div><h2>Cidades</h2><ul><li><a href="?cidade=bh#lojas">Belo Horizonte</a></li><li><a href="?cidade=contagem#lojas">Contagem</a></li><li><a href="?cidade=betim#lojas">Betim</a></li></ul></div><div><h2>Atendimento</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-1.5 2.5-4 2.5h-2"/></svg><a href="tel:08000000000">SAC 0800 000 0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Viva%20Mais.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:sac@vivamais.com.br">sac@vivamais.com.br</a></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Drogarias Viva Mais Ltda.</strong> · CNPJ 00.000.000/0001-00 · Escritório central: Avenida Amazonas, 640, Centro, Belo Horizonte – MG</p><p>Cada loja tem farmacêutico responsável e licença sanitária próprios. Ofertas válidas enquanto durarem os estoques. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Drogarias Viva Mais. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Rede com Ofertas da GSA. <a href="/modelos/farmacias/drogaria-rede/03-rede-com-ofertas/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20das%20Drogarias%20Viva%20Mais." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

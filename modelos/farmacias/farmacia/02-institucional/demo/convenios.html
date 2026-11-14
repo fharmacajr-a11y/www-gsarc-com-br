@@ -3,161 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Convênios | Farmácia Bem Estar | Demonstração Farmácia Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional de farmácia com várias páginas." />
+    <title>Convênios e descontos | Farmácia Cedro</title>
+    <meta name="description" content="Convênios de empresas, sindicatos e associações, desconto para maiores de 60 anos, Clube Cedro e Farmácia Popular na Farmácia Cedro." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#5e1320" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-cedro.svg" />
+    <link rel="preload" href="assets/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [8, 21], "2": [8, 21], "3": [8, 21], "4": [8, 21], "5": [8, 21], "6": [8, 21], "0": [8, 13]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 250, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-open-status>Seg a sáb, 8h às 21h</span></p>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="https://www.google.com/maps/search/?api=1&query=Avenida%20dos%20Ip%C3%AAs%2C%201.120%2C%20Centro%2C%20Ribeir%C3%A3o%20Preto%20%E2%80%93%20SP"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Avenida dos Ipês, 1.120 · Centro</a><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da Farmácia Bem Estar">
-          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Farmácia Bem Estar</strong>
-            <span class="brand__subtitle">Cuidado de verdade desde 1998</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Farmácia Cedro, página inicial"><img src="assets/img/logo-cedro.svg" alt="" width="44" height="44" /><span class="brand__name">Farmácia Cedro<small>Desde 1987</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html">Início</a>
             <a href="sobre.html">A farmácia</a>
             <a href="servicos.html">Serviços</a>
             <a href="convenios.html" aria-current="page">Convênios</a>
             <a href="contato.html">Contato</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html">Início</a>
-            <a href="sobre.html">A farmácia</a>
-            <a href="servicos.html">Serviços</a>
-            <a href="convenios.html" aria-current="page">Convênios</a>
-            <a href="contato.html">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="https://wa.me/5500000000000">Falar no WhatsApp</a>
+        <div class="header__actions">
+          <a class="btn btn--primary header__cta" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Fale conosco</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">A farmácia</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="convenios.html" aria-current="page">Convênios</a>
+          <a href="contato.html">Contato</a>
+          <a class="btn btn--primary btn--block" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Fale conosco</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section class="page-hero">
+      
+      <section class="page-hero" aria-labelledby="titulo">
+        <div class="hero__media"><img src="assets/img/fotos/f-caixa-1600x900.webp" srcset="assets/img/fotos/f-caixa-960x540.webp 960w, assets/img/fotos/f-caixa-1600x900.webp 1600w, assets/img/fotos/f-caixa-2400x1350.webp 2400w" sizes="100vw" alt="Cliente pagando no caixa da farmácia com maquininha de cartão" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Convênios</span></nav>
+          <h1 id="titulo">Convênios e descontos</h1>
+          <p>Atendemos convênios de empresas, sindicatos e associações, além de descontos próprios para os clientes da casa.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="tipos-titulo">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Convênios</span></nav>
-          <p class="eyebrow">Convênios</p>
-          <h1>Descontos e convênios aceitos.</h1>
-          <p>Lista fictícia. No site real, entram os convênios e programas que a farmácia aceita.</p>
+          <div class="section-head">
+          <p class="eyebrow">Formas de economizar</p>
+          <h2 id="tipos-titulo">Qual é o seu caso?</h2>
+        </div>
+          <div class="grid grid--3"><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></span><h3>Convênio da empresa</h3><p>Mais de 40 empresas da região têm convênio com a Cedro. A compra é descontada direto na folha de pagamento.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 5.5"/></svg></span><h3>Sindicatos e associações</h3><p>Descontos para associados de sindicatos e associações conveniadas, mediante a carteirinha.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span><h3>Melhor idade</h3><p>10% de desconto em medicamentos para clientes com mais de 60 anos, todos os dias.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8h14v-8M12 8v12"/><path d="M12 8c-1.5-3-5-3.5-5-1.2C7 8 9.5 8 12 8zM12 8c1.5-3 5-3.5 5-1.2C17 8 14.5 8 12 8z"/></svg></span><h3>Clube Cedro</h3><p>A cada R$ 1 em compras você ganha 1 ponto. Os pontos viram desconto nas próximas compras.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="8.5" width="18.4" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 8 5.6 8"/></svg></span><h3>Farmácia Popular</h3><p>Somos credenciados ao programa do governo federal. Traga a receita e um documento com CPF.</p></article><article class="icon-card"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><h3>Descontos de laboratórios</h3><p>Cadastramos você nos programas de desconto dos laboratórios para remédios de uso contínuo.</p></article></div>
         </div>
       </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Convênios</p>
-            <h2>Aceitamos os principais programas.</h2>
-          </div>
-          <ul class="segments-list">
-            <li>Farmácia Popular</li>
-            <li>Convênio de empresas</li>
-            <li>Programa de fidelidade</li>
-            <li>Desconto para idosos</li>
-            <li>Laboratórios parceiros</li>
-            <li>Planos de saúde parceiros</li>
-          </ul>
+
+      <section class="section section--soft" aria-labelledby="usar-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Passo a passo</p>
+          <h2 id="usar-titulo">Como usar o seu convênio</h2>
+        </div>
+          <ol class="steps steps--3"><li><span class="steps__n" aria-hidden="true">1</span><h3>Traga a carteirinha</h3><p>Apresente a carteirinha do convênio ou o crachá da empresa no caixa.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Confirmamos o cadastro</h3><p>Conferimos o seu nome no convênio e o limite disponível.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Pague depois</h3><p>O valor é descontado na folha ou faturado para a empresa, conforme o contrato.</p></li></ol>
         </div>
       </section>
-      <section class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Como usar</p>
-            <h2>Seu desconto em três passos.</h2>
+
+      <section class="section" aria-labelledby="empresa-titulo">
+        <div class="container split">
+          <div class="split__copy">
+            <p class="eyebrow">Para empresas</p>
+            <h2 id="empresa-titulo">Ofereça o convênio Cedro aos seus funcionários.</h2>
+            <p>Um benefício que a equipe usa de verdade, sem custo de adesão para a empresa. Fechamos o mês com relatório por colaborador e desconto em folha.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Sem taxa de adesão nem mensalidade</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Limite de compra definido pela empresa</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Relatório mensal por colaborador</span></li></ul>
+            <a class="btn btn--primary" href="contato.html">Quero conversar</a>
           </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Traga o documento</h3>
-              <p>CPF ou carteirinha do convênio.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Informe no balcão</h3>
-              <p>O atendente aplica o desconto na hora.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Pague menos</h3>
-              <p>O valor com desconto aparece no cupom.</p>
-            </article>
+          <div class="pharmacist">
+            <span class="pharmacist__avatar" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg></span>
+            <div><strong>Atendimento a empresas</strong><p>Fale com o Rafael pelo WhatsApp (00) 90000-0000 ou pelo e-mail contato@farmaciacedro.com.br. Respondemos em até um dia útil.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas sobre convênios</h2>
+          </div>
+          <div class="faq"><details><summary>O desconto da melhor idade vale para perfumaria?</summary><p>O desconto de 10% vale para medicamentos. Em perfumaria e dermocosméticos, temos ofertas próprias toda semana.</p></details><details><summary>Posso juntar o desconto do convênio com o Clube Cedro?</summary><p>Sim. As compras pelo convênio também somam pontos no Clube Cedro.</p></details><details><summary>Como sei se a minha empresa tem convênio?</summary><p>Pergunte no RH da empresa ou mande o nome dela pelo WhatsApp que conferimos na hora.</p></details></div>
+        </div>
+      </section>
+      
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Estamos aqui para ajudar.</h2>
+            <p>Tire dúvidas, consulte preços ou peça a entrega pelo WhatsApp.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar no WhatsApp</a>
+            <a class="btn btn--light btn--lg" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="48" height="48" />
-              <strong>Farmácia Bem Estar</strong>
-            </div>
-            <p>Farmácia de bairro com atendimento próximo, farmacêutico presente e entrega rápida.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="sobre.html">A farmácia</a></li>
-              <li><a href="servicos.html">Serviços</a></li>
-              <li><a href="convenios.html">Convênios</a></li>
-              <li><a href="contato.html">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 250, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Farmácia Cedro, página inicial"><img src="assets/img/logo-cedro.svg" alt="" width="44" height="44" /><span class="brand__name">Farmácia Cedro<small>Desde 1987</small></span></a>
+          <p class="footer__about">Farmácia de família no Centro de Ribeirão Preto desde 1987. Atendimento farmacêutico, serviços de saúde e convênios.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Farmácia Bem Estar. Empresa fictícia: demonstração do modelo Farmácia Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Páginas</h2><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">A farmácia</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="convenios.html">Convênios</a></li><li><a href="contato.html">Contato</a></li><li><a href="contato.html#privacidade">Política de privacidade</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:contato@farmaciacedro.com.br">contato@farmaciacedro.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Avenida dos Ipês, 1.120, Centro</span></li></ul></div><div><h2>Horário</h2><ul><li>Segunda a sábado: 8h às 21h</li><li>Domingo e feriados: 8h às 13h</li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Farmacêutica responsável:</strong> Dra. Helena Albuquerque · CRF-SP 00000</p><p>Drogaria Cedro Ltda. · CNPJ 00.000.000/0001-00 · Licença sanitária nº 000000/2026 · AFE nº 0.00000-0</p><p>Em caso de dúvida, procure o farmacêutico. Imagens meramente ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Farmácia Cedro · <a href="contato.html#privacidade">Política de privacidade</a></span>
+        <span>Empresa fictícia: demonstração do modelo Farmácia Institucional da GSA. <a href="/modelos/farmacias/farmacia/02-institucional/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Farm%C3%A1cia%20Cedro." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

@@ -3,363 +3,428 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Farmácia Bem Estar | Demonstração Farmácia com Ofertas</title>
-    <meta name="description" content="Demonstração fictícia de site de farmácia com ofertas da semana e pedido pelo WhatsApp." />
+    <title>Drogaria Preço Bom | Ofertas da semana em Sorocaba</title>
+    <meta name="description" content="Demonstração fictícia de site de farmácia com ofertas: vitrine da semana com preço, validade, filtro por categoria e pedido pelo WhatsApp." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#9a1219" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-preco-bom.svg" />
+    <link rel="preload" href="assets/fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [7, 22], "2": [7, 22], "3": [7, 22], "4": [7, 22], "5": [7, 22], "6": [7, 22], "0": [8, 20]}' data-whatsapp="5500000000000">
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 250, Centro</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ofertas válidas de 10 a 16 de novembro ou enquanto durarem os estoques</p>
+        <div class="topbar__links"><a class="topbar__item topbar__hide-sm" href="https://www.google.com/maps/search/?api=1&query=Rua%20Treze%20de%20Maio%2C%20880%2C%20Centro%2C%20Sorocaba%20%E2%80%93%20SP"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Treze de Maio, 880 · Centro</a><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vi%20as%20ofertas%20no%20site%20da%20Drogaria%20Pre%C3%A7o%20Bom."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da Farmácia Bem Estar">
-          <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">Farmácia Bem Estar</strong>
-            <span class="brand__subtitle">Ofertas da semana perto de você</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
-            <a href="#inicio">Início</a>
-            <a href="#ofertas">Ofertas</a>
-            <a href="#campanha">Campanha</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Drogaria Preço Bom, página inicial"><img src="assets/img/logo-preco-bom.svg" alt="" width="44" height="44" /><span class="brand__name">Preço Bom<small>Drogaria</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
+            <a href="#ofertas">Ofertas da semana</a>
+            <a href="#campanhas">Campanhas</a>
             <a href="#como-pedir">Como pedir</a>
-            <a href="#contato">Contato</a>
+            <a href="#loja">A loja</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="#ofertas">Ver ofertas</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="#inicio">Início</a>
-            <a href="#ofertas">Ofertas</a>
-            <a href="#campanha">Campanha</a>
-            <a href="#como-pedir">Como pedir</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#ofertas">Ver ofertas</a>
+        <div class="header__actions">
+          <a class="btn btn--primary header__cta" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver ofertas</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="#ofertas">Ofertas da semana</a>
+          <a href="#campanhas">Campanhas</a>
+          <a href="#como-pedir">Como pedir</a>
+          <a href="#loja">A loja</a>
+          <a class="btn btn--primary btn--block" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver ofertas</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Ofertas da semana</p>
-            <h1>Ofertas da semana com pedido direto no WhatsApp.</h1>
-            <p class="lead">Escolha a oferta, toque em &quot;Pedir no WhatsApp&quot; e a mensagem já abre com o produto e o preço. Você retira na loja ou recebe em casa.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
-              <a class="button button-secondary" href="#como-pedir">Como pedir</a>
+      <section class="promo" id="inicio" aria-labelledby="titulo">
+        <div class="container promo__inner">
+          <div>
+            <p class="tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Ofertas de 10 a 16 de novembro</p>
+            <h1 id="titulo">Preço baixo em tudo que você <em>usa todo dia.</em></h1>
+            <p class="promo__lead">Dermocosméticos, proteção solar, higiene e cuidados do bebê com até 25% de desconto. Peça pelo WhatsApp e retire em 30 minutos.</p>
+            <div class="promo__actions">
+              <a class="btn btn--accent btn--lg" href="#ofertas"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>Ver as ofertas</a>
+              <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vi%20as%20ofertas%20no%20site%20da%20Drogaria%20Pre%C3%A7o%20Bom."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir pelo WhatsApp</a>
             </div>
           </div>
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-farmacia.svg" alt="Ilustração da fachada da Farmácia Bem Estar, empresa fictícia" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques">
-              <article class="meta-card">
-                <p class="meta-card__label">Validade</p>
-                <h2>Até domingo</h2>
-                <p>Ofertas renovadas toda segunda-feira.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Pedido</p>
-                <h2>Pelo WhatsApp</h2>
-                <p>A mensagem abre pronta com o produto.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Entrega</p>
-                <h2>No bairro</h2>
-                <p>Ou retire no balcão em minutos.</p>
-              </article>
-            </div>
+          <div class="stage" role="img" aria-label="Produtos em oferta: protetor solar facial, sérum de vitamina C e loção hidratante">
+            <img class="stage__a" src="assets/img/produtos/protetor_facial-recorte-640.webp" alt="" width="227" height="640" decoding="async" />
+            <img class="stage__b" src="assets/img/produtos/serum-recorte-640.webp" alt="" width="267" height="640" decoding="async" />
+            <img class="stage__c" src="assets/img/produtos/locao-recorte-640.webp" alt="" width="271" height="640" decoding="async" />
+            <span class="sticker sticker--a" aria-hidden="true">por<strong>R$ 59,90</strong></span>
+            <span class="sticker sticker--b" aria-hidden="true">-25%<strong>R$ 89,90</strong></span>
+            <span class="sticker sticker--c" aria-hidden="true">por<strong>R$ 42,90</strong></span>
+            <span class="stage__note" aria-hidden="true">Imagens ilustrativas</span>
           </div>
         </div>
       </section>
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Farmacêutico presente</strong><span>Em todo o horário de funcionamento.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Entrega no bairro</strong><span>Seu pedido em casa em poucos minutos.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <div><strong>Convênios aceitos</strong><span>Farmácia Popular e convênios de empresas.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
-            <div><strong>Pague como quiser</strong><span>Pix, cartão ou dinheiro na entrega.</span></div>
-          </div>
-        </div>
-      </section>
-      <section id="ofertas" class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Ofertas da semana</p>
-            <h2>Economize nos itens que você mais usa.</h2>
-            <p>Filtre por categoria. No site real, a farmácia troca as ofertas toda semana em uma lista simples.</p>
-          </div>
-          <div data-filter-scope data-count-label="oferta|ofertas|encontrada|encontradas">
-          <div class="toolbar">
-            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
-              <button type="button" data-filter="todas" aria-pressed="true">Todas</button>
-              <button type="button" data-filter="dermo" aria-pressed="false">Dermocosméticos</button>
-              <button type="button" data-filter="vitaminas" aria-pressed="false">Vitaminas</button>
-              <button type="button" data-filter="infantil" aria-pressed="false">Infantil</button>
-              <button type="button" data-filter="higiene" aria-pressed="false">Higiene</button>
-            </div>
-          </div>
-          <p class="result-count" data-filter-count aria-live="polite"></p>
-          <div class="product-grid">
-            <article class="product-card" data-item data-tags="dermo">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l-1 3H9z"/><path d="M9 6h6l1.5 13a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2z"/><path d="M10 12h4"/></svg><span>Protetor solar</span></div>
-              <span class="offer-badge">-28%</span>
-              <p class="product-meta">Dermocosméticos</p>
-              <h3>Protetor solar FPS 50, 200 ml</h3>
-              <p>Válido até domingo ou enquanto durar o estoque.</p>
-              <div class="price-row"><span class="price-old">R$ 69,90</span><span class="price">R$ 49,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Protetor%20solar%20FPS%2050%2C%20200%20ml%20por%20R%24%2049%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="vitaminas">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="8" width="10" height="13" rx="2.5"/><path d="M9 8V5h6v3M8 3.5h8"/><path d="M7 13h10"/></svg><span>Vitamina C</span></div>
-              <span class="offer-badge">-29%</span>
-              <p class="product-meta">Vitaminas</p>
-              <h3>Vitamina C 1 g, 30 comprimidos</h3>
-              <p>Leve 2 e ganhe 10% no segundo.</p>
-              <div class="price-row"><span class="price-old">R$ 34,90</span><span class="price">R$ 24,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Vitamina%20C%201%20g%2C%2030%20comprimidos%20por%20R%24%2024%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="infantil">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M10 9h.01M14 9h.01M10.5 11.2c.9.6 2.1.6 3 0"/><path d="M6 21c1-3 3.4-4.5 6-4.5s5 1.5 6 4.5"/></svg><span>Fralda G</span></div>
-              <span class="offer-badge">-20%</span>
-              <p class="product-meta">Infantil</p>
-              <h3>Fralda infantil tamanho G, 40 un.</h3>
-              <p>Marcas selecionadas.</p>
-              <div class="price-row"><span class="price-old">R$ 74,90</span><span class="price">R$ 59,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Fralda%20infantil%20tamanho%20G%2C%2040%20un.%20por%20R%24%2059%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="higiene">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Shampoo</span></div>
-              <span class="offer-badge">-23%</span>
-              <p class="product-meta">Higiene</p>
-              <h3>Shampoo anticaspa 400 ml</h3>
-              <p>Válido para todas as fragrâncias.</p>
-              <div class="price-row"><span class="price-old">R$ 29,90</span><span class="price">R$ 22,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Shampoo%20anticaspa%20400%20ml%20por%20R%24%2022%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="dermo">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l-1 3H9z"/><path d="M9 6h6l1.5 13a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2z"/><path d="M10 12h4"/></svg><span>Hidratante</span></div>
-              <span class="offer-badge">-25%</span>
-              <p class="product-meta">Dermocosméticos</p>
-              <h3>Hidratante corporal 400 ml</h3>
-              <p>Pele seca e extrasseca.</p>
-              <div class="price-row"><span class="price-old">R$ 39,90</span><span class="price">R$ 29,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Hidratante%20corporal%20400%20ml%20por%20R%24%2029%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="vitaminas">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="8" width="10" height="13" rx="2.5"/><path d="M9 8V5h6v3M8 3.5h8"/><path d="M7 13h10"/></svg><span>Polivitamínico</span></div>
-              <span class="offer-badge">-25%</span>
-              <p class="product-meta">Vitaminas</p>
-              <h3>Polivitamínico A a Z, 60 cápsulas</h3>
-              <p>Para toda a família.</p>
-              <div class="price-row"><span class="price-old">R$ 52,90</span><span class="price">R$ 39,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Polivitam%C3%ADnico%20A%20a%20Z%2C%2060%20c%C3%A1psulas%20por%20R%24%2039%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="infantil">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M10 9h.01M14 9h.01M10.5 11.2c.9.6 2.1.6 3 0"/><path d="M6 21c1-3 3.4-4.5 6-4.5s5 1.5 6 4.5"/></svg><span>Lenço umedecido</span></div>
-              <span class="offer-badge">Leve 3</span>
-              <p class="product-meta">Infantil</p>
-              <h3>Lenço umedecido, 3 pacotes</h3>
-              <p>Pague menos levando o kit.</p>
-              <div class="price-row"><span class="price-old">R$ 27,90</span><span class="price">R$ 19,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Len%C3%A7o%20umedecido%2C%203%20pacotes%20por%20R%24%2019%2C90.">Pedir no WhatsApp</a>
-            </article>
-            <article class="product-card" data-item data-tags="higiene">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Escova dental</span></div>
-              <span class="offer-badge">-32%</span>
-              <p class="product-meta">Higiene</p>
-              <h3>Escova dental macia, 4 un.</h3>
-              <p>Kit para a família.</p>
-              <div class="price-row"><span class="price-old">R$ 21,90</span><span class="price">R$ 14,90</span></div>
-              <a class="button button-primary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20a%20oferta%3A%20Escova%20dental%20macia%2C%204%20un.%20por%20R%24%2014%2C90.">Pedir no WhatsApp</a>
-            </article>
-          </div>
-          </div>
-          <p class="section-note">Preços fictícios, válidos apenas para esta demonstração. Imagens ilustrativas.</p>
-        </div>
-      </section>
-      <section id="campanha" class="section anchor-target">
-        <div class="container">
-          <div class="campaign-banner">
+      <div class="perks">
+        <ul class="container">
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17" r="3"/><circle cx="18.5" cy="17" r="3"/><path d="M8.5 17h5l3-6h-4M12 8h3l3.5 9"/><path d="M5.5 17 9 11h4"/></svg>Entrega no Centro e bairros vizinhos</li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Retire na loja em 30 minutos</li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Pix, cartão ou dinheiro</li>
+        </ul>
+      </div>
+
+      <section class="section" id="ofertas" aria-labelledby="ofertas-titulo">
+        <div class="container" data-filter data-filter-noun="ofertas" data-filter-noun-one="oferta" data-filter-fem>
+          <div class="section-head section-head--row">
             <div>
-              <p class="eyebrow">Campanha do mês</p>
-              <h2>Mês da proteção solar</h2>
-              <p>Na compra de 2 protetores solares, ganhe um pós-sol. Página de campanha que a farmácia troca a cada data comemorativa.</p>
+              <p class="eyebrow">Ofertas da semana</p>
+              <h2 id="ofertas-titulo">Aproveite enquanto durar o estoque</h2>
             </div>
-            <a class="button button-secondary" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20participar%20da%20campanha%20do%20m%C3%AAs%20da%20prote%C3%A7%C3%A3o%20solar.">Pedir pelo WhatsApp</a>
+            <p class="valid" style="font-size:.9rem"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válidas de 10/11 a 16/11</p>
           </div>
+          <div class="toolbar">
+            <div class="chips" role="group" aria-label="Filtrar por categoria"><button class="chip" type="button" data-filter-btn="todos" aria-pressed="true">Todas</button><button class="chip" type="button" data-filter-btn="dermo" aria-pressed="false">Dermocosméticos</button><button class="chip" type="button" data-filter-btn="solar" aria-pressed="false">Proteção solar</button><button class="chip" type="button" data-filter-btn="corpo" aria-pressed="false">Corpo e banho</button><button class="chip" type="button" data-filter-btn="cabelo" aria-pressed="false">Cabelos</button><button class="chip" type="button" data-filter-btn="bucal" aria-pressed="false">Higiene bucal</button><button class="chip" type="button" data-filter-btn="infantil" aria-pressed="false">Infantil</button><button class="chip" type="button" data-filter-btn="beleza" aria-pressed="false">Maquiagem</button><button class="chip" type="button" data-filter-btn="saude" aria-pressed="false">Saúde e acessórios</button></div>
+            <label class="search"><span class="sr-only">Buscar oferta</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" placeholder="Buscar oferta" data-filter-search /></label>
+          </div>
+          <p class="toolbar__count" data-filter-count aria-live="polite" style="margin:-8px 0 18px">16 ofertas encontradas.</p>
+          <div class="prod-grid prod-grid--4">
+            <article class="prod" id="oferta-serum-vitamina-c" data-item data-cat="dermo" data-text="Sérum Vitamina C 10% Aurévie Sérum antioxidante que uniformiza o tom e devolve o viço da pele.">
+              <span class="prod__badge">-25%</span>
+              <div class="prod__media"><img src="assets/img/produtos/serum-480.webp" srcset="assets/img/produtos/serum-480.webp 480w, assets/img/produtos/serum-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Sérum Vitamina C 10% Aurévie, 30 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Aurévie</p>
+                <h3 class="prod__name">Sérum Vitamina C 10%</h3>
+                <p class="prod__size">30 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 119,90</span><span class="price__now"><span class="sr-only">por </span>R$ 89,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Sérum Vitamina C 10% (30 ml), marca Aurévie, por R$ 89,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-serum-vitamina-c" aria-label="Copiar o link da oferta Sérum Vitamina C 10%"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-agua-micelar" data-item data-cat="dermo" data-text="Água Micelar Pele Sensível Aurévie Limpa, demaquila e acalma a pele sem precisar de enxágue.">
+              <span class="prod__badge">-20%</span>
+              <div class="prod__media"><img src="assets/img/produtos/micelar-480.webp" srcset="assets/img/produtos/micelar-480.webp 480w, assets/img/produtos/micelar-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Água Micelar Pele Sensível Aurévie, 200 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Aurévie</p>
+                <h3 class="prod__name">Água Micelar Pele Sensível</h3>
+                <p class="prod__size">200 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 49,90</span><span class="price__now"><span class="sr-only">por </span>R$ 39,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Água Micelar Pele Sensível (200 ml), marca Aurévie, por R$ 39,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-agua-micelar" aria-label="Copiar o link da oferta Água Micelar Pele Sensível"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-protetor-solar-facial-fps-50" data-item data-cat="solar" data-text="Protetor Solar Facial FPS 50 Solmare Proteção alta contra UVA e UVB com toque seco e sem cor.">
+              <span class="prod__badge">-18%</span>
+              <div class="prod__media"><img src="assets/img/produtos/protetor_facial-480.webp" srcset="assets/img/produtos/protetor_facial-480.webp 480w, assets/img/produtos/protetor_facial-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Protetor Solar Facial FPS 50 Solmare, 60 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Solmare</p>
+                <h3 class="prod__name">Protetor Solar Facial FPS 50</h3>
+                <p class="prod__size">60 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 72,90</span><span class="price__now"><span class="sr-only">por </span>R$ 59,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Protetor Solar Facial FPS 50 (60 g), marca Solmare, por R$ 59,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-protetor-solar-facial-fps-50" aria-label="Copiar o link da oferta Protetor Solar Facial FPS 50"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-protetor-solar-spray-fps-30" data-item data-cat="solar" data-text="Protetor Solar Corporal Spray FPS 30 Solmare Spray de aplicação rápida, resistente à água e ao suor.">
+              <span class="prod__badge">-15%</span>
+              <div class="prod__media"><img src="assets/img/produtos/protetor_spray-480.webp" srcset="assets/img/produtos/protetor_spray-480.webp 480w, assets/img/produtos/protetor_spray-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Protetor Solar Corporal Spray FPS 30 Solmare, 200 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Solmare</p>
+                <h3 class="prod__name">Protetor Solar Corporal Spray FPS 30</h3>
+                <p class="prod__size">200 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 64,90</span><span class="price__now"><span class="sr-only">por </span>R$ 54,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Protetor Solar Corporal Spray FPS 30 (200 ml), marca Solmare, por R$ 54,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-protetor-solar-spray-fps-30" aria-label="Copiar o link da oferta Protetor Solar Corporal Spray FPS 30"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-protetor-labial-fps-30" data-item data-cat="solar" data-text="Protetor Labial FPS 30 Solmare Protege e hidrata os lábios no sol e no frio.">
+              <span class="prod__badge">-23%</span>
+              <div class="prod__media"><img src="assets/img/produtos/labial-480.webp" srcset="assets/img/produtos/labial-480.webp 480w, assets/img/produtos/labial-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Protetor Labial FPS 30 Solmare, 4,5 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Solmare</p>
+                <h3 class="prod__name">Protetor Labial FPS 30</h3>
+                <p class="prod__size">4,5 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 21,90</span><span class="price__now"><span class="sr-only">por </span>R$ 16,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Protetor Labial FPS 30 (4,5 g), marca Solmare, por R$ 16,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-protetor-labial-fps-30" aria-label="Copiar o link da oferta Protetor Labial FPS 30"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-locao-hidratante-corporal" data-item data-cat="corpo" data-text="Loção Hidratante Corporal Verdelis Hidratação de 24 horas com aveia e óleo de amêndoas para pele seca.">
+              <span class="prod__badge">-22%</span>
+              <div class="prod__media"><img src="assets/img/produtos/locao-480.webp" srcset="assets/img/produtos/locao-480.webp 480w, assets/img/produtos/locao-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Loção Hidratante Corporal Verdelis, 400 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Verdelis</p>
+                <h3 class="prod__name">Loção Hidratante Corporal</h3>
+                <p class="prod__size">400 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 54,90</span><span class="price__now"><span class="sr-only">por </span>R$ 42,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Loção Hidratante Corporal (400 ml), marca Verdelis, por R$ 42,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-locao-hidratante-corporal" aria-label="Copiar o link da oferta Loção Hidratante Corporal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-creme-para-as-maos" data-item data-cat="corpo" data-text="Creme para as Mãos Verdelis Nutre e protege as mãos ressecadas, com absorção rápida.">
+              <span class="prod__badge">-19%</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_maos-480.webp" srcset="assets/img/produtos/creme_maos-480.webp 480w, assets/img/produtos/creme_maos-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Creme para as Mãos Verdelis, 75 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Verdelis</p>
+                <h3 class="prod__name">Creme para as Mãos</h3>
+                <p class="prod__size">75 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 36,90</span><span class="price__now"><span class="sr-only">por </span>R$ 29,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Creme para as Mãos (75 g), marca Verdelis, por R$ 29,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-creme-para-as-maos" aria-label="Copiar o link da oferta Creme para as Mãos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-desodorante-roll-on" data-item data-cat="corpo" data-text="Desodorante Roll-on 48 h Fresca Proteção antitranspirante de 48 horas, sem álcool.">
+              <span class="prod__badge">-21%</span>
+              <div class="prod__media"><img src="assets/img/produtos/desodorante-480.webp" srcset="assets/img/produtos/desodorante-480.webp 480w, assets/img/produtos/desodorante-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Desodorante Roll-on 48 h Fresca, 50 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Fresca</p>
+                <h3 class="prod__name">Desodorante Roll-on 48 h</h3>
+                <p class="prod__size">50 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 18,90</span><span class="price__now"><span class="sr-only">por </span>R$ 14,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Desodorante Roll-on 48 h (50 ml), marca Fresca, por R$ 14,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-desodorante-roll-on" aria-label="Copiar o link da oferta Desodorante Roll-on 48 h"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-shampoo-reparacao" data-item data-cat="cabelo" data-text="Shampoo Reparação Capilé Limpa e recupera fios danificados com queratina e óleo de argan.">
+              <span class="prod__badge">-15%</span>
+              <div class="prod__media"><img src="assets/img/produtos/shampoo-480.webp" srcset="assets/img/produtos/shampoo-480.webp 480w, assets/img/produtos/shampoo-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Shampoo Reparação Capilé, 300 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Capilé</p>
+                <h3 class="prod__name">Shampoo Reparação</h3>
+                <p class="prod__size">300 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 32,90</span><span class="price__now"><span class="sr-only">por </span>R$ 27,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Shampoo Reparação (300 ml), marca Capilé, por R$ 27,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-shampoo-reparacao" aria-label="Copiar o link da oferta Shampoo Reparação"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-condicionador-reparacao" data-item data-cat="cabelo" data-text="Condicionador Reparação Capilé Desembaraça e sela as pontas, com brilho sem pesar.">
+              <span class="prod__badge">-19%</span>
+              <div class="prod__media"><img src="assets/img/produtos/condicionador-480.webp" srcset="assets/img/produtos/condicionador-480.webp 480w, assets/img/produtos/condicionador-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Condicionador Reparação Capilé, 300 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Capilé</p>
+                <h3 class="prod__name">Condicionador Reparação</h3>
+                <p class="prod__size">300 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 42,90</span><span class="price__now"><span class="sr-only">por </span>R$ 34,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Condicionador Reparação (300 ml), marca Capilé, por R$ 34,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-condicionador-reparacao" aria-label="Copiar o link da oferta Condicionador Reparação"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-creme-dental-branqueador" data-item data-cat="bucal" data-text="Creme Dental Branqueador Dentiva Remove manchas do dia a dia com flúor para proteção contra cáries.">
+              <span class="prod__badge">-23%</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_dental-480.webp" srcset="assets/img/produtos/creme_dental-480.webp 480w, assets/img/produtos/creme_dental-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Creme Dental Branqueador Dentiva, 90 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Dentiva</p>
+                <h3 class="prod__name">Creme Dental Branqueador</h3>
+                <p class="prod__size">90 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 12,90</span><span class="price__now"><span class="sr-only">por </span>R$ 9,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Creme Dental Branqueador (90 g), marca Dentiva, por R$ 9,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-creme-dental-branqueador" aria-label="Copiar o link da oferta Creme Dental Branqueador"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-creme-preventivo-assaduras" data-item data-cat="infantil" data-text="Creme Preventivo de Assaduras Petiz Forma uma camada protetora na pele do bebê a cada troca.">
+              <span class="prod__badge">-20%</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_assadura-480.webp" srcset="assets/img/produtos/creme_assadura-480.webp 480w, assets/img/produtos/creme_assadura-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Creme Preventivo de Assaduras Petiz, 45 g" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Creme Preventivo de Assaduras</h3>
+                <p class="prod__size">45 g</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 24,90</span><span class="price__now"><span class="sr-only">por </span>R$ 19,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Creme Preventivo de Assaduras (45 g), marca Petiz, por R$ 19,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-creme-preventivo-assaduras" aria-label="Copiar o link da oferta Creme Preventivo de Assaduras"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-fraldas-noites-secas-m" data-item data-cat="infantil" data-text="Fraldas Noites Secas M Petiz Até 12 horas sequinho, com cintura elástica e indicador de xixi.">
+              <span class="prod__badge">-19%</span>
+              <div class="prod__media"><img src="assets/img/produtos/fraldas-480.webp" srcset="assets/img/produtos/fraldas-480.webp 480w, assets/img/produtos/fraldas-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Fraldas Noites Secas M Petiz, 48 fraldas" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Fraldas Noites Secas M</h3>
+                <p class="prod__size">48 fraldas</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 79,90</span><span class="price__now"><span class="sr-only">por </span>R$ 64,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Fraldas Noites Secas M (48 fraldas), marca Petiz, por R$ 64,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-fraldas-noites-secas-m" aria-label="Copiar o link da oferta Fraldas Noites Secas M"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-esmalte-cremoso" data-item data-cat="beleza" data-text="Esmalte Cremoso Vermelho Lumi Cor intensa e secagem rápida, com pincel largo.">
+              <span class="prod__badge">-20%</span>
+              <div class="prod__media"><img src="assets/img/produtos/esmalte-480.webp" srcset="assets/img/produtos/esmalte-480.webp 480w, assets/img/produtos/esmalte-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Esmalte Cremoso Vermelho Lumi, 8 ml" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Lumi</p>
+                <h3 class="prod__name">Esmalte Cremoso Vermelho</h3>
+                <p class="prod__size">8 ml</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 9,90</span><span class="price__now"><span class="sr-only">por </span>R$ 7,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Esmalte Cremoso Vermelho (8 ml), marca Lumi, por R$ 7,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-esmalte-cremoso" aria-label="Copiar o link da oferta Esmalte Cremoso Vermelho"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-termometro-digital" data-item data-cat="saude" data-text="Termômetro Digital Medix Resultado em 60 segundos, com aviso sonoro e memória da última medição.">
+              <span class="prod__badge">-25%</span>
+              <div class="prod__media"><img src="assets/img/produtos/termometro-480.webp" srcset="assets/img/produtos/termometro-480.webp 480w, assets/img/produtos/termometro-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Termômetro Digital Medix, 1 unidade" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Medix</p>
+                <h3 class="prod__name">Termômetro Digital</h3>
+                <p class="prod__size">1 unidade</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 39,90</span><span class="price__now"><span class="sr-only">por </span>R$ 29,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Termômetro Digital (1 unidade), marca Medix, por R$ 29,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-termometro-digital" aria-label="Copiar o link da oferta Termômetro Digital"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article><article class="prod" id="oferta-medidor-de-pressao-digital" data-item data-cat="saude" data-text="Medidor de Pressão Digital de Braço Medix Medição automática no braço, com memória para duas pessoas.">
+              <span class="prod__badge">-17%</span>
+              <div class="prod__media"><img src="assets/img/produtos/medidor-480.webp" srcset="assets/img/produtos/medidor-480.webp 480w, assets/img/produtos/medidor-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="Medidor de Pressão Digital de Braço Medix, 1 unidade" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Medix</p>
+                <h3 class="prod__name">Medidor de Pressão Digital de Braço</h3>
+                <p class="prod__size">1 unidade</p>
+                <p class="price"><span class="price__old"><span class="sr-only">De </span>R$ 229,90</span><span class="price__now"><span class="sr-only">por </span>R$ 189,90</span></p>
+                <p class="valid"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Válido até 16/11</p>
+                <div class="prod__actions">
+                  <button class="btn btn--primary" type="button" data-order="1x Medidor de Pressão Digital de Braço (1 unidade), marca Medix, por R$ 189,90"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir</button>
+                  <button class="icon-btn" type="button" data-share="oferta-medidor-de-pressao-digital" aria-label="Copiar o link da oferta Medidor de Pressão Digital de Braço"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/></svg></button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state" data-filter-empty hidden>Nenhuma oferta encontrada. Tente outra palavra ou veja todas as categorias.</p>
+          <p class="fine">Ofertas válidas de 10/11/2026 a 16/11/2026 ou enquanto durarem os estoques. Limite de 5 unidades por cliente. Imagens ilustrativas.</p>
         </div>
       </section>
-      <section id="como-pedir" class="section section-alt anchor-target">
-        <div class="container section-panel">
+
+      <section class="section section--soft" id="campanhas" aria-labelledby="campanhas-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Como pedir</p>
-            <h2>Do site para o balcão em três passos.</h2>
+          <p class="eyebrow">Campanhas do mês</p>
+          <h2 id="campanhas-titulo">Ofertas especiais por tema</h2>
+          <p class="lead">Cada campanha junta as ofertas de um assunto em um só lugar.</p>
+        </div>
+          <div class="banners">
+            <a class="banner" href="?cat=solar#ofertas">
+            <img src="assets/img/fotos/g-banner-sol-1200x900.webp" srcset="assets/img/fotos/g-banner-sol-640x480.webp 640w, assets/img/fotos/g-banner-sol-1200x900.webp 1200w" sizes="(min-width: 900px) 380px, 92vw" alt="Mulher passando protetor solar no braço sob o céu azul" width="1200" height="900" loading="lazy" decoding="async" />
+            <span class="pill">Verão</span>
+            <strong>Verão sem queimadura</strong>
+            <span>Protetores para rosto, corpo e lábios.</span>
+            <span class="link-arrow">Ver as ofertas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+            <a class="banner" href="?cat=infantil#ofertas">
+            <img src="assets/img/fotos/f-bebe-1200x900.webp" srcset="assets/img/fotos/f-bebe-640x480.webp 640w, assets/img/fotos/f-bebe-1200x900.webp 1200w" sizes="(min-width: 900px) 380px, 92vw" alt="Mãe sorrindo com o bebê no colo" width="1200" height="900" loading="lazy" decoding="async" />
+            <span class="pill">Mês do bebê</span>
+            <strong>Tudo para o bebê</strong>
+            <span>Fraldas, lenços e cuidados com a pele.</span>
+            <span class="link-arrow">Ver as ofertas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+            <a class="banner" href="?cat=beleza#ofertas">
+            <img src="assets/img/fotos/f-beleza-1200x900.webp" srcset="assets/img/fotos/f-beleza-640x480.webp 640w, assets/img/fotos/f-beleza-1200x900.webp 1200w" sizes="(min-width: 900px) 380px, 92vw" alt="Mulher escolhendo cores em uma paleta de maquiagem" width="1200" height="900" loading="lazy" decoding="async" />
+            <span class="pill">Beleza</span>
+            <strong>Beleza em conta</strong>
+            <span>Base, esmaltes e maquiagem com desconto.</span>
+            <span class="link-arrow">Ver as ofertas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
           </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Escolha a oferta</h3>
-              <p>Veja as ofertas da semana e toque em &quot;Pedir no WhatsApp&quot;.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Confirme com o atendente</h3>
-              <p>A farmácia confirma o estoque e o valor final pelo WhatsApp.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Retire ou receba</h3>
-              <p>Busque no balcão ou receba em casa com a entrega do bairro.</p>
-            </article>
-          </div>
+          <p class="season"><span>Próximas campanhas:</span><span class="pill">Natal</span><span class="pill">Volta às aulas</span><span class="pill">Dia das Mães</span><span class="pill">Inverno</span></p>
         </div>
       </section>
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
+
+      <section class="section" id="como-pedir" aria-labelledby="como-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Como pedir</p>
+          <h2 id="como-titulo">Pediu pelo site, pegou na loja</h2>
+        </div>
+          <ol class="steps steps--3"><li><span class="steps__n" aria-hidden="true">1</span><h3>Escolha a oferta</h3><p>Toque em Pedir na oferta que quiser. A mensagem abre pronta no WhatsApp.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Confirmamos o estoque</h3><p>Respondemos com a disponibilidade e o total do pedido em poucos minutos.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Retire ou receba</h3><p>Retire na loja em 30 minutos ou receba em casa no Centro e bairros vizinhos.</p></li></ol>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="loja" aria-labelledby="loja-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
-          </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Pedi pelo WhatsApp e em meia hora o remédio estava em casa. Atendimento muito educado.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">M</span><span><strong>Mariana S.</strong><span>Centro</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“O farmacêutico sempre tira as minhas dúvidas com paciência. Confio muito.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>José R.</strong><span>Vila Nova</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Gosto de ver as ofertas pelo site antes de passar na loja. Facilita a vida.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">C</span><span><strong>Carla M.</strong><span>Jardim América</span></span></figcaption>
-            </figure>
+          <p class="eyebrow">A loja</p>
+          <h2 id="loja-titulo">Onde estamos</h2>
+          <p class="lead">No coração do Centro, aberta todos os dias da semana.</p>
+        </div>
+          <div class="visit visit--3">
+            <div class="visit__card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horário</h3>
+              <dl class="hours"><div data-day="1,2,3,4,5,6"><dt>Segunda a sábado</dt><dd>7h às 22h</dd></div><div data-day="0"><dt>Domingo e feriados</dt><dd>8h às 20h</dd></div></dl>
+              <p class="tag tag--soft open-status" data-open-status style="margin-top:18px">Seg a sáb, 7h às 22h</p>
+            </div>
+            <div class="visit__card">
+              <h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Endereço</h3>
+              <ul class="address">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><strong>Rua Treze de Maio, 880</strong><span>Centro · Sorocaba – SP</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><strong><a href="tel:+550030000000">(00) 3000-0000</a></strong><span>Telefone da loja</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span><strong><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vi%20as%20ofertas%20no%20site%20da%20Drogaria%20Pre%C3%A7o%20Bom.">(00) 90000-0000</a></strong><span>Pedidos pelo WhatsApp</span></span></li>
+              </ul>
+              <div class="visit__actions">
+                <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=Rua%20Treze%20de%20Maio%2C%20880%2C%20Centro%2C%20Sorocaba%20%E2%80%93%20SP" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+              </div>
+            </div>
+            <div class="visit__photo"><img src="assets/img/fotos/f-caixa-1000x1250.webp" srcset="assets/img/fotos/f-caixa-560x700.webp 560w, assets/img/fotos/f-caixa-1000x1250.webp 1000w" sizes="(min-width: 1100px) 400px, (min-width: 760px) 45vw, 92vw" alt="Cliente sendo atendida no caixa da farmácia" width="1000" height="1250" loading="lazy" decoding="async" /></div>
           </div>
         </div>
       </section>
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com a Farmácia Bem Estar.</h2>
-            </div>
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Rua Exemplo, 250, Centro</dd>
-              </div>
-              <div>
-                <dt>Horário</dt>
-                <dd>Segunda a sábado, das 7h às 22h. Domingo, das 8h às 14h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:contato@farmaciabemestar.com.br">contato@farmaciabemestar.com.br</a></dd>
-              </div>
-            </dl>
-          </article>
-          <aside class="contact-card">
-            <p class="contact-card__label">Demonstração</p>
-            <h2>Farmácia fictícia para mostrar o modelo</h2>
-            <p>A Farmácia Bem Estar não existe. Ofertas, preços e contatos desta página são fictícios.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#ofertas">Ver ofertas</a>
-              <a class="button button-secondary" href="#como-pedir">Como pedir</a>
-            </div>
-          </aside>
+
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Receba as ofertas toda segunda-feira.</h2>
+            <p>Entre na lista de transmissão do WhatsApp. Uma mensagem por semana, sem spam.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Quero%20receber%20as%20ofertas%20da%20semana."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Quero receber</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-farmacia-modelo.svg" alt="" width="48" height="48" />
-              <strong>Farmácia Bem Estar</strong>
-            </div>
-            <p>Farmácia de bairro com atendimento próximo, farmacêutico presente e entrega rápida.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#ofertas">Ofertas</a></li>
-              <li><a href="#campanha">Campanha</a></li>
-              <li><a href="#como-pedir">Como pedir</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 250, Centro</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sáb, 7h às 22h · Dom, 8h às 14h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Drogaria Preço Bom, página inicial"><img src="assets/img/logo-preco-bom.svg" alt="" width="44" height="44" /><span class="brand__name">Preço Bom<small>Drogaria</small></span></a>
+          <p class="footer__about">Drogaria no Centro de Sorocaba com ofertas toda semana em dermocosméticos, higiene, beleza e cuidados do bebê.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> Farmácia Bem Estar. Empresa fictícia: demonstração do modelo Farmácia com Ofertas.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Navegação</h2><ul><li><a href="#ofertas">Ofertas da semana</a></li><li><a href="#campanhas">Campanhas</a></li><li><a href="#como-pedir">Como pedir</a></li><li><a href="#loja">A loja</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vi%20as%20ofertas%20no%20site%20da%20Drogaria%20Pre%C3%A7o%20Bom.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:ofertas@drogariaprecobom.com.br">ofertas@drogariaprecobom.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Treze de Maio, 880, Centro</span></li></ul></div><div><h2>Horário</h2><ul><li>Segunda a sábado: 7h às 22h</li><li>Domingo e feriados: 8h às 20h</li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p>Ofertas válidas de 10/11/2026 a 16/11/2026 ou enquanto durarem os estoques. Preços sujeitos a alteração sem aviso. Imagens ilustrativas.</p><p><strong>Farmacêutico responsável:</strong> Dr. Paulo Mendes · CRF-SP 00000 · Drogaria Preço Bom Ltda. · CNPJ 00.000.000/0001-00</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Drogaria Preço Bom. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Farmácia com Ofertas da GSA. <a href="/modelos/farmacias/farmacia/03-ofertas/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vi%20as%20ofertas%20no%20site%20da%20Drogaria%20Pre%C3%A7o%20Bom." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>WhatsApp</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>
