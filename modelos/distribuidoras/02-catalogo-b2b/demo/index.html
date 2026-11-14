@@ -3,386 +3,274 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DistriModelo Atacado | Demonstração Catálogo B2B</title>
-    <meta name="description" content="Demonstração fictícia de catálogo B2B para distribuidora, com busca, categorias e pedido pelo WhatsApp." />
+    <title>Prisma Distribuidora | Catálogo de higiene, beleza e infantil no atacado</title>
+    <meta name="description" content="Demonstração fictícia de catálogo B2B de distribuidora: produtos em caixas, displays e fardos, sem preço no site, com pedido enviado ao vendedor pelo WhatsApp." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#083b43" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-prisma.svg" />
+    <link rel="preload" href="assets/fonts/barlow-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [8, 18], "2": [8, 18], "3": [8, 18], "4": [8, 18], "5": [8, 18]}' data-whatsapp="5500000000000" data-cart="prisma-pedido" data-cart-prices="off" data-cart-empty="O pedido está vazio.&lt;br /&gt;&lt;a href=&quot;catalogo.html&quot;&gt;Abrir o catálogo&lt;/a&gt;" data-cart-toast="Adicionado ao pedido" data-cart-title="Olá! Quero enviar este pedido para a Prisma Distribuidora:" data-cart-footer="Fico no aguardo dos preços e do prazo de entrega.">
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 500, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg>Venda só para CNPJ · pedido mínimo R$&nbsp;800</p>
+        <div class="topbar__links"><p class="topbar__item topbar__hide-sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h</p><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com vendedor</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da DistriModelo Atacado">
-          <img src="assets/img/logo-distribuidora-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">DistriModelo Atacado</strong>
-            <span class="brand__subtitle">Catálogo para o varejo</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
-            <a href="#inicio">Início</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#como-comprar">Como comprar</a>
-            <a href="#contato">Contato</a>
-        </nav>
-
-        <a class="button button-primary header-cta" href="#catalogo">Abrir catálogo</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="#inicio">Início</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#como-comprar">Como comprar</a>
-            <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#catalogo">Abrir catálogo</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Prisma Distribuidora, página inicial"><img src="assets/img/logo-prisma.svg" alt="" width="44" height="44" /><span class="brand__name">Prisma<small>Distribuidora</small></span></a>
+        <form class="hsearch" action="catalogo.html" role="search">
+          <label class="sr-only" for="busca">Buscar no catálogo</label>
+          <input id="busca" type="search" name="q" placeholder="Buscar produto, marca ou código" autocomplete="off" />
+          <button type="submit" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+        </form>
+        <div class="header__actions">
+          <a class="header__link" href="seja-cliente.html">Seja cliente</a>
+          <a class="cart-btn" href="pedido.html" data-cart-open aria-label="Abrir o pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg><span class="cart-btn__label">Pedido</span><span class="cart-count" data-cart-count data-zero aria-hidden="true">0</span></a>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <nav class="catbar" aria-label="Categorias"><div class="container catbar__inner"><a href="catalogo.html">Todo o catálogo</a><a href="catalogo.html?cat=dermo">Dermocosméticos</a><a href="catalogo.html?cat=solar">Proteção solar</a><a href="catalogo.html?cat=corpo">Corpo e banho</a><a href="catalogo.html?cat=cabelo">Cabelos</a><a href="catalogo.html?cat=bucal">Higiene bucal</a><a href="catalogo.html?cat=infantil">Infantil</a><a href="catalogo.html?cat=beleza">Maquiagem</a><a href="catalogo.html?cat=saude">Saúde e acessórios</a></div></nav>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel"><a href="index.html" aria-current="page">Início</a><a href="catalogo.html">Catálogo</a><a href="seja-cliente.html">Seja cliente</a><a href="pedido.html">Meu pedido</a>
+          <a class="btn btn--whats btn--block" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com vendedor</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Catálogo para o varejo</p>
-            <h1>Monte o pedido da sua loja e envie para o vendedor.</h1>
-            <p class="lead">Busque os produtos, escolha as quantidades em caixas ou fardos e envie a lista pelo WhatsApp. O vendedor retorna com preços e prazo de entrega.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#catalogo">Abrir catálogo</a>
-              <a class="button button-secondary" href="#como-comprar">Como comprar</a>
-            </div>
+      <section class="hero-cat" aria-labelledby="inicio-titulo">
+        <div class="container hero-cat__inner">
+          <div>
+            <p class="tag tag--glass"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Atacado de higiene, beleza e infantil</p>
+            <h1 id="inicio-titulo">A reposição da sua loja <em>em poucos cliques.</em></h1>
+            <p class="hero-cat__lead">Mais de 1.800 itens em caixas, displays e fardos fechados para farmácias, perfumarias e mercados. Monte o pedido no catálogo e envie para o seu vendedor pelo WhatsApp.</p>
+            <form class="bigsearch" action="catalogo.html" role="search">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <label class="sr-only" for="busca-hero">Buscar no catálogo</label>
+              <input id="busca-hero" type="search" name="q" placeholder="Ex.: fralda, shampoo, 35604" autocomplete="off" />
+              <button class="btn btn--accent" type="submit">Buscar</button>
+            </form>
+            <p class="popular">Mais buscados: <a href="catalogo.html?q=fralda">fralda</a><a href="catalogo.html?q=protetor">protetor solar</a><a href="catalogo.html?q=shampoo">shampoo</a><a href="catalogo.html?q=len%C3%A7os">lenços</a></p>
           </div>
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-distribuidora.svg" alt="Ilustração do galpão fictício com uma van saindo para entrega" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques">
-              <article class="meta-card">
-                <p class="meta-card__label">Mix</p>
-                <h2>2 mil itens</h2>
-                <p>Higiene, limpeza, mercearia e bebidas.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Preços</p>
-                <h2>Sob consulta</h2>
-                <p>Condições por volume e cliente.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Pedido</p>
-                <h2>Pelo WhatsApp</h2>
-                <p>Lista pronta para o vendedor.</p>
-              </article>
-            </div>
+          <div class="stage" aria-hidden="true">
+            <div class="stage__disc"></div>
+            <img class="stage__p stage__p--1" src="assets/img/produtos/protetor_spray-recorte-480.webp" alt="" width="188" height="480" decoding="async" />
+            <img class="stage__p stage__p--2" src="assets/img/produtos/fraldas-recorte-480.webp" alt="" width="438" height="480" decoding="async" />
+            <img class="stage__p stage__p--3" src="assets/img/produtos/shampoo-recorte-480.webp" alt="" width="185" height="480" decoding="async" />
+            <img class="stage__p stage__p--4" src="assets/img/produtos/micelar-recorte-480.webp" alt="" width="190" height="480" decoding="async" />
+            <img class="stage__p stage__p--5" src="assets/img/produtos/locao-recorte-480.webp" alt="" width="203" height="480" decoding="async" />
+            <p class="stage__card stage__card--a"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg><span><strong>Caixa com 12 un.</strong>Protetor Solmare FPS 30</span></p>
+            <p class="stage__card stage__card--b"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span><strong>Entrega em 24 h</strong>em Ribeirão Preto</span></p>
           </div>
         </div>
       </section>
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Entrega em até 24 h</strong><span>Rotas fixas para cada cidade.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Vendedor dedicado</strong><span>Atendimento direto pelo WhatsApp.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <div><strong>Nota fiscal e conferência</strong><span>Tudo conferido na entrega.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></span>
-            <div><strong>Pedido mínimo acessível</strong><span>Pensado para o pequeno varejo.</span></div>
-          </div>
+
+      <div class="perks">
+        <ul class="container perks__grid">
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg><span><strong>Preço pelo seu cadastro</strong>O vendedor responde com a condição do seu CNPJ.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span><strong>Entrega em 24 a 48 horas</strong>Frota própria em Ribeirão Preto e região.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span><strong>Boleto em até 28 dias</strong>Depois da análise do cadastro.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span><strong>Troca de avarias</strong>Trocamos na entrega seguinte.</span></li>
+        </ul>
+      </div>
+
+      <section class="section" aria-labelledby="cats-titulo">
+        <div class="container">
+          <div class="section-head section-head--row"><div><p class="eyebrow">Categorias</p><h2 id="cats-titulo">Tudo o que gira na sua loja</h2></div><a class="link-arrow" href="catalogo.html">Abrir o catálogo<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="cat-grid"><a class="cat-tile" href="catalogo.html?cat=dermo"><img src="assets/img/produtos/serum-recorte-320.webp" alt="" width="134" height="320" loading="lazy" decoding="async" /><strong>Dermocosméticos</strong><span>Séruns, cremes e limpeza facial</span></a><a class="cat-tile" href="catalogo.html?cat=solar"><img src="assets/img/produtos/protetor_spray-recorte-320.webp" alt="" width="125" height="320" loading="lazy" decoding="async" /><strong>Proteção solar</strong><span>Protetores para rosto, corpo e lábios</span></a><a class="cat-tile" href="catalogo.html?cat=corpo"><img src="assets/img/produtos/locao-recorte-320.webp" alt="" width="136" height="320" loading="lazy" decoding="async" /><strong>Corpo e banho</strong><span>Hidratantes, sabonetes e desodorantes</span></a><a class="cat-tile" href="catalogo.html?cat=cabelo"><img src="assets/img/produtos/shampoo-recorte-320.webp" alt="" width="123" height="320" loading="lazy" decoding="async" /><strong>Cabelos</strong><span>Shampoos e condicionadores</span></a><a class="cat-tile" href="catalogo.html?cat=bucal"><img src="assets/img/produtos/enxaguante-recorte-320.webp" alt="" width="147" height="320" loading="lazy" decoding="async" /><strong>Higiene bucal</strong><span>Creme dental e enxaguante</span></a><a class="cat-tile" href="catalogo.html?cat=infantil"><img src="assets/img/produtos/fraldas-recorte-320.webp" alt="" width="292" height="320" loading="lazy" decoding="async" /><strong>Infantil</strong><span>Fraldas, lenços e cuidados do bebê</span></a><a class="cat-tile" href="catalogo.html?cat=beleza"><img src="assets/img/produtos/base-recorte-320.webp" alt="" width="142" height="320" loading="lazy" decoding="async" /><strong>Maquiagem</strong><span>Base, esmaltes e acabamento</span></a><a class="cat-tile" href="catalogo.html?cat=saude"><img src="assets/img/produtos/termometro-recorte-320.webp" alt="" width="172" height="320" loading="lazy" decoding="async" /><strong>Saúde e acessórios</strong><span>Termômetros, medidores e curativos</span></a></div>
         </div>
       </section>
-      <section id="catalogo" class="section anchor-target">
-        <div class="container section-panel">
+
+      <section class="section section--soft" aria-labelledby="top-titulo">
+        <div class="container">
+          <div class="section-head section-head--row"><div><p class="eyebrow">Mais pedidos</p><h2 id="top-titulo">O que as farmácias mais repõem</h2><p class="lead">Escolha a quantidade de caixas e adicione ao pedido. Os preços chegam no orçamento.</p></div><a class="link-arrow" href="catalogo.html">Ver todos os produtos<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="prod-grid prod-grid--4"><article class="prod">
+              <span class="prod__badge prod__badge--tag">Mais pedido</span>
+              <div class="prod__media"><img src="assets/img/produtos/fraldas-480.webp" srcset="assets/img/produtos/fraldas-480.webp 480w, assets/img/produtos/fraldas-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Fraldas Noites Secas M</h3>
+                <p class="prod__meta">48 fraldas · Cód. 35604</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Fardo com 4 pacotes</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-fraldas-noites-secas-m" aria-label="Diminuir a quantidade de Fraldas Noites Secas M">−</button><input id="q-fraldas-noites-secas-m" type="number" min="1" max="99" value="1" aria-label="Quantidade de Fraldas Noites Secas M" /><button type="button" data-qty-step="1" data-target="#q-fraldas-noites-secas-m" aria-label="Aumentar a quantidade de Fraldas Noites Secas M">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="fraldas-noites-secas-m" data-name="Fraldas Noites Secas M Petiz 48 fraldas" data-img="assets/img/produtos/fraldas-160.webp" data-size="Fardo com 4 pacotes, cód. 35604" data-unit="fardo|fardos" data-qty-from="#q-fraldas-noites-secas-m" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              <span class="prod__badge prod__badge--tag">Mais pedido</span>
+              <div class="prod__media"><img src="assets/img/produtos/lenco-480.webp" srcset="assets/img/produtos/lenco-480.webp 480w, assets/img/produtos/lenco-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Petiz</p>
+                <h3 class="prod__name">Lenços Umedecidos</h3>
+                <p class="prod__meta">48 unidades · Cód. 35603</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 24 pacotes</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-lencos-umedecidos" aria-label="Diminuir a quantidade de Lenços Umedecidos">−</button><input id="q-lencos-umedecidos" type="number" min="1" max="99" value="1" aria-label="Quantidade de Lenços Umedecidos" /><button type="button" data-qty-step="1" data-target="#q-lencos-umedecidos" aria-label="Aumentar a quantidade de Lenços Umedecidos">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="lencos-umedecidos" data-name="Lenços Umedecidos Petiz 48 unidades" data-img="assets/img/produtos/lenco-160.webp" data-size="Caixa com 24 pacotes, cód. 35603" data-unit="caixa|caixas" data-qty-from="#q-lencos-umedecidos" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              <span class="prod__badge prod__badge--tag">Verão</span>
+              <div class="prod__media"><img src="assets/img/produtos/protetor_spray-480.webp" srcset="assets/img/produtos/protetor_spray-480.webp 480w, assets/img/produtos/protetor_spray-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Solmare</p>
+                <h3 class="prod__name">Protetor Solar Corporal Spray FPS 30</h3>
+                <p class="prod__meta">200 ml · Cód. 31202</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 12 un.</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-protetor-solar-spray-fps-30" aria-label="Diminuir a quantidade de Protetor Solar Corporal Spray FPS 30">−</button><input id="q-protetor-solar-spray-fps-30" type="number" min="1" max="99" value="1" aria-label="Quantidade de Protetor Solar Corporal Spray FPS 30" /><button type="button" data-qty-step="1" data-target="#q-protetor-solar-spray-fps-30" aria-label="Aumentar a quantidade de Protetor Solar Corporal Spray FPS 30">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="protetor-solar-spray-fps-30" data-name="Protetor Solar Corporal Spray FPS 30 Solmare 200 ml" data-img="assets/img/produtos/protetor_spray-160.webp" data-size="Caixa com 12 un., cód. 31202" data-unit="caixa|caixas" data-qty-from="#q-protetor-solar-spray-fps-30" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              <span class="prod__badge prod__badge--tag">Mais pedido</span>
+              <div class="prod__media"><img src="assets/img/produtos/sabonete-480.webp" srcset="assets/img/produtos/sabonete-480.webp 480w, assets/img/produtos/sabonete-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Verdelis</p>
+                <h3 class="prod__name">Sabonete Líquido para as Mãos</h3>
+                <p class="prod__meta">250 ml · Cód. 32302</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 12 un.</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-sabonete-liquido-maos" aria-label="Diminuir a quantidade de Sabonete Líquido para as Mãos">−</button><input id="q-sabonete-liquido-maos" type="number" min="1" max="99" value="1" aria-label="Quantidade de Sabonete Líquido para as Mãos" /><button type="button" data-qty-step="1" data-target="#q-sabonete-liquido-maos" aria-label="Aumentar a quantidade de Sabonete Líquido para as Mãos">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="sabonete-liquido-maos" data-name="Sabonete Líquido para as Mãos Verdelis 250 ml" data-img="assets/img/produtos/sabonete-160.webp" data-size="Caixa com 12 un., cód. 32302" data-unit="caixa|caixas" data-qty-from="#q-sabonete-liquido-maos" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              <span class="prod__badge prod__badge--tag">Mais pedido</span>
+              <div class="prod__media"><img src="assets/img/produtos/creme_dental-480.webp" srcset="assets/img/produtos/creme_dental-480.webp 480w, assets/img/produtos/creme_dental-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Dentiva</p>
+                <h3 class="prod__name">Creme Dental Branqueador</h3>
+                <p class="prod__meta">90 g · Cód. 34501</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 72 un.</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-creme-dental-branqueador" aria-label="Diminuir a quantidade de Creme Dental Branqueador">−</button><input id="q-creme-dental-branqueador" type="number" min="1" max="99" value="1" aria-label="Quantidade de Creme Dental Branqueador" /><button type="button" data-qty-step="1" data-target="#q-creme-dental-branqueador" aria-label="Aumentar a quantidade de Creme Dental Branqueador">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="creme-dental-branqueador" data-name="Creme Dental Branqueador Dentiva 90 g" data-img="assets/img/produtos/creme_dental-160.webp" data-size="Caixa com 72 un., cód. 34501" data-unit="caixa|caixas" data-qty-from="#q-creme-dental-branqueador" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              <span class="prod__badge prod__badge--tag">Mais pedido</span>
+              <div class="prod__media"><img src="assets/img/produtos/desodorante-480.webp" srcset="assets/img/produtos/desodorante-480.webp 480w, assets/img/produtos/desodorante-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Fresca</p>
+                <h3 class="prod__name">Desodorante Roll-on 48 h</h3>
+                <p class="prod__meta">50 ml · Cód. 32304</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 12 un.</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-desodorante-roll-on" aria-label="Diminuir a quantidade de Desodorante Roll-on 48 h">−</button><input id="q-desodorante-roll-on" type="number" min="1" max="99" value="1" aria-label="Quantidade de Desodorante Roll-on 48 h" /><button type="button" data-qty-step="1" data-target="#q-desodorante-roll-on" aria-label="Aumentar a quantidade de Desodorante Roll-on 48 h">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="desodorante-roll-on" data-name="Desodorante Roll-on 48 h Fresca 50 ml" data-img="assets/img/produtos/desodorante-160.webp" data-size="Caixa com 12 un., cód. 32304" data-unit="caixa|caixas" data-qty-from="#q-desodorante-roll-on" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              <span class="prod__badge prod__badge--tag">Mais pedido</span>
+              <div class="prod__media"><img src="assets/img/produtos/micelar-480.webp" srcset="assets/img/produtos/micelar-480.webp 480w, assets/img/produtos/micelar-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Aurévie</p>
+                <h3 class="prod__name">Água Micelar Pele Sensível</h3>
+                <p class="prod__meta">200 ml · Cód. 30103</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 12 un.</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-agua-micelar" aria-label="Diminuir a quantidade de Água Micelar Pele Sensível">−</button><input id="q-agua-micelar" type="number" min="1" max="99" value="1" aria-label="Quantidade de Água Micelar Pele Sensível" /><button type="button" data-qty-step="1" data-target="#q-agua-micelar" aria-label="Aumentar a quantidade de Água Micelar Pele Sensível">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="agua-micelar" data-name="Água Micelar Pele Sensível Aurévie 200 ml" data-img="assets/img/produtos/micelar-160.webp" data-size="Caixa com 12 un., cód. 30103" data-unit="caixa|caixas" data-qty-from="#q-agua-micelar" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article><article class="prod">
+              
+              <div class="prod__media"><img src="assets/img/produtos/shampoo-480.webp" srcset="assets/img/produtos/shampoo-480.webp 480w, assets/img/produtos/shampoo-960.webp 960w" sizes="(min-width: 1100px) 260px, (min-width: 760px) 30vw, 45vw" alt="" width="480" height="480" loading="lazy" decoding="async" /></div>
+              <div class="prod__body">
+                <p class="prod__brand">Capilé</p>
+                <h3 class="prod__name">Shampoo Reparação</h3>
+                <p class="prod__meta">300 ml · Cód. 33401</p>
+                <p class="pack"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>Caixa com 12 un.</p>
+                <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-shampoo-reparacao" aria-label="Diminuir a quantidade de Shampoo Reparação">−</button><input id="q-shampoo-reparacao" type="number" min="1" max="99" value="1" aria-label="Quantidade de Shampoo Reparação" /><button type="button" data-qty-step="1" data-target="#q-shampoo-reparacao" aria-label="Aumentar a quantidade de Shampoo Reparação">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="shampoo-reparacao" data-name="Shampoo Reparação Capilé 300 ml" data-img="assets/img/produtos/shampoo-160.webp" data-size="Caixa com 12 un., cód. 33401" data-unit="caixa|caixas" data-qty-from="#q-shampoo-reparacao" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+              </div>
+            </article></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="marcas-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Catálogo</p>
-            <h2>Encontre os produtos e monte o pedido.</h2>
-            <p>Experimente buscar &quot;fardo&quot; ou filtrar por Bebidas. No site real, entram as fotos e o mix da distribuidora.</p>
-          </div>
-          <div class="shop-layout">
-            <div data-filter-scope data-count-label="produto|produtos">
-          <div class="toolbar">
-            <label class="search-field">
-              <span class="skip-link">Buscar produto</span>
-              <input type="search" data-search placeholder="Buscar produto" aria-label="Buscar produto" />
-            </label>
-            <div class="chip-row" role="group" aria-label="Filtrar por categoria">
-              <button type="button" data-filter="todas" aria-pressed="true">Todos</button>
-              <button type="button" data-filter="higiene" aria-pressed="false">Higiene</button>
-              <button type="button" data-filter="limpeza" aria-pressed="false">Limpeza</button>
-              <button type="button" data-filter="mercearia" aria-pressed="false">Mercearia</button>
-              <button type="button" data-filter="bebidas" aria-pressed="false">Bebidas</button>
-            </div>
-          </div>
-          <p class="result-count" data-filter-count aria-live="polite"></p>
-          <div class="product-grid product-grid--three">
-            <article class="product-card" data-item data-tags="higiene">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Higiene</span></div>
-              <p class="product-meta">Higiene</p>
-              <h3>Sabonete em barra 85 g</h3>
-              <p>Caixa com 12 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Sabonete em barra 85 g" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="higiene">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Higiene</span></div>
-              <p class="product-meta">Higiene</p>
-              <h3>Shampoo 350 ml</h3>
-              <p>Caixa com 12 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Shampoo 350 ml" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="higiene">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Higiene</span></div>
-              <p class="product-meta">Higiene</p>
-              <h3>Papel higiênico folha dupla</h3>
-              <p>Fardo com 16 pacotes de 4</p>
-              <button class="button button-primary" type="button" data-add data-name="Papel higiênico folha dupla" data-unit="fardo">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="limpeza">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Limpeza</span></div>
-              <p class="product-meta">Limpeza</p>
-              <h3>Detergente 500 ml</h3>
-              <p>Caixa com 24 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Detergente 500 ml" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="limpeza">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Limpeza</span></div>
-              <p class="product-meta">Limpeza</p>
-              <h3>Água sanitária 2 L</h3>
-              <p>Caixa com 6 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Água sanitária 2 L" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="limpeza">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Limpeza</span></div>
-              <p class="product-meta">Limpeza</p>
-              <h3>Sabão em pó 1 kg</h3>
-              <p>Fardo com 10 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Sabão em pó 1 kg" data-unit="fardo">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="mercearia">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Mercearia</span></div>
-              <p class="product-meta">Mercearia</p>
-              <h3>Arroz tipo 1, 5 kg</h3>
-              <p>Fardo com 6 pacotes</p>
-              <button class="button button-primary" type="button" data-add data-name="Arroz tipo 1, 5 kg" data-unit="fardo">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="mercearia">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Mercearia</span></div>
-              <p class="product-meta">Mercearia</p>
-              <h3>Café torrado 500 g</h3>
-              <p>Caixa com 10 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Café torrado 500 g" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="mercearia">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg><span>Mercearia</span></div>
-              <p class="product-meta">Mercearia</p>
-              <h3>Óleo de soja 900 ml</h3>
-              <p>Caixa com 20 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Óleo de soja 900 ml" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="bebidas">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Bebidas</span></div>
-              <p class="product-meta">Bebidas</p>
-              <h3>Água mineral 500 ml</h3>
-              <p>Fardo com 12 garrafas</p>
-              <button class="button button-primary" type="button" data-add data-name="Água mineral 500 ml" data-unit="fardo">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="bebidas">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Bebidas</span></div>
-              <p class="product-meta">Bebidas</p>
-              <h3>Refrigerante 2 L</h3>
-              <p>Fardo com 6 garrafas</p>
-              <button class="button button-primary" type="button" data-add data-name="Refrigerante 2 L" data-unit="fardo">Adicionar ao pedido</button>
-            </article>
-            <article class="product-card" data-item data-tags="bebidas">
-              <div class="product-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><span>Bebidas</span></div>
-              <p class="product-meta">Bebidas</p>
-              <h3>Suco 1 L</h3>
-              <p>Caixa com 12 unidades</p>
-              <button class="button button-primary" type="button" data-add data-name="Suco 1 L" data-unit="cx">Adicionar ao pedido</button>
-            </article>
-          </div>
-            </div>
-            <aside class="cart-panel" aria-label="Seu pedido">
-              <h2>Seu pedido <span class="cart-count" data-cart-count>0</span></h2>
-              <ul class="cart-list" data-cart-list></ul>
-              <p class="cart-empty" data-cart-empty>Nenhum item ainda. Toque em "Adicionar" nos produtos.</p>
-              <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero um orçamento destes itens:" data-needs-cart data-cart-title="Itens do pedido:" data-cart-name="adicione pelo menos um item" novalidate>
-                <label>
-                  Nome da empresa
-                  <input type="text" name="empresa" required />
-                </label>
-                <label>
-                  CNPJ
-                  <input type="text" name="cnpj" inputmode="numeric" />
-                </label>
-                <label>
-                  Cidade
-                  <input type="text" name="cidade" required />
-                </label>
-                <p class="quote-form__error" data-form-error role="alert" hidden></p>
-                <button class="button button-primary" type="submit">Enviar pedido pelo WhatsApp</button>
-              </form>
-            </aside>
-          </div>
-          <p class="section-note">Venda exclusiva para empresas. Produtos e embalagens fictícios.</p>
+          <p class="eyebrow">Marcas</p>
+          <h2 id="marcas-titulo">Marcas que distribuímos</h2>
+          <p class="lead">Toque em uma marca para ver os produtos dela no catálogo.</p>
+        </div>
+          <div class="brands"><a href="catalogo.html?q=Aur%C3%A9vie">Aurévie</a><a href="catalogo.html?q=Capil%C3%A9">Capilé</a><a href="catalogo.html?q=Dentiva">Dentiva</a><a href="catalogo.html?q=Fresca">Fresca</a><a href="catalogo.html?q=Lumi">Lumi</a><a href="catalogo.html?q=Medix">Medix</a><a href="catalogo.html?q=Petiz">Petiz</a><a href="catalogo.html?q=Solmare">Solmare</a><a href="catalogo.html?q=Verdelis">Verdelis</a></div>
         </div>
       </section>
-      <section id="como-comprar" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
+
+      <section class="section section--soft" aria-labelledby="como-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/d-separacao-1200x900.webp" srcset="assets/img/fotos/d-separacao-640x480.webp 640w, assets/img/fotos/d-separacao-1200x900.webp 1200w" sizes="(min-width: 960px) 540px, 92vw" alt="Funcionário puxando uma paleteira no corredor do centro de distribuição" width="1200" height="900" loading="lazy" decoding="async" />
+            <p class="split__badge"><strong>Mesmo dia</strong>separação dos pedidos<br />aprovados até as 14h</p>
+          </figure>
+          <div class="split__copy">
             <p class="eyebrow">Como comprar</p>
-            <h2>Do catálogo à entrega na loja.</h2>
-          </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Monte o pedido</h3>
-              <p>Escolha os produtos e as quantidades em caixas ou fardos.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Envie ao vendedor</h3>
-              <p>A lista chega pronta no WhatsApp do vendedor da sua região.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Receba na loja</h3>
-              <p>O vendedor confirma preço e prazo, e o pedido sai na rota da sua cidade.</p>
-            </article>
+            <h2 id="como-titulo">Do catálogo à sua prateleira em três passos</h2>
+            <ol class="how">
+              <li><span><strong>Monte o pedido</strong><p>Busque os produtos e escolha quantas caixas, displays ou fardos quer de cada um.</p></span></li>
+              <li><span><strong>Envie para o vendedor</strong><p>O pedido chega pronto no WhatsApp, com código e embalagem de cada item.</p></span></li>
+              <li><span><strong>Receba com nota fiscal</strong><p>O vendedor confirma preço e prazo, e a entrega sai na rota da sua cidade.</p></span></li>
+            </ol>
+            <a class="btn btn--primary" href="catalogo.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Começar o pedido</a>
           </div>
         </div>
       </section>
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
-          </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Mando a lista pelo WhatsApp e no dia seguinte está tudo na loja. Facilitou a reposição.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">P</span><span><strong>Paulo H.</strong><span>Mercado São José</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“O vendedor responde rápido e o prazo de pagamento ajuda muito o caixa.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">S</span><span><strong>Sandra M.</strong><span>Drogaria Central</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Entrega sempre no dia combinado, com tudo conferido. Parceiro de confiança.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>Jorge L.</strong><span>Padaria Pão Nosso</span></span></figcaption>
-            </figure>
-          </div>
+
+      <section class="section" aria-labelledby="depo-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Clientes</p>
+          <h2 id="depo-titulo">Quem compra com a Prisma</h2>
+        </div>
+          <div class="reviews"><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Montei o pedido da semana no celular, entre um atendimento e outro. Em meia hora o vendedor mandou o orçamento.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">RF</span><span><strong>Renata Figueiredo</strong>Drogaria Figueiredo, Sertãozinho</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“O catálogo com código e embalagem acabou com os erros de pedido. Chega exatamente o que eu pedi.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">MV</span><span><strong>Marcos Vilela</strong>Perfumaria Vilela, Franca</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Fralda e lenço não faltam mais na loja. A entrega de quinta é certa.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">AP</span><span><strong>Ana Paula Costa</strong>Mercado Costa, Barretos</span></figcaption>
+          </figure></div>
         </div>
       </section>
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com o time de vendas.</h2>
-            </div>
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Rua Exemplo, 500, Centro de Distribuição</dd>
-              </div>
-              <div>
-                <dt>Horário</dt>
-                <dd>Segunda a sexta, das 8h às 18h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:vendas@distribuidoramodelo.com.br">vendas@distribuidoramodelo.com.br</a></dd>
-              </div>
-            </dl>
-          </article>
-          <aside class="contact-card">
-            <p class="contact-card__label">Demonstração</p>
-            <h2>Distribuidora fictícia para mostrar o modelo</h2>
-            <p>A DistriModelo Atacado não existe. Produtos e contatos desta página são fictícios.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#catalogo">Abrir catálogo</a>
-            </div>
-          </aside>
+
+      <section class="cta-band cta-band--photo" aria-labelledby="cta-titulo">
+        <div class="cta-band__media"><img src="assets/img/fotos/d-comercial-1600x900.webp" srcset="assets/img/fotos/d-comercial-960x540.webp 960w, assets/img/fotos/d-comercial-1600x900.webp 1600w, assets/img/fotos/d-comercial-2400x1350.webp 2400w" sizes="100vw" alt="" width="1600" height="900" loading="lazy" decoding="async" /></div>
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Ainda não compra com a Prisma?</h2>
+            <p>Faça o cadastro em 5 minutos. Um vendedor da sua região entra em contato no mesmo dia.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--accent btn--lg" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Quero ser cliente</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com vendedor</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-distribuidora-modelo.svg" alt="" width="48" height="48" />
-              <strong>DistriModelo Atacado</strong>
-            </div>
-            <p>Distribuidora que abastece o comércio da região com entrega rápida e atendimento por vendedor.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#catalogo">Catálogo</a></li>
-              <li><a href="#como-comprar">Como comprar</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 500, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Prisma Distribuidora, página inicial"><img src="assets/img/logo-prisma.svg" alt="" width="44" height="44" /><span class="brand__name">Prisma<small>Distribuidora</small></span></a>
+          <p class="footer__about">Distribuidora de higiene, beleza, infantil e acessórios de saúde para farmácias, perfumarias e mercados do interior de São Paulo.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> DistriModelo Atacado. Empresa fictícia: demonstração do modelo Catálogo B2B.</span>
-          <a href="../">Voltar para a GSA</a>
+        <div><h2>Catálogo</h2><ul><li><a href="catalogo.html">Todo o catálogo</a></li><li><a href="catalogo.html?cat=dermo">Dermocosméticos</a></li><li><a href="catalogo.html?cat=solar">Proteção solar</a></li><li><a href="catalogo.html?cat=corpo">Corpo e banho</a></li><li><a href="catalogo.html?cat=cabelo">Cabelos</a></li><li><a href="catalogo.html?cat=bucal">Higiene bucal</a></li></ul></div><div><h2>Para o cliente</h2><ul><li><a href="seja-cliente.html">Seja cliente</a></li><li><a href="seja-cliente.html#condicoes">Condições comerciais</a></li><li><a href="seja-cliente.html#entregas">Dias de entrega</a></li><li><a href="pedido.html">Meu pedido</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:pedidos@prismadist.com.br">pedidos@prismadist.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Distrito Empresarial, Ribeirão Preto – SP</span></li></ul></div>
+      </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Prisma Distribuidora de Cosméticos Ltda.</strong> · <span class="nowrap">CNPJ 00.000.000/0001-00</span> · <span class="nowrap">Inscrição estadual 000.000.000.000</span></p><p>Venda exclusiva para pessoa jurídica. Não vendemos medicamentos. Marcas, produtos e embalagens fictícios; imagens ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Prisma Distribuidora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Catálogo B2B da GSA. <a href="/modelos/distribuidoras/02-catalogo-b2b/">Voltar para a GSA</a></span>
+      </div></div>
+    </footer>
+    <div class="drawer" data-drawer hidden>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="pedido-titulo">
+        <div class="drawer__head">
+          <h2 id="pedido-titulo">Seu pedido</h2>
+          <button class="icon-btn" type="button" data-cart-close aria-label="Fechar o pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </div>
+        <div class="drawer__body"><div class="cart-lines" data-cart-lines></div></div>
+        <div class="drawer__foot" data-cart-foot hidden>
+          <p class="drawer__sum"><span data-cart-skus>0 produtos</span><span data-cart-volumes>0 volumes</span></p>
+          <a class="btn btn--primary btn--block btn--lg" href="pedido.html">Revisar e enviar</a>
+          <button class="btn btn--ghost btn--block" type="button" data-cart-close>Continuar no catálogo</button>
         </div>
       </div>
-    </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    </div>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>Vendedor</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

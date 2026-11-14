@@ -6,6 +6,11 @@ As empresas, pessoas e depoimentos das demonstrações são fictícios.
 
 | Foto | Fotógrafo | Banco | Licença | Página original |
 |---|---|---|---|---|
+| d-comercial | Yankrukov (perfil @yankrukov) | Pexels | Licença Pexels | https://www.pexels.com/photo/7693692/ |
+| d-conferencia | Tiger Lily (perfil @tiger-lily) | Pexels | Licença Pexels | https://www.pexels.com/photo/4484154/ |
+| d-hero | Handiboyz (perfil @handiboyz) | Pexels | Licença Pexels | https://www.pexels.com/photo/5775099/ |
+| d-hero-b | Enginakyurt (perfil @enginakyurt) | Pexels | Licença Pexels | https://www.pexels.com/photo/4170172/ |
+| d-separacao | Tiger Lily (perfil @tiger-lily) | Pexels | Licença Pexels | https://www.pexels.com/photo/4483860/ |
 | f-balcao | Cottonbro (perfil @cottonbro) | Pexels | Licença Pexels | https://www.pexels.com/photo/8657373/ |
 | f-bebe | Laura Garcia (perfil @laura-garcia-1667452) | Pexels | Licença Pexels | https://www.pexels.com/photo/3766464/ |
 | f-beleza | Kamaji Ogino (perfil @kamaji-ogino) | Pexels | Licença Pexels | https://www.pexels.com/photo/5065854/ |
@@ -36,6 +41,10 @@ As empresas, pessoas e depoimentos das demonstrações são fictícios.
 | g-noite | Serkan Yildiz | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/a-building-with-a-large-white-cross-on-its-side-W28dHvdQ0YE |
 | g-teste | Artempodrez (perfil @artempodrez) | Pexels | Licença Pexels | https://www.pexels.com/photo/6823510/ |
 | g-vacina | Franco30 (perfil @franco30) | Pexels | Licença Pexels | https://www.pexels.com/photo/6958380/ |
+| o-ambiente | Neosiam (perfil @neosiam) | Pexels | Licença Pexels | https://www.pexels.com/photo/38788452/ |
+| o-equipe | Mathias Reding | Unsplash | Licença Unsplash (gratuita) | https://unsplash.com/photos/a-man-standing-next-to-a-van-RDjXQe1rKM0 |
+| o-hero | Jose Andres Pacheco Cortes (perfil @jose-andres-pacheco-cortes-3641213) | Pexels | Licença Pexels | https://www.pexels.com/photo/5463581/ |
+| o-manutencao | Jose Andres Pacheco Cortes (perfil @jose-andres-pacheco-cortes-3641213) | Pexels | Licença Pexels | https://www.pexels.com/photo/5463587/ |
 | t1-armazenagem | Tiger Lily (perfil @tiger-lily) | Pexels | Licença Pexels | https://www.pexels.com/photo/4483610/ |
 | t1-cta | Josh Hild (perfil @josh-hild-1270765) | Pexels | Licença Pexels | https://www.pexels.com/photo/2801312/ |
 | t1-fracionada | Tiger Lily (perfil @tiger-lily) | Pexels | Licença Pexels | https://www.pexels.com/photo/4487382/ |

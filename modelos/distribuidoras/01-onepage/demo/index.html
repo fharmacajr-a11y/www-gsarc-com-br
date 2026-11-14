@@ -3,397 +3,323 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DistriModelo Atacado | Demonstração OnePage</title>
-    <meta
-      name="description"
-      content="Demonstração fictícia de um site OnePage para distribuidoras apresentarem linhas de produtos, segmentos atendidos e receberem pedidos de orçamento pelo WhatsApp."
-    />
+    <title>Vértice Distribuidora | Atacado de higiene, limpeza e mercearia em Maringá</title>
+    <meta name="description" content="Demonstração fictícia de site de distribuidora em uma página: linhas de produtos, clientes atendidos, estrutura, como comprar e pedido de orçamento pelo WhatsApp." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0a2740" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-vertice.svg" />
+    <link rel="preload" href="assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [8, 18], "2": [8, 18], "3": [8, 18], "4": [8, 18], "5": [8, 18], "6": [8, 12]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <div class="topbar">
+    <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 500, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg>Venda só para CNPJ · pedido mínimo R$&nbsp;500</p>
+        <div class="topbar__links"><p class="topbar__item topbar__hide-sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h</p><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp de vendas</a></div>
       </div>
     </div>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir para o início da DistriModelo Atacado">
-          <img src="assets/img/logo-distribuidora-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">DistriModelo Atacado</strong>
-            <span class="brand__subtitle">Distribuição para o varejo da região</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal da distribuidora">
-          <a href="#inicio">Início</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#clientes">Para quem vendemos</a>
-          <a href="#orcamento">Orçamento</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <a class="button button-primary header-cta" href="#orcamento">Pedir orçamento</a>
-
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-expanded="false"
-          aria-controls="menu-mobile"
-        >
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel da distribuidora">
-            <a href="#inicio">Início</a>
-            <a href="#produtos">Produtos</a>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Vértice Distribuidora, página inicial"><img src="assets/img/logo-vertice.svg" alt="" width="44" height="44" /><span class="brand__name">Vértice<small>Distribuidora</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
+            <a href="#linhas">Linhas</a>
             <a href="#clientes">Para quem vendemos</a>
-            <a href="#orcamento">Orçamento</a>
+            <a href="#estrutura">Estrutura</a>
+            <a href="#como-comprar">Como comprar</a>
             <a href="#contato">Contato</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="#orcamento">Pedir orçamento</a>
+        </nav>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Pedir orçamento</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="#linhas">Linhas</a>
+          <a href="#clientes">Para quem vendemos</a>
+          <a href="#estrutura">Estrutura</a>
+          <a href="#como-comprar">Como comprar</a>
+          <a href="#contato">Contato</a>
+          <a class="btn btn--accent btn--block" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Pedir orçamento</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Atacado e distribuição</p>
-            <h1>Abasteça sua loja com quem entrega na sua porta.</h1>
-            <p class="lead">
-              Higiene, limpeza, mercearia, bebidas e linha farmacêutica para mercados, farmácias e comércios da região,
-              com pedido mínimo acessível e orçamento direto pelo WhatsApp.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#orcamento">Pedir orçamento</a>
-              <a class="button button-secondary" href="#produtos">Ver linhas de produtos</a>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img
-                src="assets/img/hero-distribuidora.svg"
-                alt="Ilustração do galpão fictício da DistriModelo Atacado com uma van saindo para entrega"
-                width="640"
-                height="460"
-              />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques rápidos da distribuidora fictícia">
-              <article class="meta-card">
-                <p class="meta-card__label">Pedido</p>
-                <h2>Mínimo acessível</h2>
-                <p>Faixa de pedido mínimo pensada para o pequeno varejo.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Entrega</p>
-                <h2>Rota semanal</h2>
-                <p>Dias fixos de entrega para cada cidade atendida.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Venda</p>
-                <h2>Só para CNPJ</h2>
-                <p>Atendimento exclusivo para empresas e revendas.</p>
-              </article>
+      <section class="hero hero--vertice" id="inicio" aria-labelledby="inicio-titulo">
+        <div class="hero__media"><img src="assets/img/fotos/d-hero-1600x900.webp" srcset="assets/img/fotos/d-hero-960x540.webp 960w, assets/img/fotos/d-hero-1600x900.webp 1600w, assets/img/fotos/d-hero-2400x1350.webp 2400w" sizes="100vw" alt="Corredor do centro de distribuição com prateleiras altas cheias de caixas" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="tag tag--glass hero-tag"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Atacado para o comércio do Paraná desde 2004</p>
+            <h1 id="inicio-titulo">Abasteça a sua loja com <em>quem entrega na porta.</em></h1>
+            <p class="hero__lead">Higiene, limpeza, mercearia e bebidas para mercados, farmácias e conveniências. Você manda a lista pelo WhatsApp e recebe com caminhão próprio, na rota da sua cidade.</p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Pedir orçamento</a>
+              <a class="btn btn--light btn--lg" href="#linhas">Ver as linhas</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Entrega em até 24 h</strong><span>Rotas fixas para cada cidade.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Vendedor dedicado</strong><span>Atendimento direto pelo WhatsApp.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <div><strong>Nota fiscal e conferência</strong><span>Tudo conferido na entrega.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></span>
-            <div><strong>Pedido mínimo acessível</strong><span>Pensado para o pequeno varejo.</span></div>
-          </div>
+      <div class="kpis">
+        <div class="container">
+          <dl class="kpis__grid">
+            <div class="kpi"><dt class="sr-only">Itens no mix</dt><dd><strong>3.500</strong><span>itens em 6 linhas</span></dd></div>
+            <div class="kpi"><dt class="sr-only">Cidades atendidas</dt><dd><strong>42</strong><span>cidades com rota toda semana</span></dd></div>
+            <div class="kpi"><dt class="sr-only">Pedido mínimo</dt><dd><strong>R$&nbsp;500</strong><span>de pedido mínimo</span></dd></div>
+            <div class="kpi"><dt class="sr-only">Prazo de entrega</dt><dd><strong>48&nbsp;h</strong><span>do pedido à sua porta</span></dd></div>
+          </dl>
         </div>
-      </section>
+      </div>
 
-      <section id="produtos" class="section anchor-target">
-        <div class="container section-panel">
+      <section class="section" id="linhas" aria-labelledby="linhas-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Linhas de produtos</p>
-            <h2>Um só fornecedor para várias seções da sua loja.</h2>
-            <p>
-              Esta demonstração mostra como um site de página única apresenta o catálogo de uma distribuidora por
-              linhas, sem preços públicos, para que o comprador peça o orçamento com os itens que precisa.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Linha 01</p>
+          <p class="eyebrow">Linhas de produtos</p>
+          <h2 id="linhas-titulo">Um fornecedor para várias seções da sua loja</h2>
+          <p class="lead">Compre tudo no mesmo pedido, com uma nota só e uma entrega só. Os preços saem no orçamento, conforme o seu cadastro.</p>
+        </div>
+          <div class="lines"><article class="line">
+              <div class="line__top"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2h4v3l2 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-3z"/><path d="M8 12h8"/></svg></span><span class="line__count">1.200 itens</span></div>
               <h3>Higiene e perfumaria</h3>
-              <p>Sabonetes, shampoos, desodorantes, fraldas e cuidados pessoais das principais marcas.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 02</p>
+              <p>Sabonetes, shampoos, desodorantes, cremes dentais, fraldas e absorventes.</p>
+              <p class="line__ex"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg> Caixas com 6, 12 ou 24 unidades</p>
+            </article><article class="line">
+              <div class="line__top"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l-1 18H9z"/><path d="M8.5 9h7"/></svg></span><span class="line__count">650 itens</span></div>
               <h3>Limpeza</h3>
-              <p>Detergentes, desinfetantes, sabão em pó, papel higiênico e descartáveis.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 03</p>
+              <p>Detergentes, desinfetantes, sabão em pó, amaciantes, esponjas e panos.</p>
+              <p class="line__ex"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg> Fardos e caixas fechadas</p>
+            </article><article class="line">
+              <div class="line__top"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg></span><span class="line__count">900 itens</span></div>
               <h3>Mercearia</h3>
-              <p>Itens de giro rápido: arroz, feijão, óleo, café, açúcar, biscoitos e enlatados.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 04</p>
+              <p>Arroz, feijão, café, açúcar, massas, biscoitos, enlatados e temperos.</p>
+              <p class="line__ex"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg> Fardos de 5 kg a 30 kg</p>
+            </article><article class="line">
+              <div class="line__top"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><span class="line__count">320 itens</span></div>
               <h3>Bebidas</h3>
-              <p>Águas, refrigerantes, sucos e isotônicos em fardos e caixas fechadas.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 05</p>
-              <h3>Linha farmacêutica</h3>
-              <p>Medicamentos isentos de prescrição, dermocosméticos e conveniência para farmácias.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 06</p>
-              <h3>Marcas exclusivas, se houver</h3>
-              <p>Bloco opcional para destacar marcas que a distribuidora representa na região.</p>
-            </article>
+              <p>Águas, sucos, refrigerantes, chás e isotônicos, com e sem gás.</p>
+              <p class="line__ex"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg> Fardos com 6 ou 12 garrafas</p>
+            </article><article class="line">
+              <div class="line__top"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></span><span class="line__count">280 itens</span></div>
+              <h3>Linha de farmácia</h3>
+              <p>Dermocosméticos, protetor solar, curativos, termômetros e acessórios.</p>
+              <p class="line__ex"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg> Sem medicamentos, só correlatos</p>
+            </article><article class="line">
+              <div class="line__top"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M10.5 8h.01M13.5 8h.01M10.8 10c.7.6 1.7.6 2.4 0"/><path d="M6 21a6 6 0 0 1 12 0"/></svg></span><span class="line__count">190 itens</span></div>
+              <h3>Infantil</h3>
+              <p>Fraldas, lenços umedecidos, shampoo infantil e cremes para assaduras.</p>
+              <p class="line__ex"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg> Fardos econômicos</p>
+            </article></div>
+          <div class="shelf">
+            <div class="shelf__head">
+              <div><h3>Alguns itens da linha de higiene</h3><p>Vendidos em caixa fechada, com nota fiscal e validade longa.</p></div>
+              <a class="link-arrow" href="#orcamento">Pedir o catálogo completo<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="shelf__grid"><div class="sku"><img src="assets/img/produtos/lenco-480.webp" srcset="assets/img/produtos/lenco-480.webp 480w, assets/img/produtos/lenco-960.webp 960w" sizes="(min-width: 1100px) 170px, (min-width: 700px) 30vw, 45vw" alt="Lenços Umedecidos Petiz" width="480" height="480" loading="lazy" decoding="async" />
+              <div class="sku__body"><strong>Lenços Umedecidos</strong><span>Petiz · 48 unidades</span><span class="sku__pack">Caixa com 24</span></div>
+            </div><div class="sku"><img src="assets/img/produtos/fraldas-480.webp" srcset="assets/img/produtos/fraldas-480.webp 480w, assets/img/produtos/fraldas-960.webp 960w" sizes="(min-width: 1100px) 170px, (min-width: 700px) 30vw, 45vw" alt="Fraldas Noites Secas M Petiz" width="480" height="480" loading="lazy" decoding="async" />
+              <div class="sku__body"><strong>Fraldas Noites Secas M</strong><span>Petiz · 48 fraldas</span><span class="sku__pack">Fardo com 4</span></div>
+            </div><div class="sku"><img src="assets/img/produtos/sabonete-480.webp" srcset="assets/img/produtos/sabonete-480.webp 480w, assets/img/produtos/sabonete-960.webp 960w" sizes="(min-width: 1100px) 170px, (min-width: 700px) 30vw, 45vw" alt="Sabonete Líquido para as Mãos Verdelis" width="480" height="480" loading="lazy" decoding="async" />
+              <div class="sku__body"><strong>Sabonete Líquido para as Mãos</strong><span>Verdelis · 250 ml</span><span class="sku__pack">Caixa com 12</span></div>
+            </div><div class="sku"><img src="assets/img/produtos/creme_dental-480.webp" srcset="assets/img/produtos/creme_dental-480.webp 480w, assets/img/produtos/creme_dental-960.webp 960w" sizes="(min-width: 1100px) 170px, (min-width: 700px) 30vw, 45vw" alt="Creme Dental Branqueador Dentiva" width="480" height="480" loading="lazy" decoding="async" />
+              <div class="sku__body"><strong>Creme Dental Branqueador</strong><span>Dentiva · 90 g</span><span class="sku__pack">Caixa com 72</span></div>
+            </div><div class="sku"><img src="assets/img/produtos/desodorante-480.webp" srcset="assets/img/produtos/desodorante-480.webp 480w, assets/img/produtos/desodorante-960.webp 960w" sizes="(min-width: 1100px) 170px, (min-width: 700px) 30vw, 45vw" alt="Desodorante Roll-on 48 h Fresca" width="480" height="480" loading="lazy" decoding="async" />
+              <div class="sku__body"><strong>Desodorante Roll-on 48 h</strong><span>Fresca · 50 ml</span><span class="sku__pack">Caixa com 12</span></div>
+            </div><div class="sku"><img src="assets/img/produtos/shampoo-480.webp" srcset="assets/img/produtos/shampoo-480.webp 480w, assets/img/produtos/shampoo-960.webp 960w" sizes="(min-width: 1100px) 170px, (min-width: 700px) 30vw, 45vw" alt="Shampoo Reparação Capilé" width="480" height="480" loading="lazy" decoding="async" />
+              <div class="sku__body"><strong>Shampoo Reparação</strong><span>Capilé · 300 ml</span><span class="sku__pack">Caixa com 12</span></div>
+            </div></div>
           </div>
-
-          <p class="section-note">Preços, prazos e condições de pagamento são informados no orçamento, conforme o volume do pedido.</p>
         </div>
       </section>
 
-      <section id="clientes" class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
+      <section class="section section--soft" id="clientes" aria-labelledby="clientes-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/t2-entrega-1200x900.webp" srcset="assets/img/fotos/t2-entrega-640x480.webp 640w, assets/img/fotos/t2-entrega-1200x900.webp 1200w" sizes="(min-width: 960px) 540px, 92vw" alt="Entregador com prancheta em frente à van aberta, carregada de caixas" width="1200" height="900" loading="lazy" decoding="async" />
+            <p class="split__badge"><strong>1.800 clientes</strong>compram com a gente todo mês</p>
+          </figure>
+          <div class="split__copy">
             <p class="eyebrow">Para quem vendemos</p>
-            <h2>Atendemos o comércio que precisa de reposição frequente.</h2>
-            <p>Lista fictícia. No site real, entram os segmentos e as cidades que a distribuidora atende de verdade.</p>
-          </div>
-          <ul class="segments-list">
-            <li>Mercados e mercearias</li>
-            <li>Farmácias e drogarias</li>
-            <li>Padarias e conveniências</li>
-            <li>Restaurantes e lanchonetes</li>
-            <li>Lojas de bairro</li>
-            <li>Empresas e condomínios</li>
-          </ul>
-
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Envie sua lista</h3>
-              <p>Informe a empresa, a cidade e os itens com as quantidades que precisa.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Receba o orçamento</h3>
-              <p>O vendedor responde pelo WhatsApp com preços, prazo e forma de pagamento.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Receba na loja</h3>
-              <p>O pedido sai na rota da sua cidade, com nota fiscal e conferência na entrega.</p>
-            </article>
+            <h2 id="clientes-titulo">Atendemos o comércio que precisa de reposição toda semana.</h2>
+            <p>Vendemos só para empresas com CNPJ. O vendedor conhece a sua loja, sugere o mix que gira e avisa das ofertas do mês.</p>
+            <ul class="segments">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg><span>Mercados e mercearias<small>Mix completo de mercearia, limpeza e higiene</small></span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg><span>Farmácias e drogarias<small>Higiene, infantil e linha de farmácia, sem medicamentos</small></span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Padarias e conveniências<small>Bebidas, biscoitos e itens de giro rápido</small></span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5a5 5 0 0 1 6 5.5"/></svg><span>Hotéis, restaurantes e condomínios<small>Limpeza e descartáveis em volume</small></span></li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section id="orcamento" class="section anchor-target">
-        <div class="container about-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Orçamento</p>
-              <h2>Peça seu orçamento de produtos.</h2>
-              <p>Preencha os dados e a mensagem abre pronta no WhatsApp do vendedor.</p>
-            </div>
-
-            <form class="quote-form" data-quote-form data-whatsapp="5500000000000" novalidate>
-              <div class="quote-form__row">
-                <label>
-                  Nome da empresa
-                  <input type="text" name="empresa" autocomplete="organization" required />
-                </label>
-                <label>
-                  CNPJ
-                  <input type="text" name="cnpj" inputmode="numeric" placeholder="Opcional" />
-                </label>
-              </div>
-              <div class="quote-form__row">
-                <label>
-                  Cidade
-                  <input type="text" name="cidade" autocomplete="address-level2" required />
-                </label>
-                <label>
-                  Linha de produtos
-                  <select name="linha" required>
-                    <option value="">Selecione</option>
-                    <option>Higiene e perfumaria</option>
-                    <option>Limpeza</option>
-                    <option>Mercearia</option>
-                    <option>Bebidas</option>
-                    <option>Linha farmacêutica</option>
-                    <option>Várias linhas</option>
-                  </select>
-                </label>
-              </div>
-              <label>
-                Itens e quantidades
-                <textarea name="itens" rows="5" placeholder="Ex.: 10 fardos de água 500 ml, 5 caixas de detergente" required></textarea>
-              </label>
-              <p class="quote-form__error" data-quote-error role="alert" hidden></p>
-              <div class="hero-actions">
-                <button class="button button-primary" type="submit">Enviar pelo WhatsApp</button>
-              </div>
-            </form>
-          </article>
-          <aside class="info-card">
-            <p class="info-card__label">Demonstração</p>
-            <p>
-              A DistriModelo Atacado é uma empresa fictícia usada apenas para demonstrar o layout do modelo. O número de
-              WhatsApp desta página não é real; no site do cliente, o pedido de orçamento chega direto no WhatsApp do
-              vendedor.
-            </p>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
+      <section class="section section--brand" id="estrutura" aria-labelledby="estrutura-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+          <p class="eyebrow">Estrutura</p>
+          <h2 id="estrutura-titulo">Do nosso estoque para a sua prateleira em 48 horas</h2>
+          <p class="lead">Centro de distribuição próprio, separação conferida e frota com rota fixa por cidade.</p>
+        </div>
+          <div class="ops">
+            <article class="op"><img src="assets/img/fotos/d-separacao-1200x800.webp" srcset="assets/img/fotos/d-separacao-640x427.webp 640w, assets/img/fotos/d-separacao-1200x800.webp 1200w" sizes="(min-width: 760px) 31vw, 92vw" alt="Funcionário puxando uma paleteira entre as prateleiras do estoque" width="1200" height="800" loading="lazy" decoding="async" />
+              <div class="op__body"><h3>Separação do pedido</h3><p>O pedido é separado no mesmo dia em que é aprovado, por endereço de prateleira.</p></div></article>
+            <article class="op"><img src="assets/img/fotos/d-conferencia-1200x800.webp" srcset="assets/img/fotos/d-conferencia-640x427.webp 640w, assets/img/fotos/d-conferencia-1200x800.webp 1200w" sizes="(min-width: 760px) 31vw, 92vw" alt="Conferente com leitor de código de barras e tablet conferindo baldes no estoque" width="1200" height="800" loading="lazy" decoding="async" />
+              <div class="op__body"><h3>Conferência item a item</h3><p>Cada volume é conferido com leitor de código de barras antes de subir no caminhão.</p></div></article>
+            <article class="op"><img src="assets/img/fotos/t1-lotacao-1200x800.webp" srcset="assets/img/fotos/t1-lotacao-640x427.webp 640w, assets/img/fotos/t1-lotacao-1200x800.webp 1200w" sizes="(min-width: 760px) 31vw, 92vw" alt="Caminhão amarelo carregado rodando em uma estrada" width="1200" height="800" loading="lazy" decoding="async" />
+              <div class="op__body"><h3>Entrega com frota própria</h3><p>Caminhões com rota fixa por dia da semana: você sabe quando o pedido chega.</p></div></article>
           </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Mando a lista pelo WhatsApp e no dia seguinte está tudo na loja. Facilitou a reposição.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">P</span><span><strong>Paulo H.</strong><span>Mercado São José</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“O vendedor responde rápido e o prazo de pagamento ajuda muito o caixa.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">S</span><span><strong>Sandra M.</strong><span>Drogaria Central</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Entrega sempre no dia combinado, com tudo conferido. Parceiro de confiança.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>Jorge L.</strong><span>Padaria Pão Nosso</span></span></figcaption>
-            </figure>
+          <dl class="stats ops-stats">
+            <div><dt>de centro de distribuição</dt><dd>6.000 m²</dd></div>
+            <div><dt>caminhões na frota</dt><dd>18</dd></div>
+            <div><dt>dos pedidos entregues no prazo</dt><dd>98%</dd></div>
+            <div><dt>anos atendendo o Paraná</dt><dd>22</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="como-comprar" aria-labelledby="como-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Como comprar</p>
+          <h2 id="como-titulo">Três passos, sem cadastro no site</h2>
+          <p class="lead">Na primeira compra, o vendedor faz o seu cadastro e libera o faturamento.</p>
+        </div>
+          <ol class="steps steps--3"><li><span class="steps__n" aria-hidden="true">1</span><h3>Mande a sua lista</h3><p>Pelo formulário abaixo ou direto no WhatsApp do vendedor da sua região. Pode ser foto, planilha ou texto.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Receba o orçamento</h3><p>Em até 2 horas no horário comercial, com preço, prazo e a condição de pagamento do seu cadastro.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Receba na loja</h3><p>Aprovou, separamos no mesmo dia e entregamos na rota da sua cidade, com nota fiscal.</p></li></ol>
+          <div class="terms">
+            <p class="term"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a1 1 0 0 1-1-1z"/><path d="M4 7V6a2 2 0 0 1 2-2h10v3M16 13.5h.01"/></svg><span><strong>Boleto em até 28 dias</strong><span>Depois do cadastro aprovado. Pix e cartão também.</span></span></p>
+            <p class="term"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><span><strong>Nota fiscal em todo pedido</strong><span>Com substituição tributária já calculada.</span></span></p>
+            <p class="term"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 19H4.5a1.5 1.5 0 0 1-1.3-2.2L5 13.5M11 5.2l1-1.7a1.5 1.5 0 0 1 2.6 0L17 7.5M17 19h2.5a1.5 1.5 0 0 0 1.3-2.2L18.5 13"/><path d="M14 19h3M7 16l-2-2.5 3-.8M14 7.5l3 0 .8-3M10 22l-3-3 3-3"/></svg><span><strong>Troca garantida</strong><span>Avaria ou validade curta: trocamos na próxima entrega.</span></span></p>
           </div>
         </div>
       </section>
 
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com o nosso time de vendas.</h2>
+      <section class="section section--soft" id="orcamento" aria-labelledby="orcamento-titulo">
+        <div class="container quote-grid">
+          <form class="form-card" data-wa-form data-whatsapp="5500000000000" data-wa-title="Olá! Quero um orçamento da Vértice Distribuidora:" data-wa-footer="Se precisar, mando a lista completa em planilha nesta conversa." novalidate aria-labelledby="orcamento-titulo">
+            <h2 id="orcamento-titulo">Peça o seu orçamento</h2>
+            <p>Mande a lista do jeito que for mais fácil. O vendedor da sua região responde com preços, prazo e condições.</p>
+            <p class="form-req">Campos com <span class="req">*</span> são obrigatórios.</p>
+            <div class="form-grid">
+              <label class="field"><span>Nome da empresa <span class="req" aria-hidden="true">*</span></span><input type="text" name="empresa" required autocomplete="organization" /></label>
+              <label class="field"><span>CNPJ <span class="req" aria-hidden="true">*</span></span><input type="text" name="cnpj" required placeholder="00.000.000/0000-00" inputmode="numeric" /></label>
+              <label class="field"><span>Seu nome <span class="req" aria-hidden="true">*</span></span><input type="text" name="nome" required autocomplete="name" /></label>
+              <label class="field"><span>WhatsApp com DDD <span class="req" aria-hidden="true">*</span></span><input type="tel" name="telefone" required autocomplete="tel" inputmode="tel" /></label>
+              <label class="field"><span>Cidade <span class="req" aria-hidden="true">*</span></span><input type="text" name="cidade" required autocomplete="address-level2" /></label>
+              <label class="field"><span>Tipo de negócio <span class="req" aria-hidden="true">*</span></span><select name="negocio" required><option value="">Selecione</option><option>Mercado ou mercearia</option><option>Farmácia ou drogaria</option><option>Padaria ou conveniência</option><option>Hotel ou restaurante</option><option>Empresa ou condomínio</option><option>Outro</option></select></label>
+              <label class="field form-grid__full"><span>Linha de produtos</span><select name="linha"><option value="">Selecione</option><option>Higiene e perfumaria</option><option>Limpeza</option><option>Mercearia</option><option>Bebidas</option><option>Linha de farmácia</option><option>Infantil</option><option>Várias linhas</option></select></label>
+              <label class="field form-grid__full"><span>Itens e quantidades <span class="req" aria-hidden="true">*</span></span><textarea name="itens" rows="4" required placeholder="Ex.: 10 cx sabonete líquido 250 ml; 5 fardos de arroz 5 kg; 20 cx detergente 500 ml"></textarea></label>
+              <fieldset class="form-grid__full"><legend>Já compra com a Vértice? <span class="req" aria-hidden="true">*</span></legend><div class="radio-row"><label class="radio-pill"><input type="radio" name="cliente" value="Já sou cliente" required /><span>Já sou cliente</span></label><label class="radio-pill"><input type="radio" name="cliente" value="Primeira compra" /><span>Primeira compra</span></label></div></fieldset>
             </div>
-
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Rua Exemplo, 500, Centro de Distribuição, Distrito Industrial</dd>
-              </div>
-              <div>
-                <dt>Horário</dt>
-                <dd>Segunda a sexta, das 8h às 18h. Sábado, das 8h às 12h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:vendas@distribuidoramodelo.com.br">vendas@distribuidoramodelo.com.br</a></dd>
-              </div>
-            </dl>
-          </article>
-
-          <aside class="contact-card">
-            <p class="contact-card__label">Atendimento fictício</p>
-            <h2>Contato para demonstração do modelo</h2>
-            <p>Os dados desta página são fictícios e mostram como o site final organiza os canais da distribuidora.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="#orcamento">Pedir orçamento</a>
-              <a class="button button-secondary" href="#produtos">Ver produtos</a>
+            <p class="form-error" data-form-error role="alert" hidden></p>
+            <div class="form-actions"><button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Pedir orçamento</button></div>
+            <p class="form-note">Os preços não ficam no site: cada orçamento sai com a condição do seu cadastro.</p>
+          </form>
+          <aside class="sellers" aria-labelledby="vendedores-titulo">
+            <img src="assets/img/fotos/d-comercial-1200x800.webp" srcset="assets/img/fotos/d-comercial-640x427.webp 640w, assets/img/fotos/d-comercial-1200x800.webp 1200w" sizes="(min-width: 1000px) 420px, 92vw" alt="Equipe comercial reunida em uma mesa analisando relatórios" width="1200" height="800" loading="lazy" decoding="async" />
+            <div class="sellers__body">
+              <h3 id="vendedores-titulo">Prefere falar direto com o vendedor?</h3>
+              <ul><li class="seller"><span><strong>Carla Nogueira</strong><span>Maringá e região</span></span><a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Carla%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20e%20quero%20um%20or%C3%A7amento." aria-label="Chamar Carla Nogueira no WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar</a></li><li class="seller"><span><strong>Rodrigo Tanaka</strong><span>Londrina e norte do Paraná</span></span><a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Rodrigo%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20e%20quero%20um%20or%C3%A7amento." aria-label="Chamar Rodrigo Tanaka no WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar</a></li><li class="seller"><span><strong>Juliana Prates</strong><span>Noroeste e oeste do Paraná</span></span><a class="btn btn--whats btn--sm" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Juliana%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20e%20quero%20um%20or%C3%A7amento." aria-label="Chamar Juliana Prates no WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar</a></li></ul>
+              <p class="sellers__note">Atendimento de segunda a sexta, das 8h às 18h, e sábado até o meio-dia.</p>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section" id="avaliacoes" aria-labelledby="avaliacoes-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Clientes</p>
+          <h2 id="avaliacoes-titulo">Quem compra com a Vértice</h2>
+        </div>
+          <div class="reviews"><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Mando a lista no domingo à noite e na terça o caminhão está na porta. Nunca mais fiquei sem produto de limpeza na gôndola.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">SA</span><span><strong>Sérgio Almeida</strong>Mercado Bom Preço, Sarandi</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Compro a linha infantil e de higiene para as duas lojas. O vendedor avisa das ofertas e o boleto de 28 dias ajuda muito o caixa.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">PL</span><span><strong>Patrícia Lemos</strong>Drogaria Lemos, Maringá</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Precisava de um fornecedor só para bebidas e descartáveis. Um pedido, uma nota e entrega certa toda quinta.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">FK</span><span><strong>Fernando Kato</strong>Conveniência Posto Avenida, Cianorte</span></figcaption>
+          </figure></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" id="duvidas" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+            <p class="lead">Não achou a sua? O vendedor responde pelo WhatsApp.</p>
+            <a class="link-arrow" style="margin-top:20px" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20como%20comprar%20na%20V%C3%A9rtice.">Perguntar pelo WhatsApp<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="faq"><details><summary>Vocês vendem para pessoa física?</summary><p>Não. A Vértice vende só para empresas com CNPJ ativo, como mercados, farmácias, padarias, conveniências, hotéis e restaurantes.</p></details><details><summary>Qual é o pedido mínimo?</summary><p>R$ 500 por pedido, somando todas as linhas. Para cidades fora da rota, o vendedor informa o mínimo e o frete no orçamento.</p></details><details><summary>Por que os preços não aparecem no site?</summary><p>Porque o preço depende do volume, da linha e da condição do seu cadastro. O orçamento sai com o preço certo para a sua empresa.</p></details><details><summary>Como funciona a primeira compra?</summary><p>Mande a lista com o CNPJ. O vendedor faz o cadastro, confere os dados e libera a primeira compra no Pix ou no cartão. Depois, o boleto em até 28 dias.</p></details><details><summary>Vocês vendem medicamentos?</summary><p>Não. Para farmácias, vendemos higiene, infantil, dermocosméticos e correlatos, como curativos e termômetros.</p></details></div>
+        </div>
+      </section>
+
+      <section class="section" id="contato" aria-labelledby="contato-titulo">
+        <div class="container">
+          <div class="section-head">
+          <p class="eyebrow">Contato</p>
+          <h2 id="contato-titulo">Onde estamos e quando entregamos</h2>
+        </div>
+          <div class="where">
+            <figure class="where__photo">
+              <img src="assets/img/fotos/t2-empresa-1200x900.webp" srcset="assets/img/fotos/t2-empresa-640x480.webp 640w, assets/img/fotos/t2-empresa-1200x900.webp 1200w" sizes="(min-width: 960px) 520px, 92vw" alt="Vista aérea de um centro de distribuição com caminhões nas docas" width="1200" height="900" loading="lazy" decoding="async" />
+              <figcaption>Centro de distribuição no Parque Industrial de Maringá</figcaption>
+            </figure>
+            <div class="visit__card">
+              <ul class="address">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><strong>Rodovia PR-317, km 4, nº 2.300</strong><span>Parque Industrial · Maringá – PR</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong data-open-status>Seg a sex, 8h às 18h</strong><span>Sábado, 8h às 12h · retirada com pedido aprovado</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><strong><a href="tel:+550030000000">(00) 3000-0000</a></strong><span>Central de vendas</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span><strong><a href="mailto:vendas@verticedistribuidora.com.br">vendas@verticedistribuidora.com.br</a></strong><span>Cadastro, financeiro e notas</span></span></li>
+              </ul>
+              <p style="margin-top:20px;font-weight:700;color:var(--heading)">Rota de entrega da semana</p>
+              <ul class="route-list" aria-label="Rota de entrega"><li><strong>Seg</strong> · Maringá e Sarandi</li><li><strong>Ter</strong> · Londrina e Cambé</li><li><strong>Qua</strong> · Apucarana e Arapongas</li><li><strong>Qui</strong> · Umuarama e Cianorte</li><li><strong>Sex</strong> · Paranavaí e Campo Mourão</li></ul>
+              <div class="visit__actions">
+                <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=Rodovia%20PR-317%2C%20km%204%2C%20n%C2%BA%202.300%2C%20Parque%20Industrial%2C%20Maring%C3%A1%20%E2%80%93%20PR" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Como chegar</a>
+                <a class="btn btn--ghost" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp de vendas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-titulo">
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Mande a sua lista hoje e receba nesta semana.</h2>
+            <p>O vendedor da sua região responde em até 2 horas no horário comercial.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--white btn--lg" href="#orcamento"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Pedir orçamento</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Chamar no WhatsApp</a>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-distribuidora-modelo.svg" alt="" width="48" height="48" />
-              <strong>DistriModelo Atacado</strong>
-            </div>
-            <p>Distribuidora que abastece o comércio da região com entrega rápida e atendimento por vendedor.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#produtos">Produtos</a></li>
-              <li><a href="#clientes">Para quem vendemos</a></li>
-              <li><a href="#orcamento">Orçamento</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 500, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Vértice Distribuidora, página inicial"><img src="assets/img/logo-vertice.svg" alt="" width="44" height="44" /><span class="brand__name">Vértice<small>Distribuidora</small></span></a>
+          <p class="footer__about">Distribuidora atacadista de higiene, limpeza, mercearia e bebidas para o comércio do Paraná, com entrega em rota semanal.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> DistriModelo Atacado. Empresa fictícia: demonstração do modelo Distribuidora OnePage.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>Navegação</h2><ul><li><a href="#linhas">Linhas</a></li><li><a href="#clientes">Para quem vendemos</a></li><li><a href="#estrutura">Estrutura</a></li><li><a href="#como-comprar">Como comprar</a></li><li><a href="#contato">Contato</a></li></ul></div><div><h2>Vendas</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:vendas@verticedistribuidora.com.br">vendas@verticedistribuidora.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Parque Industrial, Maringá – PR</span></li></ul></div><div><h2>Horário</h2><ul><li>Segunda a sexta: 8h às 18h</li><li>Sábado: 8h às 12h</li><li>Venda só para CNPJ</li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Vértice Distribuidora Ltda.</strong> · <span class="nowrap">CNPJ 00.000.000/0001-00</span> · <span class="nowrap">Inscrição estadual 000.00000-00</span></p><p>Não vendemos medicamentos. Imagens meramente ilustrativas; marcas e produtos fictícios.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Vértice Distribuidora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Distribuidora OnePage da GSA. <a href="/modelos/distribuidoras/01-onepage/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20V%C3%A9rtice%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>Vendas</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo | Prisma Distribuidora</title>
+    <meta name="description" content="Catálogo de higiene, beleza, infantil e acessórios de saúde no atacado, com busca por produto, marca ou código e pedido enviado pelo WhatsApp." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#083b43" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-prisma.svg" />
+    <link rel="preload" href="assets/fonts/barlow-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body data-hours='{"1": [8, 18], "2": [8, 18], "3": [8, 18], "4": [8, 18], "5": [8, 18]}' data-whatsapp="5500000000000" data-cart="prisma-pedido" data-cart-prices="off" data-cart-empty="O pedido está vazio.&lt;br /&gt;&lt;a href=&quot;catalogo.html&quot;&gt;Abrir o catálogo&lt;/a&gt;" data-cart-toast="Adicionado ao pedido" data-cart-title="Olá! Quero enviar este pedido para a Prisma Distribuidora:" data-cart-footer="Fico no aguardo dos preços e do prazo de entrega.">
+    <script src="/assets/js/demo-bar.js"></script>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg>Venda só para CNPJ · pedido mínimo R$&nbsp;800</p>
+        <div class="topbar__links"><p class="topbar__item topbar__hide-sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h</p><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com vendedor</a></div>
+      </div>
+    </div>
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Prisma Distribuidora, página inicial"><img src="assets/img/logo-prisma.svg" alt="" width="44" height="44" /><span class="brand__name">Prisma<small>Distribuidora</small></span></a>
+        <form class="hsearch" action="catalogo.html" role="search">
+          <label class="sr-only" for="busca">Buscar no catálogo</label>
+          <input id="busca" type="search" name="q" placeholder="Buscar produto, marca ou código" autocomplete="off" />
+          <button type="submit" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+        </form>
+        <div class="header__actions">
+          <a class="header__link" href="seja-cliente.html">Seja cliente</a>
+          <a class="cart-btn" href="pedido.html" data-cart-open aria-label="Abrir o pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg><span class="cart-btn__label">Pedido</span><span class="cart-count" data-cart-count data-zero aria-hidden="true">0</span></a>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
+        </div>
+      </div>
+      <nav class="catbar" aria-label="Categorias"><div class="container catbar__inner"><a href="catalogo.html" aria-current="page">Todo o catálogo</a><a href="catalogo.html?cat=dermo">Dermocosméticos</a><a href="catalogo.html?cat=solar">Proteção solar</a><a href="catalogo.html?cat=corpo">Corpo e banho</a><a href="catalogo.html?cat=cabelo">Cabelos</a><a href="catalogo.html?cat=bucal">Higiene bucal</a><a href="catalogo.html?cat=infantil">Infantil</a><a href="catalogo.html?cat=beleza">Maquiagem</a><a href="catalogo.html?cat=saude">Saúde e acessórios</a></div></nav>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel"><a href="index.html">Início</a><a href="catalogo.html" aria-current="page">Catálogo</a><a href="seja-cliente.html">Seja cliente</a><a href="pedido.html">Meu pedido</a>
+          <a class="btn btn--whats btn--block" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com vendedor</a>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <div class="page-head">
+        <div class="container">
+          <nav class="crumbs crumbs--dark" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Catálogo</span></nav>
+          <h1>Catálogo de produtos</h1>
+          <p>Escolha a quantidade de cada item e adicione ao pedido. Não mostramos preço no site: o vendedor responde com a condição do seu CNPJ.</p>
+        </div>
+      </div>
+      <section class="section section--tight" aria-labelledby="lista-titulo">
+        <h2 class="sr-only" id="lista-titulo">Produtos</h2>
+        <div class="container catalog" data-filter data-filter-noun="produtos" data-filter-noun-one="produto">
+          <aside class="filters" aria-label="Filtros">
+            <p class="filters__title">Categorias</p>
+            <div class="chips" role="group" aria-label="Filtrar por categoria"><button class="chip" type="button" data-filter-btn="todos" aria-pressed="true">Todas<span class="chip__n">24</span></button><button class="chip" type="button" data-filter-btn="dermo" aria-pressed="false">Dermocosméticos<span class="chip__n">4</span></button><button class="chip" type="button" data-filter-btn="solar" aria-pressed="false">Proteção solar<span class="chip__n">3</span></button><button class="chip" type="button" data-filter-btn="corpo" aria-pressed="false">Corpo e banho<span class="chip__n">4</span></button><button class="chip" type="button" data-filter-btn="cabelo" aria-pressed="false">Cabelos<span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="bucal" aria-pressed="false">Higiene bucal<span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="infantil" aria-pressed="false">Infantil<span class="chip__n">4</span></button><button class="chip" type="button" data-filter-btn="beleza" aria-pressed="false">Maquiagem<span class="chip__n">2</span></button><button class="chip" type="button" data-filter-btn="saude" aria-pressed="false">Saúde e acessórios<span class="chip__n">3</span></button></div>
+            <div class="filters__row">
+              <label class="field"><span>Marca</span><select name="marca" data-filter-by="brand"><option value="">Todas</option><option value="aurevie">Aurévie</option><option value="capile">Capilé</option><option value="dentiva">Dentiva</option><option value="fresca">Fresca</option><option value="lumi">Lumi</option><option value="medix">Medix</option><option value="petiz">Petiz</option><option value="solmare">Solmare</option><option value="verdelis">Verdelis</option></select></label>
+              <label class="field"><span>Embalagem</span><select name="embalagem" data-filter-by="pack"><option value="">Todas</option><option value="caixa">Caixa</option><option value="display">Display</option><option value="fardo">Fardo</option></select></label>
+            </div>
+            <button class="filters__reset" type="button" data-filter-reset>Limpar filtros</button>
+          </aside>
+          <div>
+            <div class="catalog__top">
+              <label class="search"><span class="sr-only">Buscar no catálogo</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" placeholder="Buscar produto, marca ou código" data-filter-search /></label>
+              <p class="toolbar__count" data-filter-count aria-live="polite">24 produtos encontrados.</p>
+            </div>
+            <div class="sku-list"><article class="sku" data-item data-cat="dermo" data-brand="aurevie" data-pack="display" data-text="Sérum Vitamina C 10% Aurévie 30101 Dermocosméticos Display com 6 un.">
+              <img src="assets/img/produtos/serum-480.webp" srcset="assets/img/produtos/serum-480.webp 480w, assets/img/produtos/serum-960.webp 960w" sizes="76px" alt="" width="480" height="480" fetchpriority="high" decoding="async" />
+              <div>
+                <p class="prod__brand">Aurévie</p>
+                <h3>Sérum Vitamina C 10%</h3>
+                <p class="sku__meta"><span>30 ml</span><span>Cód. 30101</span><span>Display com 6 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-serum-vitamina-c" aria-label="Diminuir a quantidade de Sérum Vitamina C 10%">−</button><input id="q-serum-vitamina-c" type="number" min="1" max="99" value="1" aria-label="Quantidade de Sérum Vitamina C 10%" /><button type="button" data-qty-step="1" data-target="#q-serum-vitamina-c" aria-label="Aumentar a quantidade de Sérum Vitamina C 10%">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="serum-vitamina-c" data-name="Sérum Vitamina C 10% Aurévie 30 ml" data-img="assets/img/produtos/serum-160.webp" data-size="Display com 6 un., cód. 30101" data-unit="display|displays" data-qty-from="#q-serum-vitamina-c" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="dermo" data-brand="aurevie" data-pack="caixa" data-text="Creme Hidratante Facial Aurévie 30102 Dermocosméticos Caixa com 6 un.">
+              <img src="assets/img/produtos/creme_facial-480.webp" srcset="assets/img/produtos/creme_facial-480.webp 480w, assets/img/produtos/creme_facial-960.webp 960w" sizes="76px" alt="" width="480" height="480" fetchpriority="high" decoding="async" />
+              <div>
+                <p class="prod__brand">Aurévie</p>
+                <h3>Creme Hidratante Facial</h3>
+                <p class="sku__meta"><span>50 g</span><span>Cód. 30102</span><span>Caixa com 6 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-creme-hidratante-facial" aria-label="Diminuir a quantidade de Creme Hidratante Facial">−</button><input id="q-creme-hidratante-facial" type="number" min="1" max="99" value="1" aria-label="Quantidade de Creme Hidratante Facial" /><button type="button" data-qty-step="1" data-target="#q-creme-hidratante-facial" aria-label="Aumentar a quantidade de Creme Hidratante Facial">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="creme-hidratante-facial" data-name="Creme Hidratante Facial Aurévie 50 g" data-img="assets/img/produtos/creme_facial-160.webp" data-size="Caixa com 6 un., cód. 30102" data-unit="caixa|caixas" data-qty-from="#q-creme-hidratante-facial" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="dermo" data-brand="aurevie" data-pack="caixa" data-text="Água Micelar Pele Sensível Aurévie 30103 Dermocosméticos Caixa com 12 un.">
+              <img src="assets/img/produtos/micelar-480.webp" srcset="assets/img/produtos/micelar-480.webp 480w, assets/img/produtos/micelar-960.webp 960w" sizes="76px" alt="" width="480" height="480" fetchpriority="high" decoding="async" />
+              <div>
+                <p class="prod__brand">Aurévie</p>
+                <h3>Água Micelar Pele Sensível</h3>
+                <p class="sku__meta"><span>200 ml</span><span>Cód. 30103</span><span>Caixa com 12 un.</span><span class="sku__tag">Mais pedido</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-agua-micelar" aria-label="Diminuir a quantidade de Água Micelar Pele Sensível">−</button><input id="q-agua-micelar" type="number" min="1" max="99" value="1" aria-label="Quantidade de Água Micelar Pele Sensível" /><button type="button" data-qty-step="1" data-target="#q-agua-micelar" aria-label="Aumentar a quantidade de Água Micelar Pele Sensível">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="agua-micelar" data-name="Água Micelar Pele Sensível Aurévie 200 ml" data-img="assets/img/produtos/micelar-160.webp" data-size="Caixa com 12 un., cód. 30103" data-unit="caixa|caixas" data-qty-from="#q-agua-micelar" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="dermo" data-brand="aurevie" data-pack="caixa" data-text="Gel de Limpeza Facial Aurévie 30104 Dermocosméticos Caixa com 12 un.">
+              <img src="assets/img/produtos/gel_limpeza-480.webp" srcset="assets/img/produtos/gel_limpeza-480.webp 480w, assets/img/produtos/gel_limpeza-960.webp 960w" sizes="76px" alt="" width="480" height="480" fetchpriority="high" decoding="async" />
+              <div>
+                <p class="prod__brand">Aurévie</p>
+                <h3>Gel de Limpeza Facial</h3>
+                <p class="sku__meta"><span>150 g</span><span>Cód. 30104</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-gel-de-limpeza-facial" aria-label="Diminuir a quantidade de Gel de Limpeza Facial">−</button><input id="q-gel-de-limpeza-facial" type="number" min="1" max="99" value="1" aria-label="Quantidade de Gel de Limpeza Facial" /><button type="button" data-qty-step="1" data-target="#q-gel-de-limpeza-facial" aria-label="Aumentar a quantidade de Gel de Limpeza Facial">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="gel-de-limpeza-facial" data-name="Gel de Limpeza Facial Aurévie 150 g" data-img="assets/img/produtos/gel_limpeza-160.webp" data-size="Caixa com 12 un., cód. 30104" data-unit="caixa|caixas" data-qty-from="#q-gel-de-limpeza-facial" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="solar" data-brand="solmare" data-pack="caixa" data-text="Protetor Solar Facial FPS 50 Solmare 31201 Proteção solar Caixa com 6 un.">
+              <img src="assets/img/produtos/protetor_facial-480.webp" srcset="assets/img/produtos/protetor_facial-480.webp 480w, assets/img/produtos/protetor_facial-960.webp 960w" sizes="76px" alt="" width="480" height="480" fetchpriority="high" decoding="async" />
+              <div>
+                <p class="prod__brand">Solmare</p>
+                <h3>Protetor Solar Facial FPS 50</h3>
+                <p class="sku__meta"><span>60 g</span><span>Cód. 31201</span><span>Caixa com 6 un.</span><span class="sku__tag">Verão</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-protetor-solar-facial-fps-50" aria-label="Diminuir a quantidade de Protetor Solar Facial FPS 50">−</button><input id="q-protetor-solar-facial-fps-50" type="number" min="1" max="99" value="1" aria-label="Quantidade de Protetor Solar Facial FPS 50" /><button type="button" data-qty-step="1" data-target="#q-protetor-solar-facial-fps-50" aria-label="Aumentar a quantidade de Protetor Solar Facial FPS 50">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="protetor-solar-facial-fps-50" data-name="Protetor Solar Facial FPS 50 Solmare 60 g" data-img="assets/img/produtos/protetor_facial-160.webp" data-size="Caixa com 6 un., cód. 31201" data-unit="caixa|caixas" data-qty-from="#q-protetor-solar-facial-fps-50" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="solar" data-brand="solmare" data-pack="caixa" data-text="Protetor Solar Corporal Spray FPS 30 Solmare 31202 Proteção solar Caixa com 12 un.">
+              <img src="assets/img/produtos/protetor_spray-480.webp" srcset="assets/img/produtos/protetor_spray-480.webp 480w, assets/img/produtos/protetor_spray-960.webp 960w" sizes="76px" alt="" width="480" height="480" fetchpriority="high" decoding="async" />
+              <div>
+                <p class="prod__brand">Solmare</p>
+                <h3>Protetor Solar Corporal Spray FPS 30</h3>
+                <p class="sku__meta"><span>200 ml</span><span>Cód. 31202</span><span>Caixa com 12 un.</span><span class="sku__tag">Verão</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-protetor-solar-spray-fps-30" aria-label="Diminuir a quantidade de Protetor Solar Corporal Spray FPS 30">−</button><input id="q-protetor-solar-spray-fps-30" type="number" min="1" max="99" value="1" aria-label="Quantidade de Protetor Solar Corporal Spray FPS 30" /><button type="button" data-qty-step="1" data-target="#q-protetor-solar-spray-fps-30" aria-label="Aumentar a quantidade de Protetor Solar Corporal Spray FPS 30">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="protetor-solar-spray-fps-30" data-name="Protetor Solar Corporal Spray FPS 30 Solmare 200 ml" data-img="assets/img/produtos/protetor_spray-160.webp" data-size="Caixa com 12 un., cód. 31202" data-unit="caixa|caixas" data-qty-from="#q-protetor-solar-spray-fps-30" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="solar" data-brand="solmare" data-pack="display" data-text="Protetor Labial FPS 30 Solmare 31203 Proteção solar Display com 24 un.">
+              <img src="assets/img/produtos/labial-480.webp" srcset="assets/img/produtos/labial-480.webp 480w, assets/img/produtos/labial-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Solmare</p>
+                <h3>Protetor Labial FPS 30</h3>
+                <p class="sku__meta"><span>4,5 g</span><span>Cód. 31203</span><span>Display com 24 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-protetor-labial-fps-30" aria-label="Diminuir a quantidade de Protetor Labial FPS 30">−</button><input id="q-protetor-labial-fps-30" type="number" min="1" max="99" value="1" aria-label="Quantidade de Protetor Labial FPS 30" /><button type="button" data-qty-step="1" data-target="#q-protetor-labial-fps-30" aria-label="Aumentar a quantidade de Protetor Labial FPS 30">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="protetor-labial-fps-30" data-name="Protetor Labial FPS 30 Solmare 4,5 g" data-img="assets/img/produtos/labial-160.webp" data-size="Display com 24 un., cód. 31203" data-unit="display|displays" data-qty-from="#q-protetor-labial-fps-30" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="corpo" data-brand="verdelis" data-pack="caixa" data-text="Loção Hidratante Corporal Verdelis 32301 Corpo e banho Caixa com 12 un.">
+              <img src="assets/img/produtos/locao-480.webp" srcset="assets/img/produtos/locao-480.webp 480w, assets/img/produtos/locao-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Verdelis</p>
+                <h3>Loção Hidratante Corporal</h3>
+                <p class="sku__meta"><span>400 ml</span><span>Cód. 32301</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-locao-hidratante-corporal" aria-label="Diminuir a quantidade de Loção Hidratante Corporal">−</button><input id="q-locao-hidratante-corporal" type="number" min="1" max="99" value="1" aria-label="Quantidade de Loção Hidratante Corporal" /><button type="button" data-qty-step="1" data-target="#q-locao-hidratante-corporal" aria-label="Aumentar a quantidade de Loção Hidratante Corporal">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="locao-hidratante-corporal" data-name="Loção Hidratante Corporal Verdelis 400 ml" data-img="assets/img/produtos/locao-160.webp" data-size="Caixa com 12 un., cód. 32301" data-unit="caixa|caixas" data-qty-from="#q-locao-hidratante-corporal" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="corpo" data-brand="verdelis" data-pack="caixa" data-text="Sabonete Líquido para as Mãos Verdelis 32302 Corpo e banho Caixa com 12 un.">
+              <img src="assets/img/produtos/sabonete-480.webp" srcset="assets/img/produtos/sabonete-480.webp 480w, assets/img/produtos/sabonete-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Verdelis</p>
+                <h3>Sabonete Líquido para as Mãos</h3>
+                <p class="sku__meta"><span>250 ml</span><span>Cód. 32302</span><span>Caixa com 12 un.</span><span class="sku__tag">Mais pedido</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-sabonete-liquido-maos" aria-label="Diminuir a quantidade de Sabonete Líquido para as Mãos">−</button><input id="q-sabonete-liquido-maos" type="number" min="1" max="99" value="1" aria-label="Quantidade de Sabonete Líquido para as Mãos" /><button type="button" data-qty-step="1" data-target="#q-sabonete-liquido-maos" aria-label="Aumentar a quantidade de Sabonete Líquido para as Mãos">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="sabonete-liquido-maos" data-name="Sabonete Líquido para as Mãos Verdelis 250 ml" data-img="assets/img/produtos/sabonete-160.webp" data-size="Caixa com 12 un., cód. 32302" data-unit="caixa|caixas" data-qty-from="#q-sabonete-liquido-maos" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="corpo" data-brand="verdelis" data-pack="caixa" data-text="Creme para as Mãos Verdelis 32303 Corpo e banho Caixa com 12 un.">
+              <img src="assets/img/produtos/creme_maos-480.webp" srcset="assets/img/produtos/creme_maos-480.webp 480w, assets/img/produtos/creme_maos-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Verdelis</p>
+                <h3>Creme para as Mãos</h3>
+                <p class="sku__meta"><span>75 g</span><span>Cód. 32303</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-creme-para-as-maos" aria-label="Diminuir a quantidade de Creme para as Mãos">−</button><input id="q-creme-para-as-maos" type="number" min="1" max="99" value="1" aria-label="Quantidade de Creme para as Mãos" /><button type="button" data-qty-step="1" data-target="#q-creme-para-as-maos" aria-label="Aumentar a quantidade de Creme para as Mãos">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="creme-para-as-maos" data-name="Creme para as Mãos Verdelis 75 g" data-img="assets/img/produtos/creme_maos-160.webp" data-size="Caixa com 12 un., cód. 32303" data-unit="caixa|caixas" data-qty-from="#q-creme-para-as-maos" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="corpo" data-brand="fresca" data-pack="caixa" data-text="Desodorante Roll-on 48 h Fresca 32304 Corpo e banho Caixa com 12 un.">
+              <img src="assets/img/produtos/desodorante-480.webp" srcset="assets/img/produtos/desodorante-480.webp 480w, assets/img/produtos/desodorante-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Fresca</p>
+                <h3>Desodorante Roll-on 48 h</h3>
+                <p class="sku__meta"><span>50 ml</span><span>Cód. 32304</span><span>Caixa com 12 un.</span><span class="sku__tag">Mais pedido</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-desodorante-roll-on" aria-label="Diminuir a quantidade de Desodorante Roll-on 48 h">−</button><input id="q-desodorante-roll-on" type="number" min="1" max="99" value="1" aria-label="Quantidade de Desodorante Roll-on 48 h" /><button type="button" data-qty-step="1" data-target="#q-desodorante-roll-on" aria-label="Aumentar a quantidade de Desodorante Roll-on 48 h">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="desodorante-roll-on" data-name="Desodorante Roll-on 48 h Fresca 50 ml" data-img="assets/img/produtos/desodorante-160.webp" data-size="Caixa com 12 un., cód. 32304" data-unit="caixa|caixas" data-qty-from="#q-desodorante-roll-on" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="cabelo" data-brand="capile" data-pack="caixa" data-text="Shampoo Reparação Capilé 33401 Cabelos Caixa com 12 un.">
+              <img src="assets/img/produtos/shampoo-480.webp" srcset="assets/img/produtos/shampoo-480.webp 480w, assets/img/produtos/shampoo-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Capilé</p>
+                <h3>Shampoo Reparação</h3>
+                <p class="sku__meta"><span>300 ml</span><span>Cód. 33401</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-shampoo-reparacao" aria-label="Diminuir a quantidade de Shampoo Reparação">−</button><input id="q-shampoo-reparacao" type="number" min="1" max="99" value="1" aria-label="Quantidade de Shampoo Reparação" /><button type="button" data-qty-step="1" data-target="#q-shampoo-reparacao" aria-label="Aumentar a quantidade de Shampoo Reparação">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="shampoo-reparacao" data-name="Shampoo Reparação Capilé 300 ml" data-img="assets/img/produtos/shampoo-160.webp" data-size="Caixa com 12 un., cód. 33401" data-unit="caixa|caixas" data-qty-from="#q-shampoo-reparacao" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="cabelo" data-brand="capile" data-pack="caixa" data-text="Condicionador Reparação Capilé 33402 Cabelos Caixa com 12 un.">
+              <img src="assets/img/produtos/condicionador-480.webp" srcset="assets/img/produtos/condicionador-480.webp 480w, assets/img/produtos/condicionador-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Capilé</p>
+                <h3>Condicionador Reparação</h3>
+                <p class="sku__meta"><span>300 ml</span><span>Cód. 33402</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-condicionador-reparacao" aria-label="Diminuir a quantidade de Condicionador Reparação">−</button><input id="q-condicionador-reparacao" type="number" min="1" max="99" value="1" aria-label="Quantidade de Condicionador Reparação" /><button type="button" data-qty-step="1" data-target="#q-condicionador-reparacao" aria-label="Aumentar a quantidade de Condicionador Reparação">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="condicionador-reparacao" data-name="Condicionador Reparação Capilé 300 ml" data-img="assets/img/produtos/condicionador-160.webp" data-size="Caixa com 12 un., cód. 33402" data-unit="caixa|caixas" data-qty-from="#q-condicionador-reparacao" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="bucal" data-brand="dentiva" data-pack="caixa" data-text="Creme Dental Branqueador Dentiva 34501 Higiene bucal Caixa com 72 un.">
+              <img src="assets/img/produtos/creme_dental-480.webp" srcset="assets/img/produtos/creme_dental-480.webp 480w, assets/img/produtos/creme_dental-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Dentiva</p>
+                <h3>Creme Dental Branqueador</h3>
+                <p class="sku__meta"><span>90 g</span><span>Cód. 34501</span><span>Caixa com 72 un.</span><span class="sku__tag">Mais pedido</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-creme-dental-branqueador" aria-label="Diminuir a quantidade de Creme Dental Branqueador">−</button><input id="q-creme-dental-branqueador" type="number" min="1" max="99" value="1" aria-label="Quantidade de Creme Dental Branqueador" /><button type="button" data-qty-step="1" data-target="#q-creme-dental-branqueador" aria-label="Aumentar a quantidade de Creme Dental Branqueador">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="creme-dental-branqueador" data-name="Creme Dental Branqueador Dentiva 90 g" data-img="assets/img/produtos/creme_dental-160.webp" data-size="Caixa com 72 un., cód. 34501" data-unit="caixa|caixas" data-qty-from="#q-creme-dental-branqueador" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="bucal" data-brand="dentiva" data-pack="caixa" data-text="Enxaguante Bucal Sem Álcool Dentiva 34502 Higiene bucal Caixa com 12 un.">
+              <img src="assets/img/produtos/enxaguante-480.webp" srcset="assets/img/produtos/enxaguante-480.webp 480w, assets/img/produtos/enxaguante-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Dentiva</p>
+                <h3>Enxaguante Bucal Sem Álcool</h3>
+                <p class="sku__meta"><span>500 ml</span><span>Cód. 34502</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-enxaguante-bucal" aria-label="Diminuir a quantidade de Enxaguante Bucal Sem Álcool">−</button><input id="q-enxaguante-bucal" type="number" min="1" max="99" value="1" aria-label="Quantidade de Enxaguante Bucal Sem Álcool" /><button type="button" data-qty-step="1" data-target="#q-enxaguante-bucal" aria-label="Aumentar a quantidade de Enxaguante Bucal Sem Álcool">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="enxaguante-bucal" data-name="Enxaguante Bucal Sem Álcool Dentiva 500 ml" data-img="assets/img/produtos/enxaguante-160.webp" data-size="Caixa com 12 un., cód. 34502" data-unit="caixa|caixas" data-qty-from="#q-enxaguante-bucal" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="infantil" data-brand="petiz" data-pack="caixa" data-text="Shampoo Infantil Suave Petiz 35601 Infantil Caixa com 12 un.">
+              <img src="assets/img/produtos/shampoo_bebe-480.webp" srcset="assets/img/produtos/shampoo_bebe-480.webp 480w, assets/img/produtos/shampoo_bebe-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Petiz</p>
+                <h3>Shampoo Infantil Suave</h3>
+                <p class="sku__meta"><span>200 ml</span><span>Cód. 35601</span><span>Caixa com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-shampoo-infantil" aria-label="Diminuir a quantidade de Shampoo Infantil Suave">−</button><input id="q-shampoo-infantil" type="number" min="1" max="99" value="1" aria-label="Quantidade de Shampoo Infantil Suave" /><button type="button" data-qty-step="1" data-target="#q-shampoo-infantil" aria-label="Aumentar a quantidade de Shampoo Infantil Suave">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="shampoo-infantil" data-name="Shampoo Infantil Suave Petiz 200 ml" data-img="assets/img/produtos/shampoo_bebe-160.webp" data-size="Caixa com 12 un., cód. 35601" data-unit="caixa|caixas" data-qty-from="#q-shampoo-infantil" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="infantil" data-brand="petiz" data-pack="display" data-text="Creme Preventivo de Assaduras Petiz 35602 Infantil Display com 12 un.">
+              <img src="assets/img/produtos/creme_assadura-480.webp" srcset="assets/img/produtos/creme_assadura-480.webp 480w, assets/img/produtos/creme_assadura-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Petiz</p>
+                <h3>Creme Preventivo de Assaduras</h3>
+                <p class="sku__meta"><span>45 g</span><span>Cód. 35602</span><span>Display com 12 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-creme-preventivo-assaduras" aria-label="Diminuir a quantidade de Creme Preventivo de Assaduras">−</button><input id="q-creme-preventivo-assaduras" type="number" min="1" max="99" value="1" aria-label="Quantidade de Creme Preventivo de Assaduras" /><button type="button" data-qty-step="1" data-target="#q-creme-preventivo-assaduras" aria-label="Aumentar a quantidade de Creme Preventivo de Assaduras">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="creme-preventivo-assaduras" data-name="Creme Preventivo de Assaduras Petiz 45 g" data-img="assets/img/produtos/creme_assadura-160.webp" data-size="Display com 12 un., cód. 35602" data-unit="display|displays" data-qty-from="#q-creme-preventivo-assaduras" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="infantil" data-brand="petiz" data-pack="caixa" data-text="Lenços Umedecidos Petiz 35603 Infantil Caixa com 24 pacotes">
+              <img src="assets/img/produtos/lenco-480.webp" srcset="assets/img/produtos/lenco-480.webp 480w, assets/img/produtos/lenco-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Petiz</p>
+                <h3>Lenços Umedecidos</h3>
+                <p class="sku__meta"><span>48 unidades</span><span>Cód. 35603</span><span>Caixa com 24 pacotes</span><span class="sku__tag">Mais pedido</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-lencos-umedecidos" aria-label="Diminuir a quantidade de Lenços Umedecidos">−</button><input id="q-lencos-umedecidos" type="number" min="1" max="99" value="1" aria-label="Quantidade de Lenços Umedecidos" /><button type="button" data-qty-step="1" data-target="#q-lencos-umedecidos" aria-label="Aumentar a quantidade de Lenços Umedecidos">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="lencos-umedecidos" data-name="Lenços Umedecidos Petiz 48 unidades" data-img="assets/img/produtos/lenco-160.webp" data-size="Caixa com 24 pacotes, cód. 35603" data-unit="caixa|caixas" data-qty-from="#q-lencos-umedecidos" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="infantil" data-brand="petiz" data-pack="fardo" data-text="Fraldas Noites Secas M Petiz 35604 Infantil Fardo com 4 pacotes">
+              <img src="assets/img/produtos/fraldas-480.webp" srcset="assets/img/produtos/fraldas-480.webp 480w, assets/img/produtos/fraldas-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Petiz</p>
+                <h3>Fraldas Noites Secas M</h3>
+                <p class="sku__meta"><span>48 fraldas</span><span>Cód. 35604</span><span>Fardo com 4 pacotes</span><span class="sku__tag">Mais pedido</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-fraldas-noites-secas-m" aria-label="Diminuir a quantidade de Fraldas Noites Secas M">−</button><input id="q-fraldas-noites-secas-m" type="number" min="1" max="99" value="1" aria-label="Quantidade de Fraldas Noites Secas M" /><button type="button" data-qty-step="1" data-target="#q-fraldas-noites-secas-m" aria-label="Aumentar a quantidade de Fraldas Noites Secas M">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="fraldas-noites-secas-m" data-name="Fraldas Noites Secas M Petiz 48 fraldas" data-img="assets/img/produtos/fraldas-160.webp" data-size="Fardo com 4 pacotes, cód. 35604" data-unit="fardo|fardos" data-qty-from="#q-fraldas-noites-secas-m" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="beleza" data-brand="lumi" data-pack="display" data-text="Base Líquida Acabamento Natural Lumi 36701 Maquiagem Display com 6 un.">
+              <img src="assets/img/produtos/base-480.webp" srcset="assets/img/produtos/base-480.webp 480w, assets/img/produtos/base-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Lumi</p>
+                <h3>Base Líquida Acabamento Natural</h3>
+                <p class="sku__meta"><span>30 ml</span><span>Cód. 36701</span><span>Display com 6 un.</span><span class="sku__tag">Novo</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-base-liquida" aria-label="Diminuir a quantidade de Base Líquida Acabamento Natural">−</button><input id="q-base-liquida" type="number" min="1" max="99" value="1" aria-label="Quantidade de Base Líquida Acabamento Natural" /><button type="button" data-qty-step="1" data-target="#q-base-liquida" aria-label="Aumentar a quantidade de Base Líquida Acabamento Natural">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="base-liquida" data-name="Base Líquida Acabamento Natural Lumi 30 ml" data-img="assets/img/produtos/base-160.webp" data-size="Display com 6 un., cód. 36701" data-unit="display|displays" data-qty-from="#q-base-liquida" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="beleza" data-brand="lumi" data-pack="display" data-text="Esmalte Cremoso Vermelho Lumi 36702 Maquiagem Display com 48 un.">
+              <img src="assets/img/produtos/esmalte-480.webp" srcset="assets/img/produtos/esmalte-480.webp 480w, assets/img/produtos/esmalte-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Lumi</p>
+                <h3>Esmalte Cremoso Vermelho</h3>
+                <p class="sku__meta"><span>8 ml</span><span>Cód. 36702</span><span>Display com 48 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-esmalte-cremoso" aria-label="Diminuir a quantidade de Esmalte Cremoso Vermelho">−</button><input id="q-esmalte-cremoso" type="number" min="1" max="99" value="1" aria-label="Quantidade de Esmalte Cremoso Vermelho" /><button type="button" data-qty-step="1" data-target="#q-esmalte-cremoso" aria-label="Aumentar a quantidade de Esmalte Cremoso Vermelho">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="esmalte-cremoso" data-name="Esmalte Cremoso Vermelho Lumi 8 ml" data-img="assets/img/produtos/esmalte-160.webp" data-size="Display com 48 un., cód. 36702" data-unit="display|displays" data-qty-from="#q-esmalte-cremoso" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="saude" data-brand="medix" data-pack="caixa" data-text="Termômetro Digital Medix 37801 Saúde e acessórios Caixa com 10 un.">
+              <img src="assets/img/produtos/termometro-480.webp" srcset="assets/img/produtos/termometro-480.webp 480w, assets/img/produtos/termometro-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Medix</p>
+                <h3>Termômetro Digital</h3>
+                <p class="sku__meta"><span>1 unidade</span><span>Cód. 37801</span><span>Caixa com 10 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-termometro-digital" aria-label="Diminuir a quantidade de Termômetro Digital">−</button><input id="q-termometro-digital" type="number" min="1" max="99" value="1" aria-label="Quantidade de Termômetro Digital" /><button type="button" data-qty-step="1" data-target="#q-termometro-digital" aria-label="Aumentar a quantidade de Termômetro Digital">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="termometro-digital" data-name="Termômetro Digital Medix 1 unidade" data-img="assets/img/produtos/termometro-160.webp" data-size="Caixa com 10 un., cód. 37801" data-unit="caixa|caixas" data-qty-from="#q-termometro-digital" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="saude" data-brand="medix" data-pack="caixa" data-text="Medidor de Pressão Digital de Braço Medix 37802 Saúde e acessórios Caixa com 4 un.">
+              <img src="assets/img/produtos/medidor-480.webp" srcset="assets/img/produtos/medidor-480.webp 480w, assets/img/produtos/medidor-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Medix</p>
+                <h3>Medidor de Pressão Digital de Braço</h3>
+                <p class="sku__meta"><span>1 unidade</span><span>Cód. 37802</span><span>Caixa com 4 un.</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-medidor-de-pressao-digital" aria-label="Diminuir a quantidade de Medidor de Pressão Digital de Braço">−</button><input id="q-medidor-de-pressao-digital" type="number" min="1" max="99" value="1" aria-label="Quantidade de Medidor de Pressão Digital de Braço" /><button type="button" data-qty-step="1" data-target="#q-medidor-de-pressao-digital" aria-label="Aumentar a quantidade de Medidor de Pressão Digital de Braço">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="medidor-de-pressao-digital" data-name="Medidor de Pressão Digital de Braço Medix 1 unidade" data-img="assets/img/produtos/medidor-160.webp" data-size="Caixa com 4 un., cód. 37802" data-unit="caixa|caixas" data-qty-from="#q-medidor-de-pressao-digital" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article><article class="sku" data-item data-cat="saude" data-brand="medix" data-pack="display" data-text="Curativos Resistentes à Água Medix 37803 Saúde e acessórios Display com 24 caixinhas">
+              <img src="assets/img/produtos/curativos-480.webp" srcset="assets/img/produtos/curativos-480.webp 480w, assets/img/produtos/curativos-960.webp 960w" sizes="76px" alt="" width="480" height="480" loading="lazy" decoding="async" />
+              <div>
+                <p class="prod__brand">Medix</p>
+                <h3>Curativos Resistentes à Água</h3>
+                <p class="sku__meta"><span>40 unidades</span><span>Cód. 37803</span><span>Display com 24 caixinhas</span></p>
+              </div>
+              <div class="buy"><div class="qty qty--sm"><button type="button" data-qty-step="-1" data-target="#q-curativos" aria-label="Diminuir a quantidade de Curativos Resistentes à Água">−</button><input id="q-curativos" type="number" min="1" max="99" value="1" aria-label="Quantidade de Curativos Resistentes à Água" /><button type="button" data-qty-step="1" data-target="#q-curativos" aria-label="Aumentar a quantidade de Curativos Resistentes à Água">+</button></div><button class="btn btn--primary btn--sm" type="button" data-add data-id="curativos" data-name="Curativos Resistentes à Água Medix 40 unidades" data-img="assets/img/produtos/curativos-160.webp" data-size="Display com 24 caixinhas, cód. 37803" data-unit="display|displays" data-qty-from="#q-curativos" data-add-text="Adicionar"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Adicionar</span></button></div>
+            </article></div>
+            <p class="empty-state" data-filter-empty hidden>Nenhum produto encontrado. Tente outra palavra ou <a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20N%C3%A3o%20encontrei%20um%20produto%20no%20cat%C3%A1logo%20da%20Prisma.">pergunte ao vendedor</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Prisma Distribuidora, página inicial"><img src="assets/img/logo-prisma.svg" alt="" width="44" height="44" /><span class="brand__name">Prisma<small>Distribuidora</small></span></a>
+          <p class="footer__about">Distribuidora de higiene, beleza, infantil e acessórios de saúde para farmácias, perfumarias e mercados do interior de São Paulo.</p>
+        </div>
+        <div><h2>Catálogo</h2><ul><li><a href="catalogo.html">Todo o catálogo</a></li><li><a href="catalogo.html?cat=dermo">Dermocosméticos</a></li><li><a href="catalogo.html?cat=solar">Proteção solar</a></li><li><a href="catalogo.html?cat=corpo">Corpo e banho</a></li><li><a href="catalogo.html?cat=cabelo">Cabelos</a></li><li><a href="catalogo.html?cat=bucal">Higiene bucal</a></li></ul></div><div><h2>Para o cliente</h2><ul><li><a href="seja-cliente.html">Seja cliente</a></li><li><a href="seja-cliente.html#condicoes">Condições comerciais</a></li><li><a href="seja-cliente.html#entregas">Dias de entrega</a></li><li><a href="pedido.html">Meu pedido</a></li></ul></div><div><h2>Contato</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:pedidos@prismadist.com.br">pedidos@prismadist.com.br</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Distrito Empresarial, Ribeirão Preto – SP</span></li></ul></div>
+      </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Prisma Distribuidora de Cosméticos Ltda.</strong> · <span class="nowrap">CNPJ 00.000.000/0001-00</span> · <span class="nowrap">Inscrição estadual 000.000.000.000</span></p><p>Venda exclusiva para pessoa jurídica. Não vendemos medicamentos. Marcas, produtos e embalagens fictícios; imagens ilustrativas.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Prisma Distribuidora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Catálogo B2B da GSA. <a href="/modelos/distribuidoras/02-catalogo-b2b/">Voltar para a GSA</a></span>
+      </div></div>
+    </footer>
+    <div class="drawer" data-drawer hidden>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="pedido-titulo">
+        <div class="drawer__head">
+          <h2 id="pedido-titulo">Seu pedido</h2>
+          <button class="icon-btn" type="button" data-cart-close aria-label="Fechar o pedido"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </div>
+        <div class="drawer__body"><div class="cart-lines" data-cart-lines></div></div>
+        <div class="drawer__foot" data-cart-foot hidden>
+          <p class="drawer__sum"><span data-cart-skus>0 produtos</span><span data-cart-volumes>0 volumes</span></p>
+          <a class="btn btn--primary btn--block btn--lg" href="pedido.html">Revisar e enviar</a>
+          <button class="btn btn--ghost btn--block" type="button" data-cart-close>Continuar no catálogo</button>
+        </div>
+      </div>
+    </div>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20cat%C3%A1logo%20da%20Prisma%20Distribuidora%20e%20quero%20falar%20com%20um%20vendedor." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>Vendedor</span></a>
+    <script src="assets/js/demo.js" defer></script>
+  </body>
+</html>
