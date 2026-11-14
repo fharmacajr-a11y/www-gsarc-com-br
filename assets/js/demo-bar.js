@@ -18,7 +18,7 @@
   }
   window.__gsaDemoBar = true;
 
-  var WHATSAPP = "5511999129999";
+  var WHATSAPP = "5519996275900";
 
   // [pasta dentro de /modelos/, nome do modelo, grupo da galeria /modelos/#grupo]
   var MODELS = [
