@@ -3,171 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qualidade | MedDistri Modelo | Demonstração Distribuidora B2B Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para distribuidora farmacêutica, com várias páginas." />
+    <title>Qualidade | Ipê Farma Distribuidora</title>
+    <meta name="description" content="Licenças e boas práticas da Ipê Farma: AFE Anvisa, autorização especial, licença sanitária, armazenagem climatizada, rastreio por lote e responsável técnica." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0c3826" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-ipe.svg" />
+    <link rel="preload" href="assets/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [7, 19], "2": [7, 19], "3": [7, 19], "4": [7, 19], "5": [7, 19], "6": [8, 12]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 500, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>AFE Anvisa nº 0.00000-0 · venda só para farmácias com CNPJ</p>
+        <div class="topbar__links"><p class="topbar__item topbar__hide-sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h</p><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp comercial</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da MedDistri Modelo">
-          <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">MedDistri Modelo</strong>
-            <span class="brand__subtitle">Distribuidora farmacêutica</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Ipê Farma Distribuidora, página inicial"><img src="assets/img/logo-ipe.svg" alt="" width="44" height="44" /><span class="brand__name">Ipê Farma<small>Distribuidora</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html">Início</a>
             <a href="a-empresa.html">A empresa</a>
             <a href="linhas.html">Linhas</a>
             <a href="qualidade.html" aria-current="page">Qualidade</a>
             <a href="seja-cliente.html">Seja cliente</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="seja-cliente.html">Seja cliente</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html">Início</a>
-            <a href="a-empresa.html">A empresa</a>
-            <a href="linhas.html">Linhas</a>
-            <a href="qualidade.html" aria-current="page">Qualidade</a>
-            <a href="seja-cliente.html">Seja cliente</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="seja-cliente.html">Seja cliente</a>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Seja cliente</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="index.html">Início</a>
+          <a href="a-empresa.html">A empresa</a>
+          <a href="linhas.html">Linhas</a>
+          <a href="qualidade.html" aria-current="page">Qualidade</a>
+          <a href="seja-cliente.html">Seja cliente</a>
+          <a class="btn btn--accent btn--block" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Seja cliente</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section class="page-hero">
+      
+      <section class="page-hero page-hero--ipe" aria-labelledby="titulo">
+        <div class="hero__media"><img src="assets/img/fotos/d-conferencia-1600x900.webp" srcset="assets/img/fotos/d-conferencia-960x540.webp 960w, assets/img/fotos/d-conferencia-1600x900.webp 1600w, assets/img/fotos/d-conferencia-2400x1350.webp 2400w" sizes="100vw" alt="Conferente registrando volumes com leitor de código de barras e tablet no estoque" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Qualidade</span></nav>
+          <h1 id="titulo">Licenças em dia e boas práticas em cada etapa.</h1>
+          <p>Distribuir medicamentos exige autorização, controle de temperatura e rastreio por lote. Aqui estão os documentos e os processos que garantem isso.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="licencas-titulo">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Qualidade</span></nav>
-          <p class="eyebrow">Qualidade</p>
-          <h1>Licenças e boas práticas.</h1>
-          <p>Distribuir medicamentos exige autorização e controle. Esta página mostra os documentos e processos que dão segurança ao comprador.</p>
+          <div class="section-head">
+          <p class="eyebrow">Licenças</p>
+          <h2 id="licencas-titulo">Documentos da distribuidora</h2>
+          <p class="lead">Números fictícios. No site real, entram os números e as validades das licenças.</p>
+        </div>
+          <div class="docs"><article class="doc"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h3>AFE Anvisa</h3><p>Autorização de Funcionamento de Empresa para distribuir medicamentos.</p><code>nº 0.00000-0</code></article><article class="doc"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h3>Autorização Especial</h3><p>Permite distribuir medicamentos controlados da Portaria 344.</p><code>AE nº 0.00000-0</code></article><article class="doc"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><h3>Licença sanitária</h3><p>Alvará da vigilância sanitária de Contagem, renovado todo ano.</p><code>nº 0000/2026</code></article><article class="doc"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-2.5 5 2.5-1.5-7"/></svg></span><h3>Boas práticas</h3><p>Certificado de Boas Práticas de Distribuição e Armazenagem.</p><code>CBPDA 2026</code></article></div>
+          <p style="margin-top:22px"><a class="link-arrow" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Preciso%20de%20c%C3%B3pia%20das%20licen%C3%A7as%20da%20Ip%C3%AA%20Farma%20para%20o%20meu%20cadastro.">Pedir cópia das licenças pelo WhatsApp<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
         </div>
       </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Licenças</p>
-            <h2>Documentos em dia.</h2>
-            <p>Números fictícios. No site real, entram os números das licenças da distribuidora.</p>
-          </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Documento 01</p>
-              <h3>AFE Anvisa</h3>
-              <p>Autorização de Funcionamento de Empresa nº 0.000.000.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Documento 02</p>
-              <h3>Licença sanitária</h3>
-              <p>Licença de funcionamento emitida pela vigilância sanitária.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Documento 03</p>
-              <h3>Responsável técnico</h3>
-              <p>Farmacêutico responsável com CRF ativo.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
+
+      <section class="section section--soft" aria-labelledby="praticas-titulo">
+        <div class="container quality">
+          <figure><img src="assets/img/fotos/d-separacao-1200x900.webp" srcset="assets/img/fotos/d-separacao-640x480.webp 640w, assets/img/fotos/d-separacao-1200x900.webp 1200w" sizes="(min-width: 960px) 560px, 92vw" alt="Funcionário puxando uma paleteira no corredor do centro de distribuição" width="1200" height="900" loading="lazy" decoding="async" /></figure>
+          <div>
             <p class="eyebrow">Boas práticas</p>
-            <h2>Como cuidamos dos produtos.</h2>
+            <h2 id="praticas-titulo">Como cuidamos dos produtos</h2>
+            <ol class="steps steps--list"><li><span class="steps__n" aria-hidden="true">1</span><h3>Recebimento</h3><p>Conferência de nota, lote, validade e temperatura antes de entrar no estoque.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Armazenagem</h3><p>Temperatura entre 15&nbsp;°C e 30&nbsp;°C, termolábeis em câmara fria de 2&nbsp;°C a 8&nbsp;°C.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Separação e conferência</h3><p>Cada item é conferido por leitor de código de barras, com lote registrado na nota.</p></li><li><span class="steps__n" aria-hidden="true">4</span><h3>Transporte</h3><p>Veículos limpos e monitorados, com caixas térmicas para termolábeis.</p></li></ol>
           </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-card__number">1</span>
-              <h3>Recebimento</h3>
-              <p>Conferência de lote, validade e temperatura na chegada.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">2</span>
-              <h3>Armazenagem</h3>
-              <p>Estoque climatizado e controle de validade por lote.</p>
-            </article>
-            <article class="step-card">
-              <span class="step-card__number">3</span>
-              <h3>Entrega</h3>
-              <p>Transporte adequado e rastreio de cada pedido.</p>
-            </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="rt-titulo">
+        <div class="container">
+          <div class="rt">
+            <figure><img src="assets/img/fotos/g-farmaceutica-1000x1250.webp" srcset="assets/img/fotos/g-farmaceutica-560x700.webp 560w, assets/img/fotos/g-farmaceutica-1000x1250.webp 1000w" sizes="(min-width: 900px) 420px, 92vw" alt="Farmacêutica de jaleco segurando uma pasta em frente às prateleiras" width="1000" height="1250" loading="lazy" decoding="async" /></figure>
+            <div class="rt__body">
+              <p class="eyebrow">Responsável técnica</p>
+              <h2 id="rt-titulo">Uma farmacêutica acompanha toda a operação.</h2>
+              <p>Ela responde pelos procedimentos de qualidade, treina a equipe e atende as farmácias em dúvidas sobre lote, validade, devolução e recolhimento de produtos.</p>
+              <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Rastreio de qualquer lote em minutos.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Aviso às farmácias em caso de recolhimento pela Anvisa.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Devolução de vencidos e avariados com descarte correto.</span></li></ul>
+              <div class="rt__sign"><strong>Dra. Helena Martins</strong><span>Farmacêutica responsável técnica · CRF-MG 00000</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="cta-band cta-band--photo" aria-labelledby="cta-titulo">
+        <div class="cta-band__media"><img src="assets/img/fotos/f-equipe-1600x900.webp" srcset="assets/img/fotos/f-equipe-960x540.webp 960w, assets/img/fotos/f-equipe-1600x900.webp 1600w, assets/img/fotos/f-equipe-2400x1350.webp 2400w" sizes="100vw" alt="" width="1600" height="900" loading="lazy" decoding="async" /></div>
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Precisa dos documentos para o seu cadastro?</h2>
+            <p>O comercial envia as licenças e o cadastro da farmácia sai no mesmo dia.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--accent btn--lg" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Cadastrar minha farmácia</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com o comercial</a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="48" height="48" />
-              <strong>MedDistri Modelo</strong>
-            </div>
-            <p>Distribuidora que abastece o comércio da região com entrega rápida e atendimento por vendedor.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-empresa.html">A empresa</a></li>
-              <li><a href="linhas.html">Linhas</a></li>
-              <li><a href="qualidade.html">Qualidade</a></li>
-              <li><a href="seja-cliente.html">Seja cliente</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 500, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ipê Farma Distribuidora, página inicial"><img src="assets/img/logo-ipe.svg" alt="" width="44" height="44" /><span class="brand__name">Ipê Farma<small>Distribuidora</small></span></a>
+          <p class="footer__about">Distribuidora de medicamentos, dermocosméticos e perfumaria para farmácias e drogarias de Minas Gerais, com entrega em até 24 horas na Grande BH.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> MedDistri Modelo. Empresa fictícia: demonstração do modelo Distribuidora B2B Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>A Ipê Farma</h2><ul><li><a href="a-empresa.html">A empresa</a></li><li><a href="linhas.html">Linhas</a></li><li><a href="qualidade.html">Qualidade</a></li><li><a href="seja-cliente.html">Seja cliente</a></li><li><a href="a-empresa.html#fornecedores">Fornecedores</a></li></ul></div><div><h2>Comercial</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:comercial@ipefarma.com.br">comercial@ipefarma.com.br</a></li></ul></div><div><h2>Centro de distribuição</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Av. das Indústrias, 3.400, Distrito Industrial, Contagem – MG</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h; sáb, 8h às 12h</span></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Ipê Farma Distribuidora de Medicamentos Ltda.</strong> · <span class="nowrap">CNPJ 00.000.000/0001-00</span> · <span class="nowrap">AFE Anvisa nº 0.00000-0</span> · <span class="nowrap">AE nº 0.00000-0</span></p><p><strong>Responsável técnica:</strong> Dra. Helena Martins · CRF-MG 00000. Venda exclusiva para farmácias, drogarias e estabelecimentos de saúde com CNPJ. Números de registro fictícios.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Ipê Farma Distribuidora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Distribuidora B2B Institucional da GSA. <a href="/modelos/farmacias/distribuidora/01-institucional-b2b/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>Comercial</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

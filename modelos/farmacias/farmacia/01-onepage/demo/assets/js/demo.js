@@ -162,6 +162,13 @@
   }
 
   /* ---------------------------------------------------------- WhatsApp forms */
+  // "Seu nome" -> "seu nome", mas mantém CNPJ, WhatsApp e nomes próprios; tira o "?" do fim.
+  function softLower(text) {
+    text = text.replace(/[?:]\s*$/, "");
+    var first = text.split(" ")[0];
+    return /^[A-ZÀ-Ý][a-zà-ÿ]*$/.test(first) ? text.charAt(0).toLowerCase() + text.slice(1) : text;
+  }
+
   function labelOf(field) {
     if (field.getAttribute("data-label")) return field.getAttribute("data-label");
     var lab = field.closest("label");
@@ -201,7 +208,7 @@
           "Preencha: " +
           missing
             .map(function (f) {
-              return f.type === "radio" ? (f.closest("fieldset") ? $("legend", f.closest("fieldset")).textContent.replace("*", "").trim().toLowerCase() : f.name) : labelOf(f).toLowerCase();
+              return softLower(f.type === "radio" ? (f.closest("fieldset") ? $("legend", f.closest("fieldset")).textContent.replace("*", "").trim() : f.name) : labelOf(f));
             })
             .join(", ") +
           ".";
@@ -270,11 +277,26 @@
     });
   });
 
+  /* ---------------------------------------------------------- clear the error mark once a field is filled */
+  ["input", "change"].forEach(function (type) {
+    document.addEventListener(type, function (event) {
+      var f = event.target;
+      if (!f || !f.name || !f.form) return;
+      var group = f.type === "radio" ? f.form.querySelectorAll('[name="' + f.name + '"]') : [f];
+      var filled = f.type === "radio" ? f.checked : f.type === "checkbox" ? f.checked : !!String(f.value || "").trim();
+      if (!filled) return;
+      Array.prototype.forEach.call(group, function (el) {
+        el.removeAttribute("aria-invalid");
+      });
+    });
+  });
+
   /* ---------------------------------------------------------- filters */
   $$("[data-filter]").forEach(function (root) {
     var items = $$("[data-item]", root);
     var chips = $$("[data-filter-btn]", root);
     var search = $("[data-filter-search]", root);
+    var selects = $$("[data-filter-by]", root);
     var countEl = $("[data-filter-count]", root);
     var emptyEl = $("[data-filter-empty]", root);
     var noun = root.getAttribute("data-filter-noun") || "itens";
@@ -295,7 +317,10 @@
         var cats = (item.getAttribute("data-cat") || "").split(" ");
         var okCat = current === "todos" || cats.indexOf(current) !== -1 || cats.indexOf("todas") !== -1;
         var okText = !q || norm(item.getAttribute("data-text") || item.textContent).indexOf(q) !== -1;
-        item.hidden = !(okCat && okText);
+        var okSel = selects.every(function (sel) {
+          return !sel.value || (item.getAttribute("data-" + sel.getAttribute("data-filter-by")) || "").split(" ").indexOf(sel.value) !== -1;
+        });
+        item.hidden = !(okCat && okText && okSel);
         if (!item.hidden) shown++;
       });
       chips.forEach(function (c) {
@@ -313,6 +338,20 @@
       });
     });
     if (search) search.addEventListener("input", apply);
+    selects.forEach(function (sel) {
+      sel.addEventListener("change", apply);
+    });
+    $$("[data-filter-reset]", root).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        current = "todos";
+        if (search) search.value = "";
+        selects.forEach(function (sel) {
+          sel.value = "";
+        });
+        apply();
+        if (search) search.focus();
+      });
+    });
     var params = new URLSearchParams(window.location.search);
     var wanted = params.get(root.getAttribute("data-filter-param") || "cat");
     if (wanted && chips.some(function (c) { return c.getAttribute("data-filter-btn") === wanted; })) current = wanted;
@@ -434,6 +473,7 @@
   var cartKey = body.getAttribute("data-cart");
   if (cartKey) {
     var showPrices = body.getAttribute("data-cart-prices") !== "off";
+    var maxQty = parseInt(body.getAttribute("data-cart-max") || "99", 10);
     var cart = {};
     try {
       cart = JSON.parse(localStorage.getItem(cartKey) || "{}") || {};
@@ -473,7 +513,7 @@
     };
 
     var render = function () {
-      var n = count();
+      var n = body.getAttribute("data-cart-count-mode") === "lines" ? Object.keys(cart).length : count();
       $$("[data-cart-count]").forEach(function (el) {
         el.textContent = n;
         if (n) el.removeAttribute("data-zero");
@@ -498,13 +538,13 @@
             var it = cart[id];
             return (
               '<div class="cart-line" data-line="' + id + '">' +
-              '<img src="' + it.img + '" alt="" width="64" height="64" loading="lazy" />' +
+              (it.img ? '<img src="' + it.img + '" alt="" width="64" height="64" loading="lazy" />' : '<span class="cart-line__ph" aria-hidden="true">' + (it.ph || "") + "</span>") +
               "<div><p class=\"cart-line__name\">" + it.name + "</p>" +
               (showPrices ? '<p class="cart-line__price">' + brl(it.price) + " cada</p>" : '<p class="cart-line__price">' + (it.size || "") + "</p>") +
               '<button type="button" class="cart-line__remove" data-remove="' + id + '">Remover</button></div>' +
               '<div class="qty" aria-label="Quantidade de ' + it.name + '">' +
               '<button type="button" data-dec="' + id + '" aria-label="Diminuir">−</button>' +
-              '<input type="number" min="1" max="99" value="' + it.qty + '" data-qty="' + id + '" aria-label="Quantidade" />' +
+              '<input type="number" min="1" max="' + maxQty + '" value="' + it.qty + '" data-qty="' + id + '" aria-label="Quantidade" />' +
               '<button type="button" data-inc="' + id + '" aria-label="Aumentar">+</button></div></div>'
             );
           })
@@ -518,6 +558,10 @@
         });
       };
       set("[data-cart-subtotal]", brl(sub));
+      var vols = count();
+      set("[data-cart-skus]", ids.length + (ids.length === 1 ? " produto" : " produtos"));
+      var volUnit = (body.getAttribute("data-cart-vol-unit") || "volume|volumes").split("|");
+      set("[data-cart-volumes]", vols.toLocaleString("pt-BR") + " " + (vols === 1 ? volUnit[0] : volUnit[1] || volUnit[0]));
       set("[data-cart-fee]", f ? brl(f) : "—");
       set("[data-cart-total]", brl(sub + f));
     };
@@ -568,7 +612,7 @@
         var id = btn.getAttribute("data-id");
         var qty = 1;
         var from = btn.getAttribute("data-qty-from");
-        if (from && $(from)) qty = Math.max(1, Math.min(99, parseInt($(from).value, 10) || 1));
+        if (from && $(from)) qty = Math.max(1, Math.min(maxQty, parseInt($(from).value, 10) || 1));
         if (cart[id] && !from) {
           openDrawer();
           return;
@@ -576,9 +620,11 @@
         cart[id] = {
           name: btn.getAttribute("data-name"),
           price: parseFloat(btn.getAttribute("data-price") || "0"),
-          img: btn.getAttribute("data-img"),
+          img: btn.getAttribute("data-img") || "",
+          ph: btn.getAttribute("data-ph") || "",
           size: btn.getAttribute("data-size") || "",
-          qty: (cart[id] ? cart[id].qty : 0) + qty
+          unit: btn.getAttribute("data-unit") || "",
+          qty: Math.min(maxQty, (cart[id] ? cart[id].qty : 0) + qty)
         };
         save();
         render();
@@ -592,7 +638,7 @@
         if (!t) return;
         var id = t.getAttribute("data-inc") || t.getAttribute("data-dec") || t.getAttribute("data-remove");
         if (!id || !cart[id]) return;
-        if (t.hasAttribute("data-inc")) cart[id].qty = Math.min(99, cart[id].qty + 1);
+        if (t.hasAttribute("data-inc")) cart[id].qty = Math.min(maxQty, cart[id].qty + 1);
         if (t.hasAttribute("data-dec")) cart[id].qty -= 1;
         if (t.hasAttribute("data-remove") || cart[id].qty < 1) delete cart[id];
         save();
@@ -605,7 +651,7 @@
         if (!id || !cart[id]) return;
         var v = parseInt(event.target.value, 10);
         if (!v || v < 1) delete cart[id];
-        else cart[id].qty = Math.min(99, v);
+        else cart[id].qty = Math.min(maxQty, v);
         save();
         render();
       });
@@ -615,7 +661,7 @@
       btn.addEventListener("click", function () {
         var input = $(btn.getAttribute("data-target"));
         var v = (parseInt(input.value, 10) || 1) + parseInt(btn.getAttribute("data-qty-step"), 10);
-        input.value = Math.max(1, Math.min(99, v));
+        input.value = Math.max(1, Math.min(parseInt(input.getAttribute("max") || maxQty, 10), v));
       });
     });
 
@@ -632,7 +678,9 @@
         var lines = [body.getAttribute("data-cart-title") || "Olá! Quero fazer um pedido:", ""];
         Object.keys(cart).forEach(function (id) {
           var it = cart[id];
-          lines.push(it.qty + "x " + it.name + (it.size ? " (" + it.size + ")" : "") + (showPrices ? " · " + brl(it.price * it.qty) : ""));
+          var units = (it.unit || "").split("|");
+          var unitTxt = it.qty === 1 ? units[0] : units[1] || units[0];
+          lines.push((it.unit ? it.qty + " " + unitTxt + " · " : it.qty + "x ") + it.name + (it.size ? " (" + it.size + ")" : "") + (showPrices ? " · " + brl(it.price * it.qty) : ""));
         });
         if (showPrices) {
           lines.push("");

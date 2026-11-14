@@ -3,211 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seja cliente | MedDistri Modelo | Demonstração Distribuidora B2B Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para distribuidora farmacêutica, com várias páginas." />
+    <title>Seja cliente | Ipê Farma Distribuidora</title>
+    <meta name="description" content="Cadastre a sua farmácia na Ipê Farma: documentos necessários, análise de crédito, condições de pagamento e formulário enviado ao comercial pelo WhatsApp." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0c3826" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-ipe.svg" />
+    <link rel="preload" href="assets/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [7, 19], "2": [7, 19], "3": [7, 19], "4": [7, 19], "5": [7, 19], "6": [8, 12]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 500, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>AFE Anvisa nº 0.00000-0 · venda só para farmácias com CNPJ</p>
+        <div class="topbar__links"><p class="topbar__item topbar__hide-sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h</p><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp comercial</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da MedDistri Modelo">
-          <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">MedDistri Modelo</strong>
-            <span class="brand__subtitle">Distribuidora farmacêutica</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Ipê Farma Distribuidora, página inicial"><img src="assets/img/logo-ipe.svg" alt="" width="44" height="44" /><span class="brand__name">Ipê Farma<small>Distribuidora</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html">Início</a>
             <a href="a-empresa.html">A empresa</a>
             <a href="linhas.html">Linhas</a>
             <a href="qualidade.html">Qualidade</a>
             <a href="seja-cliente.html" aria-current="page">Seja cliente</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="seja-cliente.html">Seja cliente</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html">Início</a>
-            <a href="a-empresa.html">A empresa</a>
-            <a href="linhas.html">Linhas</a>
-            <a href="qualidade.html">Qualidade</a>
-            <a href="seja-cliente.html" aria-current="page">Seja cliente</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="seja-cliente.html">Seja cliente</a>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Seja cliente</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="index.html">Início</a>
+          <a href="a-empresa.html">A empresa</a>
+          <a href="linhas.html">Linhas</a>
+          <a href="qualidade.html">Qualidade</a>
+          <a href="seja-cliente.html" aria-current="page">Seja cliente</a>
+          <a class="btn btn--accent btn--block" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Seja cliente</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section class="page-hero">
+      
+      <section class="page-hero page-hero--ipe" aria-labelledby="titulo">
+        <div class="hero__media"><img src="assets/img/fotos/f-balcao-1600x900.webp" srcset="assets/img/fotos/f-balcao-960x540.webp 960w, assets/img/fotos/f-balcao-1600x900.webp 1600w, assets/img/fotos/f-balcao-2400x1350.webp 2400w" sizes="100vw" alt="Farmacêutico atendendo uma cliente no balcão de madeira de uma farmácia" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Seja cliente</span></nav>
+          <h1 id="titulo">Cadastre a sua farmácia em poucos minutos.</h1>
+          <p>Preencha os dados e um vendedor da sua região entra em contato com as condições comerciais, a tabela de preços e as campanhas do mês.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="passos-titulo">
         <div class="container">
-          <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">/</span><span>Seja cliente</span></nav>
-          <p class="eyebrow">Seja cliente</p>
-          <h1>Cadastre sua farmácia.</h1>
-          <p>Preencha os dados e a mensagem abre pronta no WhatsApp do comercial. Um vendedor da sua região retorna com as condições.</p>
+          <div class="section-head">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="passos-titulo">Do cadastro ao primeiro pedido</h2>
+        </div>
+          <ol class="steps steps--3"><li><span class="steps__n" aria-hidden="true">1</span><h3>Envie o cadastro</h3><p>Pelo formulário abaixo ou direto no WhatsApp do comercial.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Análise em até 2 dias</h3><p>Conferimos as licenças e liberamos o limite de crédito para boleto.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Primeiro pedido</h3><p>O vendedor visita a farmácia ou fecha o pedido pelo WhatsApp.</p></li></ol>
         </div>
       </section>
-      <section id="cadastro" class="section anchor-target">
-        <div class="container about-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Cadastro</p>
-              <h2>Dados da empresa.</h2>
-              <p>Venda exclusiva para farmácias, drogarias e estabelecimentos de saúde com CNPJ.</p>
+
+      <section class="section section--soft" id="cadastro" aria-labelledby="cadastro-titulo">
+        <div class="container join">
+          <div class="join__side">
+            <p class="eyebrow">Documentos</p>
+            <h2>Separe estes documentos</h2>
+            <p>O vendedor pede uma cópia de cada um para concluir o cadastro.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Cartão CNPJ e inscrição estadual.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Licença sanitária da farmácia.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>AFE da farmácia na Anvisa.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Certidão de regularidade do CRF e nome do responsável técnico.</span></li></ul>
+            <div class="contact-card">
+              <ul class="address">
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><strong>Av. das Indústrias, 3.400</strong><span>Distrito Industrial · Contagem – MG</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong data-open-status>Seg a sex, 7h às 19h</strong><span>Sábado, 8h às 12h</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><span><strong><a href="tel:+550030000000">(00) 3000-0000</a></strong><span>Comercial · SAC 0800 000 0000</span></span></li>
+                <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span><strong><a href="mailto:comercial@ipefarma.com.br">comercial@ipefarma.com.br</a></strong><span>Cadastro e financeiro</span></span></li>
+              </ul>
+              <a class="btn btn--ghost" style="margin-top:18px" href="https://www.google.com/maps/search/?api=1&query=Av.%20das%20Ind%C3%BAstrias%2C%203.400%2C%20Distrito%20Industrial%2C%20Contagem%20%E2%80%93%20MG" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>Ver no mapa</a>
             </div>
-            <form class="quote-form" data-whatsapp-form data-whatsapp="5500000000000" data-intro="Olá! Quero cadastrar minha empresa como cliente da MedDistri." novalidate>
-              <div class="quote-form__row">
-                <label>
-                  Razão social
-                  <input type="text" name="razao" required />
-                </label>
-                <label>
-                  CNPJ
-                  <input type="text" name="cnpj" required />
-                </label>
-              </div>
-              <div class="quote-form__row">
-                <label>
-                  Cidade
-                  <input type="text" name="cidade" required />
-                </label>
-                <label>
-                  Nome do responsável
-                  <input type="text" name="responsavel" required />
-                </label>
-              </div>
-              <label>
-                Tipo de estabelecimento
-                <select name="tipo" required>
-                  <option value="">Selecione</option>
-                  <option>Farmácia independente</option>
-                  <option>Rede de drogarias</option>
-                  <option>Farmácia de manipulação</option>
-                  <option>Clínica ou hospital</option>
-                </select>
-              </label>
-              <label>
-                Linhas de interesse
-                <textarea name="obs" rows="4"></textarea>
-              </label>
-              <p class="quote-form__error" data-form-error role="alert" hidden></p>
-              <div class="hero-actions">
-                <button class="button button-primary" type="submit">Enviar pelo WhatsApp</button>
-              </div>
-            </form>
-          </article>
-          <aside class="info-card">
-            <p class="info-card__label">Documentos</p>
-            <p>No site real, a página lista os documentos pedidos para o cadastro, como licença sanitária e AFE.</p>
-          </aside>
+          </div>
+          <form class="form-card" data-wa-form data-whatsapp="5500000000000" data-wa-title="Olá! Quero cadastrar a minha farmácia na Ipê Farma:" data-wa-footer="Posso enviar as licenças da farmácia nesta conversa." novalidate aria-labelledby="cadastro-titulo">
+            <h2 id="cadastro-titulo">Cadastro da farmácia</h2>
+            <p>Os dados abrem prontos no WhatsApp do comercial. O vendedor da sua região retorna no mesmo dia.</p>
+            <p class="form-req">Campos com <span class="req">*</span> são obrigatórios.</p>
+            <div class="form-grid">
+              <label class="field form-grid__full"><span>Razão social <span class="req" aria-hidden="true">*</span></span><input type="text" name="razao" required autocomplete="organization" /></label>
+              <label class="field"><span>CNPJ <span class="req" aria-hidden="true">*</span></span><input type="text" name="cnpj" required placeholder="00.000.000/0000-00" inputmode="numeric" /></label>
+              <label class="field"><span>Nome fantasia</span><input type="text" name="fantasia" /></label>
+              <label class="field"><span>Responsável <span class="req" aria-hidden="true">*</span></span><input type="text" name="responsavel" required autocomplete="name" /></label>
+              <label class="field"><span>WhatsApp com DDD <span class="req" aria-hidden="true">*</span></span><input type="tel" name="telefone" required autocomplete="tel" inputmode="tel" /></label>
+              <label class="field"><span>E-mail</span><input type="email" name="email" autocomplete="email" /></label>
+              <label class="field"><span>Cidade <span class="req" aria-hidden="true">*</span></span><input type="text" name="cidade" required autocomplete="address-level2" /></label>
+              <label class="field"><span>Tipo de estabelecimento <span class="req" aria-hidden="true">*</span></span><select name="tipo" required><option value="">Selecione</option><option>Farmácia independente</option><option>Rede de farmácias</option><option>Farmácia de manipulação</option><option>Clínica ou hospital</option><option>Outro</option></select></label>
+              <label class="field"><span>Linha de maior interesse</span><select name="linha"><option value="">Selecione</option><option>Medicamentos de referência</option><option>Genéricos e similares</option><option>Isentos de prescrição</option><option>Dermocosméticos</option><option>Higiene e perfumaria</option><option>Materiais e correlatos</option><option>Todas as linhas</option></select></label>
+              <label class="field form-grid__full"><span>Mensagem</span><textarea name="mensagem" rows="4" placeholder="Ex.: já compro de outra distribuidora e quero comparar condições"></textarea></label>
+            </div>
+            <p class="form-error" data-form-error role="alert" hidden></p>
+            <div class="form-actions"><button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Enviar cadastro</button></div>
+            <p class="form-note">Venda exclusiva para farmácias, drogarias e estabelecimentos de saúde com CNPJ e licenças em dia.</p>
+          </form>
         </div>
       </section>
-      <section id="contato" class="section anchor-target">
-        <div class="container contact-grid">
-          <article class="section-panel">
-            <div class="section-head section-head--compact">
-              <p class="eyebrow">Contato</p>
-              <h2>Fale com o comercial.</h2>
-            </div>
-            <dl class="contact-list">
-              <div>
-                <dt>Endereço</dt>
-                <dd>Rua Exemplo, 800, Centro de Distribuição, Distrito Industrial</dd>
-              </div>
-              <div>
-                <dt>Horário comercial</dt>
-                <dd>Segunda a sexta, das 8h às 18h</dd>
-              </div>
-              <div>
-                <dt>WhatsApp comercial</dt>
-                <dd><a href="https://wa.me/5500000000000">(00) 90000-0000</a></dd>
-              </div>
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:comercial@meddistrimodelo.com.br">comercial@meddistrimodelo.com.br</a></dd>
-              </div>
-            </dl>
-          </article>
-          <aside class="contact-card">
-            <p class="contact-card__label">Demonstração</p>
-            <h2>Distribuidora fictícia para mostrar o modelo</h2>
-            <p>A MedDistri Modelo não existe. Licenças, números e contatos desta página são fictícios.</p>
-            <div class="hero-actions contact-actions">
-              <a class="button button-primary" href="linhas.html">Ver linhas</a>
-            </div>
-          </aside>
+
+      <section class="section" aria-labelledby="duvidas-titulo">
+        <div class="container faq-wrap">
+          <div>
+            <p class="eyebrow">Dúvidas</p>
+            <h2 id="duvidas-titulo">Perguntas frequentes</h2>
+            <p class="lead">Não achou a sua? O comercial responde pelo WhatsApp.</p>
+            <a class="link-arrow" style="margin-top:20px" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20cadastro%20na%20Ip%C3%AA%20Farma.">Perguntar pelo WhatsApp<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="faq"><details><summary>Vocês vendem para pessoa física?</summary><p>Não. A Ipê Farma vende só para farmácias, drogarias e estabelecimentos de saúde com CNPJ e licenças em dia.</p></details><details><summary>Existe pedido mínimo?</summary><p>Sim, o pedido mínimo é de R$ 600 por entrega. Para a Grande BH, o vendedor pode combinar entregas menores em dias de rota.</p></details><details><summary>Como é o pagamento?</summary><p>No boleto, com prazo de até 28 dias depois da análise de crédito, ou no Pix com desconto. Até a análise sair, o primeiro pedido pode ser pago no Pix.</p></details><details><summary>Vocês vendem medicamentos controlados?</summary><p>Sim, para farmácias com AFE e autorização especial. A receita e a escrituração seguem as regras da Anvisa.</p></details><details><summary>Vocês atendem a minha cidade?</summary><p>Atendemos 180 cidades de Minas Gerais. Se a sua não estiver na lista de regiões, mande uma mensagem que o comercial confirma.</p></details></div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="48" height="48" />
-              <strong>MedDistri Modelo</strong>
-            </div>
-            <p>Distribuidora que abastece o comércio da região com entrega rápida e atendimento por vendedor.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-empresa.html">A empresa</a></li>
-              <li><a href="linhas.html">Linhas</a></li>
-              <li><a href="qualidade.html">Qualidade</a></li>
-              <li><a href="seja-cliente.html">Seja cliente</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 500, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ipê Farma Distribuidora, página inicial"><img src="assets/img/logo-ipe.svg" alt="" width="44" height="44" /><span class="brand__name">Ipê Farma<small>Distribuidora</small></span></a>
+          <p class="footer__about">Distribuidora de medicamentos, dermocosméticos e perfumaria para farmácias e drogarias de Minas Gerais, com entrega em até 24 horas na Grande BH.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> MedDistri Modelo. Empresa fictícia: demonstração do modelo Distribuidora B2B Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>A Ipê Farma</h2><ul><li><a href="a-empresa.html">A empresa</a></li><li><a href="linhas.html">Linhas</a></li><li><a href="qualidade.html">Qualidade</a></li><li><a href="seja-cliente.html">Seja cliente</a></li><li><a href="a-empresa.html#fornecedores">Fornecedores</a></li></ul></div><div><h2>Comercial</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:comercial@ipefarma.com.br">comercial@ipefarma.com.br</a></li></ul></div><div><h2>Centro de distribuição</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Av. das Indústrias, 3.400, Distrito Industrial, Contagem – MG</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h; sáb, 8h às 12h</span></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Ipê Farma Distribuidora de Medicamentos Ltda.</strong> · <span class="nowrap">CNPJ 00.000.000/0001-00</span> · <span class="nowrap">AFE Anvisa nº 0.00000-0</span> · <span class="nowrap">AE nº 0.00000-0</span></p><p><strong>Responsável técnica:</strong> Dra. Helena Martins · CRF-MG 00000. Venda exclusiva para farmácias, drogarias e estabelecimentos de saúde com CNPJ. Números de registro fictícios.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Ipê Farma Distribuidora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Distribuidora B2B Institucional da GSA. <a href="/modelos/farmacias/distribuidora/01-institucional-b2b/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>Comercial</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>

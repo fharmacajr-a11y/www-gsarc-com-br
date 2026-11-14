@@ -1597,6 +1597,11 @@ a.info-item:hover strong {
   display: block;
 }
 
+.address li > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .address span {
   color: var(--muted);
   font-size: 0.95rem;
@@ -2626,6 +2631,18 @@ legend {
   border-radius: 10px;
 }
 
+.cart-line__ph {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: var(--soft);
+  color: var(--brand);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
 .cart-line__name {
   font-weight: 600;
   font-size: 0.92rem;
@@ -3002,6 +3019,14 @@ figure {
     position: sticky;
     top: 120px;
   }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.section--brand .split__copy > p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ---------- próprio desta demonstração ---------- */

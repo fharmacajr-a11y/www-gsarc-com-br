@@ -3,245 +3,181 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MedDistri Modelo | Demonstração Distribuidora B2B Institucional</title>
-    <meta name="description" content="Demonstração fictícia de site institucional para distribuidora farmacêutica, com várias páginas." />
+    <title>Ipê Farma Distribuidora | Medicamentos para farmácias em Minas Gerais</title>
+    <meta name="description" content="Demonstração fictícia de site institucional de distribuidora farmacêutica: linhas, regiões de entrega, licenças, boas práticas e cadastro de farmácias pelo WhatsApp." />
     <meta name="robots" content="noindex, follow" />
-    <link rel="icon" type="image/png" sizes="64x64" href="../../../../../assets/favicon.png" />
+    <meta name="theme-color" content="#0c3826" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo-ipe.svg" />
+    <link rel="preload" href="assets/fonts/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/demo.css" />
   </head>
-  <body>
+  <body data-hours='{"1": [7, 19], "2": [7, 19], "3": [7, 19], "4": [7, 19], "5": [7, 19], "6": [8, 12]}'>
     <script src="/assets/js/demo-bar.js"></script>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="topbar">
       <div class="container topbar__inner">
-        <div class="topbar__group">
-          <span class="topbar__item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span>
-          <span class="topbar__item topbar__group--secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Rua Exemplo, 500, Distrito Industrial</span>
-        </div>
-        <div class="topbar__group">
-          <a class="topbar__item" href="https://wa.me/5500000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>WhatsApp (00) 90000-0000</a>
-        </div>
+        <p class="topbar__item topbar__hide-md"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>AFE Anvisa nº 0.00000-0 · venda só para farmácias com CNPJ</p>
+        <div class="topbar__links"><p class="topbar__item topbar__hide-sm"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seg a sex, 7h às 19h</p><a class="topbar__item" href="tel:+550030000000"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>(00) 3000-0000</a><a class="topbar__item" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>WhatsApp comercial</a></div>
       </div>
     </div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ir para o início da MedDistri Modelo">
-          <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="72" height="72" />
-          <span class="brand__text">
-            <strong class="brand__title">MedDistri Modelo</strong>
-            <span class="brand__subtitle">Distribuidora farmacêutica</span>
-          </span>
-        </a>
-
-        <nav class="site-nav" aria-label="Menu principal">
+    <header class="header" data-header>
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Ipê Farma Distribuidora, página inicial"><img src="assets/img/logo-ipe.svg" alt="" width="44" height="44" /><span class="brand__name">Ipê Farma<small>Distribuidora</small></span></a>
+        <nav class="nav" aria-label="Menu principal">
             <a href="index.html" aria-current="page">Início</a>
             <a href="a-empresa.html">A empresa</a>
             <a href="linhas.html">Linhas</a>
             <a href="qualidade.html">Qualidade</a>
             <a href="seja-cliente.html">Seja cliente</a>
         </nav>
-
-        <a class="button button-primary header-cta" href="seja-cliente.html">Seja cliente</a>
-
-        <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="menu-mobile">
-          Abrir menu
-        </button>
-      </div>
-
-      <div id="menu-mobile" class="mobile-panel" data-mobile-menu hidden>
-        <div class="container mobile-panel__inner">
-          <nav class="mobile-nav" aria-label="Menu móvel">
-            <a href="index.html" aria-current="page">Início</a>
-            <a href="a-empresa.html">A empresa</a>
-            <a href="linhas.html">Linhas</a>
-            <a href="qualidade.html">Qualidade</a>
-            <a href="seja-cliente.html">Seja cliente</a>
-          </nav>
-          <a class="button button-primary mobile-cta" href="seja-cliente.html">Seja cliente</a>
+        <div class="header__actions">
+          <a class="btn btn--accent header__cta" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Seja cliente</a>
+          
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movel" data-menu-btn>
+            <span class="menu-btn__bars" aria-hidden="true"></span><span class="menu-btn__label">Menu</span>
+          </button>
         </div>
+      </div>
+      <div class="mobile-menu" id="menu-movel" data-menu hidden>
+        <nav class="container mobile-menu__inner" aria-label="Menu móvel">
+          <a href="index.html" aria-current="page">Início</a>
+          <a href="a-empresa.html">A empresa</a>
+          <a href="linhas.html">Linhas</a>
+          <a href="qualidade.html">Qualidade</a>
+          <a href="seja-cliente.html">Seja cliente</a>
+          <a class="btn btn--accent btn--block" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Seja cliente</a>
+        </nav>
       </div>
     </header>
-
     <main id="conteudo">
-      <section id="inicio" class="hero-section anchor-target">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Distribuidora farmacêutica</p>
-            <h1>Abastecimento confiável para farmácias e drogarias.</h1>
-            <p class="lead">Mais de 6 mil itens, entrega em até 24 horas na região e um time comercial dedicado a cada cliente.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="seja-cliente.html">Quero ser cliente</a>
-              <a class="button button-secondary" href="linhas.html">Conheça as linhas</a>
+      <section class="hero hero--ipe" aria-labelledby="inicio-titulo">
+        <div class="hero__media"><img src="assets/img/fotos/d-hero-b-1600x900.webp" srcset="assets/img/fotos/d-hero-b-960x540.webp 960w, assets/img/fotos/d-hero-b-1600x900.webp 1600w, assets/img/fotos/d-hero-b-2400x1350.webp 2400w" sizes="100vw" alt="Corredor do centro de distribuição com prateleiras altas dos dois lados" width="1600" height="900" fetchpriority="high" decoding="async" /></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="tag tag--glass"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Distribuidora farmacêutica em Minas desde 2003</p>
+            <h1 id="inicio-titulo">Sua farmácia abastecida <em>em até 24 horas.</em></h1>
+            <p class="hero__lead">Medicamentos, genéricos, dermocosméticos e perfumaria dos principais laboratórios, com vendedor dedicado e entrega diária na Grande BH.</p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Quero ser cliente</a>
+              <a class="btn btn--light btn--lg" href="linhas.html">Conheça as linhas</a>
             </div>
-          </div>
-          <div class="hero-visual">
-            <div class="illustration-card">
-              <img src="assets/img/hero-distribuidora.svg" alt="Ilustração do centro de distribuição fictício com uma van saindo para entrega" width="640" height="460" />
-            </div>
-            <div class="hero-meta-grid" aria-label="Destaques">
-              <article class="meta-card">
-                <p class="meta-card__label">Mix</p>
-                <h2>6 mil itens</h2>
-                <p>Dos principais laboratórios.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Entrega</p>
-                <h2>Até 24 horas</h2>
-                <p>Rotas diárias na região.</p>
-              </article>
-              <article class="meta-card">
-                <p class="meta-card__label">Clientes</p>
-                <h2>1.200 farmácias</h2>
-                <p>Em 40 cidades atendidas.</p>
-              </article>
-            </div>
+            <ul class="hero__facts">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>8.000 itens</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>180 cidades</li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v10h16V10"/><path d="M3 10l2-6h14l2 6zM3 10a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></svg>1.500 farmácias clientes</li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="trust-strip" aria-label="Diferenciais">
-        <div class="container trust-strip__inner">
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3.5 3.5v2.5h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
-            <div><strong>Entrega em até 24 h</strong><span>Rotas fixas para cada cidade.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></span>
-            <div><strong>Vendedor dedicado</strong><span>Atendimento direto pelo WhatsApp.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <div><strong>Nota fiscal e conferência</strong><span>Tudo conferido na entrega.</span></div>
-          </div>
-          <div class="trust-item">
-            <span class="trust-item__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5L12 12l9-4.5M12 12v9"/></svg></span>
-            <div><strong>Pedido mínimo acessível</strong><span>Pensado para o pequeno varejo.</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="section anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Números</p>
-            <h2>Estrutura para atender o varejo farmacêutico.</h2>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-card"><strong>6 mil</strong><span>itens no portfólio</span></div>
-            <div class="stat-card"><strong>40</strong><span>cidades atendidas</span></div>
-            <div class="stat-card"><strong>24 h</strong><span>prazo de entrega</span></div>
-            <div class="stat-card"><strong>1.200</strong><span>farmácias clientes</span></div>
-          </div>
-        </div>
-      </section>
-      <section class="section section-alt anchor-target">
-        <div class="container section-panel">
-          <div class="section-head">
-            <p class="eyebrow">Linhas</p>
-            <h2>O que distribuímos.</h2>
-          </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <p class="service-card__tag">Linha 01</p>
-              <h3>Medicamentos de referência</h3>
-              <p>Portfólio dos principais laboratórios do país.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 02</p>
-              <h3>Genéricos e similares</h3>
-              <p>Linhas completas com giro rápido para o balcão.</p>
-            </article>
-            <article class="service-card">
-              <p class="service-card__tag">Linha 03</p>
-              <h3>Medicamentos isentos de prescrição</h3>
-              <p>Analgésicos, antigripais, antiácidos e vitaminas.</p>
-            </article>
-          </div>
-          <div class="hero-actions"><a class="button button-primary" href="linhas.html">Ver todas as linhas</a></div>
-        </div>
-      </section>
-      <section class="section">
+
+      <div class="trust">
+        <ul class="container trust__grid">
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg><span><strong>AFE e licenças em dia</strong>Autorizada pela Anvisa e pela vigilância sanitária.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/></svg><span><strong>Armazém climatizado</strong>Temperatura e umidade controladas 24 horas.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span><strong>Farmacêutica responsável</strong>Acompanha recebimento, estoque e entrega.</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg><span><strong>Rastreio por lote</strong>Cada caixa tem lote e validade registrados.</span></li>
+        </ul>
+      </div>
+
+      <section class="section" aria-labelledby="linhas-titulo">
         <div class="container">
-          <div class="campaign-banner">
-            <div>
-              <p class="eyebrow">Novos clientes</p>
-              <h2>Cadastre sua farmácia</h2>
-              <p>Envie os dados da empresa e um vendedor da região entra em contato com condições de primeira compra.</p>
-            </div>
-            <a class="button button-secondary" href="seja-cliente.html">Quero ser cliente</a>
+          <div class="section-head section-head--row"><div><p class="eyebrow">Linhas</p><h2 id="linhas-titulo">Tudo o que o balcão precisa, em um só fornecedor</h2></div><a class="link-arrow" href="linhas.html">Ver todas as linhas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="lines"><article class="line"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="8.5" width="18.4" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 8 5.6 8"/></svg></span><h3>Medicamentos de referência</h3><p>Portfólio completo dos principais laboratórios, com reposição diária dos itens de maior giro.</p><ul aria-label="Destaques"><li>Cardiologia</li><li>Diabetes</li><li>Sistema nervoso</li><li>Antibióticos</li></ul></article><article class="line"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.8" y="8.5" width="18.4" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 8 5.6 8"/></svg></span><h3>Genéricos e similares</h3><p>Linhas completas de genéricos para a farmácia oferecer a opção mais em conta no balcão.</p><ul aria-label="Destaques"><li>Mais de 2.500 apresentações</li><li>Vários laboratórios</li></ul></article><article class="line"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span><h3>Isentos de prescrição</h3><p>Analgésicos, antigripais, antiácidos, vitaminas e suplementos para a área de autosserviço.</p><ul aria-label="Destaques"><li>Exposição no autosserviço</li><li>Kits de temporada</li></ul></article><article class="line"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m12 8 1.5 2.5L16 12l-2.5 1.5L12 16l-1.5-2.5L8 12l2.5-1.5z"/></svg></span><h3>Dermocosméticos</h3><p>Tratamento facial, proteção solar e cuidados com o corpo das marcas mais procuradas.</p><ul aria-label="Destaques"><li>Proteção solar</li><li>Tratamento facial</li><li>Corpo</li></ul></article><article class="line"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Higiene e perfumaria</h3><p>Higiene pessoal, bucal e infantil, fraldas e itens de conveniência para a farmácia.</p><ul aria-label="Destaques"><li>Fraldas e infantil</li><li>Higiene bucal</li></ul></article><article class="line"><span class="icon-badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></span><h3>Materiais e correlatos</h3><p>Curativos, seringas, termômetros, medidores de pressão e itens de primeiros socorros.</p><ul aria-label="Destaques"><li>Curativos</li><li>Aparelhos</li><li>Primeiros socorros</li></ul></article></div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="balcao-titulo">
+        <div class="container split">
+          <figure class="split__media">
+            <img src="assets/img/fotos/g-atendimento-1200x900.webp" srcset="assets/img/fotos/g-atendimento-640x480.webp 640w, assets/img/fotos/g-atendimento-1200x900.webp 1200w" sizes="(min-width: 960px) 540px, 92vw" alt="Farmacêutico mostrando um medicamento para uma cliente no balcão da farmácia" width="1200" height="900" loading="lazy" decoding="async" />
+            <p class="split__badge"><strong>98,7%</strong>dos pedidos entregues completos</p>
+          </figure>
+          <div class="split__copy">
+            <p class="eyebrow">Para a farmácia</p>
+            <h2 id="balcao-titulo">Menos falta no balcão, mais tempo para atender.</h2>
+            <p>O vendedor da sua região acompanha o giro da loja, avisa das ofertas dos laboratórios e ajuda a montar o pedido certo para a semana.</p>
+            <ul class="checks"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Pedido pelo WhatsApp, por telefone ou com o vendedor na loja.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Boleto em até 28 dias para clientes cadastrados.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Troca de avarias e de vencidos na entrega seguinte.</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Nota fiscal com lote e validade de cada item.</span></li></ul>
+            <a class="link-arrow" href="a-empresa.html">Conheça a Ipê Farma<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </section>
-      <section class="section section-alt anchor-target" aria-labelledby="depoimentos-titulo">
-        <div class="container section-panel">
+
+      <section class="section" aria-labelledby="regioes-titulo">
+        <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Depoimentos</p>
-            <h2 id="depoimentos-titulo">O que dizem os nossos clientes.</h2>
-            <p>Depoimentos fictícios. No site real, entram avaliações verdadeiras dos clientes.</p>
+          <p class="eyebrow">Regiões atendidas</p>
+          <h2 id="regioes-titulo">Entrega com frota própria em 180 cidades</h2>
+          <p class="lead">Confira o dia de entrega da sua região. Pedidos feitos até as 14h saem na rota seguinte.</p>
+        </div>
+          <div class="regions" role="table" aria-label="Regiões e dias de entrega"><div class="regions__row regions__head" role="row"><span role="columnheader">Região</span><span role="columnheader">Dias de entrega</span><span role="columnheader">Prazo</span></div><div class="regions__row" role="row"><strong role="cell">Belo Horizonte, Contagem e Betim</strong><span class="regions__day" role="cell">Todos os dias úteis</span><span role="cell">Pedido até 14h, entrega no dia seguinte</span></div><div class="regions__row" role="row"><strong role="cell">Grande BH e Sete Lagoas</strong><span class="regions__day" role="cell">Todos os dias úteis</span><span role="cell">Entrega em até 24 horas</span></div><div class="regions__row" role="row"><strong role="cell">Divinópolis e centro-oeste</strong><span class="regions__day" role="cell">Segunda, quarta e sexta</span><span role="cell">Entrega em até 48 horas</span></div><div class="regions__row" role="row"><strong role="cell">Ipatinga e Vale do Aço</strong><span class="regions__day" role="cell">Terça e quinta</span><span role="cell">Entrega em até 48 horas</span></div><div class="regions__row" role="row"><strong role="cell">Juiz de Fora e Zona da Mata</strong><span class="regions__day" role="cell">Terça e sexta</span><span role="cell">Entrega em até 48 horas</span></div><div class="regions__row" role="row"><strong role="cell">Uberlândia e Triângulo</strong><span class="regions__day" role="cell">Segunda e quinta</span><span role="cell">Entrega em até 72 horas</span></div></div>
+        </div>
+      </section>
+
+      <section class="section section--brand" aria-labelledby="qualidade-titulo">
+        <div class="container quality">
+          <figure><img src="assets/img/fotos/d-conferencia-1200x900.webp" srcset="assets/img/fotos/d-conferencia-640x480.webp 640w, assets/img/fotos/d-conferencia-1200x900.webp 1200w" sizes="(min-width: 960px) 560px, 92vw" alt="Conferente registrando volumes com leitor de código de barras e tablet no estoque" width="1200" height="900" loading="lazy" decoding="async" /></figure>
+          <div>
+            <p class="eyebrow">Qualidade</p>
+            <h2 id="qualidade-titulo">Cuidado com o medicamento do recebimento à sua porta.</h2>
+            <ol class="steps steps--list"><li><span class="steps__n" aria-hidden="true">1</span><h3>Recebimento</h3><p>Conferência de lote, validade, nota e temperatura de cada carga.</p></li><li><span class="steps__n" aria-hidden="true">2</span><h3>Armazenagem</h3><p>Estoque climatizado, com controle de validade por lote.</p></li><li><span class="steps__n" aria-hidden="true">3</span><h3>Entrega</h3><p>Veículos adequados e comprovante assinado em cada parada.</p></li></ol>
+            <a class="btn btn--accent" href="qualidade.html" style="margin-top:26px">Ver licenças e boas práticas</a>
           </div>
-          <div class="reviews-grid">
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Mando a lista pelo WhatsApp e no dia seguinte está tudo na loja. Facilitou a reposição.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">P</span><span><strong>Paulo H.</strong><span>Mercado São José</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“O vendedor responde rápido e o prazo de pagamento ajuda muito o caixa.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">S</span><span><strong>Sandra M.</strong><span>Drogaria Central</span></span></figcaption>
-            </figure>
-            <figure class="review-card">
-              <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
-              <blockquote>“Entrega sempre no dia combinado, com tudo conferido. Parceiro de confiança.”</blockquote>
-              <figcaption class="review-card__who"><span class="review-card__avatar">J</span><span><strong>Jorge L.</strong><span>Padaria Pão Nosso</span></span></figcaption>
-            </figure>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="depo-titulo">
+        <div class="container">
+          <div class="section-head section-head--center">
+          <p class="eyebrow">Clientes</p>
+          <h2 id="depo-titulo">O que dizem as farmácias</h2>
+        </div>
+          <div class="reviews"><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Faço o pedido até as duas da tarde e no dia seguinte cedo está tudo na loja, com lote e validade na nota.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">CA</span><span><strong>Cláudia Andrade</strong>Drogaria Andrade, Contagem</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“O vendedor conhece o giro da minha farmácia e me avisa das campanhas dos laboratórios antes de todo mundo.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">RM</span><span><strong>Rafael Moreira</strong>Farmácia Moreira, Sete Lagoas</span></figcaption>
+          </figure><figure class="review">
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>“Precisava de um distribuidor que chegasse no Vale do Aço com regularidade. Terça e quinta, sem falhar.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">JT</span><span><strong>Juliana Teixeira</strong>Rede Vida Farma, Ipatinga</span></figcaption>
+          </figure></div>
+        </div>
+      </section>
+      
+      <section class="cta-band cta-band--photo" aria-labelledby="cta-titulo">
+        <div class="cta-band__media"><img src="assets/img/fotos/f-equipe-1600x900.webp" srcset="assets/img/fotos/f-equipe-960x540.webp 960w, assets/img/fotos/f-equipe-1600x900.webp 1600w, assets/img/fotos/f-equipe-2400x1350.webp 2400w" sizes="100vw" alt="" width="1600" height="900" loading="lazy" decoding="async" /></div>
+        <div class="container cta-band__inner">
+          <div>
+            <h2 id="cta-titulo">Cadastre a sua farmácia</h2>
+            <p>Um vendedor da sua região retorna no mesmo dia com as condições comerciais.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--accent btn--lg" href="seja-cliente.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Cadastrar minha farmácia</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial."><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg>Falar com o comercial</a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-cols">
-          <div class="footer-col">
-            <div class="footer-col__brand">
-              <img src="assets/img/logo-meddistri-modelo.svg" alt="" width="48" height="48" />
-              <strong>MedDistri Modelo</strong>
-            </div>
-            <p>Distribuidora que abastece o comércio da região com entrega rápida e atendimento por vendedor.</p>
-          </div>
-          <div class="footer-col">
-            <h2>Navegação</h2>
-            <ul>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="a-empresa.html">A empresa</a></li>
-              <li><a href="linhas.html">Linhas</a></li>
-              <li><a href="qualidade.html">Qualidade</a></li>
-              <li><a href="seja-cliente.html">Seja cliente</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Contato</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Rua Exemplo, 500, Distrito Industrial</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><a href="https://wa.me/5500000000000">WhatsApp (00) 90000-0000</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h2>Horário</h2>
-            <ul class="footer-contact">
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></li>
-            </ul>
-          </div>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ipê Farma Distribuidora, página inicial"><img src="assets/img/logo-ipe.svg" alt="" width="44" height="44" /><span class="brand__name">Ipê Farma<small>Distribuidora</small></span></a>
+          <p class="footer__about">Distribuidora de medicamentos, dermocosméticos e perfumaria para farmácias e drogarias de Minas Gerais, com entrega em até 24 horas na Grande BH.</p>
         </div>
-        <div class="footer-bottom">
-          <span>© <span data-current-year></span> MedDistri Modelo. Empresa fictícia: demonstração do modelo Distribuidora B2B Institucional.</span>
-          <a href="../">Voltar para a GSA</a>
-        </div>
+        <div><h2>A Ipê Farma</h2><ul><li><a href="a-empresa.html">A empresa</a></li><li><a href="linhas.html">Linhas</a></li><li><a href="qualidade.html">Qualidade</a></li><li><a href="seja-cliente.html">Seja cliente</a></li><li><a href="a-empresa.html#fornecedores">Fornecedores</a></li></ul></div><div><h2>Comercial</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial.">(00) 90000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+550030000000">(00) 3000-0000</a></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:comercial@ipefarma.com.br">comercial@ipefarma.com.br</a></li></ul></div><div><h2>Centro de distribuição</h2><ul class="footer__contact"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Av. das Indústrias, 3.400, Distrito Industrial, Contagem – MG</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Seg a sex, 7h às 19h; sáb, 8h às 12h</span></li></ul></div>
       </div>
+      <div class="container footer__legal"><div class="legal"><p><strong>Ipê Farma Distribuidora de Medicamentos Ltda.</strong> · <span class="nowrap">CNPJ 00.000.000/0001-00</span> · <span class="nowrap">AFE Anvisa nº 0.00000-0</span> · <span class="nowrap">AE nº 0.00000-0</span></p><p><strong>Responsável técnica:</strong> Dra. Helena Martins · CRF-MG 00000. Venda exclusiva para farmácias, drogarias e estabelecimentos de saúde com CNPJ. Números de registro fictícios.</p></div></div>
+      <div class="container"><div class="footer__bottom">
+        <span>© <span data-year>2026</span> Ipê Farma Distribuidora. Todos os direitos reservados.</span>
+        <span>Empresa fictícia: demonstração do modelo Distribuidora B2B Institucional da GSA. <a href="/modelos/farmacias/distribuidora/01-institucional-b2b/">Voltar para a GSA</a></span>
+      </div></div>
     </footer>
-
-    <a class="wa-float" href="https://wa.me/5500000000000" aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span>Fale conosco</span></a>
-
-    <script src="assets/js/demo.js"></script>
+    <a class="wa-float" href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Ip%C3%AA%20Farma%20e%20quero%20falar%20com%20o%20comercial." aria-label="Falar pelo WhatsApp"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.5-1.5-2-1-1 .8a4 4 0 0 1-2.3-2.3l.8-1-1-2z"/></svg><span>Comercial</span></a>
+    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>
